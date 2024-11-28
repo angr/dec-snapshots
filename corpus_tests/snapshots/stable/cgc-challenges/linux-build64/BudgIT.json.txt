@@ -194,17 +194,14 @@ long long __do_global_dtors_aux()\n
             v4 = v0;\n
             return v4;\n
         }\n
-        else if (!cgc_transmit(a0, v3, v2, &v1))\n
-        {\n
-            v3 = v1 + v3;\n
-            v0 = v1 + v0;\n
-            v2 -= v1;\n
-        }\n
-        else\n
+        if (cgc_transmit(a0, v3, v2, &v1))\n
         {\n
             v4 = -1;\n
             return v4;\n
         }\n
+        v3 = v1 + v3;\n
+        v0 = v1 + v0;\n
+        v2 -= v1;\n
     }\n
 }\n
 ", "4203286:sub_402316": "int sub_402316()\n
@@ -732,12 +729,15 @@ LABEL_402aff:\n
             v1 = 0;\n
             return v1;\n
         }\n
-        if (*(v0) == a1)\n
+        else if (*(v0) != a1)\n
+        {\n
+            v0 += 1;\n
+        }\n
+        else\n
         {\n
             v1 = v0;\n
             return v1;\n
         }\n
-        v0 += 1;\n
     }\n
 }\n
 ", "4205794:sub_402ce2": "int sub_402ce2()\n
@@ -786,15 +786,12 @@ LABEL_402aff:\n
             v1 = 0;\n
             return v1;\n
         }\n
-        else if (*((a0 + v0)) == *((a1 + v0)))\n
-        {\n
-            v0 += 1;\n
-        }\n
-        else\n
+        if (*((a0 + v0)) != *((a1 + v0)))\n
         {\n
             v1 = -1;\n
             return v1;\n
         }\n
+        v0 += 1;\n
     }\n
 }\n
 ", "4206036:sub_402dd4": "int sub_402dd4()\n
@@ -1105,12 +1102,15 @@ long long cgc___stack_cookie_fail()\n
             v1 = a1;\n
             return v1;\n
         }\n
-        if (!*((a0 + v0)))\n
+        else if (*((a0 + v0)))\n
+        {\n
+            v0 += 1;\n
+        }\n
+        else\n
         {\n
             v1 = v0;\n
             return v1;\n
         }\n
-        v0 += 1;\n
     }\n
 }\n
 ", "4207603:sub_4033f3": "int sub_4033f3()\n
