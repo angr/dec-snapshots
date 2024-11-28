@@ -465,20 +465,20 @@ long long cgc_recvline(unsigned int a0, struct_0 *a1, unsigned long a2)\n
     v4 += 1;\n
     return v4 + 1;\n
 }\n
-", "4200736:cgc_parseResultSize": "long long cgc_parseResultSize(char *a0)\n
+", "4200736:cgc_parseResultSize": "long long cgc_parseResultSize(unsigned long a0)\n
 {\n
     char v0;  // [sp-0xa1]\n
     unsigned int v1;  // [sp-0xa0]\n
     unsigned int v2;  // [sp-0x9c]\n
-    char *v3;  // [sp-0x98]\n
+    unsigned long v3;  // [sp-0x98]\n
     unsigned int v4;  // [sp-0x90]\n
     unsigned int v5;  // [sp-0x8c]\n
     char v6;  // [bp-0x88]\n
     char v7;  // [bp-0x48]\n
-    void* v8;  // [sp-0x28], Other Possible Types: char *\n
-    void* v9;  // [sp-0x20], Other Possible Types: char *\n
+    unsigned long v8;  // [sp-0x28]\n
+    unsigned long v9;  // [sp-0x20]\n
     unsigned int v10;  // [sp-0xc]\n
-    char *v12;  // rdi\n
+    unsigned long v12;  // rdi\n
 \n
     v9 = 0;\n
     v8 = 0;\n
