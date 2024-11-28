@@ -171,7 +171,7 @@ long long __do_global_dtors_aux()\n
             v4 = v2;\n
             return v4;\n
         }\n
-        if (v0)\n
+        else if (v0)\n
         {\n
             v1 -= v0;\n
         }\n
@@ -715,17 +715,17 @@ LABEL_401d11:\n
                     v3 = 6;\n
                     *((vvar_219{reg 48} - 8)) = &g_401e0e;\n
                     v12 = cgc_canonicalize_path(&v3, v1, v6);\n
-                    if (v12)\n
-                    {\n
-                        v2 = 2;\n
-                        v13 = v13;\n
-                    }\n
-                    else\n
+                    if (!v12)\n
                     {\n
                         v13 += 1;\n
                         *((vvar_219{reg 48} - 16)) = &g_401e44;\n
                         v12 = cgc_request_document(&v3, v13 + 1);\n
                         v2 = (0 == v12 ? 2 : 0);\n
+                        v13 = v13;\n
+                    }\n
+                    else\n
+                    {\n
+                        v2 = 2;\n
                         v13 = v13;\n
                     }\n
                     vvar_19{reg 48} = v5;\n
