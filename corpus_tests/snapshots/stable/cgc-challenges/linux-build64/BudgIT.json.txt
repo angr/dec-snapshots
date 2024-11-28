@@ -391,7 +391,7 @@ long long cgc_recvline(unsigned int a0, struct_0 *a1, unsigned long a2)\n
 ", "4204064:cgc_strncpy": "long long cgc_strncpy(char *a0, char *a1, unsigned long a2)\n
 {\n
     char v0;  // [sp-0x29]\n
-    char *v1;  // [sp-0x28]\n
+    char *v1;  // [sp-0x28], Other Possible Types: unsigned long long\n
     char *v2;  // [sp-0x18]\n
     unsigned long long v4;  // 4105\n
     char *v5;  // rax\n
@@ -413,7 +413,7 @@ long long cgc_recvline(unsigned int a0, struct_0 *a1, unsigned long a2)\n
     v5 = v1;\n
     v1 = v5 + 1;\n
     *(v5) = 0;\n
-    return v1 - a0 - 1;\n
+    return -1 + v1 - a0;\n
 }\n
 ", "4204222:sub_4026be": "int sub_4026be()\n
 {\n
@@ -1105,12 +1105,15 @@ long long cgc___stack_cookie_fail()\n
             v1 = a1;\n
             return v1;\n
         }\n
-        if (!*((a0 + v0)))\n
+        else if (*((a0 + v0)))\n
+        {\n
+            v0 += 1;\n
+        }\n
+        else\n
         {\n
             v1 = v0;\n
             return v1;\n
         }\n
-        v0 += 1;\n
     }\n
 }\n
 ", "4207603:sub_4033f3": "int sub_4033f3()\n
