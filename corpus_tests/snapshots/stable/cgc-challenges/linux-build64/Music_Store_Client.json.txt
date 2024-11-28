@@ -586,18 +586,18 @@ long long cgc_recvline(unsigned int a0, struct_0 *a1, unsigned long a2)\n
     cgc_parseSearchResult();\n
     return;\n
 }\n
-", "4201552:cgc_parseSearchResult": "long long cgc_parseSearchResult(char *a0, char *a1)\n
+", "4201552:cgc_parseSearchResult": "long long cgc_parseSearchResult(unsigned long a0, unsigned long a1)\n
 {\n
     char v0;  // [sp-0x5d]\n
     unsigned int v1;  // [sp-0x5c]\n
-    char *v2;  // [sp-0x58]\n
+    unsigned long v2;  // [sp-0x58]\n
     unsigned int v3;  // [sp-0x50]\n
     unsigned int v4;  // [sp-0x4c]\n
     char v5;  // [bp-0x48]\n
-    void* v6;  // [sp-0x30], Other Possible Types: char *\n
-    void* v7;  // [sp-0x28], Other Possible Types: char *\n
+    unsigned long v6;  // [sp-0x30]\n
+    unsigned long v7;  // [sp-0x28]\n
     unsigned int v8;  // [sp-0xc]\n
-    char *v10;  // rdi\n
+    unsigned long v10;  // rdi\n
 \n
     v7 = 0;\n
     v6 = 0;\n
