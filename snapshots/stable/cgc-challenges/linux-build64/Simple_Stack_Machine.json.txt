@@ -2,7 +2,7 @@
 \n
 long long _init()\n
 {\n
-    struct struct_0 **v1;  // rax, Other Possible Types: unsigned long\n
+    struct struct_0 **v1;  // rax\n
 \n
     v1 = g_4033b8;\n
     if (g_4033b8)\n
@@ -13,12 +13,17 @@ long long _init()\n
 \n
 long long sub_401020()\n
 {\n
-    unsigned long v0;  // [bp-0x8]\n
+    unsigned long long v0;  // [sp-0x8]\n
 \n
     v0 = g_4033d8;\n
     goto *(4207584);\n
 }\n
-", "4198444:sub_40102c": null, "4198448:cgc__terminate": "// attributes: PLT stub\n
+", "4198444:sub_40102c": "int sub_40102c()\n
+{\n
+    cgc__terminate();\n
+    return;\n
+}\n
+", "4198448:cgc__terminate": "// attributes: PLT stub\n
 int cgc__terminate()\n
 {\n
     ::libc.so.0::cgc__terminate();\n
@@ -55,39 +60,56 @@ char * __cxa_finalize()\n
 }\n
 ", "4198544:_start": "long long _start()\n
 {\n
-    char v0;  // [bp+0x0], Other Possible Types: unsigned long\n
+    unsigned long long v0;  // [sp+0x0]\n
     unsigned long v1;  // [bp+0x8]\n
-    unsigned long long v2;  // rsi\n
-    unsigned long v3;  // rax\n
-    unsigned long long v4;  // rdx\n
+    unsigned long v2;  // rax\n
+    unsigned long long v3;  // rdx\n
 \n
-    v2 = *(&v0);\n
-    v0 = v3;\n
-    __libc_start_main(main, v2, &v1, 0, 0, v4); /* do not return */\n
+    v0 = v2;\n
+    __libc_start_main(main, v0, &v1, 0, 0, v3); /* do not return */\n
 }\n
-", "4198581:sub_4010b5": null, "4198582:sub_4010b6": null, "4198592:deregister_tm_clones": "extern unsigned long long g_4033b0;\n
+", "4198581:sub_4010b5": "long long sub_4010b5()\n
+{\n
+    [D] Unsupported jumpkind Ijk_SigTRAP at address 4198581()\n
+}\n
+", "4198582:sub_4010b6": "int sub_4010b6()\n
+{\n
+    deregister_tm_clones();\n
+    return;\n
+}\n
+", "4198592:deregister_tm_clones": "extern unsigned long long g_4033b0;\n
 \n
 long long deregister_tm_clones()\n
 {\n
     return 4209608;\n
 }\n
-", "4198633:sub_4010e9": null, "4198640:register_tm_clones": "extern unsigned long long g_4033c0;\n
+", "4198633:sub_4010e9": "int sub_4010e9()\n
+{\n
+    register_tm_clones();\n
+    return;\n
+}\n
+", "4198640:register_tm_clones": "extern unsigned long long g_4033c0;\n
 \n
 long long register_tm_clones()\n
 {\n
     return 0;\n
 }\n
-", "4198697:sub_401129": null, "4198704:__do_global_dtors_aux": "extern char __bss_start;\n
+", "4198697:sub_401129": "int sub_401129()\n
+{\n
+    __do_global_dtors_aux();\n
+    return;\n
+}\n
+", "4198704:__do_global_dtors_aux": "extern char __bss_start;\n
 extern unsigned long long g_4033c8;\n
 \n
 long long __do_global_dtors_aux()\n
 {\n
-    unsigned long v0;  // [bp-0x8]\n
-    unsigned long v2;  // rax\n
+    unsigned long v0;  // [sp-0x8]\n
+    unsigned long v3;  // rax\n
 \n
     if (__bss_start)\n
-        return v2;\n
-    *(&v0) = rbp<8>;\n
+        return v3;\n
+    *(&v0) = vvar_7{reg 56};\n
     if (!g_4033c8)\n
     {\n
         __bss_start = 1;\n
@@ -95,18 +117,29 @@ long long __do_global_dtors_aux()\n
     }\n
     __cxa_finalize();\n
 }\n
-", "4198757:sub_401165": null, "4198761:sub_401169": null, "4198768:frame_dummy": "long long frame_dummy()\n
+", "4198757:sub_401165": "int sub_401165()\n
+{\n
+}\n
+", "4198761:sub_401169": "int sub_401169()\n
+{\n
+    frame_dummy();\n
+    return;\n
+}\n
+", "4198768:frame_dummy": "long long frame_dummy()\n
 {\n
     return register_tm_clones();\n
 }\n
-", "4198777:sub_401179": null, "4198784:cgc_transmit_all": "long long cgc_transmit_all(unsigned long long a0, unsigned long long a1)\n
+", "4198777:sub_401179": "int sub_401179()\n
 {\n
-    unsigned int v0;  // [bp-0x34]\n
-    void* v1;  // [bp-0x30], Other Possible Types: unsigned long\n
-    void* v2;  // [bp-0x28]\n
-    void* v3;  // [bp-0x10], Other Possible Types: unsigned long\n
-    unsigned long long v5;  // rdx\n
-    unsigned long long v6;  // rcx\n
+    cgc_transmit_all();\n
+    return;\n
+}\n
+", "4198784:cgc_transmit_all": "long long cgc_transmit_all(unsigned long long a0, unsigned long a1)\n
+{\n
+    unsigned int v0;  // [sp-0x34]\n
+    void* v1;  // [sp-0x30]\n
+    void* v2;  // [sp-0x28]\n
+    void* v3;  // [sp-0x10]\n
 \n
     v2 = 0;\n
     v1 = 0;\n
@@ -118,44 +151,44 @@ long long __do_global_dtors_aux()\n
     }\n
     do\n
     {\n
-        v0 = cgc_transmit(a0, a1, v5, v6);\n
+        v0 = cgc_transmit(1, a0, a1 - v1, &v2);\n
         if (!v0 && !(!v2))\n
             continue;\n
-        cgc__terminate(a0);\n
+        cgc__terminate(1);\n
         v1 = v2 + v1;\n
     } while (v1 < a1);\n
     v3 = a1;\n
     return v3;\n
 }\n
-", "4198956:sub_40122c": null, "4198960:main": "extern unsigned long long gHelpMsg;\n
-\n
-int main(unsigned long long a0, unsigned long long a1)\n
+", "4198956:sub_40122c": "int sub_40122c()\n
 {\n
-    unsigned long v0;  // [bp-0x78]\n
-    char v1;  // [bp-0x6d]\n
-    unsigned int v2;  // [bp-0x6c]\n
-    unsigned int v3;  // [bp-0x68]\n
-    unsigned int v4;  // [bp-0x64]\n
-    void* v5;  // [bp-0x60]\n
-    void* v6;  // [bp-0x58]\n
-    unsigned int *v7;  // [bp-0x50]\n
-    unsigned int *v8;  // [bp-0x48]\n
-    unsigned int v9;  // [bp-0x40]\n
-    unsigned int v10;  // [bp-0x3c]\n
-    unsigned int v11;  // [bp-0x38]\n
-    unsigned int v12;  // [bp-0x34]\n
-    void* v13;  // [bp-0x30], Other Possible Types: unsigned long\n
-    void* v14;  // [bp-0x28]\n
-    unsigned int v15;  // [bp-0x1c]\n
-    unsigned long v16;  // [bp-0x18]\n
-    unsigned int v17;  // [bp-0x10]\n
-    unsigned int v18;  // [bp-0xc]\n
-    unsigned long long v20;  // rdx\n
-    unsigned long long v21;  // rcx\n
-    unsigned int *v22;  // rax\n
-    unsigned long v23;  // rcx\n
-    unsigned int *v24;  // rax\n
-    unsigned long v25;  // rcx\n
+    main();\n
+    return;\n
+}\n
+", "4198960:main": "extern unsigned long long gHelpMsg;\n
+\n
+int main(unsigned int a0, unsigned long a1)\n
+{\n
+    unsigned long v0;  // [sp-0x78]\n
+    char v1;  // [sp-0x6d]\n
+    unsigned int v2;  // [sp-0x6c]\n
+    unsigned int v3;  // [sp-0x68]\n
+    unsigned int v4;  // [sp-0x64]\n
+    void* v5;  // [sp-0x60]\n
+    void* v6;  // [sp-0x58]\n
+    void* v7;  // [sp-0x50], Other Possible Types: unsigned int *\n
+    void* v8;  // [sp-0x48], Other Possible Types: unsigned int *\n
+    unsigned int v9;  // [sp-0x40]\n
+    unsigned int v10;  // [sp-0x3c]\n
+    unsigned int v11;  // [sp-0x38]\n
+    unsigned int v12;  // [sp-0x34]\n
+    void* v13;  // [sp-0x30]\n
+    void* v14;  // [sp-0x28]\n
+    unsigned int v15;  // [sp-0x1c]\n
+    unsigned long long v16;  // [sp-0x18]\n
+    unsigned int v17;  // [sp-0x10]\n
+    unsigned int v18;  // [sp-0xc]\n
+    unsigned int v20;  // 4101\n
 \n
     v18 = 0;\n
     v17 = a0;\n
@@ -171,18 +204,18 @@ int main(unsigned long long a0, unsigned long long a1)\n
     v7 = 0;\n
     v6 = 0;\n
     v5 = 0;\n
-    cgc_allocate(a0, a1, v20);\n
-    cgc_allocate(a0, a1, v20);\n
-    cgc_allocate(a0, a1, v20);\n
-    cgc_allocate(a0, a1, v20);\n
-    cgc_deallocate(a0, a1);\n
-    cgc_deallocate(a0, a1);\n
+    cgc_allocate(0x1000, 0, &v6);\n
+    cgc_allocate(0x1000, 0, &v7);\n
+    cgc_allocate(0x1000, 0, &v5);\n
+    cgc_allocate(0x2000, 0, &v8);\n
+    cgc_deallocate(v6, 0x1000);\n
+    cgc_deallocate(v5, 0x1000);\n
     do\n
     {\n
         v13 = 0;\n
         do\n
         {\n
-            v9 = cgc_receive(a0, a1, v20, v21);\n
+            v9 = cgc_receive(0, &v15 + v13, 4 - v13, &v14);\n
             if (!v9 && !(!v14))\n
                 continue;\n
             if (!v11)\n
@@ -236,7 +269,7 @@ If y-1 is not zero, then we will jump back up to where PUSHPC is and execute tha
 will now be SUM+x and y is now y-1\\n
 If y-1 is zero, then we will jump to the instruction after the second JMPZ (which is the first POP)\\n
 \", 1956);\n
-            cgc__terminate(a0);\n
+            cgc__terminate(4294967295);\n
             v13 = v14 + v13;\n
         } while (v13 < 4);\n
         v8[v11] = v15;\n
@@ -245,15 +278,15 @@ If y-1 is zero, then we will jump to the instruction after the second JMPZ (whic
         {\n
             cgc_transmit_all(\"INSNS OVERFLOW EXCEPTION\\n
 \", 26);\n
-            cgc__terminate(\"INSNS OVERFLOW EXCEPTION\\n
-\");\n
+            cgc__terminate(4294967295);\n
         }\n
     } while (v15 != -1);\n
     v10 = 0;\n
     while (true)\n
     {\n
+        v20 = v11;\n
         v1 = 0;\n
-        if (v10 < v11)\n
+        if (v10 < v20)\n
             v1 = v8[v10] != -1;\n
         if (!(v1 & 1))\n
             break;\n
@@ -272,8 +305,7 @@ If y-1 is zero, then we will jump to the instruction after the second JMPZ (whic
             {\n
                 cgc_transmit_all(\"STACK UNDERFLOW EXCEPTION\\n
 \", 27);\n
-                cgc__terminate(\"STACK UNDERFLOW EXCEPTION\\n
-\");\n
+                cgc__terminate(4294967295);\n
             }\n
             v12 -= 1;\n
             goto LABEL_401717;\n
@@ -283,8 +315,7 @@ If y-1 is zero, then we will jump to the instruction after the second JMPZ (whic
             {\n
                 cgc_transmit_all(\"STACK OVERFLOW EXCEPTION\\n
 \", 26);\n
-                cgc__terminate(\"STACK OVERFLOW EXCEPTION\\n
-\");\n
+                cgc__terminate(4294967295);\n
             }\n
             v7[v12] = v10;\n
             goto LABEL_401717;\n
@@ -293,8 +324,7 @@ If y-1 is zero, then we will jump to the instruction after the second JMPZ (whic
             {\n
                 cgc_transmit_all(\"STACK UNDERFLOW EXCEPTION\\n
 \", 27);\n
-                cgc__terminate(\"STACK UNDERFLOW EXCEPTION\\n
-\");\n
+                cgc__terminate(4294967295);\n
             }\n
             if (v7[v12])\n
             {\n
@@ -306,8 +336,7 @@ If y-1 is zero, then we will jump to the instruction after the second JMPZ (whic
                 goto LABEL_40154a;\n
             cgc_transmit_all(\"INVALID PROGRAM COUNTER EXCEPTION\\n
 \", 35);\n
-            cgc__terminate(\"INVALID PROGRAM COUNTER EXCEPTION\\n
-\");\n
+            cgc__terminate(4294967295);\n
 LABEL_40154a:\n
             v10 -= 1;\n
             break;\n
@@ -316,8 +345,7 @@ LABEL_40154a:\n
             {\n
                 cgc_transmit_all(\"STACK UNDERFLOW EXCEPTION\\n
 \", 27);\n
-                cgc__terminate(\"STACK UNDERFLOW EXCEPTION\\n
-\");\n
+                cgc__terminate(4294967295);\n
             }\n
             v4 = v7[v12];\n
             v3 = v12 - (v15 >> 3);\n
@@ -325,8 +353,7 @@ LABEL_40154a:\n
                 goto LABEL_4015d3;\n
             cgc_transmit_all(\"STACK UNDERFLOW EXCEPTION\\n
 \", 27);\n
-            cgc__terminate(\"STACK UNDERFLOW EXCEPTION\\n
-\");\n
+            cgc__terminate(4294967295);\n
 LABEL_4015d3:\n
             v7[v12] = v7[v3];\n
             v7[v3] = v4;\n
@@ -338,8 +365,7 @@ LABEL_4015d3:\n
                 goto LABEL_401647;\n
             cgc_transmit_all(\"STACK UNDERFLOW EXCEPTION\\n
 \", 27);\n
-            cgc__terminate(\"STACK UNDERFLOW EXCEPTION\\n
-\");\n
+            cgc__terminate(4294967295);\n
 LABEL_401647:\n
             v7[v12] = v7[1 + v12 + -1 * (v15 >> 3)];\n
             goto LABEL_401717;\n
@@ -348,12 +374,9 @@ LABEL_401647:\n
             {\n
                 cgc_transmit_all(\"STACK UNDERFLOW EXCEPTION\\n
 \", 27);\n
-                cgc__terminate(\"STACK UNDERFLOW EXCEPTION\\n
-\");\n
+                cgc__terminate(4294967295);\n
             }\n
-            v22 = v7;\n
-            v23 = v12 - 1;\n
-            v22[v23] = v7[v12] + v22[v23];\n
+            v7[1 + v12] = v7[v12] + v7[1 + v12];\n
             v12 -= 1;\n
             goto LABEL_401717;\n
         case 7:\n
@@ -361,12 +384,9 @@ LABEL_401647:\n
             {\n
                 cgc_transmit_all(\"STACK UNDERFLOW EXCEPTION\\n
 \", 27);\n
-                cgc__terminate(\"STACK UNDERFLOW EXCEPTION\\n
-\");\n
+                cgc__terminate(4294967295);\n
             }\n
-            v24 = v7;\n
-            v25 = v12 - 1;\n
-            v24[v25] = v24[v25] - v7[v12];\n
+            v7[1 + v12] = v7[1 + v12] - v7[v12];\n
             v12 -= 1;\n
             goto LABEL_401717;\n
         default:\n
@@ -379,8 +399,7 @@ LABEL_401717:\n
     {\n
         cgc_transmit_all(\"STACK UNDERFLOW EXCEPTION\\n
 \", 27);\n
-        cgc__terminate(\"STACK UNDERFLOW EXCEPTION\\n
-\");\n
+        cgc__terminate(4294967295);\n
     }\n
     cgc_transmit_all(&v7[v12], 4);\n
     return 0;\n
