@@ -2,7 +2,7 @@
 \n
 long long _init()\n
 {\n
-    struct struct_0 **v1;  // rax, Other Possible Types: unsigned long\n
+    struct struct_0 **v1;  // rax\n
 \n
     v1 = g_403408;\n
     if (g_403408)\n
@@ -13,12 +13,17 @@ long long _init()\n
 \n
 long long sub_401020()\n
 {\n
-    unsigned long v0;  // [bp-0x8]\n
+    unsigned long long v0;  // [sp-0x8]\n
 \n
     v0 = g_403428;\n
     goto *(4207664);\n
 }\n
-", "4198444:sub_40102c": null, "4198448:cgc__terminate": "// attributes: PLT stub\n
+", "4198444:sub_40102c": "int sub_40102c()\n
+{\n
+    cgc__terminate();\n
+    return;\n
+}\n
+", "4198448:cgc__terminate": "// attributes: PLT stub\n
 int cgc__terminate()\n
 {\n
     ::libc.so.0::cgc__terminate();\n
@@ -43,40 +48,57 @@ char * __cxa_finalize()\n
 }\n
 ", "4198512:_start": "long long _start()\n
 {\n
-    unsigned long v0;  // [bp+0x0], Other Possible Types: char\n
+    unsigned long long v0;  // [sp+0x0]\n
     unsigned long v1;  // [bp+0x8]\n
-    unsigned long long v2;  // rsi\n
-    unsigned long v3;  // rax\n
-    unsigned long long v4;  // rdx\n
+    unsigned long v2;  // rax\n
+    unsigned long long v3;  // rdx\n
 \n
-    v2 = *(&v0);\n
-    v0 = v3;\n
-    __libc_start_main(main, v2, &v1, 0, 0, v4); /* do not return */\n
+    v0 = v2;\n
+    __libc_start_main(main, v0, &v1, 0, 0, v3); /* do not return */\n
 }\n
-", "4198549:sub_401095": null, "4198550:sub_401096": null, "4198560:deregister_tm_clones": "extern char __bss_start;\n
+", "4198549:sub_401095": "long long sub_401095()\n
+{\n
+    [D] Unsupported jumpkind Ijk_SigTRAP at address 4198549()\n
+}\n
+", "4198550:sub_401096": "int sub_401096()\n
+{\n
+    deregister_tm_clones();\n
+    return;\n
+}\n
+", "4198560:deregister_tm_clones": "extern char __bss_start;\n
 extern unsigned long long g_403400;\n
 \n
 long long deregister_tm_clones()\n
 {\n
     return &__bss_start;\n
 }\n
-", "4198601:sub_4010c9": null, "4198608:register_tm_clones": "extern unsigned long long g_403410;\n
+", "4198601:sub_4010c9": "int sub_4010c9()\n
+{\n
+    register_tm_clones();\n
+    return;\n
+}\n
+", "4198608:register_tm_clones": "extern unsigned long long g_403410;\n
 \n
 long long register_tm_clones()\n
 {\n
     return 0;\n
 }\n
-", "4198665:sub_401109": null, "4198672:__do_global_dtors_aux": "extern char __bss_start;\n
+", "4198665:sub_401109": "int sub_401109()\n
+{\n
+    __do_global_dtors_aux();\n
+    return;\n
+}\n
+", "4198672:__do_global_dtors_aux": "extern char __bss_start;\n
 extern unsigned long long g_403418;\n
 \n
 long long __do_global_dtors_aux()\n
 {\n
-    unsigned long v0;  // [bp-0x8]\n
-    unsigned long v2;  // rax\n
+    unsigned long v0;  // [sp-0x8]\n
+    unsigned long v3;  // rax\n
 \n
     if (__bss_start)\n
-        return v2;\n
-    *(&v0) = rbp<8>;\n
+        return v3;\n
+    *(&v0) = vvar_7{reg 56};\n
     if (!g_403418)\n
     {\n
         __bss_start = 1;\n
@@ -84,104 +106,114 @@ long long __do_global_dtors_aux()\n
     }\n
     __cxa_finalize();\n
 }\n
-", "4198725:sub_401145": null, "4198729:sub_401149": null, "4198736:frame_dummy": "long long frame_dummy()\n
+", "4198725:sub_401145": "int sub_401145()\n
+{\n
+}\n
+", "4198729:sub_401149": "int sub_401149()\n
+{\n
+    frame_dummy();\n
+    return;\n
+}\n
+", "4198736:frame_dummy": "long long frame_dummy()\n
 {\n
     return register_tm_clones();\n
 }\n
-", "4198745:sub_401159": null, "4198752:cgc_transmit_all": "long long cgc_transmit_all(unsigned long long a0, unsigned long long a1, unsigned long long a2)\n
+", "4198745:sub_401159": "int sub_401159()\n
 {\n
-    unsigned int v0;  // [bp-0x34]\n
-    void* v1;  // [bp-0x30]\n
-    void* v2;  // [bp-0x28], Other Possible Types: unsigned long\n
-    unsigned int v3;  // [bp-0x10]\n
-    unsigned int v4;  // [bp-0xc]\n
-    unsigned long long v6;  // rcx\n
+    cgc_transmit_all();\n
+    return;\n
+}\n
+", "4198752:cgc_transmit_all": "long long cgc_transmit_all(unsigned int a0, unsigned long a1, unsigned long a2)\n
+{\n
+    unsigned int v0;  // [sp-0x34]\n
+    void* v1;  // [sp-0x30]\n
+    void* v2;  // [sp-0x28]\n
+    unsigned int v3;  // [sp-0xc]\n
 \n
-    v3 = a0;\n
     v2 = 0;\n
     v1 = 0;\n
     if (!a1)\n
     {\n
-        v4 = 1;\n
-        return v4;\n
+        v3 = 1;\n
+        return v3;\n
     }\n
     if (!a2)\n
     {\n
-        v4 = 2;\n
-        return v4;\n
+        v3 = 2;\n
+        return v3;\n
     }\n
     while (true)\n
     {\n
-        if (v2 < a2)\n
+        if (v2 >= a2)\n
         {\n
-            v0 = cgc_transmit(a0, a1, a2, v6);\n
-            if (!v1)\n
-            {\n
-                v4 = 3;\n
-                return v4;\n
-            }\n
-            if (v0)\n
-            {\n
-                v4 = 3;\n
-                return v4;\n
-            }\n
-            v2 = v1 + v2;\n
+            v3 = 0;\n
+            return v3;\n
         }\n
-        else\n
+        v0 = cgc_transmit(a0, a1 + v2, a2 - v2, &v1);\n
+        if (!v1)\n
         {\n
-            v4 = 0;\n
-            return v4;\n
+            v3 = 3;\n
+            return v3;\n
         }\n
+        if (v0)\n
+        {\n
+            v3 = 3;\n
+            return v3;\n
+        }\n
+        v2 = v1 + v2;\n
     }\n
 }\n
-", "4198961:sub_401231": null, "4198976:cgc_receive_delim": "long long cgc_receive_delim(unsigned long long a0, unsigned long a1, unsigned long long a2, unsigned long long a3)\n
+", "4198961:sub_401231": "int sub_401231()\n
 {\n
-    unsigned int v0;  // [bp-0x3c]\n
-    void* v1;  // [bp-0x38]\n
-    char *v2;  // [bp-0x30], Other Possible Types: unsigned long\n
-    unsigned int v3;  // [bp-0x10]\n
-    unsigned int v4;  // [bp-0xc]\n
+    cgc_receive_delim();\n
+    return;\n
+}\n
+", "4198976:cgc_receive_delim": "long long cgc_receive_delim(unsigned int a0, char *a1, unsigned long a2, char a3)\n
+{\n
+    unsigned int v0;  // [sp-0x3c]\n
+    void* v1;  // [sp-0x38]\n
+    char *v2;  // [sp-0x30]\n
+    unsigned int v3;  // [sp-0xc]\n
 \n
-    v3 = a0;\n
     v2 = 0;\n
     if (!a1)\n
     {\n
-        v4 = 1;\n
-        return v4;\n
+        v3 = 1;\n
+        return v3;\n
     }\n
     else if (a2)\n
     {\n
         for (v1 = 0; v2 < a2; v2 = v1 + v2)\n
         {\n
-            v0 = cgc_receive(a0, a1, a2, a3);\n
+            v0 = cgc_receive(a0, a1 + v2, 1, &v1);\n
             if (!v1)\n
             {\n
-                v4 = 3;\n
-                return v4;\n
+                v3 = 3;\n
+                return v3;\n
             }\n
             if (v0)\n
             {\n
-                v4 = 3;\n
-                return v4;\n
+                v3 = 3;\n
+                return v3;\n
             }\n
-            if (v2[a1] == a3)\n
+            if (*((a1 + v2)) == a3)\n
                 break;\n
         }\n
-        v4 = 0;\n
-        return v4;\n
+        v3 = 0;\n
+        return v3;\n
     }\n
     else\n
     {\n
-        v4 = 2;\n
-        return v4;\n
+        v3 = 2;\n
+        return v3;\n
     }\n
 }\n
-", "4199216:main": "int main(unsigned long a0, unsigned long a1)\n
+", "4199216:main": "int main(unsigned int a0, unsigned long a1)\n
 {\n
-    unsigned int v0;  // [bp-0x1c]\n
-    unsigned long v1;  // [bp-0x18]\n
-    unsigned int v2;  // [bp-0x10]\n
-    unsigned int v3;  // [bp-0xc]\n
+    unsigned int v0;  // [sp-0x1c]\n
+    unsigned long long v1;  // [sp-0x18]\n
+    unsigned int v2;  // [sp-0x10]\n
+    unsigned int v3;  // [sp-0xc]\n
 \n
     v3 = 0;\n
     v2 = a0;\n
@@ -190,81 +222,69 @@ long long __do_global_dtors_aux()\n
 Welcome to Palindrome Finder\\n
 \\n
 \", 31))\n
-        cgc__terminate(1);\n
+        cgc__terminate(0);\n
     while (true)\n
     {\n
         if (cgc_transmit_all(1, \"\\tPlease enter a possible palindrome: \", 37))\n
-            cgc__terminate(1);\n
+            cgc__terminate(0);\n
         v0 = cgc_check();\n
         if (v0 == -1)\n
             break;\n
-        if (!v0)\n
-        {\n
-            if (cgc_transmit_all(1, \"\\t\\tNope, that's not a palindrome\\n
-\\n
-\", 33))\n
-                cgc__terminate(1);\n
-        }\n
-        else\n
+        if (v0)\n
         {\n
             if (cgc_transmit_all(1, \"\\t\\tYes, that's a palindrome!\\n
 \\n
 \", 29))\n
-                cgc__terminate(1);\n
+                cgc__terminate(0);\n
+        }\n
+        else\n
+        {\n
+            if (cgc_transmit_all(1, \"\\t\\tNope, that's not a palindrome\\n
+\\n
+\", 33))\n
+                cgc__terminate(0);\n
         }\n
     }\n
     return 0;\n
 }\n
-", "4199456:cgc_check": "long long cgc_check()\n
+", "4199456:cgc_check": "int main(unsigned int a0, unsigned long a1)\n
 {\n
-    unsigned int v0;  // [bp-0x60]\n
-    unsigned int v1;  // [bp-0x5c]\n
-    char v2;  // [bp-0x58]\n
-    unsigned int v3;  // [bp-0x18]\n
-    unsigned int v4;  // [bp-0x14]\n
-    unsigned int v5;  // [bp-0x10]\n
-    unsigned int v6;  // [bp-0xc]\n
-    unsigned int v8;  // eax\n
-    unsigned int v10;  // eax\n
+    unsigned int v0;  // [sp-0x1c]\n
+    unsigned long long v1;  // [sp-0x18]\n
+    unsigned int v2;  // [sp-0x10]\n
+    unsigned int v3;  // [sp-0xc]\n
 \n
-    v5 = -1;\n
-    v3 = 1;\n
-    for (v4 = 0; v4 < 64; v4 += 1)\n
-    {\n
-        (&v2)[v4] = 0;\n
-    }\n
-    if (cgc_receive_delim(0, &v2, 128, 10))\n
-    {\n
-        v6 = -1;\n
-        return v6;\n
-    }\n
-    for (v4 = 0; (&v2)[v4]; v4 += 1)\n
-    {\n
-        v5 += 1;\n
-    }\n
-    v1 = v5;\n
-    v8 = v5;\n
-    if ((v8 >> 31 CONCAT v8) /m 2 >> 32 == 1)\n
-        v1 -= 1;\n
-    v4 = 0;\n
+    v3 = 0;\n
+    v2 = a0;\n
+    v1 = a1;\n
+    if (cgc_transmit_all(1, \"\\n
+Welcome to Palindrome Finder\\n
+\\n
+\", 31))\n
+        cgc__terminate(0);\n
     while (true)\n
     {\n
-        v0 = v4;\n
-        v10 = v1;\n
-        if (v0 > (v10 >> 31 CONCAT v10) /m 2)\n
+        if (cgc_transmit_all(1, \"\\tPlease enter a possible palindrome: \", 37))\n
+            cgc__terminate(0);\n
+        v0 = cgc_check();\n
+        if (v0 == -1)\n
             break;\n
-        if ((&v2)[v4] != (&v2)[1 + v5 + -1 * v4])\n
-            v3 = 0;\n
-        v4 += 1;\n
+        if (v0)\n
+        {\n
+            if (cgc_transmit_all(1, \"\\t\\tYes, that's a palindrome!\\n
+\\n
+\", 29))\n
+                cgc__terminate(0);\n
+        }\n
+        else\n
+        {\n
+            if (cgc_transmit_all(1, \"\\t\\tNope, that's not a palindrome\\n
+\\n
+\", 33))\n
+                cgc__terminate(0);\n
+        }\n
     }\n
-    if (v2 == 94 && cgc_transmit_all(1, \"\\n
-\\n
-EASTER EGG!\\n
-\\n
-\", 15))\n
-        cgc__terminate(1);\n
-    v6 = v3;\n
-    return v6;\n
+    return 0;\n
 }\n
 ", "4199816:_fini": "long long _fini()\n
 {\n
