@@ -1,0 +1,11 @@
+void cgc_promptc(unsigned long long a0, unsigned short a1, unsigned long long a2)
+{
+    if (cgc_sendall(1, a2, cgc_strlen(a2)) < 0)
+        cgc__terminate(3);
+    if (cgc_recvline(0, a0, a1) >= 0)
+        return;
+    if (cgc_sendline(1, "You didn't say the magic word.", 30) < 0)
+        cgc__terminate(6);
+    cgc__terminate(2);
+    return;
+}

@@ -1,0 +1,17 @@
+int main(unsigned int a0, unsigned long long a1)
+{
+    char v0[15];  // [bp-0x38]
+    char v1;  // [bp-0x29]
+    unsigned int v2;  // [bp-0x1c]
+    unsigned long long v3;  // [bp-0x18]
+    unsigned int v4;  // [bp-0x10]
+    unsigned int v5;  // [bp-0xc]
+
+    v5 = 0;
+    v4 = a0;
+    v3 = a1;
+    v2 = 0;
+    cgc_random_alpha_lower(&v0, 16);
+    v1 = 6;
+    return cgc_request_document(&v0, 0);
+}

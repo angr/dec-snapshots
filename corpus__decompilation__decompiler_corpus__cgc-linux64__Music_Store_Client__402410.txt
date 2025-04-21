@@ -1,0 +1,7 @@
+long long cgc_createRandomRequest(unsigned long a0)
+{
+    cgc_memset(a0, 0, 104);
+    cgc_getRandomTerm(a0);
+    cgc_getRandomAttribute(a0);
+    return cgc_memcpy(a0 + 100, "10", 3);
+}

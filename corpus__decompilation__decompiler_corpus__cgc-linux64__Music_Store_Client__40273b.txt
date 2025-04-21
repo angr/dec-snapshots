@@ -1,0 +1,5 @@
+void sub_40273b()
+{
+    cgc_getBalance();
+    return;
+}

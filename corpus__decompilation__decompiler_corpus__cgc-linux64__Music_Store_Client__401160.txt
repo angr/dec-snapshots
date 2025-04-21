@@ -1,0 +1,19 @@
+extern char __bss_start;
+extern unsigned long long __dso_handle;
+extern unsigned long long g_404800;
+
+long long __do_global_dtors_aux()
+{
+    unsigned long v0;  // [bp-0x8]
+    unsigned long v3;  // rax
+    unsigned long long v4;  // rax
+
+    if (__bss_start)
+        return v3;
+    *(&v0) = vvar_8{reg 56};
+    if (g_404800)
+        __cxa_finalize(__dso_handle);
+    v4 = deregister_tm_clones();
+    __bss_start = 1;
+    return v4;
+}

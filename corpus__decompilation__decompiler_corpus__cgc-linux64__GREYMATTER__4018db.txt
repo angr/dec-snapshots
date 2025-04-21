@@ -1,0 +1,5 @@
+void sub_4018db()
+{
+    cgc_random_alpha_lower();
+    return;
+}

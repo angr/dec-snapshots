@@ -1,0 +1,5 @@
+void sub_40184f()
+{
+    cgc_strcmp();
+    return;
+}

@@ -1,0 +1,28 @@
+typedef struct struct_0 {
+    char padding_0[8];
+    struct struct_0 *field_8;
+    unsigned int field_10;
+} struct_0;
+
+extern struct_0 *cgc_allocated;
+extern struct_0 *cgc_freed;
+
+long long cgc_checkheap()
+{
+    struct_0 *v0;  // [bp-0x18]
+    struct_0 *v1;  // [bp-0x10]
+
+    for (v1 = cgc_freed; v1->field_8 != cgc_freed; v1 = v1->field_8)
+    {
+        for (v0 = cgc_allocated; v0->field_8 != cgc_allocated; v0 = v0->field_8)
+        {
+            if (v1 < &v0->padding_0[v0->field_10] && v0 < &v1->padding_0[v1->field_10])
+            {
+                if (cgc_sendline(1, "corrupt", 7) < 0)
+                    cgc__terminate(6);
+                cgc__terminate(283);
+            }
+        }
+    }
+    return v1->field_8;
+}

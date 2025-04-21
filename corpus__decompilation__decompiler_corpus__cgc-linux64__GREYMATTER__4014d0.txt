@@ -1,0 +1,9 @@
+long long cgc_strncat(unsigned long long a0, char *a1, char *a2)
+{
+    char *v0;  // [bp-0x28]
+
+    v0 = a0 + cgc_strlen(a0);
+    cgc_strncpy(v0, a1, a2);
+    *((v0 + a2)) = 6;
+    return a1;
+}

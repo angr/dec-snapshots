@@ -1,0 +1,5 @@
+void sub_401275()
+{
+    cgc_transmit_all();
+    return;
+}

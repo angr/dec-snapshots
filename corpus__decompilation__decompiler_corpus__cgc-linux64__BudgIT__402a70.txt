@@ -1,0 +1,34 @@
+long long cgc_str2uint(char *a0)
+{
+    unsigned int v0;  // [bp-0x24]
+    unsigned int v1;  // [bp-0x20]
+    unsigned int v2;  // [bp-0x1c]
+    unsigned int v3;  // [bp-0xc]
+
+    v2 = 0;
+    v1 = 10;
+    if (!a0)
+    {
+        v3 = v2;
+        v3 = v3;
+        return v3;
+    }
+    for (v0 = 0; v0 < v1; v0 += 1)
+    {
+        if (a0[v0] >= 48)
+        {
+            if (!(a0[v0] <= 57))
+                goto LABEL_402aff;
+            v2 *= 10;
+            v2 += a0[v0] - 48;
+        }
+        else
+        {
+LABEL_402aff:
+            break;
+        }
+    }
+    v3 = v2;
+    v3 = v3;
+    return v3;
+}

@@ -1,0 +1,5 @@
+void sub_402149()
+{
+    __do_global_dtors_aux();
+    return;
+}

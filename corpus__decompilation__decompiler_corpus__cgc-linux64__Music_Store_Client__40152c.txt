@@ -1,0 +1,5 @@
+void sub_40152c()
+{
+    cgc_recvline();
+    return;
+}

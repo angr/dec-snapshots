@@ -1,0 +1,5 @@
+void sub_40252d()
+{
+    cgc_purchaseSong();
+    return;
+}

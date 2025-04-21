@@ -1,0 +1,5 @@
+void sub_401096()
+{
+    deregister_tm_clones();
+    return;
+}

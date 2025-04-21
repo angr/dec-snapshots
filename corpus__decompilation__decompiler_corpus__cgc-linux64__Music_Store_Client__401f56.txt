@@ -1,0 +1,5 @@
+void sub_401f56()
+{
+    cgc_receiveNumResults();
+    return;
+}

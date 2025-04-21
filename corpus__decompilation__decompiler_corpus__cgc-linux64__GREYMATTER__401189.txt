@@ -1,0 +1,5 @@
+void sub_401189()
+{
+    cgc_receive_all();
+    return;
+}

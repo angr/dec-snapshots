@@ -1,0 +1,10 @@
+extern struct_0 *g_4047f0;
+
+long long _init()
+{
+    unsigned long long v1;  // rax
+
+    if (g_4047f0)
+        g_4047f0();
+    return v1;
+}

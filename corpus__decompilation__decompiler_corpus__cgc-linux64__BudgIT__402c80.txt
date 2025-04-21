@@ -1,0 +1,23 @@
+long long cgc_strchr(char *a0, char a1)
+{
+    char *v0;  // [bp-0x28]
+    char *v1;  // [bp-0x10], Other Possible Types: void*
+
+    v0 = a0;
+    while (true)
+    {
+        if (!*(v0))
+        {
+            v1 = 0;
+            v1 = v1;
+            return v1;
+        }
+        if (*(v0) == a1)
+        {
+            v1 = v0;
+            v1 = v1;
+            return v1;
+        }
+        v0 += 1;
+    }
+}

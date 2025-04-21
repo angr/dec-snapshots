@@ -1,0 +1,5 @@
+void sub_4011a9()
+{
+    cgc_bzero();
+    return;
+}

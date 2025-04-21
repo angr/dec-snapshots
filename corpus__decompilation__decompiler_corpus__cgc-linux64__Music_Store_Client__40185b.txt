@@ -1,0 +1,5 @@
+void sub_40185b()
+{
+    cgc_setValue();
+    return;
+}

@@ -1,0 +1,5 @@
+void sub_401393()
+{
+    cgc_strlen();
+    return;
+}

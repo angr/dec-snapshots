@@ -1,0 +1,5 @@
+void sub_402dd4()
+{
+    cgc_checkheap();
+    return;
+}

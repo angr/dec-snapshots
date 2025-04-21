@@ -1,0 +1,5 @@
+void sub_4035ca()
+{
+    cgc_setMap();
+    return;
+}

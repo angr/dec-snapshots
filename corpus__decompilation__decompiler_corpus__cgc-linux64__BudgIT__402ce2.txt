@@ -1,0 +1,5 @@
+void sub_402ce2()
+{
+    cgc___umoddi3();
+    return;
+}

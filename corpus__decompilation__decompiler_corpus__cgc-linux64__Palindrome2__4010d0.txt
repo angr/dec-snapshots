@@ -1,0 +1,5 @@
+
+long long register_tm_clones()
+{
+    return 0;
+}

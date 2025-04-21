@@ -1,0 +1,26 @@
+long long cgc_sendline(unsigned int a0, unsigned long long a1, unsigned long long a2)
+{
+    unsigned int v0;  // [bp-0x24]
+    unsigned int v1;  // [bp-0xc]
+
+    v0 = cgc_sendall(a0, a1, a2);
+    if (v0 < 0)
+    {
+        v1 = v0;
+        v1 = v1;
+        return v1;
+    }
+    else if (cgc_transmit(a0, "\n", 1, &a2))
+    {
+        v1 = 4294967295;
+        v1 = v1;
+        return v1;
+    }
+    else
+    {
+        v0 += 1;
+        v1 = v0;
+        v1 = v1;
+        return v1;
+    }
+}

@@ -1,0 +1,5 @@
+void sub_402d14()
+{
+    cgc_sleep();
+    return;
+}

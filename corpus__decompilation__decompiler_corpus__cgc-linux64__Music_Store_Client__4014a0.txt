@@ -1,0 +1,17 @@
+long long cgc_strcmp(char *a0, char *a1)
+{
+    char v0;  // [bp-0x1d]
+    unsigned int v1;  // [bp-0x1c]
+
+    v1 = 0;
+    while (true)
+    {
+        v0 = 0;
+        if (a0[v1])
+            v0 = a0[v1] == a1[v1];
+        if (!(v0 & 1))
+            break;
+        v1 += 1;
+    }
+    return a0[v1] - a1[v1];
+}

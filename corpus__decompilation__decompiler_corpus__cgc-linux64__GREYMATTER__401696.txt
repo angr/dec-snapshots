@@ -1,0 +1,5 @@
+void sub_401696()
+{
+    cgc_strncmp();
+    return;
+}

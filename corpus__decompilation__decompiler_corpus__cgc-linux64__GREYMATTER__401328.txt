@@ -1,0 +1,5 @@
+void sub_401328()
+{
+    cgc_transmit_with_term();
+    return;
+}

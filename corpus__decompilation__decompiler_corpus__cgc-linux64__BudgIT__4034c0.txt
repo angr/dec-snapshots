@@ -1,0 +1,17 @@
+extern struct_0 *cgc_allocated;
+extern struct_0 cgc_allocatedc;
+extern struct_0 *cgc_freed;
+extern struct_0 cgc_freedc;
+extern char cgc_heapinit_done;
+
+long long cgc_heapinit()
+{
+    cgc_allocated = &cgc_allocatedc.field_0;
+    cgc_freed = &cgc_freedc.field_0;
+    cgc_allocated->field_8 = cgc_allocated;
+    cgc_allocated->field_0 = cgc_allocated;
+    cgc_freed->field_8 = cgc_freed;
+    cgc_freed->field_0 = cgc_freed;
+    cgc_heapinit_done = 1;
+    return cgc_freed;
+}

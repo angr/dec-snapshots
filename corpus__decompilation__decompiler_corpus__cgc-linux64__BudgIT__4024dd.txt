@@ -1,0 +1,5 @@
+void sub_4024dd()
+{
+    cgc_recv();
+    return;
+}

@@ -1,0 +1,5 @@
+void sub_4022e3()
+{
+    cgc_getRandomAttribute();
+    return;
+}

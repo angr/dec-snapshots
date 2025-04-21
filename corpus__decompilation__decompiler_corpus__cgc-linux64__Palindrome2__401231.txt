@@ -1,0 +1,5 @@
+void sub_401231()
+{
+    cgc_receive_delim();
+    return;
+}

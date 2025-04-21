@@ -1,0 +1,5 @@
+void sub_4038cf()
+{
+    cgc_receiveInstruction();
+    return;
+}

@@ -1,0 +1,5 @@
+void sub_4013bd()
+{
+    cgc_receive_with_term();
+    return;
+}

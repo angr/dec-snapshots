@@ -1,0 +1,5 @@
+
+long long deregister_tm_clones()
+{
+    return 4209608;
+}

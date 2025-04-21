@@ -1,0 +1,24 @@
+long long cgc_receiveNumResults(unsigned int a0)
+{
+    unsigned int v0;  // [bp-0x420]
+    unsigned int v1;  // [bp-0x41c]
+    char v2;  // [bp-0x418]
+    unsigned int v3;  // [bp-0xc]
+
+    memset(&v2, 0, 0x400);
+    v1 = 0;
+    v0 = 0;
+    v1 = cgc_recvline(a0, &v2, 1023);
+    if (v1 < 0)
+        cgc__terminate(2);
+    if (v1)
+    {
+        v0 = cgc_parseResultSize(&v2);
+        v3 = (v0 <= 0 ? 0 : v0);
+        v3 = v3;
+        return v3;
+    }
+    v3 = 0;
+    v3 = v3;
+    return v3;
+}

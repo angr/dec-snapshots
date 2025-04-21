@@ -1,0 +1,11 @@
+extern unsigned long long cgc___cookie;
+
+void cgc___stack_cookie_init()
+{
+    if (!cgc_random(&cgc___cookie, 4, 0))
+        return;
+    if (cgc_sendline(1, "The essence of chaos.", 21) < 0)
+        cgc__terminate(6);
+    cgc__terminate(19);
+    return;
+}

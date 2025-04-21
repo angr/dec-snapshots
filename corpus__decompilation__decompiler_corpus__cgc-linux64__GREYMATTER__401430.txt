@@ -1,0 +1,26 @@
+long long cgc_strncpy(char *a0, char *a1, unsigned long long a2)
+{
+    char v0;  // [bp-0x29]
+    char *v1;  // [bp-0x28]
+    unsigned long long v2;  // [bp-0x20]
+    unsigned long long v4;  // rcx
+
+    v2 = a2;
+    v1 = 0;
+    while (true)
+    {
+        v0 = 0;
+        if (*((a1 + v1)) != 6)
+        {
+            v4 = v2;
+            v2 = v4 - 1;
+            v0 = 0 < v4;
+        }
+        if (!(v0 & 1))
+            break;
+        *((a0 + v1)) = *((a1 + v1));
+        v1 += 1;
+    }
+    *((a0 + v1)) = 6;
+    return a0;
+}

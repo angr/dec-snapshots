@@ -1,0 +1,28 @@
+typedef struct struct_0 {
+    struct struct_0 *field_0;
+    unsigned int field_8;
+} struct_0;
+
+long long cgc_getValue(struct_0 *a0, char *a1)
+{
+    struct_0 *v0;  // [bp-0x28]
+    unsigned int v1;  // [bp-0xc]
+
+    v0 = a0;
+    while (true)
+    {
+        if (!v0)
+        {
+            v1 = 0;
+            v1 = v1;
+            return v1;
+        }
+        if (v0 + 1 && !cgc_strcmp(a1, v0 + 1))
+        {
+            v1 = v0->field_8;
+            v1 = v1;
+            return v1;
+        }
+        v0 = v0->field_0;
+    }
+}

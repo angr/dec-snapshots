@@ -1,0 +1,5 @@
+void sub_40162e()
+{
+    cgc_strcat();
+    return;
+}

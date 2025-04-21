@@ -1,0 +1,5 @@
+void sub_402a67()
+{
+    cgc_str2uint();
+    return;
+}

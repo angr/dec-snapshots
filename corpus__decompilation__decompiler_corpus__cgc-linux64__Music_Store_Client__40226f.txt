@@ -1,0 +1,5 @@
+void sub_40226f()
+{
+    cgc_getRandomNumber();
+    return;
+}

@@ -1,0 +1,5 @@
+void sub_40214d()
+{
+    cgc_createSearchString();
+    return;
+}

@@ -1,0 +1,5 @@
+void sub_4026be()
+{
+    cgc_strcat();
+    return;
+}

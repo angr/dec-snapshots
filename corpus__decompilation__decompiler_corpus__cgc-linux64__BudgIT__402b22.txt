@@ -1,0 +1,5 @@
+void sub_402b22()
+{
+    cgc_memset();
+    return;
+}

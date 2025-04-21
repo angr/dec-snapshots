@@ -1,0 +1,5 @@
+void sub_402359()
+{
+    cgc_getRandomTerm();
+    return;
+}

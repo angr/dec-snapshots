@@ -1,0 +1,5 @@
+void sub_401169()
+{
+    frame_dummy();
+    return;
+}

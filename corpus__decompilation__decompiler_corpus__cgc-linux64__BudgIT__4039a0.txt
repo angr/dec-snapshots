@@ -1,0 +1,45 @@
+typedef struct struct_0 {
+    struct struct_0 *field_0;
+    unsigned int field_8;
+} struct_0;
+
+long long cgc_sendReport(struct_0 *a0)
+{
+    unsigned int v0;  // [bp-0x5c]
+    struct_0 *v1;  // [bp-0x58]
+    unsigned int v2;  // [bp-0x4c]
+    char v3;  // [bp-0x48]
+    unsigned int v4;  // [bp-0x14]
+    unsigned int v6;  // eax
+
+    memset(&v3, 0, 40);
+    v2 = 0;
+    v4 = cgc_getSize(a0);
+    v1 = a0;
+    while (true)
+    {
+        v6 = v4;
+        v4 = v6 - 1;
+        if (!v6)
+            break;
+        v2 += v1->field_8;
+        v0 = cgc_transmit_all(1, v1 + 1, 24);
+        if (v0)
+            cgc__terminate(1);
+        v0 = cgc_int2str(&v3, 40, v1->field_8);
+        if (v0)
+            cgc__terminate(6);
+        v0 = cgc_transmit_all(1, &v3, 40);
+        if (v0)
+            cgc__terminate(1);
+        cgc_memset(&v3, 0, 40);
+        v1 = v1->field_0;
+    }
+    v0 = cgc_int2str(&v3, 40, v2);
+    if (v0)
+        cgc__terminate(6);
+    v0 = cgc_transmit_all(1, &v3, 40);
+    if (!v0)
+        return v0;
+    return cgc__terminate(1);
+}

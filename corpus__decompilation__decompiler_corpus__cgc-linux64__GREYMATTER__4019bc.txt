@@ -1,0 +1,5 @@
+void sub_4019bc()
+{
+    cgc_canonicalize_path();
+    return;
+}

@@ -1,0 +1,6 @@
+extern char __bss_start;
+
+long long deregister_tm_clones()
+{
+    return &__bss_start;
+}

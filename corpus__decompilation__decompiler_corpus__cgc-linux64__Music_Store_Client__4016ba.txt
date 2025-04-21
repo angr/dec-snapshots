@@ -1,0 +1,5 @@
+void sub_4016ba()
+{
+    cgc_str2int();
+    return;
+}

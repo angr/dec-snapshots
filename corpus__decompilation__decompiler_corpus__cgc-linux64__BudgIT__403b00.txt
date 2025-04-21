@@ -1,0 +1,92 @@
+int main(unsigned int a0, unsigned long long a1)
+{
+    char *v0;  // [bp-0x90]
+    char v1;  // [bp-0x88]
+    unsigned int v2;  // [bp-0x58]
+    unsigned int v3;  // [bp-0x54]
+    unsigned int v4;  // [bp-0x50]
+    char v5;  // [bp-0x4c]
+    char v6;  // [bp-0x48]
+    char v7;  // [bp-0x28]
+    void* v8;  // [bp-0x20]
+    unsigned long long v9;  // [bp-0x18]
+    unsigned int v10;  // [bp-0x10]
+    unsigned int v11;  // [bp-0xc]
+
+    v11 = 0;
+    v10 = a0;
+    v9 = a1;
+    v8 = 0;
+    while (true)
+    {
+        while (true)
+        {
+            cgc_receiveInstruction(&v7);
+            if (*(&v7) == 1)
+            {
+                cgc_receiveKey(&v6);
+                cgc_receiveValue(&v5);
+                if (*(&v5) >= 0)
+                    break;
+            }
+            else
+            {
+LABEL_403bdc:
+                if (*(&v7) == 2)
+                {
+                    cgc_receiveKey(&v6);
+                    cgc_receiveValue(&v5);
+                    v3 = cgc_getValue(v8, &v6);
+                    v3 -= *(&v5);
+                    cgc_setMap(&v8, &v6, v3);
+                    if (v3 < 0)
+                    {
+                        v0 = &v6;
+                        v4 = cgc_transmit_all(1, v0, cgc_strlen(&v6));
+                        if (v4)
+                            cgc__terminate(1);
+                        v4 = cgc_transmit_all(1, " is over budget!\n", 17);
+                        if (v4)
+                            cgc__terminate(1);
+                    }
+                }
+                if (*(&v7) == 3)
+                {
+                    memset(&v1, 0, 40);
+                    cgc_receiveKey(&v6);
+                    v2 = cgc_getValue(v8, &v6);
+                    v4 = cgc_int2str(&v1, 40, v2);
+                    if (v4)
+                        cgc__terminate(6);
+                    v4 = cgc_transmit_all(1, &v1, 40);
+                    if (v4)
+                        cgc__terminate(1);
+                }
+                if (*(&v7) == 6)
+                {
+                    cgc_receiveKey(&v6);
+                    if (!cgc_strcmp(&v6, "BACON"))
+                        cgc_removeMap(&v8, &v6);
+                }
+                if (*(&v7) == 7)
+                    cgc_sendReport(v8);
+                if (*(&v7) >= 8)
+                    return 0;
+            }
+        }
+        v4 = cgc_setMap(&v8, &v6, *(&v5));
+        if (v4 == 1)
+        {
+            v4 = cgc_transmit_all(1, "New budget created!\n", 20);
+            if (v4)
+                cgc__terminate(1);
+        }
+        else
+        {
+            v4 = cgc_transmit_all(1, "No more entries\n", 16);
+            if (v4)
+                cgc__terminate(1);
+        }
+        goto LABEL_403bdc;
+    }
+}

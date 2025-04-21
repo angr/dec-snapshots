@@ -1,0 +1,5 @@
+void sub_403136()
+{
+    cgc_insert();
+    return;
+}

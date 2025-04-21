@@ -1,0 +1,5 @@
+void sub_4030e2()
+{
+    cgc_remove();
+    return;
+}

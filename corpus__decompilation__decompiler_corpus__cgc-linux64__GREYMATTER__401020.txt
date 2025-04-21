@@ -1,0 +1,10 @@
+extern unsigned long long g_403588;
+extern unsigned long long g_403590;
+
+void sub_401020()
+{
+    unsigned long long v0;  // [bp-0x8]
+
+    v0 = g_403588;
+    goto g_403590;
+}

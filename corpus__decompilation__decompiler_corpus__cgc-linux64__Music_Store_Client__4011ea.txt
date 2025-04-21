@@ -1,0 +1,5 @@
+void sub_4011ea()
+{
+    cgc_ready();
+    return;
+}

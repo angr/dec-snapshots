@@ -1,0 +1,5 @@
+void sub_401427()
+{
+    cgc_strncpy();
+    return;
+}

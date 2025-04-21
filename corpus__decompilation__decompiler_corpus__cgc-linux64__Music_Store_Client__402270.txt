@@ -1,0 +1,17 @@
+long long cgc_getRandomNumber(unsigned int a0)
+{
+    unsigned int v0;  // [bp-0x20]
+    unsigned int v1;  // [bp-0x1c]
+    void* v2;  // [bp-0x18]
+
+    v2 = 0;
+    v1 = 0;
+    v0 = 0;
+    v0 = cgc_random(&v1, 4, &v2);
+    if (v0)
+        cgc__terminate(1);
+    if (v2 != 4)
+        cgc__terminate(2);
+    v1 = (((0 CONCAT v1) % a0) CONCAT ((0 CONCAT v1) / a0)) >> 32;
+    return v1;
+}

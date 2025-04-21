@@ -1,0 +1,5 @@
+void sub_403999()
+{
+    cgc_sendReport();
+    return;
+}

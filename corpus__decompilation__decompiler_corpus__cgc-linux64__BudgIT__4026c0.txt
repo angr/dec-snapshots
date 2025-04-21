@@ -1,0 +1,8 @@
+long long cgc_strcat(char *a0, char *a1)
+{
+    char *v0;  // [bp-0x20]
+
+    for (v0 = a0; *(v0); v0 += 1);
+    cgc_strcpy(v0, a1);
+    return a0;
+}

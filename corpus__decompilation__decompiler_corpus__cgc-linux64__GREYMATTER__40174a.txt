@@ -1,0 +1,5 @@
+void sub_40174a()
+{
+    cgc_recv_until_delim();
+    return;
+}

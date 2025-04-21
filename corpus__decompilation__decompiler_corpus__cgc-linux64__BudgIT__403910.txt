@@ -1,0 +1,9 @@
+long long cgc_receiveValue(unsigned long long a0)
+{
+    unsigned int v0;  // [bp-0x14]
+
+    v0 = cgc_recv(0, a0, 4);
+    if (v0 >= 0)
+        return v0;
+    return cgc__terminate(2);
+}

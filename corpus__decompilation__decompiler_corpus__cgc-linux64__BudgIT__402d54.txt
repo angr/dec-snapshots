@@ -1,0 +1,5 @@
+void sub_402d54()
+{
+    cgc_memcmp();
+    return;
+}

@@ -1,0 +1,5 @@
+void sub_402199()
+{
+    cgc_promptc();
+    return;
+}

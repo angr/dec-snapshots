@@ -1,0 +1,8 @@
+void cgc_sleep(unsigned int a0)
+{
+    unsigned int v0;  // [bp-0x14]
+
+    v0 = 0;
+    cgc_fdwait(0, 0, 0, &vvar_0, 0);
+    return;
+}
