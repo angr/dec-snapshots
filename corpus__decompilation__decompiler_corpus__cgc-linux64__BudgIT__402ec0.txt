@@ -15,7 +15,7 @@ long long cgc_malloc(unsigned long long a0)
     char v0;  // [bp-0x21]
     struct_0 *v1;  // [bp-0x20]
     unsigned long long v2;  // [bp-0x18]
-    void* v3;  // [bp-0x10], Other Possible Types: unsigned long, unsigned long long
+    void* v3;  // [bp-0x10], Other Possible Types: unsigned long long
     unsigned long long v5;  // 4102
 
     v2 = a0;

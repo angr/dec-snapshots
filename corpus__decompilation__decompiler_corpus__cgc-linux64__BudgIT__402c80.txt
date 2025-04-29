@@ -1,7 +1,7 @@
 long long cgc_strchr(char *a0, char a1)
 {
     char *v0;  // [bp-0x28]
-    char *v1;  // [bp-0x10], Other Possible Types: void*
+    void* v1;  // [bp-0x10], Other Possible Types: char *, unsigned long long
 
     v0 = a0;
     while (true)
