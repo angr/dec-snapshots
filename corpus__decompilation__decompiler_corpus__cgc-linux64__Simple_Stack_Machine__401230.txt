@@ -1,40 +1,177 @@
-Traceback (most recent call last):
-  File "/__w/claripy/claripy/build/src/angr/corpus_tests/test_corpus.py", line 40, in analyze_binary
-    decomp = project.analyses.Decompiler(
-  File "/__w/claripy/claripy/build/src/angr/angr/analyses/analysis.py", line 264, in __call__
-    r = w(*args, **kwargs)
-  File "/__w/claripy/claripy/build/src/angr/angr/analyses/analysis.py", line 249, in wrapper
-    oself.__init__(*args, **kwargs)
-  File "/__w/claripy/claripy/build/src/angr/angr/analyses/decompiler/decompiler.py", line 145, in __init__
-    self._decompile()
-  File "/__w/claripy/claripy/build/src/angr/angr/utils/timing.py", line 72, in timed_func
-    return func(*args, **kwargs)
-  File "/__w/claripy/claripy/build/src/angr/angr/analyses/decompiler/decompiler.py", line 328, in _decompile
-    rs = self.project.analyses[RecursiveStructurer].prep(kb=self.kb, fail_fast=self._fail_fast)(
-  File "/__w/claripy/claripy/build/src/angr/angr/analyses/analysis.py", line 249, in wrapper
-    oself.__init__(*args, **kwargs)
-  File "/__w/claripy/claripy/build/src/angr/angr/analyses/decompiler/structuring/recursive_structurer.py", line 49, in __init__
-    self._analyze()
-  File "/__w/claripy/claripy/build/src/angr/angr/analyses/decompiler/structuring/recursive_structurer.py", line 86, in _analyze
-    st: StructurerBase = self.project.analyses[self.structurer_cls].prep(
-  File "/__w/claripy/claripy/build/src/angr/angr/analyses/analysis.py", line 249, in wrapper
-    oself.__init__(*args, **kwargs)
-  File "/__w/claripy/claripy/build/src/angr/angr/analyses/decompiler/structuring/phoenix.py", line 131, in __init__
-    self._analyze()
-  File "/__w/claripy/claripy/build/src/angr/angr/analyses/decompiler/structuring/phoenix.py", line 161, in _analyze
-    progressed = self._analyze_acyclic()
-  File "/__w/claripy/claripy/build/src/angr/angr/analyses/decompiler/structuring/phoenix.py", line 1001, in _analyze_acyclic
-    any_matches_this_iteration = self._match_acyclic_schemas(
-  File "/__w/claripy/claripy/build/src/angr/angr/analyses/decompiler/structuring/phoenix.py", line 1049, in _match_acyclic_schemas
-    matched = self._match_acyclic_switch_cases(graph, full_graph, node)
-  File "/__w/claripy/claripy/build/src/angr/angr/analyses/decompiler/structuring/phoenix.py", line 1097, in _match_acyclic_switch_cases
-    r = self._match_acyclic_switch_cases_address_loaded_from_memory(node, graph, full_graph)
-  File "/__w/claripy/claripy/build/src/angr/angr/analyses/decompiler/structuring/phoenix.py", line 1285, in _match_acyclic_switch_cases_address_loaded_from_memory
-    r = self._make_switch_cases_core(
-  File "/__w/claripy/claripy/build/src/angr/angr/analyses/decompiler/structuring/phoenix.py", line 1804, in _make_switch_cases_core
-    remove_last_statements(node_a)
-  File "/__w/claripy/claripy/build/src/angr/angr/analyses/decompiler/utils.py", line 58, in remove_last_statements
-    remove_last_statements(node.nodes[-1])
-  File "/__w/claripy/claripy/build/src/angr/angr/analyses/decompiler/utils.py", line 72, in remove_last_statements
-    raise NotImplementedError(type(node))
-NotImplementedError: <class 'angr.analyses.decompiler.structuring.structurer_nodes.SwitchCaseNode'>
+
+int main(unsigned int a0, unsigned long long a1)
+{
+    char v0;  // [bp-0x6d]
+    unsigned int v1;  // [bp-0x6c]
+    unsigned int v2;  // [bp-0x68]
+    unsigned int v3;  // [bp-0x64]
+    void* v4;  // [bp-0x60]
+    void* v5;  // [bp-0x58]
+    unsigned int *v6;  // [bp-0x50]
+    unsigned int *v7;  // [bp-0x48]
+    unsigned int v8;  // [bp-0x40]
+    unsigned int v9;  // [bp-0x3c]
+    unsigned int v10;  // [bp-0x38]
+    unsigned int v11;  // [bp-0x34]
+    void* v12;  // [bp-0x30]
+    void* v13;  // [bp-0x28]
+    unsigned int v14;  // [bp-0x1c]
+    unsigned long long v15;  // [bp-0x18]
+    unsigned int v16;  // [bp-0x10]
+    unsigned int v17;  // [bp-0xc]
+    unsigned long long v19;  // 4135
+
+    v17 = 0;
+    v16 = a0;
+    v15 = a1;
+    v14 = 0;
+    v13 = 0;
+    v12 = 0;
+    v11 = 4294967295;
+    v10 = 0;
+    v9 = 0;
+    v8 = 0;
+    v7 = 0;
+    v6 = 0;
+    v5 = 0;
+    v4 = 0;
+    cgc_allocate(0x1000, 0, &v5);
+    cgc_allocate(0x1000, 0, &v6);
+    cgc_allocate(0x1000, 0, &v4);
+    cgc_allocate(0x2000, 0, &v7);
+    cgc_deallocate(v5, 0x1000);
+    cgc_deallocate(v4, 0x1000);
+    do
+    {
+        v12 = 0;
+        do
+        {
+            v8 = cgc_receive(0, &v14 + v12, 4 - v12, &v13);
+            if (!v8 && !(!v13))
+                continue;
+            if (!v10)
+                cgc_transmit_all("### The Instruction Set\n\n000b : PUSH # : Pushes a new number onto the stack\n001b : POP : Pops the top number from the stack\n010b : PUSHPC : Pushes the program counter of the current instruction (i.e. PUSHPC) onto the stack\n011b : JMPZ : Pops the top number off of the stack, if its 0 then pop the next value off of the stack and store t\nhat into the PC. If it is not-zero then just pop the next value off of the stack and do nothing with it.\n100b : SWAP # : Swaps the nth number with the top one (which is 0) - meaning SWAP 0 does nothing\n101b : DUP #: Duplicates nth number and pushes it to the top of the stack\n110b : ADD : Pops the top two numbers off of the stack, adds them, and pushes the sum back onto the stack\n111b : SUB : Pops the top two numbers off of the stack, subtracts them ( (top - 1) - top ), and pushes the differ\nence back onto the stack\n\nAll instructions are 32-bits long with the first 3 bits (msbs) reserved for the instruction and the lower 29 bits\nfor literals. POP, ADD, SUB, PUSHPC, JMPZ ignores the lower 29 bits, UNLESS the following special instructions a\nre used:\n\n0xFFFFFFFF : RET : End of instruction stream - The topmost value is the return value\n\n### A simple program\n\nmultiply(x,y)\n\nPUSH 0\t; 0 - the SUM\nPUSH y \t; SUM, y\nPUSHPC \t; SUM, y, pc\nDUP 1 \t; SUM, y, pc, y\nPUSH 1\t; SUM, y, pc, y, 1\nSUB\t; SUM, y, pc, y-1\nSWAP 2\t; SUM, y-1, pc, y\nSWAP 3\t; y, y-1, pc, SUM\nPUSH x \t; y, y-1, pc, SUM, x\nADD \t; y, y-1, pc, SUM+x\nSWAP 3 \t; SUM+x, y-1, pc, y\nPOP\t; SUM+x, y-1, pc\nPUSHPC\t; SUM+x, y-1, pc, HERE\nPUSH 7\t; SUM+x, y-1, pc, HERE, 7\nADD\t; SUM+x, y-1, pc, HERE+7 \nDUP 2\t; SUM+x, y-1, pc, HERE+7, y-1\nJMPZ\t;\nPUSH 0\t; SUM+x, y-1, pc, 0\nJMPZ\t;\nPOP\t; SUM+x, y-1\nPOP\t; SUM+x\nRET\n\nIf y-1 is not zero, then we will jump back up to where PUSHPC is and execute that whole stream again, except SUM \nwill now be SUM+x and y is now y-1\nIf y-1 is zero, then we will jump to the instruction after the second JMPZ (which is the first POP)\n", 1956);
+            cgc__terminate(4294967295);
+            v12 += v13;
+        } while (v12 < 4);
+        v7[v10] = v14;
+        v10 += 1;
+        if (v10 >= 0x800)
+        {
+            cgc_transmit_all("INSNS OVERFLOW EXCEPTION\n", 26);
+            cgc__terminate(4294967295);
+        }
+    } while (v14 != -1);
+    v9 = 0;
+    while (true)
+    {
+        v19 = v10;
+        v0 = 0;
+        if (v9 < v19)
+            v0 = v7[v9] != -1;
+        if (!(v0 & 1))
+            break;
+        v14 = v7[v9];
+        if (v14 == -1)
+            break;
+        if ((v14 & 7) <= 7)
+        {
+            switch (v14 & 7)
+            {
+            case 0:
+                v11 += 1;
+                v6[v11] = v14 >> 3;
+                break;
+            case 1:
+                if (v11 < 0)
+                {
+                    cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
+                    cgc__terminate(4294967295);
+                }
+                v11 -= 1;
+                break;
+            case 2:
+                v11 += 1;
+                if (v11 >= 0x400)
+                {
+                    cgc_transmit_all("STACK OVERFLOW EXCEPTION\n", 26);
+                    cgc__terminate(4294967295);
+                }
+                v6[v11] = v9;
+                break;
+            case 3:
+                if (v11 < 1)
+                {
+                    cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
+                    cgc__terminate(4294967295);
+                }
+                if (v6[v11])
+                {
+LABEL_401553:
+                    v11 -= 2;
+                    break;
+                }
+                v9 = v6[1 + v11];
+                if (v9 >= 0 && v9 < v10)
+                    goto LABEL_40154a;
+                cgc_transmit_all("INVALID PROGRAM COUNTER EXCEPTION\n", 35);
+                cgc__terminate(4294967295);
+LABEL_40154a:
+                v9 -= 1;
+                goto LABEL_401553;
+            case 4:
+                if (v11 < 0)
+                {
+                    cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
+                    cgc__terminate(4294967295);
+                }
+                v3 = v6[v11];
+                v2 = v11 - (v14 >> 3);
+                if (v2 >= 0 && v2 <= v11)
+                    goto LABEL_4015d3;
+                cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
+                cgc__terminate(4294967295);
+LABEL_4015d3:
+                v6[v11] = v6[v2];
+                v6[v2] = v3;
+                break;
+            case 5:
+                v11 += 1;
+                v1 = v11 - (v14 >> 3) - 1;
+                if (v1 >= 0 && v1 <= v11)
+                    goto LABEL_401647;
+                cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
+                cgc__terminate(4294967295);
+LABEL_401647:
+                v6[v11] = v6[1 + v11 + -1 * (v14 >> 3)];
+                break;
+            case 6:
+                if (v11 < 1)
+                {
+                    cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
+                    cgc__terminate(4294967295);
+                }
+                v6[1 + v11] = v6[v11] + v6[1 + v11];
+                v11 -= 1;
+                break;
+            case 7:
+                if (v11 < 1)
+                {
+                    cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
+                    cgc__terminate(4294967295);
+                }
+                v6[1 + v11] = v6[1 + v11] - v6[v11];
+                v11 -= 1;
+                break;
+            }
+        }
+        v9 += 1;
+    }
+    if (v11 < 0)
+    {
+        cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
+        cgc__terminate(4294967295);
+    }
+    cgc_transmit_all(&v6[v11], 4);
+    return 0;
+}
