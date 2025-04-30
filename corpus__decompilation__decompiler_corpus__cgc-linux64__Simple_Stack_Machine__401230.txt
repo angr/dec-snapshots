@@ -1,40 +1,40 @@
 Traceback (most recent call last):
-  File "/__w/ailment/ailment/build/src/angr/corpus_tests/test_corpus.py", line 40, in analyze_binary
+  File "/__w/claripy/claripy/build/src/angr/corpus_tests/test_corpus.py", line 40, in analyze_binary
     decomp = project.analyses.Decompiler(
-  File "/__w/ailment/ailment/build/src/angr/angr/analyses/analysis.py", line 264, in __call__
+  File "/__w/claripy/claripy/build/src/angr/angr/analyses/analysis.py", line 264, in __call__
     r = w(*args, **kwargs)
-  File "/__w/ailment/ailment/build/src/angr/angr/analyses/analysis.py", line 249, in wrapper
+  File "/__w/claripy/claripy/build/src/angr/angr/analyses/analysis.py", line 249, in wrapper
     oself.__init__(*args, **kwargs)
-  File "/__w/ailment/ailment/build/src/angr/angr/analyses/decompiler/decompiler.py", line 145, in __init__
+  File "/__w/claripy/claripy/build/src/angr/angr/analyses/decompiler/decompiler.py", line 145, in __init__
     self._decompile()
-  File "/__w/ailment/ailment/build/src/angr/angr/utils/timing.py", line 72, in timed_func
+  File "/__w/claripy/claripy/build/src/angr/angr/utils/timing.py", line 72, in timed_func
     return func(*args, **kwargs)
-  File "/__w/ailment/ailment/build/src/angr/angr/analyses/decompiler/decompiler.py", line 328, in _decompile
+  File "/__w/claripy/claripy/build/src/angr/angr/analyses/decompiler/decompiler.py", line 328, in _decompile
     rs = self.project.analyses[RecursiveStructurer].prep(kb=self.kb, fail_fast=self._fail_fast)(
-  File "/__w/ailment/ailment/build/src/angr/angr/analyses/analysis.py", line 249, in wrapper
+  File "/__w/claripy/claripy/build/src/angr/angr/analyses/analysis.py", line 249, in wrapper
     oself.__init__(*args, **kwargs)
-  File "/__w/ailment/ailment/build/src/angr/angr/analyses/decompiler/structuring/recursive_structurer.py", line 49, in __init__
+  File "/__w/claripy/claripy/build/src/angr/angr/analyses/decompiler/structuring/recursive_structurer.py", line 49, in __init__
     self._analyze()
-  File "/__w/ailment/ailment/build/src/angr/angr/analyses/decompiler/structuring/recursive_structurer.py", line 86, in _analyze
+  File "/__w/claripy/claripy/build/src/angr/angr/analyses/decompiler/structuring/recursive_structurer.py", line 86, in _analyze
     st: StructurerBase = self.project.analyses[self.structurer_cls].prep(
-  File "/__w/ailment/ailment/build/src/angr/angr/analyses/analysis.py", line 249, in wrapper
+  File "/__w/claripy/claripy/build/src/angr/angr/analyses/analysis.py", line 249, in wrapper
     oself.__init__(*args, **kwargs)
-  File "/__w/ailment/ailment/build/src/angr/angr/analyses/decompiler/structuring/phoenix.py", line 131, in __init__
+  File "/__w/claripy/claripy/build/src/angr/angr/analyses/decompiler/structuring/phoenix.py", line 131, in __init__
     self._analyze()
-  File "/__w/ailment/ailment/build/src/angr/angr/analyses/decompiler/structuring/phoenix.py", line 161, in _analyze
+  File "/__w/claripy/claripy/build/src/angr/angr/analyses/decompiler/structuring/phoenix.py", line 161, in _analyze
     progressed = self._analyze_acyclic()
-  File "/__w/ailment/ailment/build/src/angr/angr/analyses/decompiler/structuring/phoenix.py", line 1001, in _analyze_acyclic
+  File "/__w/claripy/claripy/build/src/angr/angr/analyses/decompiler/structuring/phoenix.py", line 1001, in _analyze_acyclic
     any_matches_this_iteration = self._match_acyclic_schemas(
-  File "/__w/ailment/ailment/build/src/angr/angr/analyses/decompiler/structuring/phoenix.py", line 1049, in _match_acyclic_schemas
+  File "/__w/claripy/claripy/build/src/angr/angr/analyses/decompiler/structuring/phoenix.py", line 1049, in _match_acyclic_schemas
     matched = self._match_acyclic_switch_cases(graph, full_graph, node)
-  File "/__w/ailment/ailment/build/src/angr/angr/analyses/decompiler/structuring/phoenix.py", line 1097, in _match_acyclic_switch_cases
+  File "/__w/claripy/claripy/build/src/angr/angr/analyses/decompiler/structuring/phoenix.py", line 1097, in _match_acyclic_switch_cases
     r = self._match_acyclic_switch_cases_address_loaded_from_memory(node, graph, full_graph)
-  File "/__w/ailment/ailment/build/src/angr/angr/analyses/decompiler/structuring/phoenix.py", line 1285, in _match_acyclic_switch_cases_address_loaded_from_memory
+  File "/__w/claripy/claripy/build/src/angr/angr/analyses/decompiler/structuring/phoenix.py", line 1285, in _match_acyclic_switch_cases_address_loaded_from_memory
     r = self._make_switch_cases_core(
-  File "/__w/ailment/ailment/build/src/angr/angr/analyses/decompiler/structuring/phoenix.py", line 1804, in _make_switch_cases_core
+  File "/__w/claripy/claripy/build/src/angr/angr/analyses/decompiler/structuring/phoenix.py", line 1804, in _make_switch_cases_core
     remove_last_statements(node_a)
-  File "/__w/ailment/ailment/build/src/angr/angr/analyses/decompiler/utils.py", line 58, in remove_last_statements
+  File "/__w/claripy/claripy/build/src/angr/angr/analyses/decompiler/utils.py", line 58, in remove_last_statements
     remove_last_statements(node.nodes[-1])
-  File "/__w/ailment/ailment/build/src/angr/angr/analyses/decompiler/utils.py", line 72, in remove_last_statements
+  File "/__w/claripy/claripy/build/src/angr/angr/analyses/decompiler/utils.py", line 72, in remove_last_statements
     raise NotImplementedError(type(node))
 NotImplementedError: <class 'angr.analyses.decompiler.structuring.structurer_nodes.SwitchCaseNode'>
