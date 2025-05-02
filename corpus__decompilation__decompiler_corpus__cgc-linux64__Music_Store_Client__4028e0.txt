@@ -14,7 +14,7 @@ int main(unsigned int a0, unsigned long long a1)
     char v11;  // [bp-0x78]
     char v12;  // [bp-0x68]
     char v13;  // [bp-0x58]
-    char *v15;  // [bp-0x48], Other Possible Types: char, unsigned int
+    char *v15;  // [bp-0x48], Other Possible Types: char, unsigned int, unsigned long
     char v16;  // [bp-0x40]
     char v17;  // [bp-0x38]
     char v18;  // [bp-0x30]
