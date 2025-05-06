@@ -1,10 +1,15 @@
+typedef struct struct_0 {
+    struct struct_0 *field_0;
+} struct_0;
+
 extern struct_0 *g_4047f0;
 
 long long _init()
 {
-    unsigned long long v1;  // rax
+    struct_0 **v1;  // rax
 
+    v1 = g_4047f0;
     if (g_4047f0)
-        g_4047f0();
+        v1 = g_4047f0();
     return v1;
 }
