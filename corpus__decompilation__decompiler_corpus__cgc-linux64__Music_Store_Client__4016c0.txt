@@ -15,8 +15,8 @@ long long cgc_str2int(char *a0)
     if (!a0)
     {
         v5 = v4;
-        v5 = v5;
-        return v5;
+        s_c = v5;
+        return s_c;
     }
     if (*(a0) == 45)
     {

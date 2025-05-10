@@ -1,100 +1,100 @@
 int main(unsigned int a0, unsigned long long a1)
 {
     struct struct_0 v0[16];  // [bp-0xb18]
-    unsigned long long v1;  // [bp-0xab8]
-    int v2;  // [bp-0xab0]
-    unsigned long long v3;  // [bp-0xaa0]
-    char *v4;  // [bp-0xa98]
-    void* v5;  // [bp-0xa90], Other Possible Types: char *
-    char v6;  // [bp-0xa88]
-    char v7;  // [bp-0xb8]
-    char v8;  // [bp-0xa8]
-    char v9;  // [bp-0x98]
-    char v10;  // [bp-0x88]
-    char v11;  // [bp-0x78]
-    char v12;  // [bp-0x68]
-    char v13;  // [bp-0x58]
-    char v14;  // [bp-0x50], Other Possible Types: unsigned int
-    char *v15;  // [bp-0x48]
-    char v16;  // [bp-0x40]
-    char v17;  // [bp-0x38]
-    char v18;  // [bp-0x30]
-    char v19;  // [bp-0x28]
-    unsigned int v20;  // [bp-0x20]
-    unsigned int v21;  // [bp-0x1c]
-    unsigned long long v22;  // [bp-0x18]
-    unsigned int v23;  // [bp-0x10]
-    unsigned int v24;  // [bp-0xc]
-    int v26;  // xmm0
-    int v27;  // xmm1
-    int v28;  // xmm2
-    int v29;  // xmm0
-    int v30;  // xmm1
-    int v31;  // xmm2
-    unsigned long long v32;  // rdx
-    unsigned long long v33;  // r8
-    unsigned long long v34;  // r9
-    int v35;  // [bp-0xb08], Other Possible Types: unsigned long long
-    int v36;  // [bp-0xb00]
-    int v37;  // [bp-0xaf8]
-    int v38;  // [bp-0xaf0]
-    int v39;  // [bp-0xae8]
-    int v40;  // [bp-0xae0]
-    int v41;  // [bp-0xad8]
-    int v42;  // [bp-0xad0]
-    int v43;  // [bp-0xac8]
-    int v44;  // [bp-0xac0]
+    int v1;  // [bp-0xb00]
+    int v2;  // [bp-0xaf8]
+    int v3;  // [bp-0xaf0]
+    int v4;  // [bp-0xae8]
+    int v5;  // [bp-0xae0]
+    int v6;  // [bp-0xad8]
+    int v7;  // [bp-0xad0]
+    int v8;  // [bp-0xac8]
+    int v9;  // [bp-0xac0]
+    unsigned long long v10;  // [bp-0xab8]
+    int v11;  // [bp-0xab0]
+    unsigned long long v12;  // [bp-0xaa0]
+    char *v13;  // [bp-0xa98]
+    void* v14;  // [bp-0xa90], Other Possible Types: char *
+    char v15;  // [bp-0xa88]
+    char v16;  // [bp-0xb8]
+    char v17;  // [bp-0xa8]
+    char v18;  // [bp-0x98]
+    char v19;  // [bp-0x88]
+    char v20;  // [bp-0x78]
+    char v21;  // [bp-0x68]
+    char v22;  // [bp-0x58]
+    char v23;  // [bp-0x50], Other Possible Types: unsigned int
+    char *v24;  // [bp-0x48]
+    char v25;  // [bp-0x40]
+    char v26;  // [bp-0x38]
+    char v27;  // [bp-0x30]
+    char v28;  // [bp-0x28]
+    unsigned int v29;  // [bp-0x20]
+    unsigned int v30;  // [bp-0x1c]
+    unsigned long long v31;  // [bp-0x18]
+    unsigned int v32;  // [bp-0x10]
+    unsigned int v33;  // [bp-0xc]
+    int v35;  // xmm0
+    int v36;  // xmm1
+    int v37;  // xmm2
+    int v38;  // xmm0
+    int v39;  // xmm1
+    int v40;  // xmm2
+    unsigned long long v41;  // rdx
+    unsigned long long v42;  // r8
+    unsigned long long v43;  // r9
+    int v44;  // [bp-0xb08], Other Possible Types: unsigned long long
 
-    v24 = 0;
-    v23 = a0;
-    v22 = a1;
-    v21 = 0;
-    v20 = 0;
-    memset(&v17, 0, 24);
-    memset(&v14, 0, 24);
-    memset(&v7, 0, 104);
-    memset(&v6, 0, 2500);
-    v5 = 0;
-    v15 = &v6;
-    cgc_getBalance(&v17);
-    v20 = v19;
-    while (v19 > 0)
+    v33 = 0;
+    v32 = a0;
+    v31 = a1;
+    v30 = 0;
+    v29 = 0;
+    memset(&v26, 0, 24);
+    memset(&v23, 0, 24);
+    memset(&v16, 0, 104);
+    memset(&v15, 0, 2500);
+    v14 = 0;
+    v24 = &v15;
+    cgc_getBalance(&v26);
+    v29 = v28;
+    while (v28 > 0)
     {
-        v14 = 0;
-        cgc_createRandomRequest(&v7);
-        v1 = *(&v13);
-        *(&v43) = *(&v12);
-        *(&v41) = *(&v11);
-        v26 = *(&v7);
-        v27 = *(&v8);
-        v28 = *(&v9);
-        *(&v39) = *(&v10);
-        v37 = v28;
-        v35 = v27;
-        *(&v0->field_0) = v26;
-        cgc_sendSearchString(1);
-        cgc_receiveSearchResults(0, &v14, 10);
-        v4 = &v0[0].field_0;
-        v3 = *(&v13);
-        *(&v2) = *(&v12);
-        *(&v44) = *(&v11);
-        v29 = *(&v7);
-        v30 = *(&v8);
-        v31 = *(&v9);
-        *(&v42) = *(&v10);
-        v40 = v31;
-        v38 = v30;
-        v36 = v29;
+        v23 = 0;
+        cgc_createRandomRequest(&v16);
+        v10 = *(&v22);
+        *(&v8) = *(&v21);
+        *(&v6) = *(&v20);
         v35 = *(&v16);
-        v5 = cgc_selectSong(a0, a1, v32, *(&v16), v33, v34, *(&v14));
-        v21 = cgc_purchaseSong(1, v5, &v17);
-        if (v21 == 1)
+        v36 = *(&v17);
+        v37 = *(&v18);
+        *(&v4) = *(&v19);
+        v2 = v37;
+        v44 = v36;
+        *(&v0->field_0) = v35;
+        cgc_sendSearchString(1);
+        cgc_receiveSearchResults(0, &v23, 10);
+        v13 = &v0[0].field_0;
+        v12 = *(&v22);
+        *(&v11) = *(&v21);
+        *(&v9) = *(&v20);
+        v38 = *(&v16);
+        v39 = *(&v17);
+        v40 = *(&v18);
+        *(&v7) = *(&v19);
+        v5 = v40;
+        v3 = v39;
+        v1 = v38;
+        v44 = *(&v25);
+        v14 = cgc_selectSong(a0, a1, v41, *(&v25), v42, v43, *(&v23));
+        v30 = cgc_purchaseSong(1, v14, &v26);
+        if (v30 == 1)
             break;
         cgc_receiveBalance(0);
     }
-    v21 = cgc_deallocate(*(&v18), v20 * 250);
-    if (!v21)
-        return v21;
+    v30 = cgc_deallocate(*(&v27), v29 * 250);
+    if (!v30)
+        return v30;
     cgc__terminate(3);
-    return v21;
+    return v30;
 }

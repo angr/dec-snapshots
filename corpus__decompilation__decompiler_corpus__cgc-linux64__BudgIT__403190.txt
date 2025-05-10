@@ -13,5 +13,5 @@ long long cgc_calloc(unsigned long a0)
     }
     v1 = 0;
     v1 = v1;
-    return v1;
+    return s_10;
 }
