@@ -20,8 +20,8 @@ long long cgc_getValue(struct_0 *a0, char *a1)
         if (v0 + 1 && !cgc_strcmp(a1, v0 + 1))
         {
             v1 = v0->field_8;
-            v1 = v1;
-            return v1;
+            s_c = v1;
+            return s_c;
         }
         v0 = v0->field_0;
     }

@@ -20,8 +20,8 @@ long long cgc_purchaseSong(unsigned int a0, char *a1, struct_0 *a2)
     if (a2->field_10 < v3)
     {
         v5 = 1;
-        s_c = v5;
-        return s_c;
+        v5 = v5;
+        return v5;
     }
     a2->field_10 = a2->field_10 - v3;
     a2->field_0 = a2->field_0 + 1;

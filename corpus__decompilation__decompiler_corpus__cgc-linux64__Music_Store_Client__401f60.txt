@@ -19,6 +19,6 @@ long long cgc_receiveNumResults(unsigned int a0)
         return v3;
     }
     v3 = 0;
-    v3 = v3;
-    return v3;
+    s_c = v3;
+    return s_c;
 }
