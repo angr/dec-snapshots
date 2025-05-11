@@ -21,7 +21,7 @@ long long cgc_startswith(char *a0, char *a1)
         if (*(v2) != *(v1))
         {
             v3 = 0;
-            v3 = v3;
+            s_c = v3;
             return v3;
         }
         v2 += 1;

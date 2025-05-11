@@ -12,7 +12,7 @@ long long cgc_transmit_all(unsigned long long a0, unsigned long long a1)
     {
         v3 = 0;
         v3 = v3;
-        return v3;
+        return s_10;
     }
     do
     {
