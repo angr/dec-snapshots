@@ -21,7 +21,7 @@ long long cgc_receive_all(unsigned int a0, unsigned long a1, unsigned long long 
             {
                 v4 = v2;
                 v4 = v4;
-                return s_c;
+                return v4;
             }
             if (!v0)
             {
@@ -39,7 +39,7 @@ long long cgc_receive_all(unsigned int a0, unsigned long a1, unsigned long long 
                 *(v7) = a2;
             v4 = v2;
             v4 = v4;
-            return v4;
+            return s_c;
         }
     }
 }
