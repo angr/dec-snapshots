@@ -1,5 +1,6 @@
 int main(unsigned int a0, unsigned long long a1)
 {
+    int s_b08;  // [bp-0xb08]
     struct struct_0 v0[16];  // [bp-0xb18]
     int v1;  // [bp-0xb00]
     int v2;  // [bp-0xaf8]
@@ -43,7 +44,7 @@ int main(unsigned int a0, unsigned long long a1)
     unsigned long long v41;  // rdx
     unsigned long long v42;  // r8
     unsigned long long v43;  // r9
-    int v44;  // [bp-0xb08], Other Possible Types: unsigned long long
+    unsigned long long v44;  // [bp-0xb08]
 
     v33 = 0;
     v32 = a0;
@@ -70,7 +71,7 @@ int main(unsigned int a0, unsigned long long a1)
         v37 = *(&v18);
         *(&v4) = *(&v19);
         v2 = v37;
-        v44 = v36;
+        s_b08 = v36;
         *(&v0->field_0) = v35;
         cgc_sendSearchString(1);
         cgc_receiveSearchResults(0, &v23, 10);

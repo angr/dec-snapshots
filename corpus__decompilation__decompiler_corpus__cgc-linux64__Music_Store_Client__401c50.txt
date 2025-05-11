@@ -1,6 +1,5 @@
 long long cgc_parseSearchResult(char *a0, char *a1)
 {
-    char *s_30;  // [sp-0x30]
     char v0;  // [bp-0x5d]
     unsigned int v1;  // [bp-0x5c]
     char *v2;  // [bp-0x58]
@@ -22,48 +21,48 @@ long long cgc_parseSearchResult(char *a0, char *a1)
     v7 = a0;
     while (true)
     {
-        s_30 = v7;
+        v6 = v7;
         v4 = 0;
         while (true)
         {
             v0 = 0;
-            if (*(s_30))
+            if (*(v6))
             {
                 v0 = 0;
-                if (*(s_30) != *(v2))
+                if (*(v6) != *(v2))
                     v0 = v4 < 20;
             }
             if (!(v0 & 1))
                 break;
-            s_30 += 1;
+            v6 += 1;
             v4 += 1;
         }
         cgc_memcpy(&v5, v7, v4);
         if (!cgc_strcmp(&v5, "sid"))
         {
-            v6 = s_30 + 1;
-            v7 = cgc_setValue(s_30 + 1, a1);
+            v6 += 1;
+            v7 = cgc_setValue(v6 + 1, a1);
         }
         else
         {
             if (!cgc_strcmp(&v5, "price"))
             {
-                v6 = s_30 + 1;
-                v7 = cgc_setValue(s_30 + 1, a1 + 200);
+                v6 += 1;
+                v7 = cgc_setValue(v6 + 1, a1 + 200);
             }
             else
             {
                 if (!cgc_strcmp(&v5, "artist"))
                 {
-                    v6 = s_30 + 1;
-                    v7 = cgc_setValue(s_30 + 1, a1 + 50);
+                    v6 += 1;
+                    v7 = cgc_setValue(v6 + 1, a1 + 50);
                 }
                 else
                 {
                     if (cgc_strcmp(&v5, "album"))
                         break;
-                    v6 = s_30 + 1;
-                    v7 = cgc_setValue(s_30 + 1, a1 + 100);
+                    v6 += 1;
+                    v7 = cgc_setValue(v6 + 1, a1 + 100);
                 }
             }
         }
@@ -75,8 +74,8 @@ long long cgc_parseSearchResult(char *a0, char *a1)
         v8 = v8;
         return v8;
     }
-    v6 = s_30 + 1;
-    cgc_setValue(s_30 + 1, a1 + 150);
+    v6 += 1;
+    cgc_setValue(v6 + 1, a1 + 150);
     v8 = 0;
     v8 = v8;
     return v8;
