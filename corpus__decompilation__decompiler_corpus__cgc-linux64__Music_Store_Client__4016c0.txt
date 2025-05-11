@@ -34,5 +34,5 @@ long long cgc_str2int(char *a0)
     }
     v5 = v0 * v4;
     v5 = v5;
-    return s_c;
+    return v5;
 }

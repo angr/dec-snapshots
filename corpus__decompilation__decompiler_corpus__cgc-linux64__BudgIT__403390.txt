@@ -15,7 +15,7 @@ long long cgc_strnlen(char *a0, unsigned long long a1)
         if (!*((a0 + v0)))
         {
             v1 = v0;
-            s_10 = v1;
+            v1 = v1;
             return v1;
         }
         v0 += 1;
