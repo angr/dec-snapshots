@@ -1,7 +1,6 @@
 long long cgc_parseBalanceResult(char *a0)
 {
     char v0;  // [bp-0xa1]
-    char *s_28;  // [bp-0x28]
     unsigned int v1;  // [bp-0xa0]
     unsigned int v2;  // [bp-0x9c]
     char *v3;  // [bp-0x98]
@@ -44,9 +43,9 @@ long long cgc_parseBalanceResult(char *a0)
     {
         v10 = 0;
         v10 = v10;
-        return v10;
+        return s_c;
     }
-    s_28 = v8 + 1;
+    v8 += 1;
     cgc_setValue(v8 + 1, &v6);
     v1 = cgc_str2int(&v6);
     if (v1 >= 0 && v1 <= 255)
