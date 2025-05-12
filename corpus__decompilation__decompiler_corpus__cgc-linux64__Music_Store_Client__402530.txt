@@ -21,7 +21,7 @@ long long cgc_purchaseSong(unsigned int a0, char *a1, struct_0 *a2)
     {
         v5 = 1;
         v5 = v5;
-        return s_c;
+        return v5;
     }
     a2->field_10 = a2->field_10 - v3;
     a2->field_0 = a2->field_0 + 1;
