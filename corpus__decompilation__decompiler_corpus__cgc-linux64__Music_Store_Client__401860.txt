@@ -10,22 +10,22 @@ long long cgc_setValue(char *a0, char *a1)
     v3 = 0;
     v2 = 0;
     v1 = "&";
-    v4 = a0;
+    s_20 = a0;
     while (true)
     {
         v0 = 0;
-        if (*(v4))
+        if (*(s_20))
         {
             v0 = 0;
-            if (*(v4) != *(v1))
+            if (*(s_20) != *(v1))
                 v0 = v3 < 50;
         }
         if (!(v0 & 1))
             break;
-        v4 += 1;
+        s_20 += 1;
         v3 += 1;
     }
     cgc_memcpy(a1, a0, v3);
-    v4 += 1;
-    return v4 + 1;
+    v4 = s_20 + 1;
+    return s_20 + 1;
 }
