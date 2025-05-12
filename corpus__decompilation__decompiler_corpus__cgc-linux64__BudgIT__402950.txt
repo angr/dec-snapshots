@@ -1,14 +1,14 @@
 long long cgc_int2str(char *a0, unsigned int a1, unsigned int a2)
 {
-    unsigned int <None[is_13]|Stack sp-0x24, 4 B>;  // [sp-0x24]
     unsigned int v0;  // [bp-0x2c]
     unsigned int v1;  // [bp-0x28]
     unsigned int v2;  // [bp-0x24]
+    unsigned int v3;  // [sp-0x24]
     unsigned int v4;  // [bp-0x20]
     unsigned int v5;  // [bp-0xc]
 
     v4 = a2;
-    <None[is_13]|Stack sp-0x24, 4 B> = 0;
+    v3 = 0;
     if (a1 < 2)
     {
         v5 = 4294967295;
@@ -23,14 +23,14 @@ long long cgc_int2str(char *a0, unsigned int a1, unsigned int a2)
             v5 = v5;
             return v5;
         }
-        v3 = <None[is_13]|Stack sp-0x24, 4 B> + 1;
-        a0[<None[is_13]|Stack sp-0x24, 4 B>] = 45;
+        v3 += 1;
+        a0[v3] = 45;
         v2 = v3;
     }
     else
     {
         v4 *= -1;
-        v2 = <None[is_13]|Stack sp-0x24, 4 B>;
+        v2 = v3;
     }
     v1 = v4;
     do

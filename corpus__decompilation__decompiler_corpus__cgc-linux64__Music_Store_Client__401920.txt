@@ -1,7 +1,7 @@
 long long cgc_parseResultSize(char *a0)
 {
-    char *s_28;  // [bp-0x28]
     char v0;  // [bp-0xa1]
+    char *s_28;  // [bp-0x28]
     unsigned int v1;  // [bp-0xa0]
     unsigned int v2;  // [bp-0x9c]
     char *v3;  // [bp-0x98]
@@ -23,20 +23,20 @@ long long cgc_parseResultSize(char *a0)
     v2 = 0;
     v1 = 0;
     v9 = a0;
-    s_28 = v9;
+    v8 = v9;
     v5 = 0;
     while (true)
     {
         v0 = 0;
-        if (*(s_28))
+        if (*(v8))
         {
             v0 = 0;
-            if (*(s_28) != *(v3))
+            if (*(v8) != *(v3))
                 v0 = v5 < 20;
         }
         if (!(v0 & 1))
             break;
-        s_28 += 1;
+        v8 += 1;
         v5 += 1;
     }
     cgc_memcpy(&v7, v9, v5);
@@ -46,8 +46,8 @@ long long cgc_parseResultSize(char *a0)
         v10 = v10;
         return v10;
     }
-    v8 = s_28 + 1;
-    cgc_setValue(s_28 + 1, &v6);
+    s_28 = v8 + 1;
+    cgc_setValue(v8 + 1, &v6);
     v1 = cgc_str2int(&v6);
     v10 = v1;
     v10 = v10;

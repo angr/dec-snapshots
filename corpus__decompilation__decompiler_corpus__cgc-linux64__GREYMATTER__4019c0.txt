@@ -62,5 +62,5 @@ long long cgc_canonicalize_path(unsigned long long a0, char *a1, unsigned long a
         cgc_strncat(a0, v3, v1);
     }
     v4 = v4;
-    return s_24;
+    return v4;
 }
