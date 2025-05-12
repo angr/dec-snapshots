@@ -40,6 +40,6 @@ long long cgc_check()
     if (v2 == 94 && cgc_transmit_all(1, "\n\nEASTER EGG!\n\n", 15))
         cgc__terminate(0);
     v6 = v3;
-    s_c = v6;
+    v6 = v6;
     return v6;
 }

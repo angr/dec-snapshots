@@ -78,5 +78,5 @@ long long cgc_parseSearchResult(char *a0, char *a1)
     cgc_setValue(v6 + 1, a1 + 150);
     v8 = 0;
     v8 = v8;
-    return s_c;
+    return v8;
 }
