@@ -13,7 +13,7 @@ long long cgc_uint2str(char *a0, unsigned int a1, unsigned int a2)
     {
         v5 = 4294967295;
         v5 = v5;
-        return v5;
+        return s_c;
     }
     v1 = v4;
     do

@@ -24,7 +24,7 @@ long long cgc_setMap(struct_0 **a0, char *a1, unsigned int a2)
         {
             v2 = 0;
             v2 = v2;
-            return v2;
+            return s_c;
         }
         v1 = cgc_initMap(v0);
         v1->field_0 = *(a0);
