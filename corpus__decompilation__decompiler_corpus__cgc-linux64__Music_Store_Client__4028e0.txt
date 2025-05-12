@@ -1,101 +1,54 @@
-int main(unsigned int a0, unsigned long long a1)
-{
-    char <None[is_54]|Stack sp-0xb8, 1 B>;  // [sp-0xb8]
-    struct struct_0 v0[16];  // [bp-0xb18]
-    int v1;  // [bp-0xb08], Other Possible Types: unsigned long long
-    int v2;  // [bp-0xb00]
-    int v3;  // [bp-0xaf8]
-    int v4;  // [bp-0xaf0]
-    int v5;  // [bp-0xae8]
-    int v6;  // [bp-0xae0]
-    int v7;  // [bp-0xad8]
-    int v8;  // [bp-0xad0]
-    int v9;  // [bp-0xac8]
-    int v10;  // [bp-0xac0]
-    unsigned long long v11;  // [bp-0xab8]
-    int v12;  // [bp-0xab0]
-    unsigned long long v13;  // [bp-0xaa0]
-    char *v14;  // [bp-0xa98]
-    void* v15;  // [bp-0xa90], Other Possible Types: char *
-    char v16;  // [bp-0xa88]
-    char v17;  // [bp-0xb8]
-    char v18;  // [bp-0xa8]
-    char v19;  // [bp-0x98]
-    char v20;  // [bp-0x88]
-    char v21;  // [bp-0x78]
-    char v22;  // [bp-0x68]
-    char v23;  // [bp-0x58]
-    char v24;  // [bp-0x50], Other Possible Types: unsigned int
-    char *v25;  // [bp-0x48]
-    char v26;  // [bp-0x40]
-    char v27;  // [bp-0x38]
-    char v28;  // [bp-0x30]
-    char v29;  // [bp-0x28]
-    unsigned int v30;  // [bp-0x20]
-    unsigned int v31;  // [bp-0x1c]
-    unsigned long long v32;  // [bp-0x18]
-    unsigned int v33;  // [bp-0x10]
-    unsigned int v34;  // [bp-0xc]
-    int v36;  // xmm0
-    int v37;  // xmm1
-    int v38;  // xmm2
-    int v39;  // xmm0
-    int v40;  // xmm1
-    int v41;  // xmm2
-    unsigned long long v42;  // rdx
-    unsigned long long v43;  // r8
-    unsigned long long v44;  // r9
-
-    v34 = 0;
-    v33 = a0;
-    v32 = a1;
-    v31 = 0;
-    v30 = 0;
-    memset(&v27, 0, 24);
-    memset(&v24, 0, 24);
-    memset(&<None[is_54]|Stack sp-0xb8, 1 B>, 0, 104);
-    memset(&v16, 0, 2500);
-    v15 = 0;
-    v25 = &v16;
-    cgc_getBalance(&v27);
-    v30 = v29;
-    while (v29 > 0)
-    {
-        v24 = 0;
-        cgc_createRandomRequest(&v17);
-        v11 = *(&v23);
-        *(&v9) = *(&v22);
-        *(&v7) = *(&v21);
-        v36 = *(&<None[is_54]|Stack sp-0xb8, 1 B>);
-        v37 = *(&v18);
-        v38 = *(&v19);
-        *(&v5) = *(&v20);
-        v3 = v38;
-        v1 = v37;
-        *(&v0->field_0) = v36;
-        cgc_sendSearchString(1);
-        cgc_receiveSearchResults(0, &v24, 10);
-        v14 = &v0[0].field_0;
-        v13 = *(&v23);
-        *(&v12) = *(&v22);
-        *(&v10) = *(&v21);
-        v39 = *(&<None[is_54]|Stack sp-0xb8, 1 B>);
-        v40 = *(&v18);
-        v41 = *(&v19);
-        *(&v8) = *(&v20);
-        v6 = v41;
-        v4 = v40;
-        v2 = v39;
-        v1 = *(&v26);
-        v15 = cgc_selectSong(a0, a1, v42, *(&v26), v43, v44, *(&v24));
-        v31 = cgc_purchaseSong(1, v15, &v27);
-        if (v31 == 1)
-            break;
-        cgc_receiveBalance(0);
-    }
-    v31 = cgc_deallocate(*(&v28), v30 * 250);
-    if (!v31)
-        return v31;
-    cgc__terminate(3);
-    return v31;
-}
+Traceback (most recent call last):
+  File "/__w/angr/angr/build/src/angr/corpus_tests/test_corpus.py", line 40, in analyze_binary
+    decomp = project.analyses.Decompiler(
+  File "/__w/angr/angr/build/src/angr/angr/analyses/analysis.py", line 264, in __call__
+    r = w(*args, **kwargs)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/analysis.py", line 249, in wrapper
+    oself.__init__(*args, **kwargs)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/decompiler/decompiler.py", line 145, in __init__
+    self._decompile()
+  File "/__w/angr/angr/build/src/angr/angr/utils/timing.py", line 72, in timed_func
+    return func(*args, **kwargs)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/decompiler/decompiler.py", line 240, in _decompile
+    clinic = self.project.analyses.Clinic(
+  File "/__w/angr/angr/build/src/angr/angr/analyses/analysis.py", line 264, in __call__
+    r = w(*args, **kwargs)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/analysis.py", line 249, in wrapper
+    oself.__init__(*args, **kwargs)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/decompiler/clinic.py", line 196, in __init__
+    self._analyze_for_decompiling()
+  File "/__w/angr/angr/build/src/angr/angr/analyses/decompiler/clinic.py", line 247, in _analyze_for_decompiling
+    ail_graph = self._decompilation_simplifications(ail_graph)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/decompiler/clinic.py", line 669, in _decompilation_simplifications
+    variable_kb = self._recover_and_link_variables(ail_graph, arg_list, arg_vvars, vvar2vvar, type_hints)
+  File "/__w/angr/angr/build/src/angr/angr/utils/timing.py", line 72, in timed_func
+    return func(*args, **kwargs)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/decompiler/clinic.py", line 1734, in _recover_and_link_variables
+    vr = self.project.analyses.VariableRecoveryFast(
+  File "/__w/angr/angr/build/src/angr/angr/analyses/analysis.py", line 264, in __call__
+    r = w(*args, **kwargs)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/analysis.py", line 249, in wrapper
+    oself.__init__(*args, **kwargs)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/variable_recovery/variable_recovery_fast.py", line 302, in __init__
+    self._analyze()
+  File "/__w/angr/angr/build/src/angr/angr/analyses/forward_analysis/forward_analysis.py", line 268, in _analyze
+    self._analysis_core_graph()
+  File "/__w/angr/angr/build/src/angr/angr/analyses/forward_analysis/forward_analysis.py", line 281, in _analysis_core_graph
+    job_state = self._get_and_update_input_state(n)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/forward_analysis/forward_analysis.py", line 348, in _get_and_update_input_state
+    input_state = self._get_input_state(node)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/forward_analysis/forward_analysis.py", line 368, in _get_input_state
+    merged_state, _ = self._merge_states(node, *all_input_states)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/variable_recovery/variable_recovery_fast.py", line 439, in _merge_states
+    merged_state, merge_occurred = states[0].merge(states[1:], successor=node.addr)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/variable_recovery/variable_recovery_fast.py", line 127, in merge
+    merge_occurred = merged_stack_region.merge([other.stack_region for other in others], None)
+  File "/__w/angr/angr/build/src/angr/angr/storage/memory_mixins/paged_memory/paged_memory_mixin.py", line 267, in merge
+    for changed_page, changed_offsets in self.changed_pages(o).items():
+  File "/__w/angr/angr/build/src/angr/angr/storage/memory_mixins/paged_memory/paged_memory_mixin.py", line 598, in changed_pages
+    changed_offsets = my_page.changed_bytes(other_page, page_addr=pageno * self.page_size)
+  File "/__w/angr/angr/build/src/angr/angr/storage/memory_mixins/paged_memory/pages/mv_list_page.py", line 305, in changed_bytes
+    candidates: set[int] = super().changed_bytes(other)
+  File "/__w/angr/angr/build/src/angr/angr/storage/memory_mixins/paged_memory/pages/history_tracking_mixin.py", line 73, in changed_bytes
+    for seg in page_._changed_offsets._list:
+AttributeError: 'angr.rustylib.segmentlist.SegmentList' object has no attribute '_list'

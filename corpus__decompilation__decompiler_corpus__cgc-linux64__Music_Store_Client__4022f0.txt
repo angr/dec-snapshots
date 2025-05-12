@@ -1,14 +1,14 @@
-extern struct_0 attributes;
+extern unsigned long long attributes[4];
 
 long long cgc_getRandomAttribute(unsigned long a0)
 {
-    char *v0;  // [bp-0x28]
-    char *v1;  // [bp-0x20]
+    unsigned long long v0;  // [bp-0x28]
+    unsigned long long v1;  // [bp-0x20]
     unsigned int v2;  // [bp-0x14]
 
     v2 = 0;
     v2 = cgc_getRandomNumber(3);
     v0 = a0 + 50;
-    v1 = (&attributes.field_0)[v2];
-    return cgc_memcpy(v0, v1, cgc_strlen((&attributes.field_0)[v2]));
+    v1 = attributes[v2];
+    return cgc_memcpy(v0, v1, cgc_strlen(attributes[v2]));
 }

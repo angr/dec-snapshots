@@ -1,43 +1,54 @@
-long long cgc_uint2str(char *a0, unsigned int a1, unsigned int a2)
-{
-    unsigned int v0;  // [bp-0x2c]
-    unsigned int v1;  // [bp-0x28]
-    unsigned int v2;  // [bp-0x24]
-    unsigned int v3;  // [bp-0x24]
-    unsigned int v4;  // [bp-0x20]
-    unsigned int v5;  // [bp-0xc]
-
-    v4 = a2;
-    v2 = 0;
-    if (a1 < 2)
-    {
-        v5 = 4294967295;
-        v5 = v5;
-        return v5;
-    }
-    v1 = v4;
-    do
-    {
-        v2 += 1;
-        v1 = ((0 CONCAT v1) % 10) CONCAT ((0 CONCAT v1) / 10);
-    } while (v1 > 0);
-    if (v2 >= a1)
-    {
-        v5 = 4294967295;
-        v5 = v5;
-        return v5;
-    }
-    v3 = v2 - 1;
-    a0[v2] = 0;
-    do
-    {
-        v0 = (((0 CONCAT v4) % 10) CONCAT ((0 CONCAT v4) / 10)) >> 32;
-        v2 = v3 - 1;
-        a0[v3] = v0 + 48;
-        v4 = ((0 CONCAT v4) % 10) CONCAT ((0 CONCAT v4) / 10);
-        v3 = v2;
-    } while (v4 > 0);
-    v5 = 0;
-    v5 = v5;
-    return v5;
-}
+Traceback (most recent call last):
+  File "/__w/angr/angr/build/src/angr/corpus_tests/test_corpus.py", line 40, in analyze_binary
+    decomp = project.analyses.Decompiler(
+  File "/__w/angr/angr/build/src/angr/angr/analyses/analysis.py", line 264, in __call__
+    r = w(*args, **kwargs)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/analysis.py", line 249, in wrapper
+    oself.__init__(*args, **kwargs)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/decompiler/decompiler.py", line 145, in __init__
+    self._decompile()
+  File "/__w/angr/angr/build/src/angr/angr/utils/timing.py", line 72, in timed_func
+    return func(*args, **kwargs)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/decompiler/decompiler.py", line 240, in _decompile
+    clinic = self.project.analyses.Clinic(
+  File "/__w/angr/angr/build/src/angr/angr/analyses/analysis.py", line 264, in __call__
+    r = w(*args, **kwargs)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/analysis.py", line 249, in wrapper
+    oself.__init__(*args, **kwargs)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/decompiler/clinic.py", line 196, in __init__
+    self._analyze_for_decompiling()
+  File "/__w/angr/angr/build/src/angr/angr/analyses/decompiler/clinic.py", line 247, in _analyze_for_decompiling
+    ail_graph = self._decompilation_simplifications(ail_graph)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/decompiler/clinic.py", line 669, in _decompilation_simplifications
+    variable_kb = self._recover_and_link_variables(ail_graph, arg_list, arg_vvars, vvar2vvar, type_hints)
+  File "/__w/angr/angr/build/src/angr/angr/utils/timing.py", line 72, in timed_func
+    return func(*args, **kwargs)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/decompiler/clinic.py", line 1734, in _recover_and_link_variables
+    vr = self.project.analyses.VariableRecoveryFast(
+  File "/__w/angr/angr/build/src/angr/angr/analyses/analysis.py", line 264, in __call__
+    r = w(*args, **kwargs)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/analysis.py", line 249, in wrapper
+    oself.__init__(*args, **kwargs)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/variable_recovery/variable_recovery_fast.py", line 302, in __init__
+    self._analyze()
+  File "/__w/angr/angr/build/src/angr/angr/analyses/forward_analysis/forward_analysis.py", line 268, in _analyze
+    self._analysis_core_graph()
+  File "/__w/angr/angr/build/src/angr/angr/analyses/forward_analysis/forward_analysis.py", line 281, in _analysis_core_graph
+    job_state = self._get_and_update_input_state(n)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/forward_analysis/forward_analysis.py", line 348, in _get_and_update_input_state
+    input_state = self._get_input_state(node)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/forward_analysis/forward_analysis.py", line 368, in _get_input_state
+    merged_state, _ = self._merge_states(node, *all_input_states)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/variable_recovery/variable_recovery_fast.py", line 439, in _merge_states
+    merged_state, merge_occurred = states[0].merge(states[1:], successor=node.addr)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/variable_recovery/variable_recovery_fast.py", line 127, in merge
+    merge_occurred = merged_stack_region.merge([other.stack_region for other in others], None)
+  File "/__w/angr/angr/build/src/angr/angr/storage/memory_mixins/paged_memory/paged_memory_mixin.py", line 267, in merge
+    for changed_page, changed_offsets in self.changed_pages(o).items():
+  File "/__w/angr/angr/build/src/angr/angr/storage/memory_mixins/paged_memory/paged_memory_mixin.py", line 598, in changed_pages
+    changed_offsets = my_page.changed_bytes(other_page, page_addr=pageno * self.page_size)
+  File "/__w/angr/angr/build/src/angr/angr/storage/memory_mixins/paged_memory/pages/mv_list_page.py", line 305, in changed_bytes
+    candidates: set[int] = super().changed_bytes(other)
+  File "/__w/angr/angr/build/src/angr/angr/storage/memory_mixins/paged_memory/pages/history_tracking_mixin.py", line 73, in changed_bytes
+    for seg in page_._changed_offsets._list:
+AttributeError: 'angr.rustylib.segmentlist.SegmentList' object has no attribute '_list'

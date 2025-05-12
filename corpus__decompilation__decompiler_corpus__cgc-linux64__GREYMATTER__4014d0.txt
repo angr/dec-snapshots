@@ -1,4 +1,4 @@
-long long cgc_strncat(unsigned long long a0, char *a1, char *a2)
+long long cgc_strncat(unsigned long long a0, unsigned long long a1, char *a2)
 {
     char *v0;  // [bp-0x28]
 

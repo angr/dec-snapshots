@@ -1,153 +1,54 @@
-extern void buf_recv_tmp;
-extern char g_401d36;
-extern char g_401d54;
-extern char g_401d6c;
-extern char g_401dca;
-extern char g_401df0;
-extern char g_401e0e;
-extern char g_401e44;
-extern char g_401ead;
-extern char g_402008;
-
-long long cgc_request_document(char *a0, unsigned long long a1)
-{
-    char v0;  // [bp-0x190]
-    void* v1;  // [bp-0x180]
-    unsigned int v2;  // [bp-0x16c]
-    char v3;  // [bp-0x168]
-    unsigned long long v4;  // [bp-0x68]
-    unsigned long v5;  // [bp-0x60]
-    unsigned long v6;  // [bp-0x58]
-    void* v7;  // [bp-0x50], Other Possible Types: unsigned long long
-    char *v8;  // [bp-0x48], Other Possible Types: unsigned long long
-    void* v9;  // [bp-0x40]
-    unsigned short v10;  // [bp-0x32]
-    void* v11;  // [bp-0x30]
-    unsigned int v12;  // [bp-0x24]
-    unsigned int v13;  // [bp-0x24]
-    unsigned long long v14;  // [bp-0x20]
-    unsigned long long v15;  // [bp-0x20]
-    unsigned int v16;  // [bp-0xc]
-    unsigned long long v18;  // rax
-
-    v14 = a1;
-    v12 = 0;
-    v11 = 0;
-    if (v14 > 1000)
-    {
-        v16 = 16;
-        v16 = v16;
-        return v16;
-    }
-    v12 = cgc_transmit_with_term(1, a0, cgc_strlen(a0), 0);
-    if (v12)
-    {
-        v16 = v12;
-        v16 = v16;
-        return v16;
-    }
-    v10 = 0;
-    v12 = cgc_receive_all(0, &v10, 2);
-    if (v12)
-    {
-        v16 = v12;
-        v16 = v16;
-        return v16;
-    }
-    else if (v10 + 1 < v10)
-    {
-        v16 = v12;
-        v16 = v16;
-        return v16;
-    }
-    else if (0 > cgc_recv_until_delim(0, &buf_recv_tmp, 65535))
-    {
-        v16 = v12;
-        v16 = v16;
-        return v16;
-    }
-    else if (cgc_strcmp(a0, &buf_recv_tmp))
-    {
-        v16 = v12;
-        v16 = v16;
-        return v16;
-    }
-    else
-    {
-        v9 = 0;
-        v12 = cgc_allocate(v10 + 1, 0, &v9);
-        if (v12)
-        {
-            v16 = v12;
-            v16 = v16;
-            return v16;
-        }
-        vvar_17{reg 48} = &v0;
-        v13 = cgc_receive_with_term(0, v9, v10);
-        if (!v13)
-        {
-            if (!(v11 == v10))
-                goto LABEL_401d11;
-            v8 = v9;
-            v7 = 0;
-            while (true)
-            {
-                vvar_8{reg 48} = vvar_17{reg 48} - 8;
-                *((vvar_17{reg 48} - 8)) = &g_401d36;
-                v8 = cgc_strpos(v8, &g_402008);
-                if (!v8)
-                    break;
-                vvar_175{reg 48} = vvar_8{reg 48} - 8;
-                *((vvar_8{reg 48} - 8)) = &g_401d54;
-                v8 += cgc_strlen(&g_402008);
-                vvar_17{reg 48} = vvar_175{reg 48} - 8;
-                *((vvar_175{reg 48} - 8)) = &g_401d6c;
-                v7 = cgc_strpos(v8, "$!SRC$");
-                if (v7)
-                {
-                    v6 = 1 + v7 - v8;
-                    v18 = v6;
-                    *(&v5) = vvar_17{reg 48};
-                    v1 = vvar_17{reg 48} - (v18 + 15 & 0xfffffffffffffff0);
-                    v4 = v18;
-                    vvar_207{reg 48} = v1 - 8;
-                    *(&v1[8]) = &g_401dca;
-                    cgc_strncpy(v1, v8, v6 - 1);
-                    *(-1 + v1 + v6) = 6;
-                    vvar_218{reg 48} = vvar_207{reg 48} - 8;
-                    *((vvar_207{reg 48} - 8)) = &g_401df0;
-                    memset(&v3, 0, 0x100);
-                    v3 = 6;
-                    *((vvar_218{reg 48} - 8)) = &g_401e0e;
-                    v13 = cgc_canonicalize_path(&v3, v1, v6);
-                    if (v13)
-                    {
-                        v2 = 2;
-                        v2 = v2;
-                    }
-                    else
-                    {
-                        v15 = v14 + 1;
-                        *((vvar_218{reg 48} - 16)) = &g_401e44;
-                        v13 = cgc_request_document(&v3, v14 + 1);
-                        v2 = (0 == v13 ? 2 : 0);
-                        v14 = v15;
-                        v2 = v13;
-                    }
-                    vvar_17{reg 48} = v5;
-                    if (v2)
-                        break;
-                }
-            }
-        }
-        else
-        {
-LABEL_401d11:
-        }
-        *((vvar_8{reg 48} - 8)) = &g_401ead;
-        cgc_deallocate(v9, v10 + 1);
-        v16 = v13;
-        v16 = v16;
-        return v16;
-    }
-}
+Traceback (most recent call last):
+  File "/__w/angr/angr/build/src/angr/corpus_tests/test_corpus.py", line 40, in analyze_binary
+    decomp = project.analyses.Decompiler(
+  File "/__w/angr/angr/build/src/angr/angr/analyses/analysis.py", line 264, in __call__
+    r = w(*args, **kwargs)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/analysis.py", line 249, in wrapper
+    oself.__init__(*args, **kwargs)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/decompiler/decompiler.py", line 145, in __init__
+    self._decompile()
+  File "/__w/angr/angr/build/src/angr/angr/utils/timing.py", line 72, in timed_func
+    return func(*args, **kwargs)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/decompiler/decompiler.py", line 240, in _decompile
+    clinic = self.project.analyses.Clinic(
+  File "/__w/angr/angr/build/src/angr/angr/analyses/analysis.py", line 264, in __call__
+    r = w(*args, **kwargs)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/analysis.py", line 249, in wrapper
+    oself.__init__(*args, **kwargs)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/decompiler/clinic.py", line 196, in __init__
+    self._analyze_for_decompiling()
+  File "/__w/angr/angr/build/src/angr/angr/analyses/decompiler/clinic.py", line 247, in _analyze_for_decompiling
+    ail_graph = self._decompilation_simplifications(ail_graph)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/decompiler/clinic.py", line 669, in _decompilation_simplifications
+    variable_kb = self._recover_and_link_variables(ail_graph, arg_list, arg_vvars, vvar2vvar, type_hints)
+  File "/__w/angr/angr/build/src/angr/angr/utils/timing.py", line 72, in timed_func
+    return func(*args, **kwargs)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/decompiler/clinic.py", line 1734, in _recover_and_link_variables
+    vr = self.project.analyses.VariableRecoveryFast(
+  File "/__w/angr/angr/build/src/angr/angr/analyses/analysis.py", line 264, in __call__
+    r = w(*args, **kwargs)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/analysis.py", line 249, in wrapper
+    oself.__init__(*args, **kwargs)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/variable_recovery/variable_recovery_fast.py", line 302, in __init__
+    self._analyze()
+  File "/__w/angr/angr/build/src/angr/angr/analyses/forward_analysis/forward_analysis.py", line 268, in _analyze
+    self._analysis_core_graph()
+  File "/__w/angr/angr/build/src/angr/angr/analyses/forward_analysis/forward_analysis.py", line 281, in _analysis_core_graph
+    job_state = self._get_and_update_input_state(n)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/forward_analysis/forward_analysis.py", line 348, in _get_and_update_input_state
+    input_state = self._get_input_state(node)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/forward_analysis/forward_analysis.py", line 368, in _get_input_state
+    merged_state, _ = self._merge_states(node, *all_input_states)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/variable_recovery/variable_recovery_fast.py", line 439, in _merge_states
+    merged_state, merge_occurred = states[0].merge(states[1:], successor=node.addr)
+  File "/__w/angr/angr/build/src/angr/angr/analyses/variable_recovery/variable_recovery_fast.py", line 127, in merge
+    merge_occurred = merged_stack_region.merge([other.stack_region for other in others], None)
+  File "/__w/angr/angr/build/src/angr/angr/storage/memory_mixins/paged_memory/paged_memory_mixin.py", line 267, in merge
+    for changed_page, changed_offsets in self.changed_pages(o).items():
+  File "/__w/angr/angr/build/src/angr/angr/storage/memory_mixins/paged_memory/paged_memory_mixin.py", line 598, in changed_pages
+    changed_offsets = my_page.changed_bytes(other_page, page_addr=pageno * self.page_size)
+  File "/__w/angr/angr/build/src/angr/angr/storage/memory_mixins/paged_memory/pages/mv_list_page.py", line 305, in changed_bytes
+    candidates: set[int] = super().changed_bytes(other)
+  File "/__w/angr/angr/build/src/angr/angr/storage/memory_mixins/paged_memory/pages/history_tracking_mixin.py", line 70, in changed_bytes
+    for seg in page_._changed_offsets._list:
+AttributeError: 'angr.rustylib.segmentlist.SegmentList' object has no attribute '_list'

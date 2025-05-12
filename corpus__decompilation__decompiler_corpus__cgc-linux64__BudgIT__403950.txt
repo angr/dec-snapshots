@@ -1,4 +1,4 @@
-long long cgc_receiveKey(void* a0)
+long long cgc_receiveKey(unsigned long long a0)
 {
     unsigned int v0;  // [bp-0x14]
 
