@@ -16,6 +16,6 @@ long long cgc_receive_with_term(unsigned int a0, char *a1, char *a2)
         return v2;
     }
     v2 = v0;
-    s_c = v2;
+    v2 = v2;
     return v2;
 }
