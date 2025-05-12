@@ -23,9 +23,9 @@ long long cgc_int2str(char *a0, unsigned int a1, unsigned int a2)
             v5 = v5;
             return v5;
         }
-        v3 += 1;
+        <None[is_13]|Stack sp-0x24, 4 B> = v3 + 1;
         a0[v3] = 45;
-        v2 = v3;
+        v2 = <None[is_13]|Stack sp-0x24, 4 B>;
     }
     else
     {

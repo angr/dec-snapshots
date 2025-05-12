@@ -71,7 +71,7 @@ long long cgc_parseSearchResult(char *a0, char *a1)
     if (cgc_strcmp(&v5, "song"))
     {
         v8 = 0;
-        s_c = v8;
+        v8 = v8;
         return v8;
     }
     v6 += 1;
