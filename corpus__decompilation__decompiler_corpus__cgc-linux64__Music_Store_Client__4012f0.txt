@@ -25,7 +25,7 @@ long long cgc_transmit_all(unsigned int a0, unsigned long a1, unsigned long a2)
         if (v0)
         {
             v3 = 3;
-            v3 = v3;
+            s_c = v3;
             return v3;
         }
         v2 += v1;
