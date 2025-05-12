@@ -26,6 +26,6 @@ long long cgc_setValue(char *a0, char *a1)
         v3 += 1;
     }
     cgc_memcpy(a1, a0, v3);
-    s_20 = v4 + 1;
+    v4 += 1;
     return v4 + 1;
 }
