@@ -38,6 +38,6 @@ long long cgc_uint2str(char *a0, unsigned int a1, unsigned int a2)
         v3 = v2;
     } while (v4 > 0);
     v5 = 0;
-    s_c = v5;
-    return s_c;
+    v5 = v5;
+    return v5;
 }

@@ -44,7 +44,7 @@ long long cgc_malloc(unsigned long long a0)
         cgc_remove(v1);
         cgc_insert(cgc_allocated, v1);
         v3 = &v1[1].padding_0[4];
-        v3 = v3;
+        s_10 = v3;
         return v3;
     }
     else if (v2 <= cgc_curleft)
