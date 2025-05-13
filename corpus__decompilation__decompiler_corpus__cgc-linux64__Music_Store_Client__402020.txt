@@ -31,8 +31,8 @@ long long cgc_receiveSearchResults(unsigned int a0, struct_0 *a1, unsigned int a
         if (!v1)
         {
             v4 = 0;
-            s_c = v4;
-            return s_c;
+            v4 = v4;
+            return v4;
         }
         if (a1->field_0 < a2)
         {
