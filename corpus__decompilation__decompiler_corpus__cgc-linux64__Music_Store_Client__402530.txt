@@ -37,5 +37,5 @@ long long cgc_purchaseSong(unsigned int a0, char *a1, struct_0 *a2)
         cgc__terminate(10);
     v5 = 0;
     v5 = v5;
-    return s_c;
+    return v5;
 }

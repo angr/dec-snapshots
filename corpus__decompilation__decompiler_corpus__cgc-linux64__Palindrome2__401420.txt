@@ -41,5 +41,5 @@ long long cgc_check()
         cgc__terminate(0);
     v6 = v3;
     v6 = v6;
-    return s_c;
+    return v6;
 }
