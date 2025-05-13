@@ -1,5 +1,6 @@
 int main(unsigned int a0, unsigned long long a1)
 {
+    char <None[is_54]|Stack sp-0xb8, 1 B>;  // [sp-0xb8]
     struct struct_0 v0[16];  // [bp-0xb18]
     int v1;  // [bp-0xb00]
     int v2;  // [bp-0xaf8]
@@ -52,7 +53,7 @@ int main(unsigned int a0, unsigned long long a1)
     v29 = 0;
     memset(&v26, 0, 24);
     memset(&v23, 0, 24);
-    memset(&v16, 0, 104);
+    memset(&<None[is_54]|Stack sp-0xb8, 1 B>, 0, 104);
     memset(&v15, 0, 2500);
     v14 = 0;
     v24 = &v15;
@@ -78,7 +79,7 @@ int main(unsigned int a0, unsigned long long a1)
         v12 = *(&v22);
         *(&v11) = *(&v21);
         *(&v9) = *(&v20);
-        v38 = *(&v16);
+        v38 = *(&<None[is_54]|Stack sp-0xb8, 1 B>);
         v39 = *(&v17);
         v40 = *(&v18);
         *(&v7) = *(&v19);
