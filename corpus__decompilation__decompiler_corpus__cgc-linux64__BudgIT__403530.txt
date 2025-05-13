@@ -6,6 +6,7 @@ typedef struct struct_0 {
 long long cgc_initMap(struct_0 *a0)
 {
     struct_0 *v0;  // [bp-0x28], Other Possible Types: char, unsigned long, unsigned long long
+    unsigned long long s_10;  // [bp-0x10]
     unsigned int v1;  // [bp-0x1c]
     struct_0 *v2;  // [bp-0x10], Other Possible Types: unsigned long long
 
@@ -17,7 +18,7 @@ long long cgc_initMap(struct_0 *a0)
         v0 += 5080;
         v2 = v0;
         v2 = v2;
-        return v2;
+        return s_10;
     }
     else
     {
