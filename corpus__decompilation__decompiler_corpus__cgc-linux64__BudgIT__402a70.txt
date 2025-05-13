@@ -1,7 +1,6 @@
 long long cgc_str2uint(char *a0)
 {
     unsigned int v0;  // [bp-0x24]
-    unsigned int s_c;  // [bp-0xc]
     unsigned int v1;  // [bp-0x20]
     unsigned int v2;  // [bp-0x1c]
     unsigned int v3;  // [bp-0xc]
@@ -30,6 +29,6 @@ LABEL_402aff:
         }
     }
     v3 = v2;
-    s_c = v3;
-    return s_c;
+    v3 = v3;
+    return v3;
 }
