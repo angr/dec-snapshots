@@ -23,7 +23,7 @@ long long cgc_initMap(struct_0 *a0)
     {
         for (v0 = a0; v0->field_c; v0 = &v0[3].padding_0[1]);
         v2 = v0;
-        s_10 = v2;
-        return s_10;
+        v2 = v2;
+        return v2;
     }
 }

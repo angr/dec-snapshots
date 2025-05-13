@@ -18,5 +18,5 @@ long long cgc_transmit_with_term(unsigned int a0, unsigned long long a1, unsigne
     }
     v2 = v0;
     v2 = v2;
-    return s_c;
+    return v2;
 }

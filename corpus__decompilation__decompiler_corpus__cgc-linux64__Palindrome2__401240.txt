@@ -26,7 +26,7 @@ long long cgc_receive_delim(unsigned int a0, char *a1, unsigned long a2, char a3
             if (!v1)
             {
                 v3 = 3;
-                v3 = v3;
+                s_c = v3;
                 return v3;
             }
             if (v0)

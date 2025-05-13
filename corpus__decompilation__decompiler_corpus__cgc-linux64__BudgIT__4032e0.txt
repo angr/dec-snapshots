@@ -11,7 +11,7 @@ long long cgc_transmit_all(unsigned int a0, unsigned long a1, unsigned long a2)
     {
         v3 = 2;
         v3 = v3;
-        return s_c;
+        return v3;
     }
     while (true)
     {
