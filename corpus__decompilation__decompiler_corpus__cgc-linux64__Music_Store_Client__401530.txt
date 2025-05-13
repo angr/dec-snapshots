@@ -1,5 +1,6 @@
 long long cgc_recvline(unsigned int a0, void* a1, unsigned long long a2)
 {
+    void* s_18;  // [bp-0x18]
     void* v0;  // [bp-0x30], Other Possible Types: unsigned long long
     void* s_18;  // [bp-0x18]
     void* v1;  // [bp-0x28]
@@ -7,7 +8,7 @@ long long cgc_recvline(unsigned int a0, void* a1, unsigned long long a2)
     void* v3;  // [bp-0x18]
     unsigned int v4;  // [bp-0xc]
 
-    v3 = a1;
+    s_18 = a1;
     v2 = a2;
     v1 = 0;
     v0 = 0;
@@ -17,7 +18,7 @@ long long cgc_recvline(unsigned int a0, void* a1, unsigned long long a2)
         v4 = v4;
         return v4;
     }
-    else if (!v3)
+    else if (!s_18)
     {
         v4 = 4294967289;
         v4 = v4;
@@ -27,12 +28,12 @@ long long cgc_recvline(unsigned int a0, void* a1, unsigned long long a2)
     {
         while (true)
         {
-            v3 = v3;
-            v3 = v3;
+            s_18 = s_18;
+            s_18 = s_18;
             if (!v2)
                 break;
-            s_18 = v3 + 1;
-            if (cgc_receive(a0, v3, 1, &v1))
+            v3 = s_18 + 1;
+            if (cgc_receive(a0, s_18, 1, &v1))
             {
                 v4 = 4294967289;
                 v4 = v4;
@@ -40,14 +41,14 @@ long long cgc_recvline(unsigned int a0, void* a1, unsigned long long a2)
             }
             v0 += 1;
             v2 -= 1;
-            v3 = s_18;
-            v3 = s_18;
-            if (s_18[1] == 7)
+            s_18 = v3;
+            s_18 = v3;
+            if (v3[1] == 7)
                 break;
         }
-        if (v3[1] == 7)
+        if (s_18[1] == 7)
         {
-            *(&v3[1]) = 0;
+            *(&s_18[1]) = 0;
             v4 = v0;
             v4 = v4;
             return v4;
