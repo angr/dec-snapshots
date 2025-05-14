@@ -23,20 +23,20 @@ long long cgc_recv(unsigned int a0, unsigned long long a1, unsigned long long a2
     }
     while (true)
     {
-        v3 = v3;
+        v4 = v3;
         if (!v2)
         {
             v5 = v0;
             return v5;
         }
-        v4 = v3 + 1;
-        if (cgc_receive(a0, v3, 1, &v1))
+        v3 = v4 + 1;
+        if (cgc_receive(a0, v4, 1, &v1))
         {
             v5 = 4294967295;
             return v5;
         }
         v0 += 1;
         v2 -= 1;
-        v3 = v4;
+        v3 = v3;
     }
 }
