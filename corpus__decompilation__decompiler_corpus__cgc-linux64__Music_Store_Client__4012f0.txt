@@ -10,7 +10,7 @@ long long cgc_transmit_all(unsigned int a0, unsigned long a1, unsigned long a2)
     if (!a2)
     {
         v3 = 2;
-        s_c = v3;
+        v3 = v3;
         return v3;
     }
     while (true)

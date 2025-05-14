@@ -39,7 +39,7 @@ long long cgc_recv_until_delim(unsigned int a0, void* a1, unsigned long long a2)
             return v3;
         }
         v3 = 4294967295;
-        s_c = v3;
+        v3 = v3;
         return v3;
     }
 }

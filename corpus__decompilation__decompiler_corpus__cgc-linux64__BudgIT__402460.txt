@@ -13,7 +13,7 @@ long long cgc_sendline(unsigned int a0, unsigned long long a1, unsigned long lon
     else if (cgc_transmit(a0, "\n", 1, &a2))
     {
         v1 = 4294967295;
-        v1 = v1;
+        s_c = v1;
         return v1;
     }
     else
