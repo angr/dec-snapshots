@@ -1,6 +1,5 @@
 int main(unsigned int a0, unsigned long long a1)
 {
-    char s_b8;  // [bp-0xb8]
     struct struct_0 v0[16];  // [bp-0xb18]
     int v1;  // [bp-0xb00]
     int v2;  // [bp-0xaf8]
@@ -17,7 +16,7 @@ int main(unsigned int a0, unsigned long long a1)
     char *v13;  // [bp-0xa98]
     void* v14;  // [bp-0xa90], Other Possible Types: char *
     char v15;  // [bp-0xa88]
-    char v16;  // [sp-0xb8]
+    char v16;  // [bp-0xb8]
     char v17;  // [bp-0xa8]
     char v18;  // [bp-0x98]
     char v19;  // [bp-0x88]
@@ -62,7 +61,7 @@ int main(unsigned int a0, unsigned long long a1)
     while (v28 > 0)
     {
         v23 = 0;
-        cgc_createRandomRequest(&s_b8);
+        cgc_createRandomRequest(&v16);
         v10 = *(&v22);
         *(&v8) = *(&v21);
         *(&v6) = *(&v20);

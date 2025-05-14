@@ -42,7 +42,7 @@ long long cgc_parseResultSize(char *a0)
     if (cgc_strcmp(&v7, "NUMBER"))
     {
         v10 = 0;
-        v10 = v10;
+        s_c = v10;
         return v10;
     }
     v8 += 1;
