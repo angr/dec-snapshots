@@ -10,11 +10,9 @@ long long cgc_getSize(struct_0 **a0)
     if (!a0)
     {
         v1 = 0;
-        v1 = v1;
         return v1;
     }
     for (v0 = a0; *(v0); v0 = &*(v0)->field_0);
     v1 = (((0 CONCAT v0 - a0) % 40) CONCAT ((0 CONCAT v0 - a0) / 40)) + 1;
-    v1 = v1;
     return v1;
 }

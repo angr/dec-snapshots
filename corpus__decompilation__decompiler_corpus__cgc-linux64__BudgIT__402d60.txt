@@ -9,13 +9,11 @@ long long cgc_memcmp(char *a0, char *a1, unsigned long a2)
         if (v0 >= a2)
         {
             v1 = 0;
-            v1 = v1;
             return v1;
         }
         if (*((a0 + v0)) != *((a1 + v0)))
         {
             v1 = 4294967295;
-            v1 = v1;
             return v1;
         }
         v0 += 1;

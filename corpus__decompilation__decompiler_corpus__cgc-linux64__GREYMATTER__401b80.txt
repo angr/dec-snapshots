@@ -36,14 +36,12 @@ long long cgc_request_document(char *a0, unsigned long long a1)
     if (v14 > 1000)
     {
         v16 = 16;
-        v16 = v16;
         return v16;
     }
     v12 = cgc_transmit_with_term(1, a0, cgc_strlen(a0), 0);
     if (v12)
     {
         v16 = v12;
-        v16 = v16;
         return v16;
     }
     v10 = 0;
@@ -51,25 +49,21 @@ long long cgc_request_document(char *a0, unsigned long long a1)
     if (v12)
     {
         v16 = v12;
-        v16 = v16;
         return v16;
     }
     else if (v10 + 1 < v10)
     {
         v16 = v12;
-        v16 = v16;
         return v16;
     }
     else if (0 > cgc_recv_until_delim(0, &buf_recv_tmp, 65535))
     {
         v16 = v12;
-        v16 = v16;
         return v16;
     }
     else if (cgc_strcmp(a0, &buf_recv_tmp))
     {
         v16 = v12;
-        v16 = v16;
         return v16;
     }
     else
@@ -79,7 +73,6 @@ long long cgc_request_document(char *a0, unsigned long long a1)
         if (v12)
         {
             v16 = v12;
-            v16 = v16;
             return v16;
         }
         vvar_17{reg 48} = &v0;
@@ -147,7 +140,6 @@ LABEL_401d11:
         *((vvar_8{reg 48} - 8)) = &g_401ead;
         cgc_deallocate(v9, v10 + 1);
         v16 = v13;
-        v16 = v16;
         return v16;
     }
 }

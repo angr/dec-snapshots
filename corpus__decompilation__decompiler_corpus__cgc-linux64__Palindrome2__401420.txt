@@ -17,7 +17,6 @@ long long cgc_check()
     if (cgc_receive_delim(0, &v2, 128, 10))
     {
         v6 = 4294967295;
-        v6 = v6;
         return v6;
     }
     for (v4 = 0; v2[v4]; v4 += 1)
@@ -37,9 +36,8 @@ long long cgc_check()
             v3 = 0;
         v4 += 1;
     }
-    if (v2 == 94 && cgc_transmit_all(1, "\n\nEASTER EGG!\n\n", 15))
+    if (v2[0] == 94 && cgc_transmit_all(1, "\n\nEASTER EGG!\n\n", 15))
         cgc__terminate(0);
     v6 = v3;
-    v6 = v6;
     return v6;
 }

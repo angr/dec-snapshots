@@ -12,7 +12,6 @@ long long cgc_strpos(char *a0, char *a1)
     if (v2 < v1)
     {
         v4 = 0;
-        v4 = v4;
         return v4;
     }
     for (v0 = 0; v0 <= v2 - v1; v0 += 1)
@@ -24,6 +23,5 @@ long long cgc_strpos(char *a0, char *a1)
         }
     }
     v4 = v3;
-    v4 = v4;
     return v4;
 }

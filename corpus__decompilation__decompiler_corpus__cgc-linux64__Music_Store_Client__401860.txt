@@ -5,6 +5,7 @@ long long cgc_setValue(char *a0, char *a1)
     unsigned int v2;  // [bp-0x28]
     unsigned int v3;  // [bp-0x24]
     void* v4;  // [bp-0x20], Other Possible Types: char *
+    char *v5;  // [bp-0x20]
 
     v4 = 0;
     v3 = 0;
@@ -26,6 +27,6 @@ long long cgc_setValue(char *a0, char *a1)
         v3 += 1;
     }
     cgc_memcpy(a1, a0, v3);
-    v4 += 1;
+    v5 = v4 + 1;
     return v4 + 1;
 }

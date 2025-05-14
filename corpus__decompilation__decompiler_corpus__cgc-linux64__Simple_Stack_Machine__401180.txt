@@ -11,7 +11,6 @@ long long cgc_transmit_all(unsigned long long a0, unsigned long long a1)
     if (!a0)
     {
         v3 = 0;
-        v3 = v3;
         return v3;
     }
     do
@@ -23,6 +22,5 @@ long long cgc_transmit_all(unsigned long long a0, unsigned long long a1)
         v1 += v2;
     } while (v1 < a1);
     v3 = a1;
-    v3 = v3;
     return v3;
 }

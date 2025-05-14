@@ -16,7 +16,6 @@ long long cgc_malloc(unsigned long long a0)
     struct_0 *v1;  // [bp-0x20]
     unsigned long long v2;  // [bp-0x18]
     void* v3;  // [bp-0x10], Other Possible Types: unsigned long long
-    unsigned long long v5;  // 4102
 
     v2 = a0;
     if (!cgc_heapinit_done)
@@ -24,16 +23,14 @@ long long cgc_malloc(unsigned long long a0)
     if (!v2)
     {
         v3 = 0;
-        v3 = v3;
         return v3;
     }
     v1 = cgc_freed;
     v2 += 24;
     while (true)
     {
-        v5 = v2;
         v0 = 0;
-        if (v1->field_10 < v5)
+        if (v1->field_10 < v2)
             v0 = v1->field_8 != cgc_freed;
         if (!(v0 & 1))
             break;
@@ -44,7 +41,6 @@ long long cgc_malloc(unsigned long long a0)
         cgc_remove(v1);
         cgc_insert(cgc_allocated, v1);
         v3 = &v1[1].padding_0[4];
-        v3 = v3;
         return v3;
     }
     else if (v2 <= cgc_curleft)
@@ -55,7 +51,6 @@ long long cgc_malloc(unsigned long long a0)
         cgc_curleft = cgc_curleft - v2;
         cgc_insert(cgc_allocated, v1);
         v3 = &v1[1].padding_0[4];
-        v3 = v3;
         return v3;
     }
     else
@@ -69,7 +64,6 @@ long long cgc_malloc(unsigned long long a0)
         if (cgc_allocate(v2, 0, &v1))
         {
             v3 = 0;
-            v3 = v3;
             return v3;
         }
         v1->field_10 = v2;
@@ -80,7 +74,6 @@ long long cgc_malloc(unsigned long long a0)
         else
             cgc_curleft = 0;
         v3 = &v1[1].padding_0[4];
-        v3 = v3;
         return v3;
     }
 }

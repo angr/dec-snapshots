@@ -1,6 +1,5 @@
 long long cgc_uint2str(char *a0, unsigned int a1, unsigned int a2)
 {
-    unsigned int s_c;  // [bp-0xc]
     unsigned int v0;  // [bp-0x2c]
     unsigned int v1;  // [bp-0x28]
     unsigned int v2;  // [bp-0x24]
@@ -13,7 +12,6 @@ long long cgc_uint2str(char *a0, unsigned int a1, unsigned int a2)
     if (a1 < 2)
     {
         v5 = 4294967295;
-        v5 = v5;
         return v5;
     }
     v1 = v4;
@@ -25,8 +23,7 @@ long long cgc_uint2str(char *a0, unsigned int a1, unsigned int a2)
     if (v2 >= a1)
     {
         v5 = 4294967295;
-        v5 = v5;
-        return s_c;
+        return v5;
     }
     v3 = v2 - 1;
     a0[v2] = 0;
@@ -39,6 +36,5 @@ long long cgc_uint2str(char *a0, unsigned int a1, unsigned int a2)
         v3 = v2;
     } while (v4 > 0);
     v5 = 0;
-    v5 = v5;
     return v5;
 }

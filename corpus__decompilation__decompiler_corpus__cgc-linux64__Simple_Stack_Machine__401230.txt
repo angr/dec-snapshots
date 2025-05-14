@@ -19,7 +19,6 @@ int main(unsigned int a0, unsigned long long a1)
     unsigned long long v15;  // [bp-0x18]
     unsigned int v16;  // [bp-0x10]
     unsigned int v17;  // [bp-0xc]
-    unsigned long long v19;  // 4135
 
     v17 = 0;
     v16 = a0;
@@ -65,9 +64,8 @@ int main(unsigned int a0, unsigned long long a1)
     v9 = 0;
     while (true)
     {
-        v19 = v10;
         v0 = 0;
-        if (v9 < v19)
+        if (v9 < v10)
             v0 = v7[v9] != -1;
         if (!(v0 & 1))
             break;

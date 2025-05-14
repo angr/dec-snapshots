@@ -1,7 +1,7 @@
 long long cgc_recv_until_delim(unsigned int a0, void* a1, unsigned long long a2)
 {
     unsigned long long v0;  // [bp-0x30]
-    void* v1;  // [sp-0x28]
+    void* v1;  // [bp-0x28]
     void* v2;  // [bp-0x18]
     unsigned int v3;  // [bp-0xc]
 
@@ -10,13 +10,11 @@ long long cgc_recv_until_delim(unsigned int a0, void* a1, unsigned long long a2)
     if (!a2)
     {
         v3 = 0;
-        v3 = v3;
         return v3;
     }
     else if (!v2)
     {
         v3 = 4294967294;
-        v3 = v3;
         return v3;
     }
     else
@@ -35,11 +33,9 @@ long long cgc_recv_until_delim(unsigned int a0, void* a1, unsigned long long a2)
         {
             *(&v2[1]) = 6;
             v3 = a2 - v0;
-            v3 = v3;
             return v3;
         }
         v3 = 4294967295;
-        v3 = v3;
         return v3;
     }
 }

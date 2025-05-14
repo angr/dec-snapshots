@@ -15,10 +15,8 @@ long long cgc_receiveBalance(unsigned int a0)
     {
         v0 = cgc_parseBalanceResult(&v2);
         v3 = v0;
-        v3 = v3;
         return v3;
     }
     v3 = 0;
-    v3 = v3;
     return v3;
 }

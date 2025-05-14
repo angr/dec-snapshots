@@ -3,58 +3,55 @@ long long cgc_int2str(char *a0, unsigned int a1, unsigned int a2)
     unsigned int v0;  // [bp-0x2c]
     unsigned int v1;  // [bp-0x28]
     unsigned int v2;  // [bp-0x24]
-    unsigned int v3;  // [sp-0x24]
-    unsigned int v4;  // [bp-0x20]
-    unsigned int v5;  // [bp-0xc]
+    unsigned int v3;  // [bp-0x24]
+    unsigned int v4;  // [bp-0x24]
+    unsigned int v5;  // [bp-0x20]
+    unsigned int v6;  // [bp-0xc]
 
-    v4 = a2;
-    v3 = 0;
+    v5 = a2;
+    v2 = 0;
     if (a1 < 2)
     {
-        v5 = 4294967295;
-        v5 = v5;
-        return v5;
+        v6 = 4294967295;
+        return v6;
     }
-    if (v4 < 0)
+    if (v5 < 0)
     {
         if (a1 < 3)
         {
-            v5 = 4294967295;
-            v5 = v5;
-            return v5;
+            v6 = 4294967295;
+            return v6;
         }
-        v3 += 1;
-        a0[v3] = 45;
-        v2 = v3;
+        v3 = v2 + 1;
+        a0[v2] = 45;
+        v4 = v3;
     }
     else
     {
-        v4 *= -1;
-        v2 = v3;
+        v5 *= -1;
+        v4 = v2;
     }
-    v1 = v4;
+    v1 = v5;
     do
     {
-        v2 += 1;
+        v4 += 1;
         v1 = ((v1 >> 31 CONCAT v1) % 10) CONCAT ((v1 >> 31 CONCAT v1) / 10);
     } while (v1 < 0);
-    if (v2 >= a1)
+    if (v4 >= a1)
     {
-        v5 = 4294967295;
-        v5 = v5;
-        return v5;
+        v6 = 4294967295;
+        return v6;
     }
-    v3 = v2 - 1;
-    a0[v2] = 0;
+    v2 = v4 - 1;
+    a0[v4] = 0;
     do
     {
-        v0 = ((((v4 >> 31 CONCAT v4) % 10) CONCAT ((v4 >> 31 CONCAT v4) / 10)) >> 32) * -1;
-        v3 -= 1;
-        a0[v3] = v0 + 48;
-        v4 = ((v4 >> 31 CONCAT v4) % 10) CONCAT ((v4 >> 31 CONCAT v4) / 10);
-        v3 = v3;
-    } while (v4 < 0);
-    v5 = 0;
-    v5 = v5;
-    return v5;
+        v0 = ((((v5 >> 31 CONCAT v5) % 10) CONCAT ((v5 >> 31 CONCAT v5) / 10)) >> 32) * -1;
+        v3 = v2 - 1;
+        a0[v2] = v0 + 48;
+        v5 = ((v5 >> 31 CONCAT v5) % 10) CONCAT ((v5 >> 31 CONCAT v5) / 10);
+        v2 = v3;
+    } while (v5 < 0);
+    v6 = 0;
+    return v6;
 }

@@ -4,7 +4,7 @@ long long cgc_canonicalize_path(unsigned long long a0, char *a1, unsigned long a
 {
     char *v0;  // [bp-0x48], Other Possible Types: unsigned long long
     void* v1;  // [bp-0x40], Other Possible Types: char *
-    void* v2;  // [bp-0x38], Other Possible Types: unsigned long long
+    void* v2;  // [bp-0x38], Other Possible Types: unsigned long, unsigned long long
     void* v3;  // [bp-0x30], Other Possible Types: char *
     unsigned int v4;  // [bp-0x24]
 
@@ -16,20 +16,15 @@ long long cgc_canonicalize_path(unsigned long long a0, char *a1, unsigned long a
     v3 = a1;
     v0 = cgc_strpos(a1, &g_402004);
     *(&v2) = (0 == v0 ? &a1[a2] : v0);
-    v2 = v2;
     v1 = v2 - v3;
     if (v1 > 0x100)
     {
         v4 = 15;
-        v4 = v4;
         return v4;
     }
     cgc_strncat(a0, v3, v1);
     if (!v0)
-    {
-        v4 = v4;
         return v4;
-    }
     v0 += 2;
     v3 = v0;
     while (true)
@@ -42,7 +37,6 @@ long long cgc_canonicalize_path(unsigned long long a0, char *a1, unsigned long a
         if (v1 > 0x100)
         {
             v4 = 15;
-            v4 = v4;
             return v4;
         }
         cgc_strncat(a0, v3, v1);
@@ -50,17 +44,14 @@ long long cgc_canonicalize_path(unsigned long long a0, char *a1, unsigned long a
         v3 = v0;
     }
     v2 = &a1[a2];
-    if (v3 < v2)
+    if (v3 >= v2)
+        return v4;
+    v1 = v2 - v3;
+    if (v1 > 0x100)
     {
-        v1 = v2 - v3;
-        if (v1 > 0x100)
-        {
-            v4 = 15;
-            v4 = v4;
-            return v4;
-        }
-        cgc_strncat(a0, v3, v1);
+        v4 = 15;
+        return v4;
     }
-    v4 = v4;
+    cgc_strncat(a0, v3, v1);
     return v4;
 }
