@@ -1,13 +1,12 @@
 long long cgc_parseSearchResult(char *a0, char *a1)
 {
     char v0;  // [bp-0x5d]
-    char *s_30;  // [bp-0x30]
     unsigned int v1;  // [bp-0x5c]
     char *v2;  // [bp-0x58]
     unsigned int v3;  // [bp-0x50]
     unsigned int v4;  // [bp-0x4c]
     char v5;  // [bp-0x48]
-    void* v6;  // [sp-0x30], Other Possible Types: char *
+    void* v6;  // [bp-0x30], Other Possible Types: char *
     void* v7;  // [bp-0x28], Other Possible Types: char *
     unsigned int v8;  // [bp-0xc]
 
@@ -41,28 +40,28 @@ long long cgc_parseSearchResult(char *a0, char *a1)
         cgc_memcpy(&v5, v7, v4);
         if (!cgc_strcmp(&v5, "sid"))
         {
-            s_30 = v6 + 1;
+            v6 += 1;
             v7 = cgc_setValue(v6 + 1, a1);
         }
         else
         {
             if (!cgc_strcmp(&v5, "price"))
             {
-                s_30 = v6 + 1;
+                v6 += 1;
                 v7 = cgc_setValue(v6 + 1, a1 + 200);
             }
             else
             {
                 if (!cgc_strcmp(&v5, "artist"))
                 {
-                    s_30 = v6 + 1;
+                    v6 += 1;
                     v7 = cgc_setValue(v6 + 1, a1 + 50);
                 }
                 else
                 {
                     if (cgc_strcmp(&v5, "album"))
                         break;
-                    s_30 = v6 + 1;
+                    v6 += 1;
                     v7 = cgc_setValue(v6 + 1, a1 + 100);
                 }
             }
@@ -75,7 +74,7 @@ long long cgc_parseSearchResult(char *a0, char *a1)
         v8 = v8;
         return v8;
     }
-    s_30 = v6 + 1;
+    v6 += 1;
     cgc_setValue(v6 + 1, a1 + 150);
     v8 = 0;
     v8 = v8;
