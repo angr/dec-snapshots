@@ -3,7 +3,7 @@ extern unsigned long long g_4033e0;
 
 void sub_401020()
 {
-    unsigned long long v0;  // [bp-0x8]
+    unsigned long v0;  // [bp-0x8]
 
     v0 = g_4033d8;
     goto g_4033e0;
