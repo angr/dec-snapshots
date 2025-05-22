@@ -2,8 +2,8 @@ extern struct_0 attributes;
 
 long long cgc_getRandomAttribute(unsigned long a0)
 {
-    char *v0;  // [bp-0x28]
-    char *v1;  // [bp-0x20]
+    unsigned long v0;  // [bp-0x28]
+    unsigned long v1;  // [bp-0x20]
     unsigned int v2;  // [bp-0x14]
 
     v2 = 0;

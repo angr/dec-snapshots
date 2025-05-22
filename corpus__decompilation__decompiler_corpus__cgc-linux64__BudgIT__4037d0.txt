@@ -10,7 +10,7 @@ long long cgc_removeMap(struct_0 **a0, char *a1)
     struct_0 *v1;  // [bp-0x30]
     void* v2;  // [bp-0x28], Other Possible Types: struct_0 *
     unsigned long long v4;  // rax
-    unsigned long long v5;  // rax
+    unsigned long v5;  // rax
     unsigned long long v6;  // rax
 
     v2 = 0;
