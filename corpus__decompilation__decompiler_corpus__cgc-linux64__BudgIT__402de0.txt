@@ -16,7 +16,7 @@ long long cgc_checkheap()
     {
         for (v0 = cgc_allocated; v0->field_8 != cgc_allocated; v0 = v0->field_8)
         {
-            if (v1 < &v0->padding_0[v0->field_10] && v0 < &v1->padding_0[v1->field_10])
+            if (v1 < v0 + v0->field_10 && v0 < v1 + v1->field_10)
             {
                 if (cgc_sendline(1, "corrupt", 7) < 0)
                     cgc__terminate(6);
