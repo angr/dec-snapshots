@@ -27,8 +27,7 @@ long long cgc_removeMap(struct_0 **a0, char *a1)
         v6 = v4 & 0xffffffffffffff00 | v0;
         if (!(v0 & 1))
             break;
-        v6 = cgc_strcmp(a1, &v2->field_c);
-        if (!v6)
+        if (!cgc_strcmp(a1, &v2->field_c))
             break;
         v1 = v2;
         v2 = v2->field_0;
