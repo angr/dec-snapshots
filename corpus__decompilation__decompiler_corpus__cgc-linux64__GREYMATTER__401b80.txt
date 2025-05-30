@@ -24,47 +24,46 @@ long long cgc_request_document(char *a0, unsigned long long a1)
     unsigned short v10;  // [bp-0x32]
     void* v11;  // [bp-0x30]
     unsigned int v12;  // [bp-0x24]
-    unsigned int v13;  // [bp-0x24]
-    unsigned long long v14;  // [bp-0x20]
-    unsigned long v15;  // [bp-0x20]
-    unsigned int v16;  // [bp-0xc]
-    unsigned long v18;  // rax
+    unsigned long long v13;  // [bp-0x20]
+    unsigned long v14;  // [bp-0x20]
+    unsigned int v15;  // [bp-0xc]
+    unsigned long v17;  // rax
 
-    v14 = a1;
+    v13 = a1;
     v12 = 0;
     v11 = 0;
-    if (v14 > 1000)
+    if (v13 > 1000)
     {
-        v16 = 16;
-        return v16;
+        v15 = 16;
+        return v15;
     }
     v12 = cgc_transmit_with_term(1, a0, cgc_strlen(a0), 0);
     if (v12)
     {
-        v16 = v12;
-        return v16;
+        v15 = v12;
+        return v15;
     }
     v10 = 0;
     v12 = cgc_receive_all(0, &v10, 2);
     if (v12)
     {
-        v16 = v12;
-        return v16;
+        v15 = v12;
+        return v15;
     }
     else if (v10 + 1 < v10)
     {
-        v16 = v12;
-        return v16;
+        v15 = v12;
+        return v15;
     }
     else if (0 > cgc_recv_until_delim(0, &buf_recv_tmp, 65535))
     {
-        v16 = v12;
-        return v16;
+        v15 = v12;
+        return v15;
     }
     else if (cgc_strcmp(a0, &buf_recv_tmp))
     {
-        v16 = v12;
-        return v16;
+        v15 = v12;
+        return v15;
     }
     else
     {
@@ -72,12 +71,12 @@ long long cgc_request_document(char *a0, unsigned long long a1)
         v12 = cgc_allocate(v10 + 1, 0, &v9);
         if (v12)
         {
-            v16 = v12;
-            return v16;
+            v15 = v12;
+            return v15;
         }
-        vvar_17{reg 48} = &v0;
-        v13 = cgc_receive_with_term(0, v9, v10);
-        if (!v13)
+        vvar_152{reg 48} = &v0;
+        v12 = cgc_receive_with_term(0, v9, v10);
+        if (!v12)
         {
             if (!(v11 == v10))
                 goto LABEL_401d11;
@@ -85,24 +84,24 @@ long long cgc_request_document(char *a0, unsigned long long a1)
             v7 = 0;
             while (true)
             {
-                vvar_8{reg 48} = vvar_17{reg 48} - 8;
+                vvar_167{reg 48} = vvar_17{reg 48} - 8;
                 *((vvar_17{reg 48} - 8)) = &g_401d36;
                 v8 = cgc_strpos(v8, &g_402008);
                 if (!v8)
                     break;
-                vvar_175{reg 48} = vvar_8{reg 48} - 8;
+                vvar_175{reg 48} = vvar_167{reg 48} - 8;
                 *((vvar_8{reg 48} - 8)) = &g_401d54;
                 v8 += cgc_strlen(&g_402008);
-                vvar_17{reg 48} = vvar_175{reg 48} - 8;
+                vvar_183{reg 48} = vvar_175{reg 48} - 8;
                 *((vvar_175{reg 48} - 8)) = &g_401d6c;
                 v7 = cgc_strpos(v8, "$!SRC$");
                 if (v7)
                 {
                     v6 = 1 + v7 - v8;
-                    v18 = v6;
+                    v17 = v6;
                     *(&v5) = vvar_17{reg 48};
-                    v1 = vvar_17{reg 48} - (v18 + 15 & 0xfffffffffffffff0);
-                    v4 = v18;
+                    v1 = vvar_183{reg 48} - (v17 + 15 & 0xfffffffffffffff0);
+                    v4 = v17;
                     vvar_207{reg 48} = v1 - 8;
                     *(&v1[8]) = &g_401dca;
                     cgc_strncpy(v1, v8, v6 - 1);
@@ -112,21 +111,21 @@ long long cgc_request_document(char *a0, unsigned long long a1)
                     memset(&v3, 0, 0x100);
                     v3 = 6;
                     *((vvar_218{reg 48} - 8)) = &g_401e0e;
-                    v13 = cgc_canonicalize_path(&v3, v1, v6);
-                    if (v13)
+                    v12 = cgc_canonicalize_path(&v3, v1, v6);
+                    if (v12)
                     {
                         v2 = 2;
-                        v2 = v2;
+                        v12 = v2;
                     }
                     else
                     {
-                        v15 = v14 + 1;
+                        v14 = v13 + 1;
                         *((vvar_218{reg 48} - 16)) = &g_401e44;
-                        v13 = cgc_request_document(&v3, v14 + 1);
-                        v2 = (0 == v13 ? 2 : 0);
-                        v14 = v15;
-                        v2 = v13;
+                        v12 = cgc_request_document(&v3, v13 + 1);
+                        v2 = (0 == v12 ? 0 : 2);
+                        v13 = v14;
                     }
+                    v2 = v12;
                     vvar_17{reg 48} = v5;
                     if (v2)
                         break;
@@ -139,7 +138,7 @@ LABEL_401d11:
         }
         *((vvar_8{reg 48} - 8)) = &g_401ead;
         cgc_deallocate(v9, v10 + 1);
-        v16 = v13;
-        return v16;
+        v15 = v12;
+        return v15;
     }
 }

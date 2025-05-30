@@ -5,8 +5,7 @@ long long cgc_recvline(unsigned int a0, void* a1, unsigned long long a2)
     unsigned long long v2;  // [bp-0x20]
     void* v3;  // [bp-0x18]
     void* v4;  // [bp-0x18]
-    void* v5;  // [bp-0x18]
-    unsigned int v6;  // [bp-0xc]
+    unsigned int v5;  // [bp-0xc]
 
     v3 = a1;
     v2 = a2;
@@ -14,42 +13,39 @@ long long cgc_recvline(unsigned int a0, void* a1, unsigned long long a2)
     v0 = 0;
     if (!v2)
     {
-        v6 = 0;
-        return v6;
+        v5 = 0;
+        return v5;
     }
     else if (!v3)
     {
-        v6 = 4294967289;
-        return v6;
+        v5 = 4294967289;
+        return v5;
     }
     else
     {
         while (true)
         {
-            v3 = v3;
-            v4 = v3;
             if (!v2)
                 break;
-            v5 = v3 + 1;
+            v4 = v3 + 1;
             if (cgc_receive(a0, v3, 1, &v1))
             {
-                v6 = 4294967289;
-                return v6;
+                v5 = 4294967289;
+                return v5;
             }
             v0 += 1;
             v2 -= 1;
-            v3 = v5;
-            v4 = v5;
-            if (v5[1] == 7)
+            v3 = v4;
+            if (v3[1] == 7)
                 break;
         }
-        if (v4[1] == 7)
+        if (v3[1] == 7)
         {
-            *(&v4[1]) = 0;
-            v6 = v0;
-            return v6;
+            *(&v3[1]) = 0;
+            v5 = v0;
+            return v5;
         }
-        v6 = 4294967219;
-        return v6;
+        v5 = 4294967219;
+        return v5;
     }
 }
