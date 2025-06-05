@@ -3,14 +3,23 @@ typedef struct struct_0 {
     struct struct_0 *field_8;
 } struct_0;
 
-long long cgc_insert(struct_0 **a0, struct_0 *a1)
+typedef struct struct_1 {
+    struct struct_1 *field_0;
+    struct struct_2 *field_8;
+} struct_1;
+
+typedef struct struct_2 {
+    struct struct_1 *field_0;
+} struct_2;
+
+long long cgc_insert(struct_1 **a0, struct_0 *a1)
 {
     struct_0 *v0;  // [bp-0x18]
 
     v0 = a1;
     a1->field_8 = &a0;
-    a1->field_0 = *(a0);
+    a1->field_0 = &*(a0)->field_0;
     a1->field_0->field_8 = a1;
-    *(a0) = a1;
+    *(a0) = &a1->field_0;
     return a0;
 }
