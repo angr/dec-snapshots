@@ -12,7 +12,7 @@ long long cgc_str2uint(char *a0)
         v3 = v2;
         return v3;
     }
-    for (v0 = 0; v0 < v1; v0 += 1)
+    for (v0 = 0; v0 < 10; v0 += 1)
     {
         if (a0[v0] >= 48)
         {

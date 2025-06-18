@@ -20,7 +20,7 @@ long long cgc_canonicalize_path(unsigned long long a0, char *a1, unsigned long a
     if (v1 > 0x100)
     {
         v4 = 15;
-        return v4;
+        return 15;
     }
     cgc_strncat(a0, v3, v1);
     if (!v0)
@@ -37,7 +37,7 @@ long long cgc_canonicalize_path(unsigned long long a0, char *a1, unsigned long a
         if (v1 > 0x100)
         {
             v4 = 15;
-            return v4;
+            return 15;
         }
         cgc_strncat(a0, v3, v1);
         v0 += 2;
@@ -50,7 +50,7 @@ long long cgc_canonicalize_path(unsigned long long a0, char *a1, unsigned long a
     if (v1 > 0x100)
     {
         v4 = 15;
-        return v4;
+        return 15;
     }
     cgc_strncat(a0, v3, v1);
     return v4;

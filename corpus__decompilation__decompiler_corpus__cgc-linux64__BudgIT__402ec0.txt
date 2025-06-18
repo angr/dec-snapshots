@@ -23,7 +23,7 @@ long long cgc_malloc(unsigned long long a0)
     if (!v2)
     {
         v3 = 0;
-        return v3;
+        return 0;
     }
     v1 = cgc_freed;
     v2 += 24;
@@ -64,7 +64,7 @@ long long cgc_malloc(unsigned long long a0)
         if (cgc_allocate(v2, 0, &v1))
         {
             v3 = 0;
-            return v3;
+            return 0;
         }
         v1->field_10 = v2;
         cgc_insert(cgc_allocated, v1);

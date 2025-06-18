@@ -14,7 +14,7 @@ long long cgc_getValue(struct_0 *a0, char *a1)
         if (!v0)
         {
             v1 = 0;
-            return v1;
+            return 0;
         }
         if (v0 + 1 && !cgc_strcmp(a1, v0 + 1))
         {

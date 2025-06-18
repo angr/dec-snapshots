@@ -11,7 +11,7 @@ long long cgc_transmit_all(unsigned long long a0, unsigned long long a1)
     if (!a0)
     {
         v3 = 0;
-        return v3;
+        return 0;
     }
     do
     {
