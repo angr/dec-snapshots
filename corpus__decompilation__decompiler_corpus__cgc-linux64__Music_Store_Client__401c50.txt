@@ -43,30 +43,27 @@ long long cgc_parseSearchResult(char *a0, char *a1)
         {
             v6 = v7 + 1;
             v8 = cgc_setValue(v7 + 1, a1);
+            goto LABEL_401e83;
         }
-        else
+        if (!cgc_strcmp(&v5, "price"))
         {
-            if (!cgc_strcmp(&v5, "price"))
-            {
-                v6 = v7 + 1;
-                v8 = cgc_setValue(v7 + 1, a1 + 200);
-            }
-            else
-            {
-                if (!cgc_strcmp(&v5, "artist"))
-                {
-                    v6 = v7 + 1;
-                    v8 = cgc_setValue(v7 + 1, a1 + 50);
-                }
-                else
-                {
-                    if (cgc_strcmp(&v5, "album"))
-                        break;
-                    v6 = v7 + 1;
-                    v8 = cgc_setValue(v7 + 1, a1 + 100);
-                }
-            }
+            v6 = v7 + 1;
+            v8 = cgc_setValue(v7 + 1, a1 + 200);
+            goto LABEL_401e7e;
         }
+        if (!cgc_strcmp(&v5, "artist"))
+        {
+            v6 = v7 + 1;
+            v8 = cgc_setValue(v7 + 1, a1 + 50);
+            goto LABEL_401e74;
+        }
+        if (cgc_strcmp(&v5, "album"))
+            break;
+        v6 = v7 + 1;
+        v8 = cgc_setValue(v7 + 1, a1 + 100);
+LABEL_401e74:
+LABEL_401e7e:
+LABEL_401e83:
         cgc_memset(&v5, 0, 20);
     }
     if (cgc_strcmp(&v5, "song"))
