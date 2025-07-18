@@ -4,14 +4,14 @@ extern unsigned long long g_4033c8;
 
 long long __do_global_dtors_aux()
 {
-    unsigned long v1;  // rax
-    unsigned long long v2;  // rax
+    unsigned long long v1;  // rax
+    unsigned long v2;  // rax
 
     if (__bss_start)
-        return v1;
+        return v2;
     if (g_4033c8)
         __cxa_finalize(__dso_handle);
-    v2 = deregister_tm_clones();
+    v1 = deregister_tm_clones();
     __bss_start = 1;
-    return v2;
+    return v1;
 }
