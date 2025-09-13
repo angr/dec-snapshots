@@ -1,4 +1,4 @@
-long long sub_40102c(void* a0, unsigned int a1, unsigned int a2)
+long long sub_40102c(void* a0, unsigned int a1, unsigned long a2)
 {
     return memset(a0, a1, a2);
 }
