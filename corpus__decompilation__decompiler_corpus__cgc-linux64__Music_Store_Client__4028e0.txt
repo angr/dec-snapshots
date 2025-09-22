@@ -1,6 +1,6 @@
 int main(unsigned int a0, unsigned long long a1)
 {
-    struct struct_0 v0[16];  // [bp-0xb18]
+    int v0;  // [bp-0xb18]
     unsigned long long v1;  // [bp-0xb08]
     int v2;  // [bp-0xb08]
     int v3;  // [bp-0xb00]
@@ -64,10 +64,10 @@ int main(unsigned int a0, unsigned long long a1)
         v6 = v22;
         v4 = v21;
         v2 = v20;
-        *(&v0->field_0) = v18;
+        v0 = v18;
         cgc_sendSearchString(1);
         cgc_receiveSearchResults(0, &v26, 10);
-        v15 = &v0[0].field_0;
+        v15 = &v0;
         v14 = v25;
         v13 = v24;
         memcpy(&v11, &v23, 16);

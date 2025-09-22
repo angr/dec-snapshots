@@ -19,13 +19,13 @@ long long cgc_request_document(char *a0, unsigned long long a1)
     unsigned long v5;  // [bp-0x60]
     unsigned long v6;  // [bp-0x58]
     void* v7;  // [bp-0x50], Other Possible Types: unsigned long long
-    char *v8;  // [bp-0x48], Other Possible Types: unsigned long long
+    void* v8;  // [bp-0x48], Other Possible Types: unsigned long long
     void* v9;  // [bp-0x40]
     unsigned short v10;  // [bp-0x32]
     void* v11;  // [bp-0x30]
     unsigned int v12;  // [bp-0x24]
     unsigned long long v13;  // [bp-0x20]
-    unsigned long v14;  // [bp-0x20]
+    unsigned long long v14;  // [bp-0x20]
     unsigned int v15;  // [bp-0xc]
     unsigned long v17;  // rax
 
@@ -97,7 +97,7 @@ long long cgc_request_document(char *a0, unsigned long long a1)
                 v7 = cgc_strpos(v8, "$!SRC$");
                 if (v7)
                 {
-                    v6 = 1 + v7 - v8;
+                    v6 = v7 - v8 + 1;
                     v17 = v6;
                     *(&v5) = vvar_17{reg 48};
                     v1 = vvar_183{reg 48} - (v17 + 15 & 0xfffffffffffffff0);

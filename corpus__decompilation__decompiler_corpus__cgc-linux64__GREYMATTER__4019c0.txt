@@ -2,7 +2,7 @@ extern char g_402004;
 
 long long cgc_canonicalize_path(unsigned long long a0, char *a1, unsigned long a2)
 {
-    unsigned long v0;  // [bp-0x48], Other Possible Types: unsigned long long
+    char *v0;  // [bp-0x48], Other Possible Types: unsigned long, unsigned long long
     void* v1;  // [bp-0x40], Other Possible Types: char *
     void* v2;  // [bp-0x38], Other Possible Types: unsigned long, unsigned long long
     void* v3;  // [bp-0x30], Other Possible Types: char *, unsigned long
