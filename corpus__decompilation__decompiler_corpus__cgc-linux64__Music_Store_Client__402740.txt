@@ -5,7 +5,7 @@ typedef struct struct_0 {
 
 long long cgc_getBalance(struct_0 *a0)
 {
-    unsigned long v0;  // [bp-0x38]
+    void* v0;  // [bp-0x38]
     unsigned int v1;  // [bp-0x2c]
     void* v2;  // [bp-0x28]
     void* v3;  // [bp-0x20]

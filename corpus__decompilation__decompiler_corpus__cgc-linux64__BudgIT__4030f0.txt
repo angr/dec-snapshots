@@ -1,18 +1,27 @@
-typedef struct struct_2 {
+typedef struct struct_4 {
     struct struct_0 *field_0;
-    struct struct_1 *field_8;
-} struct_2;
+    struct struct_3 *field_8;
+} struct_4;
 
 typedef struct struct_0 {
     char padding_0[8];
     struct struct_1 *field_8;
 } struct_0;
 
+typedef struct struct_3 {
+    struct struct_2 *field_0;
+} struct_3;
+
 typedef struct struct_1 {
     struct struct_0 *field_0;
 } struct_1;
 
-long long cgc_remove(struct_2 *a0)
+typedef struct struct_2 {
+    char padding_0[8];
+    struct struct_3 *field_8;
+} struct_2;
+
+long long cgc_remove(struct_4 *a0)
 {
     a0->field_0->field_8 = a0->field_8;
     a0->field_8->field_0 = a0->field_0;

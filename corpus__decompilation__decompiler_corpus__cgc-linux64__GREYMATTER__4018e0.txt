@@ -2,7 +2,7 @@ extern char g_401937;
 
 long long cgc_random_alpha_lower(char *a0, unsigned long long a1)
 {
-    struct struct_0 v0[15];  // [bp-0x58]
+    char v0;  // [bp-0x58]
     char v1;  // [bp-0x49]
     char *v2;  // [bp-0x48]
     char *v3;  // [bp-0x48]
@@ -15,8 +15,8 @@ long long cgc_random_alpha_lower(char *a0, unsigned long long a1)
 
     v8 = 0;
     v7 = 0;
-    v6 = &v0[0].field_0;
-    v2 = &v0[-1 * (a1 + 15 & 0xfffffffffffffff0)].field_0;
+    v6 = &v0;
+    v2 = &(&v0)[-1 * (a1 + 15 & 0xfffffffffffffff0)];
     v5 = a1;
     v3 = v2;
     do

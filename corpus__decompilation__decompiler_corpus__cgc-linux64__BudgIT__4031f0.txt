@@ -1,4 +1,4 @@
-extern void* *cgc_freed;
+extern void* cgc_freed;
 
 long long cgc_free(unsigned long a0)
 {
