@@ -4,10 +4,16 @@ typedef struct struct_0 {
     char field_c;
 } struct_0;
 
-long long cgc_setMap(struct_0 **a0, char *a1, unsigned int a2)
+typedef struct struct_1 {
+    struct struct_1 *field_0;
+    unsigned int field_8;
+    char field_c;
+} struct_1;
+
+long long cgc_setMap(struct_1 **a0, char *a1, unsigned int a2)
 {
     struct_0 *v0;  // [bp-0x38]
-    void* v1;  // [bp-0x30], Other Possible Types: struct_0 *
+    void* v1;  // [bp-0x30], Other Possible Types: struct_1 *
     unsigned int v2;  // [bp-0xc]
 
     v1 = 0;
