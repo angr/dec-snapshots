@@ -1,7 +1,7 @@
-extern struct_0 *cgc_allocated;
-extern struct_0 cgc_allocatedc;
-extern struct_1 *cgc_freed;
-extern struct_1 cgc_freedc;
+extern struct_1 *cgc_allocated;
+extern struct_1 cgc_allocatedc;
+extern struct_0 *cgc_freed;
+extern struct_0 cgc_freedc;
 extern char cgc_heapinit_done;
 
 long long cgc_heapinit()
