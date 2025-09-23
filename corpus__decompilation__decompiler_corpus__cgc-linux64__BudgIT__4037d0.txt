@@ -4,11 +4,17 @@ typedef struct struct_0 {
     char field_c;
 } struct_0;
 
-long long cgc_removeMap(struct_0 **a0, char *a1)
+typedef struct struct_1 {
+    struct struct_1 *field_0;
+    unsigned int field_8;
+    char field_c;
+} struct_1;
+
+long long cgc_removeMap(struct_1 **a0, char *a1)
 {
     char v0;  // [bp-0x31]
     struct_0 *v1;  // [bp-0x30]
-    void* v2;  // [bp-0x28], Other Possible Types: struct_0 *
+    void* v2;  // [bp-0x28], Other Possible Types: struct_1 *
     void* v4;  // rax
     unsigned long long v6;  // rax
 
