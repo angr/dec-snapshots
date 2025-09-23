@@ -1,20 +1,20 @@
-typedef struct struct_1 {
-    char padding_0[8];
-    struct struct_1 *field_8;
-    unsigned int field_10;
-} struct_1;
-
 typedef struct struct_0 {
     char padding_0[8];
     struct struct_0 *field_8;
     unsigned int field_10;
 } struct_0;
 
+typedef struct struct_1 {
+    char padding_0[8];
+    struct struct_1 *field_8;
+    unsigned int field_10;
+} struct_1;
+
 extern unsigned long long cgc_allocated;
 extern unsigned int cgc_curleft;
-extern struct_1 *cgc_freed;
+extern struct_0 *cgc_freed;
 extern char cgc_heapinit_done;
-extern struct_0 *cgc_lastpage;
+extern struct_1 *cgc_lastpage;
 
 long long cgc_malloc(unsigned long long a0)
 {
