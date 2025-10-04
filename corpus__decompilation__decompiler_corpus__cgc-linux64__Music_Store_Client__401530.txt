@@ -14,12 +14,12 @@ long long cgc_recvline(unsigned int a0, void* a1, unsigned long long a2)
     if (!v2)
     {
         v5 = 0;
-        return 0;
+        return v5;
     }
     else if (!v3)
     {
         v5 = 4294967289;
-        return 4294967289;
+        return v5;
     }
     else
     {
@@ -31,7 +31,7 @@ long long cgc_recvline(unsigned int a0, void* a1, unsigned long long a2)
             if (cgc_receive(a0, v3, 1, &v1))
             {
                 v5 = 4294967289;
-                return 4294967289;
+                return v5;
             }
             v0 += 1;
             v2 -= 1;
@@ -46,6 +46,6 @@ long long cgc_recvline(unsigned int a0, void* a1, unsigned long long a2)
             return v5;
         }
         v5 = 4294967219;
-        return 4294967219;
+        return v5;
     }
 }

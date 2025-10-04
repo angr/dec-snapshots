@@ -13,12 +13,12 @@ long long cgc_sendall(unsigned int a0, unsigned long long a1, unsigned long long
     if (!v3)
     {
         v4 = 4294967295;
-        return 4294967295;
+        return v4;
     }
     if (!v2)
     {
         v4 = 0;
-        return 0;
+        return v4;
     }
     while (true)
     {
@@ -30,7 +30,7 @@ long long cgc_sendall(unsigned int a0, unsigned long long a1, unsigned long long
         if (cgc_transmit(a0, v3, v2, &v1))
         {
             v4 = 4294967295;
-            return 4294967295;
+            return v4;
         }
         v3 += v1;
         v0 += v1;

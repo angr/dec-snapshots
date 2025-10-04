@@ -18,7 +18,7 @@ long long cgc_streq(char *a0, char *a1)
         if (*(v3) != *(v2))
         {
             v4 = 0;
-            return 0;
+            return v4;
         }
         v3 += 1;
         v2 += 1;
