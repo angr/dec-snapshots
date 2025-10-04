@@ -10,30 +10,30 @@ long long cgc_transmit_all(unsigned int a0, unsigned long a1, unsigned long a2)
     if (!a1)
     {
         v3 = 1;
-        return 1;
+        return v3;
     }
     if (!a2)
     {
         v3 = 2;
-        return 2;
+        return v3;
     }
     while (true)
     {
         if (v2 >= a2)
         {
             v3 = 0;
-            return 0;
+            return v3;
         }
         v0 = cgc_transmit(a0, a1 + v2, a2 - v2, &v1);
         if (!v1)
         {
             v3 = 3;
-            return 3;
+            return v3;
         }
         if (v0)
         {
             v3 = 3;
-            return 3;
+            return v3;
         }
         v2 += v1;
     }

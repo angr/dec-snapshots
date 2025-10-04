@@ -3,7 +3,7 @@ long long cgc_parseResultSize(char *a0)
     char v0;  // [bp-0xa1]
     unsigned int v1;  // [bp-0xa0]
     unsigned int v2;  // [bp-0x9c]
-    unsigned long long v3;  // [bp-0x98]
+    char *v3;  // [bp-0x98]
     unsigned int v4;  // [bp-0x90]
     unsigned int v5;  // [bp-0x8c]
     char v6;  // [bp-0x88]
@@ -31,7 +31,7 @@ long long cgc_parseResultSize(char *a0)
         if (*(v8))
         {
             v0 = 0;
-            if (*(v8) != 61)
+            if (*(v8) != *(v3))
                 v0 = v5 < 20;
         }
         if (!(v0 & 1))
@@ -43,7 +43,7 @@ long long cgc_parseResultSize(char *a0)
     if (cgc_strcmp(&v7, "NUMBER"))
     {
         v11 = 0;
-        return 0;
+        return v11;
     }
     v9 = v8 + 1;
     cgc_setValue(v8 + 1, &v6);

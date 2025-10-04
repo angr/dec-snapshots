@@ -17,7 +17,7 @@ long long cgc_check()
     if (cgc_receive_delim(0, &v2, 128, 10))
     {
         v6 = 4294967295;
-        return 4294967295;
+        return v6;
     }
     for (v4 = 0; v2[v4]; v4 += 1)
     {

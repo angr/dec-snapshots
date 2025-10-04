@@ -9,7 +9,7 @@ long long cgc_strchr(char *a0, char a1)
         if (!*(v0))
         {
             v1 = 0;
-            return 0;
+            return v1;
         }
         if (*(v0) == a1)
         {
