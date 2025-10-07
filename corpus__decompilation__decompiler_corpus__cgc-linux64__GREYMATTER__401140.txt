@@ -1,17 +1,54 @@
-extern char __bss_start;
-extern unsigned long long __dso_handle;
-extern unsigned long long g_403578;
-
-long long __do_global_dtors_aux()
-{
-    unsigned long long v1;  // rax
-    unsigned long v2;  // rax
-
-    if (__bss_start)
-        return v2;
-    if (g_403578)
-        __cxa_finalize(__dso_handle);
-    v1 = deregister_tm_clones();
-    __bss_start = 1;
-    return v1;
-}
+Traceback (most recent call last):
+  File "/__w/angr/angr/build/src/angr/corpus_tests/test_corpus.py", line 40, in analyze_binary
+    decomp = project.analyses.Decompiler(
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/analysis.py", line 266, in __call__
+    r = w(*args, **kwargs)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/analysis.py", line 251, in wrapper
+    oself.__init__(*args, **kwargs)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/decompiler.py", line 153, in __init__
+    self._decompile()
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/utils/timing.py", line 72, in timed_func
+    return func(*args, **kwargs)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/decompiler.py", line 264, in _decompile
+    clinic = self.project.analyses.Clinic(
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/analysis.py", line 266, in __call__
+    r = w(*args, **kwargs)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/analysis.py", line 251, in wrapper
+    oself.__init__(*args, **kwargs)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/clinic.py", line 246, in __init__
+    self._analyze_for_decompiling()
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/clinic.py", line 302, in _analyze_for_decompiling
+    ail_graph = self._decompilation_simplifications(ail_graph)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/clinic.py", line 544, in _decompilation_simplifications
+    stages[stage]()
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/clinic.py", line 582, in _stage_constant_propagation
+    self._simplify_function(
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/utils/timing.py", line 72, in timed_func
+    return func(*args, **kwargs)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/clinic.py", line 1466, in _simplify_function
+    simplified = self._simplify_function_once(
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/utils/timing.py", line 72, in timed_func
+    return func(*args, **kwargs)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/clinic.py", line 1506, in _simplify_function_once
+    simp = self.project.analyses.AILSimplifier(
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/analysis.py", line 266, in __call__
+    r = w(*args, **kwargs)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/analysis.py", line 251, in wrapper
+    oself.__init__(*args, **kwargs)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/ail_simplifier.py", line 207, in __init__
+    self._simplify()
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/ail_simplifier.py", line 244, in _simplify
+    phi_const_rewritten = self._rewrite_phi_const_exprs()
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/ail_simplifier.py", line 861, in _rewrite_phi_const_exprs
+    srda = self._compute_reaching_definitions()
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/ail_simplifier.py", line 314, in _compute_reaching_definitions
+    rd = self.project.analyses.SReachingDefinitions(
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/analysis.py", line 266, in __call__
+    r = w(*args, **kwargs)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/analysis.py", line 251, in wrapper
+    oself.__init__(*args, **kwargs)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/s_reaching_definitions/s_reaching_definitions.py", line 55, in __init__
+    self._analyze()
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/s_reaching_definitions/s_reaching_definitions.py", line 203, in _analyze
+    max_vvar_size = max(reg_to_vvarids[reg_offset])
+TypeError: 'int' object is not iterable
