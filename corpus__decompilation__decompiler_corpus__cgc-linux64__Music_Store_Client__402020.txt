@@ -22,7 +22,7 @@ long long cgc_receiveSearchResults(unsigned int a0, struct_0 *a1, unsigned int a
         if (!v0)
         {
             v4 = 0;
-            return 0;
+            return v4;
         }
         v1 = cgc_recvline(a0, &v3, 1023);
         if (v1 < 0)
@@ -30,7 +30,7 @@ long long cgc_receiveSearchResults(unsigned int a0, struct_0 *a1, unsigned int a
         if (!v1)
         {
             v4 = 0;
-            return 0;
+            return v4;
         }
         if (a1->field_0 < a2)
         {
