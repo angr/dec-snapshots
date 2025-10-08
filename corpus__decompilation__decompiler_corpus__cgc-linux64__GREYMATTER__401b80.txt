@@ -74,7 +74,7 @@ long long cgc_request_document(char *a0, unsigned long long a1)
             v15 = v12;
             return v15;
         }
-        vvar_152{reg 48} = &v0;
+        vvar_152{r48|8b} = &v0;
         v12 = cgc_receive_with_term(0, v9, v10);
         if (!v12)
         {
@@ -84,33 +84,33 @@ long long cgc_request_document(char *a0, unsigned long long a1)
             v7 = 0;
             while (true)
             {
-                vvar_167{reg 48} = vvar_17{reg 48} - 8;
-                *((vvar_17{reg 48} - 8)) = &g_401d36;
+                vvar_167{r48|8b} = vvar_17{r48|8b} - 8;
+                *((vvar_17{r48|8b} - 8)) = &g_401d36;
                 v8 = cgc_strpos(v8, &g_402008);
                 if (!v8)
                     break;
-                vvar_175{reg 48} = vvar_167{reg 48} - 8;
-                *((vvar_8{reg 48} - 8)) = &g_401d54;
+                vvar_175{r48|8b} = vvar_167{r48|8b} - 8;
+                *((vvar_8{r48|8b} - 8)) = &g_401d54;
                 v8 += cgc_strlen(&g_402008);
-                vvar_183{reg 48} = vvar_175{reg 48} - 8;
-                *((vvar_175{reg 48} - 8)) = &g_401d6c;
+                vvar_183{r48|8b} = vvar_175{r48|8b} - 8;
+                *((vvar_175{r48|8b} - 8)) = &g_401d6c;
                 v7 = cgc_strpos(v8, "$!SRC$");
                 if (v7)
                 {
                     v6 = v7 - v8 + 1;
                     v17 = v6;
-                    *(&v5) = vvar_17{reg 48};
-                    v1 = vvar_183{reg 48} - (v17 + 15 & 0xfffffffffffffff0);
+                    *(&v5) = vvar_17{r48|8b};
+                    v1 = vvar_183{r48|8b} - (v17 + 15 & 0xfffffffffffffff0);
                     v4 = v17;
-                    vvar_207{reg 48} = v1 - 8;
+                    vvar_207{r48|8b} = v1 - 8;
                     *(&v1[8]) = &g_401dca;
                     cgc_strncpy(v1, v8, v6 - 1);
                     *(-1 + v1 + v6) = 6;
-                    vvar_218{reg 48} = vvar_207{reg 48} - 8;
-                    *((vvar_207{reg 48} - 8)) = &g_401df0;
+                    vvar_218{r48|8b} = vvar_207{r48|8b} - 8;
+                    *((vvar_207{r48|8b} - 8)) = &g_401df0;
                     memset(&v3, 0, 0x100);
                     v3 = 6;
-                    *((vvar_218{reg 48} - 8)) = &g_401e0e;
+                    *((vvar_218{r48|8b} - 8)) = &g_401e0e;
                     v12 = cgc_canonicalize_path(&v3, v1, v6);
                     if (v12)
                     {
@@ -119,12 +119,12 @@ long long cgc_request_document(char *a0, unsigned long long a1)
                     else
                     {
                         v14 = v13 + 1;
-                        *((vvar_218{reg 48} - 16)) = &g_401e44;
+                        *((vvar_218{r48|8b} - 16)) = &g_401e44;
                         v12 = cgc_request_document(&v3, v13 + 1);
                         v2 = (0 == v12 ? 0 : 2);
                         v13 = v14;
                     }
-                    vvar_17{reg 48} = v5;
+                    vvar_17{r48|8b} = v5;
                     if (v2)
                         break;
                 }
@@ -134,7 +134,7 @@ long long cgc_request_document(char *a0, unsigned long long a1)
         {
 LABEL_401d11:
         }
-        *((vvar_8{reg 48} - 8)) = &g_401ead;
+        *((vvar_8{r48|8b} - 8)) = &g_401ead;
         cgc_deallocate(v9, v10 + 1);
         v15 = v12;
         return v15;
