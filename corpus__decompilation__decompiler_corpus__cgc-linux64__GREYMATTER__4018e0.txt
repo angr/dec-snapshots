@@ -21,12 +21,12 @@ long long cgc_random_alpha_lower(char *a0, unsigned long long a1)
     v4 = a1;
     do
     {
-        vvar_44{reg 48} = vvar_3{reg 48} - 8;
-        *((vvar_3{reg 48} - 8)) = &g_401937;
+        vvar_44{r48|8b} = vvar_3{r48|8b} - 8;
+        *((vvar_3{r48|8b} - 8)) = &g_401937;
         v1 = 0;
         if (cgc_random(v2, a1, &v6))
             v1 = a1 != v6;
-        vvar_3{reg 48} = vvar_44{reg 48};
+        vvar_3{r48|8b} = vvar_44{r48|8b};
     } while ((v1 & 1));
     for (v3 = 0; v3 < a1; v3 += 1)
     {
