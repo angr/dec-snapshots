@@ -1,22 +1,22 @@
-typedef struct struct_0 {
-    char padding_0[8];
-    struct struct_0 *field_8;
-    unsigned int field_10;
-} struct_0;
-
 typedef struct struct_1 {
     char padding_0[8];
     struct struct_1 *field_8;
     unsigned int field_10;
 } struct_1;
 
-extern struct_1 *cgc_allocated;
-extern struct_0 *cgc_freed;
+typedef struct struct_0 {
+    char padding_0[8];
+    struct struct_0 *field_8;
+    unsigned int field_10;
+} struct_0;
+
+extern struct_0 *cgc_allocated;
+extern struct_1 *cgc_freed;
 
 long long cgc_checkheap()
 {
-    struct_1 *v0;  // [bp-0x18]
-    struct_0 *v1;  // [bp-0x10]
+    struct_0 *v0;  // [bp-0x18]
+    struct_1 *v1;  // [bp-0x10]
 
     for (v1 = cgc_freed; v1->field_8 != cgc_freed; v1 = v1->field_8)
     {
