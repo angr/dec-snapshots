@@ -1,13 +1,12 @@
 long long cgc_getRandomTerm(char *a0)
 {
     unsigned int v0;  // [bp-0x20]
-    unsigned int v1;  // [bp-0x1c]
+    char v1;  // [bp-0x1c], Other Possible Types: unsigned int
     unsigned int v2;  // [bp-0x18]
     unsigned int v3;  // [bp-0x14]
 
-    v3 = 0;
-    v2 = 0;
-    for (v1 = 0; !v3; v3 = cgc_getRandomNumber(50));
+    memset(&v1, 0, 12);
+    for (; !v3; v3 = cgc_getRandomNumber(50));
     v2 = cgc_strlen("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
     for (v1 = 0; v1 < v3; v1 += 1)
     {

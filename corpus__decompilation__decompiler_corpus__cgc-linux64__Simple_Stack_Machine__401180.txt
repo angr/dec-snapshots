@@ -1,13 +1,11 @@
 long long cgc_transmit_all(unsigned long long a0, unsigned long long a1)
 {
-    unsigned int v0;  // [bp-0x34]
-    void* v1;  // [bp-0x30]
-    void* v2;  // [bp-0x28]
+    char v0;  // [bp-0x34], Other Possible Types: unsigned int
+    unsigned long long v1;  // [bp-0x30]
+    unsigned long long v2;  // [bp-0x28]
     void* v3;  // [bp-0x10], Other Possible Types: unsigned long long
 
-    v2 = 0;
-    v1 = 0;
-    v0 = 0;
+    memset(&v0, 0, 20);
     if (!a0)
     {
         v3 = 0;
