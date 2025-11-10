@@ -5,18 +5,15 @@ typedef struct struct_0 {
 
 long long cgc_getBalance(struct_0 *a0)
 {
-    void* v0;  // [bp-0x38]
-    unsigned int v1;  // [bp-0x2c]
-    void* v2;  // [bp-0x28]
-    void* v3;  // [bp-0x20]
-    void* v4;  // [bp-0x18], Other Possible Types: unsigned long long
+    unsigned long v0;  // [bp-0x38]
+    char v1;  // [bp-0x2c], Other Possible Types: unsigned int
+    char v2;  // [bp-0x28], Other Possible Types: unsigned long
+    char *v3;  // [bp-0x20], Other Possible Types: void*[1]
+    unsigned long long v4;  // [bp-0x18]
     char v6;  // al
     unsigned long v7;  // rcx
 
-    v4 = 0;
-    v3 = 0;
-    v2 = 0;
-    v1 = 0;
+    memset(&v1, 0, 28);
     v4 = cgc_getRandomGiftCard(&v3);
     v1 = cgc_allocate(v4 + 7, 0, &v2);
     if (v1)
