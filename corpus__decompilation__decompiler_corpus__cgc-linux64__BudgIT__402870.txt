@@ -3,18 +3,19 @@ long long cgc_uint2str(char *a0, unsigned int a1, unsigned int a2)
     unsigned int v0;  // [bp-0x2c]
     unsigned int v1;  // [bp-0x28]
     unsigned int v2;  // [bp-0x24]
-    unsigned int v3;  // [bp-0x24]
-    unsigned int v4;  // [bp-0x20]
-    unsigned int v5;  // [bp-0xc]
+    unsigned int v3;  // [bp-0x20]
+    unsigned int v4;  // [bp-0xc]
+    unsigned long v6;  // rcx
+    unsigned long v7;  // rcx
 
-    v4 = a2;
+    v3 = a2;
     v2 = 0;
     if (a1 < 2)
     {
-        v5 = 4294967295;
-        return v5;
+        v4 = 4294967295;
+        return v4;
     }
-    v1 = v4;
+    v1 = v3;
     do
     {
         v2 += 1;
@@ -22,19 +23,20 @@ long long cgc_uint2str(char *a0, unsigned int a1, unsigned int a2)
     } while (v1 > 0);
     if (v2 >= a1)
     {
-        v5 = 4294967295;
-        return v5;
+        v4 = 4294967295;
+        return v4;
     }
-    v3 = v2 - 1;
-    a0[v2] = 0;
+    v6 = v2;
+    v2 = v6 - 1;
+    a0[v6 & 4294967295] = 0;
     do
     {
-        v0 = (((0 CONCAT v4) % 10) CONCAT ((0 CONCAT v4) / 10)) >> 32;
-        v2 = v3 - 1;
-        a0[v3] = v0 + 48;
-        v4 = ((0 CONCAT v4) % 10) CONCAT ((0 CONCAT v4) / 10);
-        v3 = v2;
-    } while (v4 > 0);
-    v5 = 0;
-    return v5;
+        v0 = (((0 CONCAT v3) % 10) CONCAT ((0 CONCAT v3) / 10)) >> 32;
+        v7 = v2;
+        v2 = v7 - 1;
+        a0[v7 & 4294967295] = v0 + 48;
+        v3 = ((0 CONCAT v3) % 10) CONCAT ((0 CONCAT v3) / 10);
+    } while (v3 > 0);
+    v4 = 0;
+    return v4;
 }

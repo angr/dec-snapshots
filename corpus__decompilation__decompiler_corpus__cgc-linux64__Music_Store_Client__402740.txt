@@ -10,7 +10,7 @@ long long cgc_getBalance(struct_0 *a0)
     char v2;  // [bp-0x28], Other Possible Types: unsigned long
     char *v3;  // [bp-0x20], Other Possible Types: void*[1]
     unsigned long long v4;  // [bp-0x18]
-    char v6;  // al
+    unsigned long long v6;  // rax
     unsigned long v7;  // rcx
 
     memset(&v1, 0, 28);
@@ -34,7 +34,7 @@ long long cgc_getBalance(struct_0 *a0)
         cgc__terminate(3);
     v6 = cgc_receiveBalance(0);
     a0->field_10 = v6;
-    v1 = cgc_allocate(a0->field_10 * 250, 0, &a0->padding_0[8], v7 & 0xffffffffffffff00 | v6);
+    v1 = cgc_allocate(a0->field_10 * 250, 0, &a0->padding_0[8], v7 & 0xffffffffffffff00 | v6 & 255);
     if (!v1)
         return 0;
     cgc__terminate(3);
