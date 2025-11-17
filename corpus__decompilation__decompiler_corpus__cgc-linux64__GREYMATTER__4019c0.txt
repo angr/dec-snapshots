@@ -4,7 +4,7 @@ long long cgc_canonicalize_path(unsigned long long a0, char *a1, unsigned long a
 {
     char *v0;  // [bp-0x48], Other Possible Types: unsigned long, unsigned long long
     char *v1;  // [bp-0x40], Other Possible Types: char
-    unsigned long v2;  // [bp-0x38], Other Possible Types: unsigned long long
+    unsigned long long v2;  // [bp-0x38]
     char *v3;  // [bp-0x30], Other Possible Types: unsigned long
     unsigned int v4;  // [bp-0x24]
 
