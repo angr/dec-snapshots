@@ -1,21 +1,21 @@
 int cgc_sendSearchString()
 {
-    int v0;  // [bp-0x98]
-    int v1;  // [bp-0x88]
-    int v2;  // [bp-0x78]
+    uint128_t v0;  // [bp-0x98]
+    uint128_t v1;  // [bp-0x88]
+    uint128_t v2;  // [bp-0x78]
     char v3;  // [bp-0x68]
-    int v4;  // [bp-0x58]
-    int v5;  // [bp-0x48]
+    uint128_t v4;  // [bp-0x58]
+    uint128_t v5;  // [bp-0x48]
     unsigned long long v6;  // [bp-0x38]
     unsigned long v7;  // [bp-0x20]
     void* v8;  // [bp-0x18], Other Possible Types: unsigned long
     unsigned int v9;  // [bp-0x10]
-    int v10;  // [bp+0x8]
-    int v11;  // [bp+0x18]
-    int v12;  // [bp+0x28]
+    uint128_t v10;  // [bp+0x8]
+    uint128_t v11;  // [bp+0x18]
+    uint128_t v12;  // [bp+0x28]
     char v13;  // [bp+0x38]
-    int v14;  // [bp+0x48]
-    int v15;  // [bp+0x58]
+    uint128_t v14;  // [bp+0x48]
+    uint128_t v15;  // [bp+0x58]
     char v16;  // [bp+0x68]
     unsigned int v17;  // edi
 

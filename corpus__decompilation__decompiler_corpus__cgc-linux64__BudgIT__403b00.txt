@@ -6,7 +6,7 @@ int main(unsigned int a0, unsigned long long a1)
     unsigned int v3;  // [bp-0x54]
     unsigned int v4;  // [bp-0x50]
     unsigned int v5;  // [bp-0x4c]
-    int v6;  // [bp-0x48]
+    uint256_t v6;  // [bp-0x48]
     unsigned long long v7;  // [bp-0x28]
     void* v8;  // [bp-0x20]
     unsigned long long v9;  // [bp-0x18]
