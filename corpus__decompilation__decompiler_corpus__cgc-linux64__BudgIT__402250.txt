@@ -1,9 +1,9 @@
-long long cgc_sendall(unsigned int a0, unsigned long long a1, unsigned long long a2)
+long long cgc_sendall(unsigned int a0, void* a1, unsigned long long a2)
 {
     void* v0;  // [bp-0x30]
     void* v1;  // [bp-0x28]
     unsigned long long v2;  // [bp-0x20]
-    unsigned long long v3;  // [bp-0x18]
+    void* v3;  // [bp-0x18]
     unsigned int v4;  // [bp-0xc]
 
     v3 = a1;
