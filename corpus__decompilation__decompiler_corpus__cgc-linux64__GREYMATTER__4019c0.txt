@@ -1,4 +1,4 @@
-extern char g_402004;
+extern unsigned long long g_402004;
 
 long long cgc_canonicalize_path(char *a0, void* a1, unsigned long a2)
 {

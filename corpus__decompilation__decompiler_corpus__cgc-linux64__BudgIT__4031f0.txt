@@ -8,6 +8,6 @@ long long cgc_free(unsigned long a0)
     if (!a0)
         return v2;
     v0 = a0 - 24;
-    cgc_remove(v0);
+    cgc_remove();
     return cgc_insert(cgc_freed, v0);
 }
