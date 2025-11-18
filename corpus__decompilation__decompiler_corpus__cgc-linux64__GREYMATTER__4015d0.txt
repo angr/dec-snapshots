@@ -1,4 +1,4 @@
-long long cgc_strpos(void* a0, char *a1)
+long long cgc_strpos(void* a0, unsigned long long a1)
 {
     unsigned int v0;  // [bp-0x3c]
     unsigned long long v1;  // [bp-0x38]
@@ -7,8 +7,8 @@ long long cgc_strpos(void* a0, char *a1)
     void* v4;  // [bp-0x10]
 
     v3 = 0;
-    v2 = cgc_strlen(a0);
-    v1 = cgc_strlen(a1);
+    v2 = cgc_strlen();
+    v1 = cgc_strlen();
     if (v2 < v1)
     {
         v4 = 0;
