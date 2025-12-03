@@ -2,12 +2,16 @@ typedef struct struct_0 {
     char padding_0[8];
     struct struct_0 *field_8;
     unsigned int field_10;
+    char padding_14[4];
+    char field_18;
 } struct_0;
 
 typedef struct struct_1 {
     char padding_0[8];
     struct struct_1 *field_8;
     unsigned int field_10;
+    char padding_14[4];
+    char field_18;
 } struct_1;
 
 extern unsigned long long cgc_allocated;
@@ -46,7 +50,7 @@ void* cgc_malloc(unsigned long long a0)
     {
         cgc_remove(v1);
         cgc_insert(cgc_allocated, v1);
-        v3 = &v1[1].padding_0[4];
+        v3 = &v1->field_18;
         return v3;
     }
     else if (v2 <= cgc_curleft)
@@ -56,7 +60,7 @@ void* cgc_malloc(unsigned long long a0)
         cgc_lastpage = &cgc_lastpage->padding_0[v2];
         cgc_curleft = cgc_curleft - v2;
         cgc_insert(cgc_allocated, v1);
-        v3 = &v1[1].padding_0[4];
+        v3 = &v1->field_18;
         return v3;
     }
     else
@@ -79,7 +83,7 @@ void* cgc_malloc(unsigned long long a0)
             cgc_curleft = 0x1000 - (v2 & 4095);
         else
             cgc_curleft = 0;
-        v3 = &v1[1].padding_0[4];
+        v3 = &v1->field_18;
         return v3;
     }
 }
