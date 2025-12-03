@@ -10,7 +10,7 @@ typedef struct struct_1 {
     char field_c;
 } struct_1;
 
-long long cgc_removeMap(struct_1 **a0, char *a1)
+struct_0 * cgc_removeMap(struct_1 **a0, char *a1)
 {
     char v0;  // [bp-0x31]
     struct_0 *v1;  // [bp-0x30]

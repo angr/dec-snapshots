@@ -2,10 +2,10 @@ extern char __bss_start;
 extern unsigned long long __dso_handle;
 extern unsigned long long g_403418;
 
-long long __do_global_dtors_aux()
+unsigned long long __do_global_dtors_aux()
 {
     unsigned long long v1;  // rax
-    unsigned long v2;  // rax
+    unsigned long long v2;  // rax
 
     if (__bss_start)
         return v2;

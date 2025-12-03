@@ -1,4 +1,4 @@
-long long cgc_getRandomTerm(char *a0)
+char * cgc_getRandomTerm(char *a0)
 {
     unsigned int v0;  // [bp-0x20]
     char v1;  // [bp-0x1c], Other Possible Types: unsigned int

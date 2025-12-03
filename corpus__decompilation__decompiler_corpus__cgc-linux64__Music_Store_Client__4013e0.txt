@@ -1,4 +1,4 @@
-long long cgc_memcpy(char *a0, char *a1, unsigned long long a2)
+char * cgc_memcpy(char *a0, char *a1, unsigned long long a2)
 {
     char *v0;  // [bp-0x30]
     char *v1;  // [bp-0x28]

@@ -1,4 +1,4 @@
-long long cgc_b2hex(char a0, char a1[3])
+char [3] cgc_b2hex(char a0, char a1[3])
 {
     if (a0 >> 4 < 10)
         a1[0] = (a0 >> 4) + 48;

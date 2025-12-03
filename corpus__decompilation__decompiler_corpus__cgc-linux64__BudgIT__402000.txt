@@ -1,10 +1,14 @@
+typedef struct struct_1 {
+    struct struct_1 *field_0;
+} struct_1;
+
 typedef struct struct_0 {
     struct struct_0 *field_0;
 } struct_0;
 
 extern struct_0 *g_405a38;
 
-long long _init()
+struct_1 ** _init()
 {
     struct_0 **v1;  // rax
 

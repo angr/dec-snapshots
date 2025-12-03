@@ -1,7 +1,7 @@
-long long cgc_strnlen(unsigned long a0, unsigned long long a1)
+char * cgc_strnlen(unsigned long a0, char *a1)
 {
     char *v0;  // [bp-0x28]
-    char *v1;  // [bp-0x10], Other Possible Types: unsigned long long
+    char *v1;  // [bp-0x10]
 
     v0 = 0;
     while (true)

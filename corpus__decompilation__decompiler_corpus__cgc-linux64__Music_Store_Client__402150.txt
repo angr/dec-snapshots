@@ -1,4 +1,4 @@
-long long cgc_createSearchString()
+void* cgc_createSearchString()
 {
     char *v0;  // [bp-0x20]
     unsigned int v1;  // [bp-0x14]

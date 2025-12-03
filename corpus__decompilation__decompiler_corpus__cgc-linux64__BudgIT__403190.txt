@@ -1,7 +1,7 @@
-long long cgc_calloc(unsigned long a0)
+void* cgc_calloc(unsigned long a0)
 {
-    char *v0;  // [bp-0x20]
-    void* v1;  // [bp-0x10], Other Possible Types: char *
+    void* v0;  // [bp-0x20]
+    void* v1;  // [bp-0x10]
 
     v0 = cgc_malloc(a0);
     if (v0)

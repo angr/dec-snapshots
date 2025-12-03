@@ -1,5 +1,5 @@
 
-int main(unsigned int a0, unsigned long long a1)
+unsigned int main(unsigned int a0, unsigned long long a1)
 {
     char v0;  // [bp-0x6d]
     unsigned int v1;  // [bp-0x6c]
@@ -43,7 +43,7 @@ int main(unsigned int a0, unsigned long long a1)
             if (!v8 && v14)
                 continue;
             if (!v10)
-                cgc_transmit_all("### The Instruction Set\n\n000b : PUSH # : Pushes a new number onto the stack\n001b : POP : Pops the top number from the stack\n010b : PUSHPC : Pushes the program counter of the current instruction (i.e. PUSHPC) onto the stack\n011b : JMPZ : Pops the top number off of the stack, if its 0 then pop the next value off of the stack and store t\nhat into the PC. If it is not-zero then just pop the next value off of the stack and do nothing with it.\n100b : SWAP # : Swaps the nth number with the top one (which is 0) - meaning SWAP 0 does nothing\n101b : DUP #: Duplicates nth number and pushes it to the top of the stack\n110b : ADD : Pops the top two numbers off of the stack, adds them, and pushes the sum back onto the stack\n111b : SUB : Pops the top two numbers off of the stack, subtracts them ( (top - 1) - top ), and pushes the differ\nence back onto the stack\n\nAll instructions are 32-bits long with the first 3 bits (msbs) reserved for the instruction and the lower 29 bits\nfor literals. POP, ADD, SUB, PUSHPC, JMPZ ignores the lower 29 bits, UNLESS the following special instructions a\nre used:\n\n0xFFFFFFFF : RET : End of instruction stream - The topmost value is the return value\n\n### A simple program\n\nmultiply(x,y)\n\nPUSH 0\t; 0 - the SUM\nPUSH y \t; SUM, y\nPUSHPC \t; SUM, y, pc\nDUP 1 \t; SUM, y, pc, y\nPUSH 1\t; SUM, y, pc, y, 1\nSUB\t; SUM, y, pc, y-1\nSWAP 2\t; SUM, y-1, pc, y\nSWAP 3\t; y, y-1, pc, SUM\nPUSH x \t; y, y-1, pc, SUM, x\nADD \t; y, y-1, pc, SUM+x\nSWAP 3 \t; SUM+x, y-1, pc, y\nPOP\t; SUM+x, y-1, pc\nPUSHPC\t; SUM+x, y-1, pc, HERE\nPUSH 7\t; SUM+x, y-1, pc, HERE, 7\nADD\t; SUM+x, y-1, pc, HERE+7 \nDUP 2\t; SUM+x, y-1, pc, HERE+7, y-1\nJMPZ\t;\nPUSH 0\t; SUM+x, y-1, pc, 0\nJMPZ\t;\nPOP\t; SUM+x, y-1\nPOP\t; SUM+x\nRET\n\nIf y-1 is not zero, then we will jump back up to where PUSHPC is and execute that whole stream again, except SUM \nwill now be SUM+x and y is now y-1\nIf y-1 is zero, then we will jump to the instruction after the second JMPZ (which is the first POP)\n", 1956);
+                cgc_transmit_all("### The Instruction Set\n\n000b : PUSH # : Pushes a new number onto the stack\n001b : POP : Pops the top number from the stack\n010b : PUSHPC : Pushes the program counter of the current instruction (i.e. PUSHPC) onto the stack\n011b : JMPZ : Pops the top number off of the stack, if its 0 then pop the next value off of the stack and store t\nhat into the PC. If it is not-zero then just pop the next value off of the stack and do nothing with it.\n100b : SWAP # : Swaps the nth number with the top one (which is 0) - meaning SWAP 0 does nothing\n101b : DUP #: Duplicates nth number and pushes it to the top of the stack\n110b : ADD : Pops the top two numbers off of the stack, adds them, and pushes the sum back onto the stack\n111b : SUB : Pops the top two numbers off of the stack, subtracts them ( (top - 1) - top ), and pushes the differ\nence back onto the stack\n\nAll instructions are 32-bits long with the first 3 bits (msbs) reserved for the instruction and the lower 29 bits\nfor literals. POP, ADD, SUB, PUSHPC, JMPZ ignores the lower 29 bits, UNLESS the following special instructions a\nre used:\n\n0xFFFFFFFF : RET : End of instruction stream - The topmost value is the return value\n\n### A simple program\n\nmultiply(x,y)\n\nPUSH 0\t; 0 - the SUM\nPUSH y \t; SUM, y\nPUSHPC \t; SUM, y, pc\nDUP 1 \t; SUM, y, pc, y\nPUSH 1\t; SUM, y, pc, y, 1\nSUB\t; SUM, y, pc, y-1\nSWAP 2\t; SUM, y-1, pc, y\nSWAP 3\t; y, y-1, pc, SUM\nPUSH x \t; y, y-1, pc, SUM, x\nADD \t; y, y-1, pc, SUM+x\nSWAP 3 \t; SUM+x, y-1, pc, y\nPOP\t; SUM+x, y-1, pc\nPUSHPC\t; SUM+x, y-1, pc, HERE\nPUSH 7\t; SUM+x, y-1, pc, HERE, 7\nADD\t; SUM+x, y-1, pc, HERE+7 \nDUP 2\t; SUM+x, y-1, pc, HERE+7, y-1\nJMPZ\t;\nPUSH 0\t; SUM+x, y-1, pc, 0\nJMPZ\t;\nPOP\t; SUM+x, y-1\nPOP\t; SUM+x\nRET\n\nIf y-1 is not zero, then we will jump back up to where PUSHPC is and execute that whole stream again, except SUM \nwill now be SUM+x and y is now y-1\nIf y-1 is zero, then we will jump to the instruction after the second JMPZ (which is the first POP)\n", 0x7a4);
             cgc__terminate(4294967295);
             v13 += v14;
         } while (v13 < 4);
@@ -51,7 +51,7 @@ int main(unsigned int a0, unsigned long long a1)
         v10 += 1;
         if (v10 >= 0x800)
         {
-            cgc_transmit_all("INSNS OVERFLOW EXCEPTION\n", 26);
+            cgc_transmit_all("INSNS OVERFLOW EXCEPTION\n", 0x1a);
             cgc__terminate(4294967295);
         }
     } while (v15 != -1);
@@ -77,7 +77,7 @@ int main(unsigned int a0, unsigned long long a1)
             case 1:
                 if (v12 < 0)
                 {
-                    cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
+                    cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 0x1b);
                     cgc__terminate(4294967295);
                 }
                 v12 -= 1;
@@ -86,7 +86,7 @@ int main(unsigned int a0, unsigned long long a1)
                 v12 += 1;
                 if (v12 >= 0x400)
                 {
-                    cgc_transmit_all("STACK OVERFLOW EXCEPTION\n", 26);
+                    cgc_transmit_all("STACK OVERFLOW EXCEPTION\n", 0x1a);
                     cgc__terminate(4294967295);
                 }
                 v6[v12] = v9;
@@ -94,7 +94,7 @@ int main(unsigned int a0, unsigned long long a1)
             case 3:
                 if (v12 < 1)
                 {
-                    cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
+                    cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 0x1b);
                     cgc__terminate(4294967295);
                 }
                 if (v6[v12])
@@ -106,7 +106,7 @@ LABEL_401553:
                 v9 = v6[1 + v12];
                 if (v9 >= 0 && v9 < v10)
                     goto LABEL_40154a;
-                cgc_transmit_all("INVALID PROGRAM COUNTER EXCEPTION\n", 35);
+                cgc_transmit_all("INVALID PROGRAM COUNTER EXCEPTION\n", 0x23);
                 cgc__terminate(4294967295);
 LABEL_40154a:
                 v9 -= 1;
@@ -114,14 +114,14 @@ LABEL_40154a:
             case 4:
                 if (v12 < 0)
                 {
-                    cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
+                    cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 0x1b);
                     cgc__terminate(4294967295);
                 }
                 v3 = v6[v12];
                 v2 = v12 - (v15 >> 3);
                 if (v2 >= 0 && v2 <= v12)
                     goto LABEL_4015d3;
-                cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
+                cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 0x1b);
                 cgc__terminate(4294967295);
 LABEL_4015d3:
                 v6[v12] = v6[v2];
@@ -132,7 +132,7 @@ LABEL_4015d3:
                 v1 = v12 - (v15 >> 3) - 1;
                 if (v1 >= 0 && v1 <= v12)
                     goto LABEL_401647;
-                cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
+                cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 0x1b);
                 cgc__terminate(4294967295);
 LABEL_401647:
                 v6[v12] = v6[1 + v12 + -1 * (v15 >> 3)];
@@ -140,7 +140,7 @@ LABEL_401647:
             case 6:
                 if (v12 < 1)
                 {
-                    cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
+                    cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 0x1b);
                     cgc__terminate(4294967295);
                 }
                 v6[1 + v12] = v6[v12] + v6[1 + v12];
@@ -149,7 +149,7 @@ LABEL_401647:
             case 7:
                 if (v12 < 1)
                 {
-                    cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
+                    cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 0x1b);
                     cgc__terminate(4294967295);
                 }
                 v6[1 + v12] = v6[1 + v12] - v6[v12];
@@ -164,9 +164,9 @@ LABEL_401647:
     }
     if (v12 < 0)
     {
-        cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
+        cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 0x1b);
         cgc__terminate(4294967295);
     }
-    cgc_transmit_all(&v6[v12], 4);
+    cgc_transmit_all(&v6[v12], 0x4);
     return 0;
 }

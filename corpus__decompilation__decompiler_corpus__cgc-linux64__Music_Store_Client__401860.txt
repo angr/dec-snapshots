@@ -1,4 +1,4 @@
-long long cgc_setValue(char *a0, char *a1)
+char * cgc_setValue(char *a0, char *a1)
 {
     char v0;  // [bp-0x31]
     char *v1;  // [bp-0x30]

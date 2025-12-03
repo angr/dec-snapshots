@@ -3,7 +3,7 @@ typedef struct struct_0 {
     char field_20;
 } struct_0;
 
-long long cgc_getRandomGiftCard(struct_0 **a0)
+unsigned long long cgc_getRandomGiftCard(struct_0 **a0)
 {
     unsigned int v0;  // [bp-0x24]
     char v1;  // [bp-0x20], Other Possible Types: unsigned int

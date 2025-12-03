@@ -1,4 +1,4 @@
-long long cgc_strcat(char *a0, char *a1)
+char * cgc_strcat(char *a0, char *a1)
 {
     char *v0;  // [bp-0x20]
 
