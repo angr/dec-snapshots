@@ -1,4 +1,4 @@
-void cgc___stack_cookie_fail()
+long long cgc___stack_cookie_fail()
 {
     unsigned long long v1;  // rdi
     unsigned long long v2;  // rsi
@@ -10,6 +10,5 @@ void cgc___stack_cookie_fail()
     if (cgc_sendline(1, "Friend is someone to share the last cookie with.", 48) < 0)
         cgc__terminate(6);
     cgc__terminate(66);
-    cgc_transmit_all(v1, v2, v3, v4, v5, v6);
-    return;
+    return cgc_transmit_all(v1, v2, v3, v4, v5, v6);
 }
