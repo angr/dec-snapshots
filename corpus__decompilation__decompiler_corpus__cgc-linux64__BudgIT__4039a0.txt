@@ -1,6 +1,7 @@
 typedef struct struct_0 {
     struct struct_0 *field_0;
     unsigned int field_8;
+    char field_c;
 } struct_0;
 
 long long cgc_sendReport(struct_0 *a0)
@@ -22,7 +23,7 @@ long long cgc_sendReport(struct_0 *a0)
         if (!v4)
             break;
         v2 += v1->field_8;
-        v0 = cgc_transmit_all(1, v1 + 1, 24);
+        v0 = cgc_transmit_all(1, &v1->field_c, 24);
         if (v0)
             cgc__terminate(1);
         v0 = cgc_int2str(&v3, 40, v1->field_8);
