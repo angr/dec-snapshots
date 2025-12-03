@@ -1,9 +1,9 @@
-char [3] cgc_b2hex(char a0, char a1[3])
+char [3] cgc_b2hex(char a0, char *a1)
 {
     if (a0 >> 4 < 10)
-        a1[0] = (a0 >> 4) + 48;
+        *(a1) = (a0 >> 4) + 48;
     else
-        a1[0] = (a0 >> 4) - -55;
+        *(a1) = (a0 >> 4) - -55;
     if ((a0 & 15) < 10)
         a1[1] = (a0 & 15) + 48;
     else
