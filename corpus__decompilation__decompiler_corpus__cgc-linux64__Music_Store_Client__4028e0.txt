@@ -30,7 +30,7 @@ int main(unsigned long long a0, unsigned long long a1)
     char *v27;  // [bp-0x48]
     unsigned long long v28;  // [bp-0x40]
     char v29;  // [bp-0x38]
-    unsigned long long v30;  // [bp-0x30]
+    char v30;  // [bp-0x30]
     char v31;  // [bp-0x28]
     unsigned int v32;  // [bp-0x20]
     unsigned int v33;  // [bp-0x1c]
@@ -82,7 +82,7 @@ int main(unsigned long long a0, unsigned long long a1)
             break;
         cgc_receiveBalance(0);
     }
-    v33 = cgc_deallocate(v30, v32 * 250);
+    v33 = cgc_deallocate(*(&v30), v32 * 250);
     if (!v33)
         return v33;
     cgc__terminate(3);
