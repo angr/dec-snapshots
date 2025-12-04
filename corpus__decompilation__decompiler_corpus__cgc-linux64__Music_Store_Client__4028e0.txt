@@ -26,35 +26,35 @@ int main(unsigned long long a0, unsigned long long a1)
     uint128_t v23;  // [bp-0x78]
     uint128_t v24;  // [bp-0x68]
     unsigned long long v25;  // [bp-0x58]
-    char v26;  // [bp-0x50], Other Possible Types: unsigned int
-    char *v27;  // [bp-0x48]
-    unsigned long long v28;  // [bp-0x40]
-    char v29;  // [bp-0x38]
-    char v30;  // [bp-0x30]
-    char v31;  // [bp-0x28]
-    unsigned int v32;  // [bp-0x20]
-    unsigned int v33;  // [bp-0x1c]
-    unsigned long long v34;  // [bp-0x18]
-    unsigned int v35;  // [bp-0x10]
-    unsigned int v36;  // [bp-0xc]
-    unsigned long long v38;  // rdx
-    unsigned long long v39;  // r8
-    unsigned long long v40;  // r9
+    unsigned int v26;  // [bp-0x50]
+    char *v28;  // [bp-0x48]
+    unsigned long long v29;  // [bp-0x40]
+    char v30;  // [bp-0x38]
+    char v31;  // [bp-0x30]
+    char v32;  // [bp-0x28]
+    unsigned int v33;  // [bp-0x20]
+    unsigned int v34;  // [bp-0x1c]
+    unsigned long long v35;  // [bp-0x18]
+    unsigned int v36;  // [bp-0x10]
+    unsigned int v37;  // [bp-0xc]
+    unsigned long long v39;  // rdx
+    unsigned long long v40;  // r8
+    unsigned long long v41;  // r9
 
-    v36 = 0;
-    v35 = a0;
-    v34 = a1;
+    v37 = 0;
+    v36 = a0;
+    v35 = a1;
+    v34 = 0;
     v33 = 0;
-    v32 = 0;
-    memset(&v29, 0, 24);
+    memset(&v30, 0, 24);
     memset(&v26, 0, 24);
     memset(&v19, 0, 104);
     memset(&v17, 0, 2500);
     v16 = 0;
-    v27 = &v17[0];
-    cgc_getBalance(&v29);
-    v32 = v31;
-    while (v31 > 0)
+    v28 = &v17[0];
+    cgc_getBalance(&v30);
+    v33 = v32;
+    while (v32 > 0)
     {
         v26 = 0;
         cgc_createRandomRequest(&v19);
@@ -75,16 +75,16 @@ int main(unsigned long long a0, unsigned long long a1)
         v7 = v21;
         v5 = v20;
         v3 = v18;
-        v1 = v28;
-        v16 = cgc_selectSong(a0, a1, v38, v28, v39, v40, *(&v26));
-        v33 = cgc_purchaseSong(1, v16, &v29);
-        if (v33 == 1)
+        v1 = v29;
+        v16 = cgc_selectSong(a0, a1, v39, v29, v40, v41, *(&v26));
+        v34 = cgc_purchaseSong(1, v16, &v30);
+        if (v34 == 1)
             break;
         cgc_receiveBalance(0);
     }
-    v33 = cgc_deallocate(*(&v30), v32 * 250);
-    if (!v33)
-        return v33;
+    v34 = cgc_deallocate(*(&v31), v33 * 250);
+    if (!v34)
+        return v34;
     cgc__terminate(3);
-    return v33;
+    return v34;
 }
