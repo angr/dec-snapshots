@@ -1,14 +1,14 @@
-void* cgc_strpos(void* a0, unsigned long long a1)
+void* cgc_strpos(char *a0, char *a1)
 {
     unsigned int v0;  // [bp-0x3c]
-    unsigned long long v1;  // [bp-0x38]
-    unsigned long long v2;  // [bp-0x30]
+    void* v1;  // [bp-0x38]
+    void* v2;  // [bp-0x30]
     void* v3;  // [bp-0x28]
     void* v4;  // [bp-0x10]
 
     v3 = 0;
-    v2 = cgc_strlen();
-    v1 = cgc_strlen();
+    v2 = cgc_strlen(a0);
+    v1 = cgc_strlen(a1);
     if (v2 < v1)
     {
         v4 = 0;
@@ -16,9 +16,9 @@ void* cgc_strpos(void* a0, unsigned long long a1)
     }
     for (v0 = 0; v0 <= v2 - v1; v0 += 1)
     {
-        if (!cgc_strncmp(a0 + v0, a1, v1))
+        if (!cgc_strncmp(&a0[v0], a1, v1))
         {
-            v3 = a0 + v0;
+            v3 = &a0[v0];
             break;
         }
     }

@@ -1,7 +1,6 @@
 typedef struct struct_0 {
     struct struct_0 *field_0;
     unsigned int field_8;
-    char field_c;
 } struct_0;
 
 long long cgc_getValue(struct_0 *a0, char *a1)
@@ -17,7 +16,7 @@ long long cgc_getValue(struct_0 *a0, char *a1)
             v1 = 0;
             return v1;
         }
-        if (&v0->field_c && !cgc_strcmp(a1, &v0->field_c))
+        if (v0 + 1 && !cgc_strcmp(a1, v0 + 1))
         {
             v1 = v0->field_8;
             return v1;

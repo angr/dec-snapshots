@@ -1,6 +1,6 @@
-long long cgc_memcmp(char *a0, char *a1, unsigned long a2)
+long long cgc_memcmp(unsigned long a0, unsigned long a1, unsigned long a2)
 {
-    char *v0;  // [bp-0x30]
+    void* v0;  // [bp-0x30]
     unsigned int v1;  // [bp-0xc]
 
     v0 = 0;
@@ -11,7 +11,7 @@ long long cgc_memcmp(char *a0, char *a1, unsigned long a2)
             v1 = 0;
             return v1;
         }
-        if (*((a0 + v0)) != *((a1 + v0)))
+        if (*(a0 + v0) != *(a1 + v0))
         {
             v1 = 4294967295;
             return v1;

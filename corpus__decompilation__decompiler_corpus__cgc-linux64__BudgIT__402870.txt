@@ -1,4 +1,4 @@
-long long cgc_uint2str(char *a0, unsigned int a1, unsigned int a2)
+long long cgc_uint2str(unsigned long a0, unsigned int a1, unsigned int a2)
 {
     unsigned int v0;  // [bp-0x2c]
     unsigned int v1;  // [bp-0x28]
@@ -28,13 +28,13 @@ long long cgc_uint2str(char *a0, unsigned int a1, unsigned int a2)
     }
     v6 = v2;
     v2 = v6 - 1;
-    a0[v6 & 4294967295] = 0;
+    *((a0 + (v6 & 4294967295))) = 0;
     do
     {
         v0 = (((0 CONCAT v3) % 10) CONCAT ((0 CONCAT v3) / 10)) >> 32;
         v7 = v2;
         v2 = v7 - 1;
-        a0[v7 & 4294967295] = v0 + 48;
+        *((a0 + (v7 & 4294967295))) = v0 + 48;
         v3 = ((0 CONCAT v3) % 10) CONCAT ((0 CONCAT v3) / 10);
     } while (v3 > 0);
     v4 = 0;

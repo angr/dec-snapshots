@@ -5,7 +5,7 @@ typedef struct struct_0 {
 
 struct_0 * cgc_initMap(struct_0 *a0)
 {
-    struct_0 *v0;  // [bp-0x28], Other Possible Types: char, unsigned long
+    struct_0 *v0;  // [bp-0x28], Other Possible Types: char
     unsigned int v1;  // [bp-0x1c]
     struct_0 *v2;  // [bp-0x10]
 
@@ -14,7 +14,7 @@ struct_0 * cgc_initMap(struct_0 *a0)
         v1 = cgc_allocate(0x1400, 0, &v0);
         if (v1)
             cgc__terminate(3);
-        v0 += 5080;
+        v0 = &v0[390].padding_0[10];
         v2 = v0;
         return v2;
     }

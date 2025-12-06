@@ -9,6 +9,6 @@ char * cgc_getRandomAttribute(unsigned long a0)
     v2 = 0;
     v2 = cgc_getRandomNumber(3);
     v0 = a0 + 50;
-    v1 = (&attributes.field_0)[v2];
-    return cgc_memcpy(v0, v1, cgc_strlen((&attributes.field_0)[v2]));
+    v1 = *(&(&attributes.field_0)[2 * v2]);
+    return cgc_memcpy(v0, v1, cgc_strlen(*(&(&attributes.field_0)[2 * v2])));
 }
