@@ -7,7 +7,7 @@ extern char g_401df0;
 extern char g_401e0e;
 extern char g_401e44;
 extern char g_401ead;
-extern unsigned long long g_402008;
+extern char g_402008;
 
 long long cgc_request_document(char *a0, unsigned long long a1)
 {
@@ -15,9 +15,9 @@ long long cgc_request_document(char *a0, unsigned long long a1)
     void* v1;  // [bp-0x180]
     unsigned int v2;  // [bp-0x16c]
     char v3;  // [bp-0x168]
-    unsigned long v4;  // [bp-0x68]
+    unsigned long long v4;  // [bp-0x68]
     unsigned long v5;  // [bp-0x60]
-    unsigned long v6;  // [bp-0x58]
+    unsigned long long v6;  // [bp-0x58]
     void* v7;  // [bp-0x50]
     void* v8;  // [bp-0x48]
     void* v9;  // [bp-0x40]
@@ -27,7 +27,7 @@ long long cgc_request_document(char *a0, unsigned long long a1)
     unsigned long long v13;  // [bp-0x20]
     unsigned long long v14;  // [bp-0x20]
     unsigned int v15;  // [bp-0xc]
-    unsigned long v17;  // rax
+    unsigned long long v17;  // rax
 
     v13 = a1;
     v12 = 0;
@@ -37,7 +37,7 @@ long long cgc_request_document(char *a0, unsigned long long a1)
         v15 = 16;
         return v15;
     }
-    v12 = cgc_transmit_with_term(1, a0, cgc_strlen(), 0);
+    v12 = cgc_transmit_with_term(1, a0, cgc_strlen(a0), 0);
     if (v12)
     {
         v15 = v12;
@@ -91,7 +91,7 @@ long long cgc_request_document(char *a0, unsigned long long a1)
                     break;
                 vvar_175{r48|8b} = vvar_167{r48|8b} - 8;
                 *((vvar_8{r48|8b} - 8)) = &g_401d54;
-                v8 += cgc_strlen();
+                v8 += cgc_strlen(&g_402008);
                 vvar_183{r48|8b} = vvar_175{r48|8b} - 8;
                 *((vvar_175{r48|8b} - 8)) = &g_401d6c;
                 v7 = cgc_strpos(v8, "$!SRC$");
