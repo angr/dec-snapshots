@@ -1,12 +1,12 @@
 unsigned int main(unsigned int a0, unsigned long long a1)
 {
     char *v0;  // [bp-0x90]
-    int v1;  // [bp-0x88]
+    unsigned long long v1;  // [bp-0x88]
     unsigned int v2;  // [bp-0x58]
     unsigned int v3;  // [bp-0x54]
     unsigned int v4;  // [bp-0x50]
     unsigned int v5;  // [bp-0x4c]
-    uint256_t v6;  // [bp-0x48]
+    char v6[32];  // [bp-0x48]
     unsigned long long v7;  // [bp-0x28]
     void* v8;  // [bp-0x20]
     unsigned long long v9;  // [bp-0x18]
@@ -41,7 +41,7 @@ LABEL_403bdc:
                     cgc_setMap(&v8, &v6, v3);
                     if (v3 < 0)
                     {
-                        v0 = &v6;
+                        v0 = &v6[0];
                         v4 = cgc_transmit_all(1, v0, cgc_strlen(&v6));
                         if (v4)
                             cgc__terminate(1);

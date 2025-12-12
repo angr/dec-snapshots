@@ -1,33 +1,33 @@
 int cgc_sendSearchString()
 {
-    uint128_t v0;  // [bp-0x98]
-    uint128_t v1;  // [bp-0x88]
-    uint128_t v2;  // [bp-0x78]
+    char v0;  // [bp-0x98]
+    char v1;  // [bp-0x88]
+    char v2;  // [bp-0x78]
     char v3;  // [bp-0x68]
-    uint128_t v4;  // [bp-0x58]
-    uint128_t v5;  // [bp-0x48]
+    char v4;  // [bp-0x58]
+    char v5;  // [bp-0x48]
     unsigned long long v6;  // [bp-0x38]
     unsigned long v7;  // [bp-0x20]
     void* v8;  // [bp-0x18], Other Possible Types: unsigned long
     unsigned int v9;  // [bp-0x10]
-    uint128_t v10;  // [bp+0x8]
-    uint128_t v11;  // [bp+0x18]
-    uint128_t v12;  // [bp+0x28]
+    unsigned long v10;  // [bp+0x8]
+    char v11;  // [bp+0x18]
+    char v12;  // [bp+0x28]
     char v13;  // [bp+0x38]
-    uint128_t v14;  // [bp+0x48]
-    uint128_t v15;  // [bp+0x58]
+    char v14;  // [bp+0x48]
+    char v15;  // [bp+0x58]
     char v16;  // [bp+0x68]
     unsigned int v17;  // edi
 
     v9 = 0;
     v8 = 0;
     v6 = *(&v16);
-    v5 = v15;
-    v4 = v14;
+    memcpy(&v5, &v15, 16);
+    memcpy(&v4, &v14, 16);
     memcpy(&v3, &v13, 16);
-    v2 = v12;
-    v1 = v11;
-    v0 = v10;
+    memcpy(&v2, &v12, 16);
+    memcpy(&v1, &v11, 16);
+    memcpy(&v0, &v10, 16);
     v8 = cgc_createSearchString();
     v7 = v8;
     v9 = cgc_transmit_all(v17, v7, cgc_strlen(v8));
