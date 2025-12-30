@@ -5,9 +5,9 @@ typedef struct struct_0 {
 
 struct_0 * cgc_initMap(struct_0 *a0)
 {
-    struct_0 *v0;  // [bp-0x28], Other Possible Types: char, unsigned long
+    struct_0 *v0;  // [bp-0x28], Other Possible Types: char
     unsigned int v1;  // [bp-0x1c]
-    struct_0 *v2;  // [bp-0x10], Other Possible Types: unsigned long
+    struct_0 *v2;  // [bp-0x10]
 
     if (!a0)
     {
