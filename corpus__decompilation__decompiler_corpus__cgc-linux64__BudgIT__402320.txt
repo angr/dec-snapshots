@@ -1,7 +1,7 @@
 char * cgc_strlen(char *a0)
 {
-    char *v0;  // [bp-0x18]
+    char *i;  // [bp-0x18]
 
-    for (v0 = a0; *(v0); v0 += 1);
-    return v0 - a0;
+    for (i = a0; *(i); i += 1);
+    return i - a0;
 }

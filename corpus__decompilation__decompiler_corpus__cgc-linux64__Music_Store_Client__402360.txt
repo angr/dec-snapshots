@@ -1,18 +1,18 @@
 char * cgc_getRandomTerm(char *a0)
 {
     unsigned int v0;  // [bp-0x20]
-    char v1;  // [bp-0x1c], Other Possible Types: unsigned int
+    char j;  // [bp-0x1c], Other Possible Types: unsigned int
     unsigned int v2;  // [bp-0x18]
-    unsigned int v3;  // [bp-0x14]
+    unsigned int result;  // [bp-0x14]
 
-    memset(&v1, 0, 12);
-    for (; !v3; v3 = cgc_getRandomNumber(50));
+    memset(&j, 0, 12);
+    for (; !result; result = cgc_getRandomNumber(50));
     v2 = cgc_strlen("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
-    for (v1 = 0; v1 < v3; v1 += 1)
+    for (j = 0; j < result; j += 1)
     {
         v0 = cgc_getRandomNumber(v2);
-        a0[v1] = *((4206608 + v0));
+        a0[j] = *((4206608 + v0));
     }
-    a0[v3] = 0;
+    a0[result] = 0;
     return a0;
 }

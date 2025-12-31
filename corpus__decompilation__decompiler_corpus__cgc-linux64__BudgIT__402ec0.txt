@@ -23,7 +23,7 @@ extern struct_1 *cgc_lastpage;
 void* cgc_malloc(unsigned long long a0)
 {
     char v0;  // [bp-0x21]
-    struct_0 *v1;  // [bp-0x20], Other Possible Types: struct_1 *
+    struct_0 *cur;  // [bp-0x20], Other Possible Types: struct_1 *
     unsigned long long v2;  // [bp-0x18]
     void* v3;  // [bp-0x10]
 
@@ -35,55 +35,55 @@ void* cgc_malloc(unsigned long long a0)
         v3 = 0;
         return v3;
     }
-    v1 = cgc_freed;
+    cur = cgc_freed;
     v2 += 24;
     while (true)
     {
         v0 = 0;
-        if (v1->field_10 < v2)
-            v0 = v1->field_8 != cgc_freed;
+        if (cur->field_10 < v2)
+            v0 = cur->field_8 != cgc_freed;
         if (!(v0 & 1))
             break;
-        v1 = v1->field_8;
+        cur = cur->field_8;
     }
-    if (v1->field_10 >= v2)
+    if (cur->field_10 >= v2)
     {
-        cgc_remove(v1);
-        cgc_insert(cgc_allocated, v1);
-        v3 = &v1->field_18;
+        cgc_remove(cur);
+        cgc_insert(cgc_allocated, cur);
+        v3 = &cur->field_18;
         return v3;
     }
     else if (v2 <= cgc_curleft)
     {
-        v1 = cgc_lastpage;
-        v1->field_10 = v2;
+        cur = cgc_lastpage;
+        cur->field_10 = v2;
         cgc_lastpage = &cgc_lastpage->padding_0[v2];
         cgc_curleft = cgc_curleft - v2;
-        cgc_insert(cgc_allocated, v1);
-        v3 = &v1->field_18;
+        cgc_insert(cgc_allocated, cur);
+        v3 = &cur->field_18;
         return v3;
     }
     else
     {
         if (cgc_curleft > 24)
         {
-            v1 = cgc_lastpage;
-            v1->field_10 = cgc_curleft;
-            cgc_insert(cgc_freed, v1);
+            cur = cgc_lastpage;
+            cur->field_10 = cgc_curleft;
+            cgc_insert(cgc_freed, cur);
         }
-        if (cgc_allocate(v2, 0, &v1))
+        if (cgc_allocate(v2, 0, &cur))
         {
             v3 = 0;
             return v3;
         }
-        v1->field_10 = v2;
-        cgc_insert(cgc_allocated, v1);
-        cgc_lastpage = &v1->padding_0[v2];
+        cur->field_10 = v2;
+        cgc_insert(cgc_allocated, cur);
+        cgc_lastpage = &cur->padding_0[v2];
         if ((v2 & 4095))
             cgc_curleft = 0x1000 - (v2 & 4095);
         else
             cgc_curleft = 0;
-        v3 = &v1->field_18;
+        v3 = &cur->field_18;
         return v3;
     }
 }

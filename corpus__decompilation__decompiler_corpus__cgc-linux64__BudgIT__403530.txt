@@ -5,23 +5,23 @@ typedef struct struct_0 {
 
 struct_0 * cgc_initMap(struct_0 *a0)
 {
-    struct_0 *v0;  // [bp-0x28], Other Possible Types: char, unsigned long
-    unsigned int v1;  // [bp-0x1c]
-    struct_0 *v2;  // [bp-0x10], Other Possible Types: unsigned long
+    struct_0 *i;  // [bp-0x28], Other Possible Types: char
+    unsigned int result;  // [bp-0x1c]
+    struct_0 *v2;  // [bp-0x10]
 
     if (!a0)
     {
-        v1 = cgc_allocate(0x1400, 0, &v0);
-        if (v1)
+        result = cgc_allocate(0x1400, 0, &i);
+        if (result)
             cgc__terminate(3);
-        v0 = &v0[390].padding_0[10];
-        v2 = v0;
+        i = &i[390].padding_0[10];
+        v2 = i;
         return v2;
     }
     else
     {
-        for (v0 = a0; v0->field_c; v0 = &v0[3].padding_0[1]);
-        v2 = v0;
+        for (i = a0; i->field_c; i = &i[3].padding_0[1]);
+        v2 = i;
         return v2;
     }
 }

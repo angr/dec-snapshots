@@ -3,24 +3,24 @@ extern char g_402004;
 long long cgc_canonicalize_path(unsigned long long a0, char *a1, unsigned long a2)
 {
     char *v0;  // [bp-0x48], Other Possible Types: void*, unsigned long
-    char v1;  // [bp-0x40], Other Possible Types: unsigned long long
+    char n;  // [bp-0x40], Other Possible Types: unsigned long long
     void* v2;  // [bp-0x38], Other Possible Types: unsigned long long
     char *v3;  // [bp-0x30], Other Possible Types: unsigned long
     unsigned int v4;  // [bp-0x24]
 
     v4 = 0;
-    memset(&v1, 0, 24);
+    memset(&n, 0, 24);
     v0 = a1;
     v3 = a1;
     v0 = cgc_strpos(a1, &g_402004);
     v2 = (0 == v0 ? &a1[a2] : v0);
-    v1 = v2 - v3;
-    if (v1 > 0x100)
+    n = v2 - v3;
+    if (n > 0x100)
     {
         v4 = 15;
         return v4;
     }
-    cgc_strncat(a0, v3, v1);
+    cgc_strncat(a0, v3, n);
     if (!v0)
         return v4;
     v0 += 2;
@@ -31,25 +31,25 @@ long long cgc_canonicalize_path(unsigned long long a0, char *a1, unsigned long a
         if (!v0)
             break;
         v2 = v0;
-        v1 = v2 - v3;
-        if (v1 > 0x100)
+        n = v2 - v3;
+        if (n > 0x100)
         {
             v4 = 15;
             return v4;
         }
-        cgc_strncat(a0, v3, v1);
+        cgc_strncat(a0, v3, n);
         v0 += 2;
         v3 = v0;
     }
     v2 = &a1[a2];
     if (v3 >= v2)
         return v4;
-    v1 = v2 - v3;
-    if (v1 > 0x100)
+    n = v2 - v3;
+    if (n > 0x100)
     {
         v4 = 15;
         return v4;
     }
-    cgc_strncat(a0, v3, v1);
+    cgc_strncat(a0, v3, n);
     return v4;
 }

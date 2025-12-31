@@ -5,22 +5,22 @@ typedef struct struct_0 {
 
 long long cgc_getValue(struct_0 *a0, char *a1)
 {
-    struct_0 *v0;  // [bp-0x28]
+    struct_0 *ptr;  // [bp-0x28]
     unsigned int v1;  // [bp-0xc]
 
-    v0 = a0;
+    ptr = a0;
     while (true)
     {
-        if (!v0)
+        if (!ptr)
         {
             v1 = 0;
             return v1;
         }
-        if (v0 + 1 && !cgc_strcmp(a1, v0 + 1))
+        if (ptr + 1 && !cgc_strcmp(a1, ptr + 1))
         {
-            v1 = v0->field_8;
+            v1 = ptr->field_8;
             return v1;
         }
-        v0 = v0->field_0;
+        ptr = ptr->field_0;
     }
 }

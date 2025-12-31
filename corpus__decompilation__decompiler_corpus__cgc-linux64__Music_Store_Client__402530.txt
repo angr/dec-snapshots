@@ -5,7 +5,7 @@ typedef struct struct_0 {
     char field_10;
 } struct_0;
 
-long long cgc_purchaseSong(unsigned int a0, char *a1, struct_0 *a2)
+long long cgc_purchaseSong(unsigned int a0, char *a1, struct_0 *ptr)
 {
     unsigned int v0;  // [bp-0x38]
     unsigned int v1;  // [bp-0x34]
@@ -17,17 +17,17 @@ long long cgc_purchaseSong(unsigned int a0, char *a1, struct_0 *a2)
     v4 = 0;
     v3 = 0;
     v3 = cgc_str2int(a1 + 200);
-    if (a2->field_10 < v3)
+    if (ptr->field_10 < v3)
     {
         v5 = 1;
         return v5;
     }
-    a2->field_10 = a2->field_10 - v3;
-    a2->field_0 = a2->field_0 + 1;
-    cgc_memcpy(a2->field_8 + (a2->field_0 - 1) * 250, a1, 150);
+    ptr->field_10 = ptr->field_10 - v3;
+    ptr->field_0 = ptr->field_0 + 1;
+    cgc_memcpy(ptr->field_8 + (ptr->field_0 - 1) * 250, a1, 150);
     v1 = a0;
-    v2 = a2->field_8 + (a2->field_0 - 1) * 250;
-    v4 = cgc_transmit_all(v1, v2, cgc_strlen(a2->field_8 + (a2->field_0 - 1) * 250));
+    v2 = ptr->field_8 + (ptr->field_0 - 1) * 250;
+    v4 = cgc_transmit_all(v1, v2, cgc_strlen(ptr->field_8 + (ptr->field_0 - 1) * 250));
     if (v4)
         cgc__terminate(10);
     v0 = a0;

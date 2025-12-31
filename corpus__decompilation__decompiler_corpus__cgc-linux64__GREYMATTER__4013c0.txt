@@ -1,9 +1,9 @@
 long long cgc_receive_with_term(unsigned int a0, unsigned int a1, unsigned long long a2)
 {
+    unsigned long long v4;  // rcx
     unsigned int v0;  // [bp-0x2c]
     unsigned long long v1;  // [bp-0x28]
     unsigned int v2;  // [bp-0xc]
-    unsigned long long v4;  // rcx
 
     v1 = v4;
     v0 = 0;
