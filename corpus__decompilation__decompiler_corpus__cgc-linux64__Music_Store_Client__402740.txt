@@ -3,15 +3,15 @@ typedef struct struct_0 {
     char field_10;
 } struct_0;
 
-void* cgc_getBalance(struct_0 *a0)
+void* cgc_getBalance(struct_0 *ptr)
 {
+    unsigned long long v6;  // rax
+    unsigned long v7;  // rcx
     unsigned long v0;  // [bp-0x38]
     char v1;  // [bp-0x2c], Other Possible Types: unsigned int
     char v2;  // [bp-0x28], Other Possible Types: unsigned long
     char *v3;  // [bp-0x20], Other Possible Types: void*[1]
     unsigned long long v4;  // [bp-0x18]
-    unsigned long long v6;  // rax
-    unsigned long v7;  // rcx
 
     memset(&v1, 0, 28);
     v4 = cgc_getRandomGiftCard(&v3);
@@ -33,8 +33,8 @@ void* cgc_getBalance(struct_0 *a0)
     if (v1)
         cgc__terminate(3);
     v6 = cgc_receiveBalance(0);
-    a0->field_10 = v6;
-    v1 = cgc_allocate(a0->field_10 * 250, 0, &a0->padding_0[8], v7 & 0xffffffffffffff00 | v6 & 255);
+    ptr->field_10 = v6;
+    v1 = cgc_allocate(ptr->field_10 * 250, 0, &ptr->padding_0[8], v7 & 0xffffffffffffff00 | v6 & 255);
     if (!v1)
         return 0;
     cgc__terminate(3);

@@ -4,7 +4,7 @@ typedef struct struct_0 {
 
 long long cgc_getSize(struct_0 **a0)
 {
-    struct_0 **v0;  // [bp-0x20]
+    struct_0 **ptr;  // [bp-0x20]
     unsigned int v1;  // [bp-0xc]
 
     if (!a0)
@@ -12,7 +12,7 @@ long long cgc_getSize(struct_0 **a0)
         v1 = 0;
         return v1;
     }
-    for (v0 = a0; *(v0); v0 = *(v0));
-    v1 = (((0 CONCAT v0 - a0) % 40) CONCAT ((0 CONCAT v0 - a0) / 40)) + 1;
+    for (ptr = a0; *(ptr); ptr = *(ptr));
+    v1 = (((0 CONCAT ptr - a0) % 40) CONCAT ((0 CONCAT ptr - a0) / 40)) + 1;
     return v1;
 }

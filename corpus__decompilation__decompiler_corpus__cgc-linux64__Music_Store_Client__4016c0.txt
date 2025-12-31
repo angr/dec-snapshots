@@ -1,7 +1,7 @@
 long long cgc_str2int(char *a0)
 {
     unsigned int v0;  // [bp-0x2c]
-    unsigned int v1;  // [bp-0x28]
+    unsigned int cur;  // [bp-0x28]
     unsigned int v2;  // [bp-0x24]
     unsigned int v3;  // [sp-0x20]
     unsigned int v4;  // [bp-0x1c]
@@ -10,7 +10,7 @@ long long cgc_str2int(char *a0)
     v4 = 0;
     v3 = 0;
     v2 = 10;
-    v1 = 0;
+    cur = 0;
     v0 = 1;
     if (!a0)
     {
@@ -20,15 +20,15 @@ long long cgc_str2int(char *a0)
     if (*(a0) == 45)
     {
         v0 = 4294967295;
-        v1 += 1;
+        cur += 1;
         v2 += 1;
     }
-    for (; v1 < v2; v1 += 1)
+    for (; cur < v2; cur += 1)
     {
-        if (a0[v1] != 48 && a0[v1] != 49 && a0[v1] != 50 && a0[v1] != 51 && a0[v1] != 52 && a0[v1] != 53 && a0[v1] != 54 && a0[v1] != 55 && a0[v1] != 56 && a0[v1] != 57)
+        if (a0[cur] != 48 && a0[cur] != 49 && a0[cur] != 50 && a0[cur] != 51 && a0[cur] != 52 && a0[cur] != 53 && a0[cur] != 54 && a0[cur] != 55 && a0[cur] != 56 && a0[cur] != 57)
             break;
         v4 *= 10;
-        v3 = a0[v1] - 48;
+        v3 = a0[cur] - 48;
         v4 += v3;
     }
     v5 = v0 * v4;

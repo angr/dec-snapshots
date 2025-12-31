@@ -2,9 +2,9 @@ long long cgc_parseBalanceResult(char *a0)
 {
     char v0;  // [bp-0xa1]
     unsigned int v1;  // [bp-0xa0]
-    unsigned int v2;  // [bp-0x9c]
+    unsigned int flag1;  // [bp-0x9c]
     char *v3;  // [bp-0x98]
-    unsigned int v4;  // [bp-0x90]
+    unsigned int result;  // [bp-0x90]
     unsigned int v5;  // [bp-0x8c]
     char v6;  // [bp-0x88]
     char v7;  // [bp-0x48]
@@ -18,9 +18,9 @@ long long cgc_parseBalanceResult(char *a0)
     memset(&v7, 0, 20);
     memset(&v6, 0, 50);
     v5 = 0;
-    v4 = 0;
+    result = 0;
     v3 = "=";
-    v2 = 0;
+    flag1 = 0;
     v1 = 0;
     v10 = a0;
     v8 = v10;

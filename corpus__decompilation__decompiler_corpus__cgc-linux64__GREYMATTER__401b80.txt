@@ -11,27 +11,27 @@ extern char g_402008;
 
 long long cgc_request_document(char *a0, unsigned long long a1)
 {
+    unsigned long long v17;  // rax
     char v0;  // [bp-0x190]
-    void* v1;  // [bp-0x180]
-    unsigned int v2;  // [bp-0x16c]
+    void* ptr;  // [bp-0x180]
+    unsigned int flag3;  // [bp-0x16c]
     char v3;  // [bp-0x168]
     unsigned long long v4;  // [bp-0x68]
     unsigned long v5;  // [bp-0x60]
     unsigned long long v6;  // [bp-0x58]
     void* v7;  // [bp-0x50]
     void* v8;  // [bp-0x48], Other Possible Types: unsigned long
-    unsigned long v9;  // [bp-0x40]
-    unsigned short v10;  // [bp-0x32]
-    void* v11;  // [bp-0x30]
+    unsigned long flag1;  // [bp-0x40]
+    unsigned short result;  // [bp-0x32]
+    void* flag2;  // [bp-0x30]
     unsigned int v12;  // [bp-0x24]
     unsigned long long v13;  // [bp-0x20]
     unsigned long long v14;  // [bp-0x20]
     unsigned int v15;  // [bp-0xc]
-    unsigned long long v17;  // rax
 
     v13 = a1;
     v12 = 0;
-    v11 = 0;
+    flag2 = 0;
     if (v13 > 1000)
     {
         v15 = 16;
@@ -43,14 +43,14 @@ long long cgc_request_document(char *a0, unsigned long long a1)
         v15 = v12;
         return v15;
     }
-    v10 = 0;
-    v12 = cgc_receive_all(0, &v10, 2);
+    result = 0;
+    v12 = cgc_receive_all(0, &result, 2);
     if (v12)
     {
         v15 = v12;
         return v15;
     }
-    else if (v10 + 1 < v10)
+    else if (result + 1 < result)
     {
         v15 = v12;
         return v15;
@@ -67,20 +67,20 @@ long long cgc_request_document(char *a0, unsigned long long a1)
     }
     else
     {
-        v9 = 0;
-        v12 = cgc_allocate(v10 + 1, 0, &v9);
+        flag1 = 0;
+        v12 = cgc_allocate(result + 1, 0, &flag1);
         if (v12)
         {
             v15 = v12;
             return v15;
         }
         vvar_152{r48|8b} = &v0;
-        v12 = cgc_receive_with_term(0, v9, v10);
+        v12 = cgc_receive_with_term(0, flag1, result);
         if (!v12)
         {
-            if (v11 != v10)
+            if (flag2 != result)
                 goto LABEL_401d11;
-            v8 = v9;
+            v8 = flag1;
             v7 = 0;
             while (true)
             {
@@ -100,32 +100,32 @@ long long cgc_request_document(char *a0, unsigned long long a1)
                     v6 = v7 - v8 + 1;
                     v17 = v6;
                     *(&v5) = vvar_17{r48|8b};
-                    v1 = vvar_183{r48|8b} - (v17 + 15 & 0xfffffffffffffff0);
+                    ptr = vvar_183{r48|8b} - (v17 + 15 & 0xfffffffffffffff0);
                     v4 = v17;
-                    vvar_207{r48|8b} = v1 - 8;
-                    *(&v1[8]) = &g_401dca;
-                    cgc_strncpy(v1, v8, v6 - 1);
-                    *(-1 + v1 + v6) = 6;
+                    vvar_207{r48|8b} = ptr - 8;
+                    *(&ptr[8]) = &g_401dca;
+                    cgc_strncpy(ptr, v8, v6 - 1);
+                    *(-1 + ptr + v6) = 6;
                     vvar_218{r48|8b} = vvar_207{r48|8b} - 8;
                     *((vvar_207{r48|8b} - 8)) = &g_401df0;
                     memset(&v3, 0, 0x100);
                     v3 = 6;
                     *((vvar_218{r48|8b} - 8)) = &g_401e0e;
-                    v12 = cgc_canonicalize_path(&v3, v1, v6);
+                    v12 = cgc_canonicalize_path(&v3, ptr, v6);
                     if (v12)
                     {
-                        v2 = 2;
+                        flag3 = 2;
                     }
                     else
                     {
                         v14 = v13 + 1;
                         *((vvar_218{r48|8b} - 16)) = &g_401e44;
                         v12 = cgc_request_document(&v3, v13 + 1);
-                        v2 = (0 == v12 ? 0 : 2);
+                        flag3 = (0 == v12 ? 0 : 2);
                         v13 = v14;
                     }
                     vvar_17{r48|8b} = v5;
-                    if (v2)
+                    if (flag3)
                         break;
                 }
             }
@@ -135,7 +135,7 @@ long long cgc_request_document(char *a0, unsigned long long a1)
 LABEL_401d11:
         }
         *((vvar_8{r48|8b} - 8)) = &g_401ead;
-        cgc_deallocate(v9, v10 + 1);
+        cgc_deallocate(flag1, result + 1);
         v15 = v12;
         return v15;
     }

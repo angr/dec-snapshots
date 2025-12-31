@@ -2,19 +2,19 @@ extern char g_401937;
 
 char * cgc_random_alpha_lower(char *a0, unsigned long long a1)
 {
+    char *v9;  // rcx
+    unsigned int v10;  // eax
     char v0;  // [bp-0x58]
     char v1;  // [bp-0x49]
     char *v2;  // [bp-0x48]
-    unsigned int v3;  // [bp-0x3c]
+    unsigned int i;  // [bp-0x3c]
     unsigned long long v4;  // [bp-0x38]
     char *v5;  // [bp-0x30]
-    unsigned long v6;  // [bp-0x28]
-    unsigned int v7;  // [bp-0x1c]
-    char *v9;  // rcx
-    unsigned int v10;  // eax
+    unsigned long flag1;  // [bp-0x28]
+    unsigned int result;  // [bp-0x1c]
 
-    v7 = 0;
-    v6 = 0;
+    result = 0;
+    flag1 = 0;
     v5 = &v0;
     v9 = &(&v0)[-1 * (a1 + 15 & 0xfffffffffffffff0)];
     v2 = v9;
@@ -24,14 +24,14 @@ char * cgc_random_alpha_lower(char *a0, unsigned long long a1)
         vvar_44{r48|8b} = vvar_3{r48|8b} - 8;
         *((vvar_3{r48|8b} - 8)) = &g_401937;
         v1 = 0;
-        if (cgc_random(v2, a1, &v6))
-            v1 = a1 != v6;
+        if (cgc_random(v2, a1, &flag1))
+            v1 = a1 != flag1;
         vvar_3{r48|8b} = vvar_44{r48|8b};
     } while ((v1 & 1));
-    for (v3 = 0; v3 < a1; v3 += 1)
+    for (i = 0; i < a1; i += 1)
     {
-        v10 = v2[v3];
-        a0[v3] = ((((v10 >> 31 CONCAT v10) % 26) CONCAT ((v10 >> 31 CONCAT v10) / 26)) >> 32) + 97;
+        v10 = v2[i];
+        a0[i] = ((((v10 >> 31 CONCAT v10) % 26) CONCAT ((v10 >> 31 CONCAT v10) / 26)) >> 32) + 97;
     }
     return v5;
 }

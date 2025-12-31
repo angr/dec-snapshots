@@ -1,10 +1,10 @@
 long long cgc_bzero(char *a0, unsigned int a1)
 {
-    unsigned int v0;  // [bp-0x18]
+    unsigned int i;  // [bp-0x18]
 
-    for (v0 = 0; v0 < a1; v0 += 1)
+    for (i = 0; i < a1; i += 1)
     {
-        a0[v0] = 0;
+        a0[i] = 0;
     }
-    return v0;
+    return i;
 }

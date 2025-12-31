@@ -1,5 +1,6 @@
 int cgc_sendSearchString()
 {
+    unsigned int v17;  // edi
     char v0;  // [bp-0x98]
     char v1;  // [bp-0x88]
     char v2;  // [bp-0x78]
@@ -17,7 +18,6 @@ int cgc_sendSearchString()
     char v14;  // [bp+0x48]
     char v15;  // [bp+0x58]
     char v16;  // [bp+0x68]
-    unsigned int v17;  // edi
 
     v9 = 0;
     v8 = 0;

@@ -2,27 +2,27 @@ long long cgc_createSearchString()
 {
     char *v0;  // [bp-0x20]
     unsigned int v1;  // [bp-0x14]
-    unsigned long v2;  // [bp-0x10]
+    unsigned long result;  // [bp-0x10]
     unsigned long v3;  // [bp+0x8]
 
     v0 = &v3;
-    v2 = 0;
+    result = 0;
     v1 = 0;
-    v1 = cgc_allocate(137, 0, &v2);
+    v1 = cgc_allocate(137, 0, &result);
     if (v1)
         cgc__terminate(3);
-    cgc_memset(v2, 0, 137);
-    cgc_strcat(v2, "term");
-    cgc_strcat(v2, "=");
-    cgc_strcat(v2, v0);
-    cgc_strcat(v2, "&");
-    cgc_strcat(v2, "attribute");
-    cgc_strcat(v2, "=");
-    cgc_strcat(v2, v0 + 50);
-    cgc_strcat(v2, "&");
-    cgc_strcat(v2, "limit");
-    cgc_strcat(v2, "=");
-    cgc_strcat(v2, v0 + 100);
-    cgc_strcat(v2, "\n");
-    return v2;
+    cgc_memset(result, 0, 137);
+    cgc_strcat(result, "term");
+    cgc_strcat(result, "=");
+    cgc_strcat(result, v0);
+    cgc_strcat(result, "&");
+    cgc_strcat(result, "attribute");
+    cgc_strcat(result, "=");
+    cgc_strcat(result, v0 + 50);
+    cgc_strcat(result, "&");
+    cgc_strcat(result, "limit");
+    cgc_strcat(result, "=");
+    cgc_strcat(result, v0 + 100);
+    cgc_strcat(result, "\n");
+    return result;
 }

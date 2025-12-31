@@ -14,11 +14,11 @@ typedef struct struct_1 {
 
 long long cgc_remove()
 {
-    struct_2 *v1;  // rdi
+    struct_2 *ptr;  // rdi
 
-    v1->field_0->field_8 = v1->field_8;
-    v1->field_8->field_0 = v1->field_0;
-    v1->field_8 = 0;
-    v1->field_0 = 0;
-    return v1;
+    ptr->field_0->field_8 = ptr->field_8;
+    ptr->field_8->field_0 = ptr->field_0;
+    ptr->field_8 = 0;
+    ptr->field_0 = 0;
+    return ptr;
 }

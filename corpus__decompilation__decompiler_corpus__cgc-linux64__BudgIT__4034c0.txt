@@ -1,22 +1,22 @@
-typedef struct struct_0 {
-    struct struct_0 *field_0;
-    struct struct_0 *field_8;
-} struct_0;
+typedef struct struct_3 {
+    struct struct_3 *field_0;
+    struct struct_3 *field_8;
+} struct_3;
 
-extern struct_2 *cgc_allocated;
-extern struct_3 cgc_allocatedc;
-extern struct_1 *cgc_freed;
-extern struct_0 cgc_freedc;
+extern struct_1 cgc_allocatedc;
+extern struct_3 cgc_freedc;
 extern char cgc_heapinit_done;
+extern struct_2 *p;
+extern struct_0 *ptr;
 
-struct_0 * cgc_heapinit()
+struct_3 * cgc_heapinit()
 {
-    cgc_allocated = &cgc_allocatedc.field_0;
-    cgc_freed = &cgc_freedc.field_0;
-    cgc_allocated->field_8 = cgc_allocated;
-    cgc_allocated->field_0 = cgc_allocated;
-    cgc_freed->field_8 = cgc_freed;
-    cgc_freed->field_0 = cgc_freed;
+    ptr = &cgc_allocatedc.field_0;
+    p = &cgc_freedc.field_0;
+    ptr->field_8 = ptr;
+    ptr->field_0 = ptr;
+    p->field_8 = p;
+    p->field_0 = p;
     cgc_heapinit_done = 1;
-    return cgc_freed;
+    return p;
 }

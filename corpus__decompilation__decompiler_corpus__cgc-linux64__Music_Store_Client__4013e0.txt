@@ -1,20 +1,20 @@
 char * cgc_memcpy(char *a0, char *a1, unsigned long long a2)
 {
     char *v0;  // [bp-0x30]
-    char *v1;  // [bp-0x28]
+    char *cur;  // [bp-0x28]
     unsigned long long v2;  // [bp-0x20]
     unsigned long long v3;  // [bp-0x20]
 
     v2 = a2;
-    v1 = a0;
+    cur = a0;
     v0 = a1;
     while (true)
     {
         v3 = v2 - 1;
         if (!v2)
             break;
-        *(v1) = *(v0);
-        v1 += 1;
+        *(cur) = *(v0);
+        cur += 1;
         v0 += 1;
         v2 = v3;
     }

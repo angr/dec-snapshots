@@ -1,38 +1,38 @@
 long long cgc_recv_until_delim(unsigned int a0, void* a1, unsigned long long a2)
 {
-    unsigned long long v0;  // [bp-0x30]
+    unsigned long long i;  // [bp-0x30]
     void* v1;  // [bp-0x28], Other Possible Types: unsigned long
-    void* v2;  // [bp-0x18]
+    void* ptr;  // [bp-0x18]
     unsigned int v3;  // [bp-0xc]
 
-    v2 = a1;
+    ptr = a1;
     v1 = 0;
     if (!a2)
     {
         v3 = 0;
         return v3;
     }
-    else if (!v2)
+    else if (!ptr)
     {
         v3 = 4294967294;
         return v3;
     }
     else
     {
-        for (v0 = a2; v0; v0 -= v1)
+        for (i = a2; i; i -= v1)
         {
             v1 = 0;
-            cgc_receive(a0, v2, 1, &v1);
-            v2 += v1;
+            cgc_receive(a0, ptr, 1, &v1);
+            ptr += v1;
             if (!v1)
                 break;
-            if (v2[1] == 6)
+            if (ptr[1] == 6)
                 break;
         }
-        if (v2[1] == 6)
+        if (ptr[1] == 6)
         {
-            *(&v2[1]) = 6;
-            v3 = a2 - v0;
+            *(&ptr[1]) = 6;
+            v3 = a2 - i;
             return v3;
         }
         v3 = 4294967295;

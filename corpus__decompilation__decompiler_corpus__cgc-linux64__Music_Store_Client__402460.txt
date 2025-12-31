@@ -8,7 +8,7 @@ unsigned long long cgc_getRandomGiftCard(struct_0 **a0)
 {
     unsigned int v0;  // [bp-0x24]
     char v1;  // [bp-0x20], Other Possible Types: unsigned int
-    unsigned int v2;  // [bp-0x18]
+    unsigned int i;  // [bp-0x18]
     unsigned int v3;  // [bp-0x14]
 
     memset(&v1, 0, 16);
@@ -17,10 +17,10 @@ unsigned long long cgc_getRandomGiftCard(struct_0 **a0)
         cgc__terminate(3);
     cgc_memset(*(a0), 0, 32);
     v3 = cgc_strlen("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
-    for (v2 = 0; v2 < 32; v2 += 1)
+    for (i = 0; i < 32; i += 1)
     {
         v0 = cgc_getRandomNumber(v3);
-        (&*(a0)->field_0)[v2] = *((4206608 + v0));
+        (&*(a0)->field_0)[i] = *((4206608 + v0));
     }
     *(a0)->field_20 = 0;
     return 33;

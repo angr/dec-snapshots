@@ -6,34 +6,34 @@ typedef struct struct_0 {
 long long cgc_sendReport(struct_0 *a0)
 {
     unsigned int v0;  // [bp-0x5c]
-    struct_0 *v1;  // [bp-0x58]
+    struct_0 *ptr;  // [bp-0x58]
     unsigned int v2;  // [bp-0x4c]
     char v3;  // [bp-0x48]
-    unsigned int v4;  // [bp-0x14]
+    unsigned int result;  // [bp-0x14]
     unsigned int v5;  // [bp-0x14]
 
     memset(&v3, 0, 40);
     v2 = 0;
-    v4 = cgc_getSize(a0);
-    v1 = a0;
+    result = cgc_getSize(a0);
+    ptr = a0;
     while (true)
     {
-        v5 = v4 - 1;
-        if (!v4)
+        v5 = result - 1;
+        if (!result)
             break;
-        v2 += v1->field_8;
-        v0 = cgc_transmit_all(1, v1 + 1, 24);
+        v2 += ptr->field_8;
+        v0 = cgc_transmit_all(1, ptr + 1, 24);
         if (v0)
             cgc__terminate(1);
-        v0 = cgc_int2str(&v3, 40, v1->field_8);
+        v0 = cgc_int2str(&v3, 40, ptr->field_8);
         if (v0)
             cgc__terminate(6);
         v0 = cgc_transmit_all(1, &v3, 40);
         if (v0)
             cgc__terminate(1);
         cgc_memset(&v3, 0, 40);
-        v1 = v1->field_0;
-        v4 = v5;
+        ptr = ptr->field_0;
+        result = v5;
     }
     v0 = cgc_int2str(&v3, 40, v2);
     if (v0)

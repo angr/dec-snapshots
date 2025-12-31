@@ -1,40 +1,40 @@
 long long cgc_check()
 {
     unsigned int v0;  // [bp-0x60]
-    unsigned int v1;  // [bp-0x5c]
+    unsigned int cur;  // [bp-0x5c]
     unsigned long v2;  // [bp-0x58]
     unsigned int v3;  // [bp-0x18]
-    unsigned int v4;  // [bp-0x14]
+    unsigned int i;  // [bp-0x14]
     unsigned int v5;  // [bp-0x10]
     unsigned int v6;  // [bp-0xc]
 
     v5 = 4294967295;
     v3 = 1;
-    for (v4 = 0; v4 < 64; v4 += 1)
+    for (i = 0; i < 64; i += 1)
     {
-        *(&v2 + v4) = 0;
+        *(&v2 + i) = 0;
     }
     if (cgc_receive_delim(0, &v2, 128, 10))
     {
         v6 = 4294967295;
         return v6;
     }
-    for (v4 = 0; *(&v2 + v4); v4 += 1)
+    for (i = 0; *(&v2 + i); i += 1)
     {
         v5 += 1;
     }
-    v1 = v5;
+    cur = v5;
     if ((((v5 >> 31 CONCAT v5) % 2) CONCAT ((v5 >> 31 CONCAT v5) / 2)) >> 32 == 1)
-        v1 -= 1;
-    v4 = 0;
+        cur -= 1;
+    i = 0;
     while (true)
     {
-        v0 = v4;
-        if (v0 > (((v1 >> 31 CONCAT v1) % 2) CONCAT ((v1 >> 31 CONCAT v1) / 2)))
+        v0 = i;
+        if (v0 > (((cur >> 31 CONCAT cur) % 2) CONCAT ((cur >> 31 CONCAT cur) / 2)))
             break;
-        if (*(&v2 + v4) != *(-1 + &v2 + v5 - v4))
+        if (*(&v2 + i) != *(-1 + &v2 + v5 - i))
             v3 = 0;
-        v4 += 1;
+        i += 1;
     }
     if (v2 == 94 && cgc_transmit_all(1, "\n\nEASTER EGG!\n\n", 15))
         cgc__terminate(0);
