@@ -37,7 +37,7 @@ long long cgc_check()
         i += 1;
     }
     if (v2 == 94 && cgc_transmit_all(1, "\n\nEASTER EGG!\n\n", 15))
-        cgc__terminate(0);
+        cgc__terminate();
     v6 = v3;
     return v6;
 }

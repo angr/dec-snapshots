@@ -10,7 +10,7 @@ long long cgc_receiveNumResults(unsigned int a0)
     v0 = 0;
     v1 = cgc_recvline(a0, &v2, 1023);
     if (v1 < 0)
-        cgc__terminate(2);
+        cgc__terminate();
     if (v1)
     {
         v0 = cgc_parseResultSize(&v2);

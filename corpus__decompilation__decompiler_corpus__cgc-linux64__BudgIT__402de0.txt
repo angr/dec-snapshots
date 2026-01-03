@@ -31,8 +31,8 @@ struct_1 * cgc_checkheap()
             if (cur < iter + iter->field_10 && iter < cur + cur->field_10)
             {
                 if (cgc_sendline(1, "corrupt", 7) < 0)
-                    cgc__terminate(6);
-                cgc__terminate(283);
+                    cgc__terminate();
+                cgc__terminate();
             }
         }
     }

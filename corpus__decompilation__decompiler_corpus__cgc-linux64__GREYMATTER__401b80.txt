@@ -20,8 +20,8 @@ long long cgc_request_document(char *a0, unsigned long long a1)
     unsigned long v5;  // [bp-0x60]
     unsigned long long v6;  // [bp-0x58]
     void* v7;  // [bp-0x50]
-    void* v8;  // [bp-0x48], Other Possible Types: unsigned long
-    unsigned long flag1;  // [bp-0x40]
+    void* v8;  // [bp-0x48]
+    void* flag1;  // [bp-0x40]
     unsigned short result;  // [bp-0x32]
     void* flag2;  // [bp-0x30]
     unsigned int v12;  // [bp-0x24]
@@ -68,7 +68,7 @@ long long cgc_request_document(char *a0, unsigned long long a1)
     else
     {
         flag1 = 0;
-        v12 = cgc_allocate(result + 1, 0, &flag1);
+        v12 = cgc_allocate();
         if (v12)
         {
             v15 = v12;
@@ -135,7 +135,7 @@ long long cgc_request_document(char *a0, unsigned long long a1)
 LABEL_401d11:
         }
         *((vvar_8{r48|8b} - 8)) = &g_401ead;
-        cgc_deallocate(flag1, result + 1);
+        cgc_deallocate();
         v15 = v12;
         return v15;
     }

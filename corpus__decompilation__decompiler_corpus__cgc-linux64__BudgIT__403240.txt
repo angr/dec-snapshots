@@ -1,14 +1,12 @@
-extern unsigned long long cgc___cookie;
-
 unsigned long long cgc___stack_cookie_init()
 {
     unsigned long long v1;  // rax
 
-    v1 = cgc_random(&cgc___cookie, 4, 0);
+    v1 = cgc_random();
     if (!v1)
         return v1;
     if (cgc_sendline(1, "The essence of chaos.", 21) >= 0)
-        return cgc__terminate(19);
-    cgc__terminate(6);
-    return cgc__terminate(19);
+        return cgc__terminate();
+    cgc__terminate();
+    return cgc__terminate();
 }

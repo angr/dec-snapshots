@@ -1,14 +1,11 @@
-int main(unsigned long long a0, unsigned long long a1)
+int main(unsigned int a0, unsigned long long a1)
 {
-    uint128_t v38;  // xmm0
-    int v39;  // xmm1
-    int v40;  // xmm2
-    int v41;  // xmm0
-    int v42;  // xmm1
-    int v43;  // xmm2
-    unsigned long long v44;  // rdx
-    unsigned long long v45;  // r8
-    unsigned long long v46;  // r9
+    uint128_t v37;  // xmm0
+    int v38;  // xmm1
+    int v39;  // xmm2
+    int v40;  // xmm0
+    int v41;  // xmm1
+    int v42;  // xmm2
     uint128_t v0;  // [bp-0xb18]
     unsigned long long v1;  // [bp-0xb08]
     int v2;  // [bp-0xb08]
@@ -25,7 +22,7 @@ int main(unsigned long long a0, unsigned long long a1)
     char v13;  // [bp-0xab0]
     unsigned long long v14;  // [bp-0xaa0]
     char *v15;  // [bp-0xa98]
-    void* v16;  // [bp-0xa90], Other Possible Types: char *
+    void* v16;  // [bp-0xa90], Other Possible Types: unsigned long
     char v17[2512];  // [bp-0xa88]
     char v18[16];  // [bp-0xb8]
     unsigned long v19;  // [bp-0xa8]
@@ -38,19 +35,18 @@ int main(unsigned long long a0, unsigned long long a1)
     char *v27;  // [bp-0x48]
     unsigned long long v28;  // [bp-0x40]
     char v29;  // [bp-0x38]
-    unsigned long long v30;  // [bp-0x30]
     char i;  // [bp-0x28]
-    unsigned int v32;  // [bp-0x20]
-    unsigned int v33;  // [bp-0x1c]
-    unsigned long long v34;  // [bp-0x18]
-    unsigned int v35;  // [bp-0x10]
+    unsigned int v31;  // [bp-0x20]
+    unsigned int v32;  // [bp-0x1c]
+    unsigned long long v33;  // [bp-0x18]
+    unsigned int v34;  // [bp-0x10]
     unsigned int flag1;  // [bp-0xc]
 
     flag1 = 0;
-    v35 = a0;
-    v34 = a1;
-    v33 = 0;
+    v34 = a0;
+    v33 = a1;
     v32 = 0;
+    v31 = 0;
     memset(&v29, 0, 24);
     memset(&result, 0, 24);
     memset(&v18, 0, 104);
@@ -58,7 +54,7 @@ int main(unsigned long long a0, unsigned long long a1)
     v16 = 0;
     v27 = &v17[0];
     cgc_getBalance(&v29);
-    v32 = i;
+    v31 = i;
     while (i > 0)
     {
         result = 0;
@@ -66,36 +62,37 @@ int main(unsigned long long a0, unsigned long long a1)
         v12 = v24;
         *(&v10) = *(&v23);
         *(&v8) = *(&v22);
-        v38 = v18;
-        v39 = *(&v19);
-        v40 = *(&v20);
+        v37 = v18;
+        v38 = *(&v19);
+        v39 = *(&v20);
         *(&v6) = *(&v21);
-        v4 = v40;
-        v2 = v39;
-        v0 = v38;
-        cgc_sendSearchString(1);
+        v4 = v39;
+        v2 = v38;
+        v0 = v37;
+        cgc_sendSearchString();
         cgc_receiveSearchResults(0, &result, 10);
         v15 = &v0;
         v14 = v24;
         memcpy(&v13, &v23, 16);
         *(&v11) = *(&v22);
-        v41 = v18;
-        v42 = *(&v19);
-        v43 = *(&v20);
+        v40 = v18;
+        v41 = *(&v19);
+        v42 = *(&v20);
         *(&v9) = *(&v21);
-        v7 = v43;
-        v5 = v42;
-        v3 = v41;
+        v7 = v42;
+        v5 = v41;
+        v3 = v40;
         v1 = v28;
-        v16 = cgc_selectSong(a0, a1, v44, v28, v45, v46, *(&result));
-        v33 = cgc_purchaseSong(1, v16, &v29);
-        if (v33 == 1)
+        memcpy(&v0, &result, 16);
+        v16 = cgc_selectSong();
+        v32 = cgc_purchaseSong(1, v16, &v29);
+        if (v32 == 1)
             break;
         cgc_receiveBalance(0);
     }
-    v33 = cgc_deallocate(v30, v32 * 250);
-    if (!v33)
-        return v33;
-    cgc__terminate(3);
-    return v33;
+    v32 = cgc_deallocate();
+    if (!v32)
+        return v32;
+    cgc__terminate();
+    return v32;
 }

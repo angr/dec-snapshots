@@ -1,36 +1,38 @@
 long long cgc_sendall(unsigned int a0, unsigned long long a1, unsigned long long a2)
 {
     void* v0;  // [bp-0x30]
-    unsigned long flag1;  // [bp-0x28]
+    void* flag1;  // [bp-0x28]
     unsigned long long result;  // [bp-0x20]
     unsigned long long v3;  // [bp-0x18]
-    unsigned int v4;  // [bp-0xc]
+    unsigned int v4;  // [bp-0x10]
+    unsigned int v5;  // [bp-0xc]
 
+    v4 = a0;
     v3 = a1;
     result = a2;
     flag1 = 0;
     v0 = 0;
     if (!v3)
     {
-        v4 = 4294967295;
-        return v4;
+        v5 = 4294967295;
+        return v5;
     }
     if (!result)
     {
-        v4 = 0;
-        return v4;
+        v5 = 0;
+        return v5;
     }
     while (true)
     {
         if (!result)
         {
-            v4 = v0;
-            return v4;
+            v5 = v0;
+            return v5;
         }
-        if (cgc_transmit(a0, v3, result, &flag1))
+        if (cgc_transmit())
         {
-            v4 = 4294967295;
-            return v4;
+            v5 = 4294967295;
+            return v5;
         }
         v3 += flag1;
         v0 += flag1;

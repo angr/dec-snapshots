@@ -14,7 +14,6 @@ typedef struct struct_1 {
     char field_18;
 } struct_1;
 
-extern unsigned long long cgc_allocated;
 extern unsigned int cgc_curleft;
 extern struct_0 *cgc_freed;
 extern char cgc_heapinit_done;
@@ -48,8 +47,8 @@ void* cgc_malloc(unsigned long long a0)
     }
     if (cur->field_10 >= v2)
     {
-        cgc_remove(cur);
-        cgc_insert(cgc_allocated, cur);
+        cgc_remove();
+        cgc_insert();
         v3 = &cur->field_18;
         return v3;
     }
@@ -59,7 +58,7 @@ void* cgc_malloc(unsigned long long a0)
         cur->field_10 = v2;
         cgc_lastpage = &cgc_lastpage->padding_0[v2];
         cgc_curleft = cgc_curleft - v2;
-        cgc_insert(cgc_allocated, cur);
+        cgc_insert();
         v3 = &cur->field_18;
         return v3;
     }
@@ -69,15 +68,15 @@ void* cgc_malloc(unsigned long long a0)
         {
             cur = cgc_lastpage;
             cur->field_10 = cgc_curleft;
-            cgc_insert(cgc_freed, cur);
+            cgc_insert();
         }
-        if (cgc_allocate(v2, 0, &cur))
+        if (cgc_allocate())
         {
             v3 = 0;
             return v3;
         }
         cur->field_10 = v2;
-        cgc_insert(cgc_allocated, cur);
+        cgc_insert();
         cgc_lastpage = &cur->padding_0[v2];
         if ((v2 & 4095))
             cgc_curleft = 0x1000 - (v2 & 4095);

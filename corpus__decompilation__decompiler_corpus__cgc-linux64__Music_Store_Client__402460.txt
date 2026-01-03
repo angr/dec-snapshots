@@ -12,9 +12,9 @@ unsigned long long cgc_getRandomGiftCard(struct_0 **a0)
     unsigned int v3;  // [bp-0x14]
 
     memset(&v1, 0, 16);
-    v1 = cgc_allocate(33, 0, a0);
+    v1 = cgc_allocate();
     if (v1)
-        cgc__terminate(3);
+        cgc__terminate();
     cgc_memset(*(a0), 0, 32);
     v3 = cgc_strlen("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
     for (i = 0; i < 32; i += 1)

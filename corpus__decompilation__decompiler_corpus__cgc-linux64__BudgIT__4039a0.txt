@@ -3,7 +3,7 @@ typedef struct struct_0 {
     unsigned int field_8;
 } struct_0;
 
-long long cgc_sendReport(struct_0 *a0)
+void cgc_sendReport(struct_0 *a0)
 {
     unsigned int v0;  // [bp-0x5c]
     struct_0 *ptr;  // [bp-0x58]
@@ -24,22 +24,23 @@ long long cgc_sendReport(struct_0 *a0)
         v2 += ptr->field_8;
         v0 = cgc_transmit_all(1, ptr + 1, 24);
         if (v0)
-            cgc__terminate(1);
+            cgc__terminate();
         v0 = cgc_int2str(&v3, 40, ptr->field_8);
         if (v0)
-            cgc__terminate(6);
+            cgc__terminate();
         v0 = cgc_transmit_all(1, &v3, 40);
         if (v0)
-            cgc__terminate(1);
+            cgc__terminate();
         cgc_memset(&v3, 0, 40);
         ptr = ptr->field_0;
         result = v5;
     }
     v0 = cgc_int2str(&v3, 40, v2);
     if (v0)
-        cgc__terminate(6);
+        cgc__terminate();
     v0 = cgc_transmit_all(1, &v3, 40);
     if (!v0)
-        return v0;
-    return cgc__terminate(1);
+        return;
+    cgc__terminate();
+    return;
 }

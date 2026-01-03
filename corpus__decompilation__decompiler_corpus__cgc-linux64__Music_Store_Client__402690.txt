@@ -33,6 +33,6 @@ int cgc_sendSearchString()
     v9 = cgc_transmit_all(v17, v7, cgc_strlen(v8));
     if (!v9)
         return;
-    cgc__terminate(4);
+    cgc__terminate();
     return;
 }

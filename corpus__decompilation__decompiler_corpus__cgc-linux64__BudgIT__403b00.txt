@@ -44,10 +44,10 @@ LABEL_403bdc:
                         v0 = &v6[0];
                         v4 = cgc_transmit_all(1, v0, cgc_strlen(&v6));
                         if (v4)
-                            cgc__terminate(1);
+                            cgc__terminate();
                         v4 = cgc_transmit_all(1, " is over budget!\n", 17);
                         if (v4)
-                            cgc__terminate(1);
+                            cgc__terminate();
                     }
                 }
                 if (v7 == 3)
@@ -57,10 +57,10 @@ LABEL_403bdc:
                     v2 = cgc_getValue(flag1, &v6);
                     v4 = cgc_int2str(&v1, 40, v2);
                     if (v4)
-                        cgc__terminate(6);
+                        cgc__terminate();
                     v4 = cgc_transmit_all(1, &v1, 40);
                     if (v4)
-                        cgc__terminate(1);
+                        cgc__terminate();
                 }
                 if (v7 == 6)
                 {
@@ -79,13 +79,13 @@ LABEL_403bdc:
         {
             v4 = cgc_transmit_all(1, "New budget created!\n", 20);
             if (v4)
-                cgc__terminate(1);
+                cgc__terminate();
         }
         else
         {
             v4 = cgc_transmit_all(1, "No more entries\n", 16);
             if (v4)
-                cgc__terminate(1);
+                cgc__terminate();
         }
         goto LABEL_403bdc;
     }

@@ -24,7 +24,7 @@ long long cgc_receiveSearchResults(unsigned int a0, struct_0 *ptr, unsigned int 
         }
         result = cgc_recvline(a0, &v3, 1023);
         if (result < 0)
-            cgc__terminate(2);
+            cgc__terminate();
         if (!result)
         {
             v4 = 0;
@@ -34,7 +34,7 @@ long long cgc_receiveSearchResults(unsigned int a0, struct_0 *ptr, unsigned int 
         {
             flag1 = cgc_parseSearchResult(&v3, ptr->field_8 + ptr->field_0 * 250);
             if (flag1)
-                cgc__terminate(10);
+                cgc__terminate();
             ptr->field_0 = ptr->field_0 + 1;
         }
         v0 -= 1;

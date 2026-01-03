@@ -5,15 +5,15 @@ typedef struct struct_0 {
 
 struct_0 * cgc_initMap(struct_0 *a0)
 {
-    struct_0 *i;  // [bp-0x28], Other Possible Types: char
+    struct_0 *i;  // [bp-0x28]
     unsigned int result;  // [bp-0x1c]
     struct_0 *v2;  // [bp-0x10]
 
     if (!a0)
     {
-        result = cgc_allocate(0x1400, 0, &i);
+        result = cgc_allocate();
         if (result)
-            cgc__terminate(3);
+            cgc__terminate();
         i = &i[390].padding_0[10];
         v2 = i;
         return v2;

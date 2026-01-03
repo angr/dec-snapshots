@@ -9,23 +9,23 @@ unsigned int main(unsigned int a0, unsigned long long a1)
     v2 = a0;
     v1 = a1;
     if (cgc_transmit_all(1, "\nWelcome to Palindrome Finder\n\n", 31))
-        cgc__terminate(0);
+        cgc__terminate();
     while (true)
     {
         if (cgc_transmit_all(1, "\tPlease enter a possible palindrome: ", 37))
-            cgc__terminate(0);
+            cgc__terminate();
         flag1 = cgc_check();
         if (flag1 == -1)
             break;
         if (!flag1)
         {
             if (cgc_transmit_all(1, "\t\tNope, that's not a palindrome\n\n", 33))
-                cgc__terminate(0);
+                cgc__terminate();
         }
         else
         {
             if (cgc_transmit_all(1, "\t\tYes, that's a palindrome!\n\n", 29))
-                cgc__terminate(0);
+                cgc__terminate();
         }
     }
     return 0;

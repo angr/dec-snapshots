@@ -1,13 +1,15 @@
-long long cgc_receive_all(unsigned int a0, unsigned long a1, unsigned long long a2)
+long long cgc_receive_all(unsigned int a0, unsigned long long a1, unsigned long long a2)
 {
     unsigned long long *p;  // rcx
-    void* v0;  // [bp-0x40], Other Possible Types: unsigned long
+    void* v0;  // [bp-0x40]
     unsigned long long v1;  // [bp-0x38]
     unsigned int result;  // [bp-0x2c]
-    unsigned int v3;  // [bp-0x10]
-    unsigned int v4;  // [bp-0xc]
+    unsigned long long v3;  // [bp-0x18]
+    unsigned int v4;  // [bp-0x10]
+    unsigned int v5;  // [bp-0xc]
 
-    v3 = a0;
+    v4 = a0;
+    v3 = a1;
     result = 0;
     v1 = a2;
     v0 = 0;
@@ -16,18 +18,18 @@ long long cgc_receive_all(unsigned int a0, unsigned long a1, unsigned long long 
         if (v1)
         {
             v0 = 0;
-            result = cgc_receive(0, a1 + a2 - v1, v1, &v0);
+            result = cgc_receive();
             if (result)
             {
-                v4 = result;
-                return v4;
+                v5 = result;
+                return v5;
             }
             if (!v0)
             {
                 if (p)
                     *(p) = a2 - v1;
-                v4 = result;
-                return v4;
+                v5 = result;
+                return v5;
             }
             v1 -= v0;
         }
@@ -35,8 +37,8 @@ long long cgc_receive_all(unsigned int a0, unsigned long a1, unsigned long long 
         {
             if (p)
                 *(p) = a2;
-            v4 = result;
-            return v4;
+            v5 = result;
+            return v5;
         }
     }
 }
