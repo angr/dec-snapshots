@@ -1,4 +1,4 @@
-void sub_402682()
+int sub_402682()
 {
     cgc_sendSearchString();
     return;

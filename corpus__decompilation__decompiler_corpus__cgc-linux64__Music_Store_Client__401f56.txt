@@ -1,4 +1,4 @@
-void sub_401f56()
+void sub_401f56(unsigned long a0)
 {
     cgc_receiveNumResults();
     return;

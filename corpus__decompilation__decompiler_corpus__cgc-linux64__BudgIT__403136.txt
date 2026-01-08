@@ -1,4 +1,4 @@
-void sub_403136()
+void sub_403136(unsigned long a0, unsigned long a1)
 {
     cgc_insert();
     return;

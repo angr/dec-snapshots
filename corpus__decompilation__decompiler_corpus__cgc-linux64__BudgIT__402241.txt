@@ -1,4 +1,4 @@
-void sub_402241()
+void sub_402241(unsigned long a0, unsigned long a1, unsigned long a2)
 {
     cgc_sendall();
     return;

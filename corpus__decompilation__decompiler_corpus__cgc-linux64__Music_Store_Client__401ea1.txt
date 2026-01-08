@@ -1,4 +1,4 @@
-void sub_401ea1()
+void sub_401ea1(unsigned long a0)
 {
     cgc_receiveBalance();
     return;

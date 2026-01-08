@@ -1,4 +1,4 @@
-void sub_401a9d()
+void sub_401a9d(unsigned long a0)
 {
     cgc_parseBalanceResult();
     return;

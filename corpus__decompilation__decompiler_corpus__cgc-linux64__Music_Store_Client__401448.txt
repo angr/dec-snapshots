@@ -1,4 +1,4 @@
-void sub_401448()
+void sub_401448(unsigned long a0, unsigned long a1, unsigned long a2)
 {
     cgc_memset();
     return;

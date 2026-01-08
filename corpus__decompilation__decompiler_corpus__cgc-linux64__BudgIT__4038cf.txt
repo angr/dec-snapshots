@@ -1,4 +1,4 @@
-void sub_4038cf()
+void sub_4038cf(unsigned long a0)
 {
     cgc_receiveInstruction();
     return;

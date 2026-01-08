@@ -1,4 +1,4 @@
-void sub_4027c5()
+void sub_4027c5(unsigned long a0, unsigned long a1)
 {
     cgc_startswith();
     return;

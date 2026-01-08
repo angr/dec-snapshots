@@ -1,4 +1,4 @@
-void sub_4037c3()
+void sub_4037c3(unsigned long a0, unsigned long a1)
 {
     cgc_removeMap();
     return;

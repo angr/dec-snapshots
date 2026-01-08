@@ -1,4 +1,4 @@
-void sub_40185b()
+void sub_40185b(unsigned long a0, unsigned long a1)
 {
     cgc_setValue();
     return;

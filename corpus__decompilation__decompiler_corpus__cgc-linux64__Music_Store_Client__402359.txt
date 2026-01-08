@@ -1,4 +1,4 @@
-void sub_402359()
+void sub_402359(unsigned long a0)
 {
     cgc_getRandomTerm();
     return;

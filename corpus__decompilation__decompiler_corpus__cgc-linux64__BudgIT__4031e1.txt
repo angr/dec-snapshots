@@ -1,4 +1,4 @@
-void sub_4031e1()
+void sub_4031e1(unsigned long a0)
 {
     cgc_free();
     return;

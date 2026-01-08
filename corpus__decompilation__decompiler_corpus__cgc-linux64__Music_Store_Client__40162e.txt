@@ -1,4 +1,4 @@
-void sub_40162e()
+void sub_40162e(unsigned long a0, unsigned long a1)
 {
     cgc_strcat();
     return;

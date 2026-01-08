@@ -1,4 +1,4 @@
-void sub_40245d()
+void sub_40245d(unsigned long a0)
 {
     cgc_getRandomGiftCard();
     return;

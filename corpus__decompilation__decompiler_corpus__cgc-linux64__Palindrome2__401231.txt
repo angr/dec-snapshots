@@ -1,4 +1,4 @@
-void sub_401231()
+void sub_401231(unsigned long a0, unsigned long a1, unsigned long a2, char a3)
 {
     cgc_receive_delim();
     return;

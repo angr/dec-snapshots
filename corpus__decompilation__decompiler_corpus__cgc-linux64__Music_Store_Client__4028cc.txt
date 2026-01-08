@@ -1,4 +1,4 @@
-void sub_4028cc()
+int sub_4028cc()
 {
     cgc_selectSong();
     return;

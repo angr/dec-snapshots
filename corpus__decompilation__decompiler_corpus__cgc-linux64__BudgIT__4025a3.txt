@@ -1,4 +1,4 @@
-void sub_4025a3()
+void sub_4025a3(unsigned long a0, unsigned long a1)
 {
     cgc_strcpy();
     return;

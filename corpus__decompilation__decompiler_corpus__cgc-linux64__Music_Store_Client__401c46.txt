@@ -1,4 +1,4 @@
-void sub_401c46()
+void sub_401c46(unsigned long a0, unsigned long a1)
 {
     cgc_parseSearchResult();
     return;

@@ -1,4 +1,4 @@
-void sub_403909()
+void sub_403909(unsigned long a0)
 {
     cgc_receiveValue();
     return;

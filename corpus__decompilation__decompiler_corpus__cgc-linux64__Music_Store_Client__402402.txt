@@ -1,4 +1,4 @@
-void sub_402402()
+void sub_402402(unsigned long a0)
 {
     cgc_createRandomRequest();
     return;

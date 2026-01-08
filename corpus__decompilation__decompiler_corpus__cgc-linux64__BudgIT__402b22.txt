@@ -1,4 +1,4 @@
-void sub_402b22()
+void sub_402b22(unsigned long a0, char a1, unsigned long a2)
 {
     cgc_memset();
     return;

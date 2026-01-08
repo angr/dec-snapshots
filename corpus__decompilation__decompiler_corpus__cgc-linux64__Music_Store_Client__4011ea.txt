@@ -1,4 +1,4 @@
-void sub_4011ea()
+void sub_4011ea(unsigned long a0)
 {
     cgc_ready();
     return;

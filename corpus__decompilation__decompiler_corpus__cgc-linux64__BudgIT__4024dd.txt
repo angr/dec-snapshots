@@ -1,4 +1,4 @@
-void sub_4024dd()
+void sub_4024dd(unsigned long a0, unsigned long a1, unsigned long a2)
 {
     cgc_recv();
     return;

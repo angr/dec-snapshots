@@ -1,4 +1,4 @@
-void sub_401179()
+void sub_401179(unsigned long a0, unsigned long a1)
 {
     cgc_transmit_all();
     return;

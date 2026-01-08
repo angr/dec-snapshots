@@ -1,4 +1,4 @@
-void sub_4018db()
+void sub_4018db(unsigned long a0, unsigned long a1)
 {
     cgc_random_alpha_lower();
     return;

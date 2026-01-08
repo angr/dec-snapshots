@@ -1,4 +1,4 @@
-void sub_40235b()
+void sub_40235b(unsigned long a0, unsigned long a1, unsigned long a2)
 {
     cgc_recvline();
     return;

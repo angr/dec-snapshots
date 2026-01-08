@@ -1,4 +1,4 @@
-void sub_402942()
+void sub_402942(unsigned long a0, unsigned long a1, unsigned long a2)
 {
     cgc_int2str();
     return;

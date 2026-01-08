@@ -1,4 +1,4 @@
-void sub_40270d()
+void sub_40270d(unsigned long a0, unsigned long a1)
 {
     cgc_streq();
     return;
