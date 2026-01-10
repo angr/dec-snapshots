@@ -3,20 +3,20 @@ long long cgc_strncpy(char *a0, char *a1, unsigned long a2)
     char v0;  // [bp-0x29]
     char *cur;  // [bp-0x28]
     char *v2;  // [bp-0x28]
-    char *v3;  // [bp-0x18]
+    char *iter;  // [bp-0x18]
 
-    v3 = a1;
+    iter = a1;
     cur = a0;
     while (true)
     {
         v0 = 0;
         if (cur - a0 < a2)
-            v0 = *(v3);
+            v0 = *(iter);
         if (!(v0 & 1))
             break;
-        *(cur) = *(v3);
+        *(cur) = *(iter);
         cur += 1;
-        v3 += 1;
+        iter += 1;
     }
     v2 = cur + 1;
     *(cur) = 0;
