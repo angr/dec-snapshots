@@ -1,4 +1,4 @@
-void sub_40352f()
+void sub_40352f(unsigned long a0)
 {
     cgc_initMap();
     return;

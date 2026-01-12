@@ -1,4 +1,4 @@
-void sub_402d54()
+void sub_402d54(unsigned long a0, unsigned long a1, unsigned long a2)
 {
     cgc_memcmp();
     return;

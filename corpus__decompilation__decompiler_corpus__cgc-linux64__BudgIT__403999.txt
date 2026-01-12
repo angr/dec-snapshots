@@ -1,4 +1,4 @@
-void sub_403999()
+void sub_403999(unsigned long a0)
 {
     cgc_sendReport();
     return;

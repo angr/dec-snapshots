@@ -1,4 +1,4 @@
-void sub_403af4()
+void sub_403af4(unsigned long a0, unsigned long a1)
 {
     main();
     return;

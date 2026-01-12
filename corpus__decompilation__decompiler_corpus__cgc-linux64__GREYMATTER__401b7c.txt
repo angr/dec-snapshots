@@ -1,4 +1,4 @@
-void sub_401b7c()
+void sub_401b7c(unsigned long a0, unsigned long a1)
 {
     cgc_request_document();
     return;

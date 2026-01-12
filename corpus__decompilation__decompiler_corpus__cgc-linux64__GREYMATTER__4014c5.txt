@@ -1,4 +1,4 @@
-void sub_4014c5()
+void sub_4014c5(unsigned long a0, unsigned long a1, unsigned long a2)
 {
     cgc_strncat();
     return;

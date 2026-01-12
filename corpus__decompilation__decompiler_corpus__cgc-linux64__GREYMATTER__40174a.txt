@@ -1,4 +1,4 @@
-void sub_40174a()
+void sub_40174a(unsigned long a0, unsigned long a1, unsigned long a2)
 {
     cgc_recv_until_delim();
     return;

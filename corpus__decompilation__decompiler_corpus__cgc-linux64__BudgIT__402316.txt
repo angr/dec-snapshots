@@ -1,4 +1,4 @@
-void sub_402316()
+void sub_402316(unsigned long a0)
 {
     cgc_strlen();
     return;

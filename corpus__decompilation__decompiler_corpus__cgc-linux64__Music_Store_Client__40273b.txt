@@ -1,4 +1,4 @@
-void sub_40273b()
+void sub_40273b(unsigned long a0)
 {
     cgc_getBalance();
     return;
