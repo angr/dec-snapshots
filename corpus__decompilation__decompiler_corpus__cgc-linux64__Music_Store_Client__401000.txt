@@ -1,16 +1,16 @@
-typedef struct struct_1 {
-    struct struct_1 *field_0;
-} struct_1;
-
 typedef struct struct_0 {
     struct struct_0 *field_0;
 } struct_0;
 
-extern struct_0 *g_4047f0;
+typedef struct struct_1 {
+    struct struct_1 *field_0;
+} struct_1;
 
-struct_1 ** _init()
+extern struct_1 *g_4047f0;
+
+struct_0 ** _init()
 {
-    struct_0 **v1;  // rax
+    struct_1 **v1;  // rax
 
     v1 = g_4047f0;
     if (g_4047f0)
