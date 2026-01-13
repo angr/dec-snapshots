@@ -1,4 +1,4 @@
-void sub_402199()
+void sub_402199(unsigned long a0, unsigned short a1, unsigned long a2)
 {
     cgc_promptc();
     return;

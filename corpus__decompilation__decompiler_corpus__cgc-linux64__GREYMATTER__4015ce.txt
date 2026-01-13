@@ -1,4 +1,4 @@
-void sub_4015ce()
+void sub_4015ce(unsigned long a0, unsigned long a1)
 {
     cgc_strpos();
     return;

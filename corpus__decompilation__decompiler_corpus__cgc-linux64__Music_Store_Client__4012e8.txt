@@ -1,4 +1,4 @@
-void sub_4012e8()
+void sub_4012e8(unsigned long a0, unsigned long a1, unsigned long a2)
 {
     cgc_transmit_all();
     return;

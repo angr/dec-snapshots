@@ -1,4 +1,4 @@
-void sub_4028de()
+void sub_4028de(unsigned long a0, unsigned long a1)
 {
     main();
     return;

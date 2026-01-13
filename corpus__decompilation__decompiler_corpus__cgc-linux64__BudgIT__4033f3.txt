@@ -1,4 +1,4 @@
-void sub_4033f3()
+void sub_4033f3(unsigned long a0, unsigned long a1)
 {
     cgc_strcmp();
     return;
