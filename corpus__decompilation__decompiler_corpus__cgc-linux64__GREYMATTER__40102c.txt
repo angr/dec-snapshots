@@ -1,4 +1,8 @@
-long long sub_40102c(void* a0, unsigned int a1, unsigned long a2)
+long long sub_40102c()
 {
-    return memset(a0, a1, a2);
+    void* v1;  // rdi
+    unsigned int v2;  // esi
+    unsigned long v3;  // rdx
+
+    return memset(v1, v2, v3);
 }

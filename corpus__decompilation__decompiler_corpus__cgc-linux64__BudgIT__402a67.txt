@@ -1,4 +1,4 @@
-void sub_402a67()
+void sub_402a67(unsigned long a0)
 {
     cgc_str2uint();
     return;

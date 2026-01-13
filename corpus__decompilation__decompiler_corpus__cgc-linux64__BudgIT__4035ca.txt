@@ -1,4 +1,4 @@
-void sub_4035ca()
+void sub_4035ca(unsigned long a0, unsigned long a1, unsigned long a2)
 {
     cgc_setMap();
     return;

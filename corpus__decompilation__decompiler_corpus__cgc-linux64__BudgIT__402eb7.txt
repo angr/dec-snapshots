@@ -1,4 +1,4 @@
-void sub_402eb7()
+void sub_402eb7(unsigned long a0)
 {
     cgc_malloc();
     return;

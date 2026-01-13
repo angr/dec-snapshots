@@ -1,4 +1,4 @@
-void sub_4019bc()
+void sub_4019bc(unsigned long a0, unsigned long a1, unsigned long a2)
 {
     cgc_canonicalize_path();
     return;

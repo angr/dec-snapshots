@@ -1,4 +1,4 @@
-void sub_4030e2()
+void sub_4030e2(unsigned long a0)
 {
     cgc_remove();
     return;

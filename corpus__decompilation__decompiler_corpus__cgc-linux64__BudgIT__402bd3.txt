@@ -1,4 +1,4 @@
-void sub_402bd3()
+void sub_402bd3(char a0, unsigned long a1)
 {
     cgc_b2hex();
     return;

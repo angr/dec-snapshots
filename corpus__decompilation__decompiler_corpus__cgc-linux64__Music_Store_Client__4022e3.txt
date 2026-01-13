@@ -1,4 +1,4 @@
-void sub_4022e3()
+void sub_4022e3(unsigned long a0)
 {
     cgc_getRandomAttribute();
     return;

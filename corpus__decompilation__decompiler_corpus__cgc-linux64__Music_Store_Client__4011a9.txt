@@ -1,4 +1,4 @@
-void sub_4011a9()
+void sub_4011a9(unsigned long a0, unsigned long a1)
 {
     cgc_bzero();
     return;

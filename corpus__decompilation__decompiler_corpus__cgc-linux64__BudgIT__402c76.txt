@@ -1,4 +1,4 @@
-void sub_402c76()
+void sub_402c76(unsigned long a0, char a1)
 {
     cgc_strchr();
     return;
