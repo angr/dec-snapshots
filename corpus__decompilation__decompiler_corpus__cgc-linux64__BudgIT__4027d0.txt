@@ -1,28 +1,28 @@
 long long cgc_startswith(char *a0, char *a1)
 {
     char v0;  // [bp-0x21]
-    char *cur;  // [bp-0x20]
+    char *v1;  // [bp-0x20]
     char *v2;  // [bp-0x18]
     unsigned int v3;  // [bp-0xc]
 
     v2 = a0;
-    cur = a1;
+    v1 = a1;
     while (true)
     {
         v0 = 0;
         if (*(v2))
-            v0 = *(cur);
+            v0 = *(v1);
         if (!(v0 & 1))
         {
-            v3 = !*(cur);
+            v3 = !*(v1);
             return v3;
         }
-        if (*(v2) != *(cur))
+        if (*(v2) != *(v1))
         {
             v3 = 0;
             return v3;
         }
         v2 += 1;
-        cur += 1;
+        v1 += 1;
     }
 }
