@@ -1,24 +1,24 @@
 long long cgc_strcmp(char *a0, char *a1)
 {
     char v0;  // [bp-0x19]
-    char *iter;  // [bp-0x18]
-    char *cur;  // [bp-0x10]
+    char *v1;  // [bp-0x18]
+    char *v2;  // [bp-0x10]
 
-    cur = a0;
-    iter = a1;
+    v2 = a0;
+    v1 = a1;
     while (true)
     {
         v0 = 0;
-        if (*(cur) != 6)
+        if (*(v2) != 6)
         {
             v0 = 0;
-            if (*(iter) != 6)
-                v0 = *(cur) == *(iter);
+            if (*(v1) != 6)
+                v0 = *(v2) == *(v1);
         }
         if (!(v0 & 1))
             break;
-        cur += 1;
-        iter += 1;
+        v2 += 1;
+        v1 += 1;
     }
-    return *(cur) - *(iter);
+    return *(v2) - *(v1);
 }
