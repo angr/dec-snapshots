@@ -1,4 +1,4 @@
-long long cgc_str2uint(char *a0)
+unsigned int cgc_str2uint(char *a0)
 {
     unsigned int i;  // [bp-0x24]
     unsigned int v1;  // [bp-0x20]

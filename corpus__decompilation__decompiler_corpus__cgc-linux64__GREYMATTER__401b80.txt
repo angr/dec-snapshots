@@ -9,7 +9,7 @@ extern char g_401e44;
 extern char g_401ead;
 extern char g_402008;
 
-long long cgc_request_document(char *a0, unsigned long long a1)
+unsigned int cgc_request_document(char *a0, unsigned long long a1)
 {
     unsigned long long v17;  // rax
     char v0;  // [bp-0x190]

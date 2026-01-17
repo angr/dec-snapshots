@@ -1,4 +1,4 @@
-long long cgc___stack_cookie_fail()
+int cgc___stack_cookie_fail()
 {
     unsigned long long v1;  // rdi
     unsigned long long v2;  // rsi

@@ -5,7 +5,7 @@ typedef struct struct_0 {
     char field_10;
 } struct_0;
 
-long long cgc_purchaseSong(unsigned int a0, char *a1, struct_0 *ptr)
+unsigned int cgc_purchaseSong(unsigned int a0, char *a1, struct_0 *ptr)
 {
     unsigned int v0;  // [bp-0x38]
     unsigned int v1;  // [bp-0x34]

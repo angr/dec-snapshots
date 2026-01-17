@@ -1,4 +1,4 @@
-long long cgc_strcmp(char *a0, char *a1)
+int cgc_strcmp(char *a0, char *a1)
 {
     char v0;  // [bp-0x19]
     char *iter;  // [bp-0x18]

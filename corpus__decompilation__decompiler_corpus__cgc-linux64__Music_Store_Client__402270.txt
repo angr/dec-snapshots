@@ -1,4 +1,4 @@
-long long cgc_getRandomNumber(unsigned int a0)
+int cgc_getRandomNumber(unsigned int a0)
 {
     char v0;  // [bp-0x20], Other Possible Types: unsigned int
     char v1;  // [bp-0x1c], Other Possible Types: unsigned int

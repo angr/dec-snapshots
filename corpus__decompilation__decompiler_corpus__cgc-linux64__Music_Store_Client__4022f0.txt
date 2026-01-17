@@ -1,3 +1,11 @@
+typedef struct struct_0 {
+    unsigned int field_0;
+    char padding_4[4];
+    unsigned long long field_8;
+    unsigned long long field_10;
+    unsigned long long field_18;
+} struct_0;
+
 extern struct_0 attributes;
 
 char * cgc_getRandomAttribute(unsigned long a0)

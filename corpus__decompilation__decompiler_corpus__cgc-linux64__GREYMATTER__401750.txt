@@ -1,4 +1,4 @@
-long long cgc_recv_until_delim(unsigned int a0, void* a1, unsigned long long a2)
+unsigned int cgc_recv_until_delim(unsigned int a0, void* a1, unsigned long long a2)
 {
     unsigned long long i;  // [bp-0x30]
     void* v1;  // [bp-0x28], Other Possible Types: unsigned long

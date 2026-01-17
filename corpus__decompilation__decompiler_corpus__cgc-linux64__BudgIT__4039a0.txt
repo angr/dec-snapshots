@@ -3,7 +3,7 @@ typedef struct struct_0 {
     unsigned int field_8;
 } struct_0;
 
-long long cgc_sendReport(struct_0 *a0)
+int cgc_sendReport(struct_0 *a0)
 {
     unsigned int v0;  // [bp-0x5c]
     struct_0 *ptr;  // [bp-0x58]

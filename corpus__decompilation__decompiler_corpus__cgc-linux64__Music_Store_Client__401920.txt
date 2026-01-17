@@ -1,4 +1,4 @@
-long long cgc_parseResultSize(char *a0)
+unsigned int cgc_parseResultSize(char *a0)
 {
     char v0;  // [bp-0xa1]
     unsigned int v1;  // [bp-0xa0]

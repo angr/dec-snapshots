@@ -1,16 +1,12 @@
-typedef struct struct_1 {
-    struct struct_1 *field_0;
-} struct_1;
-
 typedef struct struct_0 {
-    struct struct_0 *field_0;
+    unsigned long long field_0;
 } struct_0;
 
 extern struct_0 *g_403568;
 
-struct_1 ** _init()
+unsigned long long * _init()
 {
-    struct_0 **v1;  // rax
+    unsigned long long *v1;  // rax
 
     v1 = g_403568;
     if (g_403568)

@@ -10,7 +10,7 @@ typedef struct struct_1 {
     char field_c;
 } struct_1;
 
-long long cgc_setMap(struct_1 **p, char *a1, unsigned int a2)
+unsigned int cgc_setMap(struct_1 **p, char *a1, unsigned int a2)
 {
     struct_0 *v0;  // [bp-0x38]
     void* i;  // [bp-0x30], Other Possible Types: struct_1 *

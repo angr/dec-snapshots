@@ -1,4 +1,4 @@
-long long cgc_int2str(unsigned long a0, unsigned int a1, unsigned int a2)
+unsigned int cgc_int2str(unsigned long a0, unsigned int a1, unsigned int a2)
 {
     unsigned long v6;  // rcx
     unsigned long v7;  // rcx

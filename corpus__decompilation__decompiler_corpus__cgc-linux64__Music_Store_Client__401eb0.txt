@@ -1,4 +1,4 @@
-long long cgc_receiveBalance(unsigned int a0)
+unsigned int cgc_receiveBalance(unsigned int a0)
 {
     unsigned int v0;  // [bp-0x420]
     unsigned int v1;  // [bp-0x41c]

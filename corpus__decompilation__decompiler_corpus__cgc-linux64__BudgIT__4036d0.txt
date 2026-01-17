@@ -2,7 +2,7 @@ typedef struct struct_0 {
     struct struct_0 *field_0;
 } struct_0;
 
-long long cgc_getSize(struct_0 **a0)
+unsigned int cgc_getSize(struct_0 **a0)
 {
     struct_0 **ptr;  // [bp-0x20]
     unsigned int v1;  // [bp-0xc]

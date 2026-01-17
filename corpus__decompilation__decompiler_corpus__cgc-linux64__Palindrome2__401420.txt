@@ -1,4 +1,4 @@
-long long cgc_check()
+unsigned int cgc_check()
 {
     unsigned int v0;  // [bp-0x60]
     unsigned int cur;  // [bp-0x5c]

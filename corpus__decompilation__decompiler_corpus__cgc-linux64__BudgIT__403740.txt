@@ -3,7 +3,7 @@ typedef struct struct_0 {
     unsigned int field_8;
 } struct_0;
 
-long long cgc_getValue(struct_0 *a0, char *a1)
+unsigned int cgc_getValue(struct_0 *a0, char *a1)
 {
     struct_0 *ptr;  // [bp-0x28]
     unsigned int v1;  // [bp-0xc]
