@@ -3,16 +3,16 @@ char * cgc_getRandomTerm(char *a0)
     unsigned int v0;  // [bp-0x20]
     char j;  // [bp-0x1c], Other Possible Types: unsigned int
     unsigned int v2;  // [bp-0x18]
-    unsigned int result;  // [bp-0x14]
+    unsigned int i;  // [bp-0x14]
 
     memset(&j, 0, 12);
-    for (; !result; result = cgc_getRandomNumber(50));
+    for (; !i; i = cgc_getRandomNumber(50));
     v2 = cgc_strlen("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
-    for (j = 0; j < result; j += 1)
+    for (j = 0; j < i; j += 1)
     {
         v0 = cgc_getRandomNumber(v2);
         a0[j] = *((4206608 + v0));
     }
-    a0[result] = 0;
+    a0[i] = 0;
     return a0;
 }
