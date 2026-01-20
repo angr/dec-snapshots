@@ -3,15 +3,15 @@ typedef struct struct_0 {
     struct struct_0 *field_8;
 } struct_0;
 
-typedef struct struct_2 {
-    struct struct_2 *field_0;
-    struct struct_2 *field_8;
-} struct_2;
-
 typedef struct struct_1 {
     struct struct_1 *field_0;
     struct struct_1 *field_8;
 } struct_1;
+
+typedef struct struct_2 {
+    struct struct_2 *field_0;
+    struct struct_2 *field_8;
+} struct_2;
 
 extern char cgc_allocatedc;
 extern char cgc_freedc;
