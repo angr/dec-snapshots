@@ -1,26 +1,26 @@
 int main(unsigned long long a0, unsigned long long a1)
 {
     int v38;  // xmm0
-    int v39;  // xmm1
-    int v40;  // xmm2
-    int v41;  // xmm0
-    int v42;  // xmm1
-    int v43;  // xmm2
+    uint128_t v39;  // xmm1
+    uint128_t v40;  // xmm2
+    uint128_t v41;  // xmm0
+    uint128_t v42;  // xmm1
+    uint128_t v43;  // xmm2
     unsigned long long v44;  // rdx
     unsigned long long v45;  // r8
     unsigned long long v46;  // r9
     int v0;  // [bp-0xb18]
     unsigned long long v1;  // [bp-0xb08]
-    int v2;  // [bp-0xb08]
-    int v3;  // [bp-0xb00]
-    int v4;  // [bp-0xaf8]
-    int v5;  // [bp-0xaf0]
-    int v6;  // [bp-0xae8]
-    int v7;  // [bp-0xae0]
-    int v8;  // [bp-0xad8]
-    int v9;  // [bp-0xad0]
-    int v10;  // [bp-0xac8]
-    int v11;  // [bp-0xac0]
+    uint128_t v2;  // [bp-0xb08]
+    uint128_t v3;  // [bp-0xb00]
+    uint128_t v4;  // [bp-0xaf8]
+    uint128_t v5;  // [bp-0xaf0]
+    uint128_t v6;  // [bp-0xae8]
+    uint128_t v7;  // [bp-0xae0]
+    uint128_t v8;  // [bp-0xad8]
+    uint128_t v9;  // [bp-0xad0]
+    uint128_t v10;  // [bp-0xac8]
+    uint128_t v11;  // [bp-0xac0]
     unsigned long long v12;  // [bp-0xab8]
     char v13;  // [bp-0xab0]
     unsigned long long v14;  // [bp-0xaa0]
@@ -64,12 +64,12 @@ int main(unsigned long long a0, unsigned long long a1)
         result = 0;
         cgc_createRandomRequest(&v18);
         v12 = v24;
-        *(&v10) = *(&v23);
-        *(&v8) = *(&v22);
+        v10 = *(&v23);
+        v8 = *(&v22);
         v38 = v18;
         v39 = *(&v19);
         v40 = *(&v20);
-        *(&v6) = *(&v21);
+        v6 = *(&v21);
         v4 = v40;
         v2 = v39;
         v0 = v38;
@@ -78,11 +78,11 @@ int main(unsigned long long a0, unsigned long long a1)
         v15 = &v0;
         v14 = v24;
         memcpy(&v13, &v23, 16);
-        *(&v11) = *(&v22);
+        v11 = *(&v22);
         v41 = v18;
         v42 = *(&v19);
         v43 = *(&v20);
-        *(&v9) = *(&v21);
+        v9 = *(&v21);
         v7 = v43;
         v5 = v42;
         v3 = v41;
