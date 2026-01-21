@@ -1,16 +1,16 @@
 long long cgc_strcpy(char *a0, char *a1)
 {
-    char *cur;  // [bp-0x20]
+    char *v0;  // [bp-0x20]
     char *v1;  // [bp-0x20]
     char *i;  // [bp-0x18]
 
     i = a1;
-    for (cur = a0; *(i); i += 1)
+    for (v0 = a0; *(i); i += 1)
     {
-        *(cur) = *(i);
-        cur += 1;
+        *(v0) = *(i);
+        v0 += 1;
     }
-    v1 = cur + 1;
-    *(cur) = 0;
+    v1 = v0 + 1;
+    *(v0) = 0;
     return v1 - a0 - 1;
 }
