@@ -12,14 +12,14 @@ typedef struct struct_1 {
 
 struct_0 * cgc_removeMap(struct_1 **p, char *a1)
 {
-    void* v4;  // rax
+    unsigned long long v4;  // rax
     unsigned long long v6;  // rax
     char v0;  // [bp-0x31]
     struct_0 *addr;  // [bp-0x30]
-    void* ptr;  // [bp-0x28], Other Possible Types: struct_1 *
+    struct_1 *ptr;  // [bp-0x28], Other Possible Types: unsigned long long
 
     ptr = 0;
-    addr = 0;
+    addr = NULL;
     ptr = *(p);
     while (true)
     {
@@ -46,6 +46,6 @@ struct_0 * cgc_removeMap(struct_1 **p, char *a1)
         addr->field_0 = ptr->field_0;
     cgc_memset(&ptr->field_c, 0, 24);
     ptr->field_8 = 0;
-    ptr->field_0 = 0;
+    ptr->field_0 = NULL;
     return ptr;
 }

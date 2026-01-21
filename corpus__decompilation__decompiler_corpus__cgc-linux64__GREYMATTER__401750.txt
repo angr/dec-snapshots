@@ -1,7 +1,7 @@
 unsigned int cgc_recv_until_delim(unsigned int a0, void* a1, unsigned long long a2)
 {
     unsigned long long i;  // [bp-0x30]
-    void* v1;  // [bp-0x28], Other Possible Types: unsigned long
+    unsigned long long v1;  // [bp-0x28]
     void* ptr;  // [bp-0x18]
     unsigned int v3;  // [bp-0xc]
 

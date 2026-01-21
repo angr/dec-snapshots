@@ -1,7 +1,7 @@
-void* cgc_calloc(unsigned long n)
+long long cgc_calloc(unsigned long long n)
 {
-    void* ptr;  // [bp-0x20]
-    void* v1;  // [bp-0x10]
+    unsigned long ptr;  // [bp-0x20]
+    unsigned long v1;  // [bp-0x10]
 
     ptr = cgc_malloc(n);
     if (ptr)

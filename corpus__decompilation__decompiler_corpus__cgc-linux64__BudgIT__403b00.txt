@@ -7,8 +7,8 @@ unsigned int main(unsigned int a0, unsigned long long a1)
     unsigned int v4;  // [bp-0x50]
     unsigned int v5;  // [bp-0x4c]
     char v6[32];  // [bp-0x48]
-    unsigned long v7;  // [bp-0x28]
-    void* flag1[1];  // [bp-0x20]
+    unsigned long long v7;  // [bp-0x28]
+    void* flag1;  // [bp-0x20]
     unsigned long long v9;  // [bp-0x18]
     unsigned int v10;  // [bp-0x10]
     unsigned int result;  // [bp-0xc]
@@ -16,7 +16,7 @@ unsigned int main(unsigned int a0, unsigned long long a1)
     result = 0;
     v10 = a0;
     v9 = a1;
-    *(flag1) = 0;
+    flag1 = NULL;
     while (true)
     {
         while (true)

@@ -3,7 +3,7 @@ typedef struct struct_0 {
     char field_10;
 } struct_0;
 
-void* cgc_getBalance(struct_0 *ptr)
+unsigned long long cgc_getBalance(struct_0 *ptr)
 {
     unsigned long v6;  // rax
     unsigned long v7;  // rcx

@@ -8,7 +8,7 @@ char * cgc_strchr(char *a0, char a1)
     {
         if (!*(v0))
         {
-            v1 = 0;
+            v1 = NULL;
             return v1;
         }
         if (*(v0) == a1)

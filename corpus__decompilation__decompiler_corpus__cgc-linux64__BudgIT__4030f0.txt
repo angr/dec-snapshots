@@ -3,6 +3,11 @@ typedef struct struct_2 {
     struct struct_1 *field_8;
 } struct_2;
 
+typedef struct struct_3 {
+    char padding_0[8];
+    struct struct_4 *field_8;
+} struct_3;
+
 typedef struct struct_0 {
     char padding_0[8];
     struct struct_1 *field_8;
@@ -12,13 +17,17 @@ typedef struct struct_1 {
     struct struct_0 *field_0;
 } struct_1;
 
+typedef struct struct_4 {
+    struct struct_3 *field_0;
+} struct_4;
+
 long long cgc_remove()
 {
     struct_2 *ptr;  // rdi
 
     ptr->field_0->field_8 = ptr->field_8;
     ptr->field_8->field_0 = ptr->field_0;
-    ptr->field_8 = 0;
-    ptr->field_0 = 0;
+    ptr->field_8 = NULL;
+    ptr->field_0 = NULL;
     return ptr;
 }

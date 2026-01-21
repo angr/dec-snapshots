@@ -1,6 +1,6 @@
-void* cgc_strlen(char *a0)
+unsigned long long cgc_strlen(char *a0)
 {
-    void* v0;  // [bp-0x18]
+    unsigned long long v0;  // [bp-0x18]
     char *v1;  // [bp-0x10]
     char *v2;  // [bp-0x10]
 
