@@ -9,7 +9,7 @@ int cgc_sendSearchString()
     char v5;  // [bp-0x48]
     unsigned long long v6;  // [bp-0x38]
     unsigned long v7;  // [bp-0x20]
-    void* v8;  // [bp-0x18], Other Possible Types: unsigned long
+    unsigned long v8;  // [bp-0x18], Other Possible Types: unsigned long long
     unsigned int v9;  // [bp-0x10]
     unsigned long v10;  // [bp+0x8]
     char v11;  // [bp+0x18]

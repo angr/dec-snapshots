@@ -1,9 +1,9 @@
 extern void* cgc_freed;
 
-void* cgc_free(unsigned long a0)
+void* cgc_free(unsigned long long a0)
 {
     void* v2;  // rax
-    unsigned long v0;  // [bp-0x18]
+    unsigned long long v0;  // [bp-0x18]
 
     if (!a0)
         return v2;

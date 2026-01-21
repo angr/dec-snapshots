@@ -29,7 +29,7 @@ unsigned int cgc_int2str(unsigned long a0, unsigned int a1, unsigned int a2)
     }
     else
     {
-        j *= -1;
+        j *= 4294967295;
     }
     i = j;
     do
@@ -47,7 +47,7 @@ unsigned int cgc_int2str(unsigned long a0, unsigned int a1, unsigned int a2)
     *((a0 + (v7 & 4294967295))) = 0;
     do
     {
-        v0 = ((((j >> 31 CONCAT j) % 10) CONCAT ((j >> 31 CONCAT j) / 10)) >> 32) * -1;
+        v0 = ((((j >> 31 CONCAT j) % 10) CONCAT ((j >> 31 CONCAT j) / 10)) >> 32) * 4294967295;
         v8 = v2;
         v2 = v8 - 1;
         *((a0 + (v8 & 4294967295))) = v0 + 48;

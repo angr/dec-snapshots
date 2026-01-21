@@ -1,5 +1,5 @@
 
-long long register_tm_clones()
+unsigned long long register_tm_clones()
 {
     return 0;
 }

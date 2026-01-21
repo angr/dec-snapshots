@@ -2,7 +2,7 @@ int cgc_getRandomNumber(unsigned int a0)
 {
     char v0;  // [bp-0x20], Other Possible Types: unsigned int
     char v1;  // [bp-0x1c], Other Possible Types: unsigned int
-    char v2;  // [bp-0x18], Other Possible Types: unsigned long
+    char v2;  // [bp-0x18], Other Possible Types: unsigned long long
 
     memset(&v0, 0, 16);
     v0 = cgc_random(&v1, 4, &v2);
