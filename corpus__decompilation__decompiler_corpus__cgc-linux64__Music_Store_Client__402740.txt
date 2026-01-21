@@ -5,12 +5,12 @@ typedef struct struct_0 {
 
 unsigned long long cgc_getBalance(struct_0 *ptr)
 {
-    unsigned long v6;  // rax
+    unsigned long long v6;  // rax
     unsigned long v7;  // rcx
-    unsigned long v0;  // [bp-0x38]
+    char *v0;  // [bp-0x38]
     char v1;  // [bp-0x2c], Other Possible Types: unsigned int
-    char v2;  // [bp-0x28], Other Possible Types: unsigned long
-    char *v3;  // [bp-0x20], Other Possible Types: void*[1]
+    char *v2;  // [bp-0x28], Other Possible Types: char
+    void* v3[1];  // [bp-0x20]
     unsigned long long v4;  // [bp-0x18]
 
     memset(&v1, 0, 28);
@@ -20,9 +20,9 @@ unsigned long long cgc_getBalance(struct_0 *ptr)
         cgc__terminate(3);
     cgc_memset(v2, 0, v4 + 7);
     cgc_strcat(v2, "ID=");
-    cgc_strcat(v2, v3);
+    cgc_strcat(v2, *(v3));
     cgc_strcat(v2, "\n");
-    v1 = cgc_deallocate(v3, v4);
+    v1 = cgc_deallocate(*(v3), v4);
     if (v1)
         cgc__terminate(3);
     v0 = v2;

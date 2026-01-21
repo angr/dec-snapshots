@@ -1,7 +1,7 @@
-long long cgc_calloc(unsigned long long n)
+unsigned long long cgc_calloc(unsigned long long n)
 {
-    unsigned long ptr;  // [bp-0x20]
-    unsigned long v1;  // [bp-0x10]
+    unsigned long long ptr;  // [bp-0x20]
+    unsigned long long v1;  // [bp-0x10]
 
     ptr = cgc_malloc(n);
     if (ptr)
