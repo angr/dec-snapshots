@@ -13,7 +13,7 @@ unsigned int cgc_request_document(char *a0, unsigned long long a1)
 {
     unsigned long long v17;  // rax
     char v0;  // [bp-0x190]
-    unsigned long ptr;  // [bp-0x180]
+    char *ptr;  // [bp-0x180]
     unsigned int flag3;  // [bp-0x16c]
     char v3;  // [bp-0x168]
     unsigned long long v4;  // [bp-0x68]
@@ -102,10 +102,10 @@ unsigned int cgc_request_document(char *a0, unsigned long long a1)
                     *(&v5) = vvar_17{r48|8b};
                     ptr = vvar_183{r48|8b} - (v17 + 15 & 0xfffffffffffffff0);
                     v4 = v17;
-                    vvar_207{r48|8b} = ptr - 8;
-                    *((ptr - 8)) = &g_401dca;
+                    vvar_207{r48|8b} = ptr + 8;
+                    *(&ptr[8]) = &g_401dca;
                     cgc_strncpy(ptr, v8, v6 - 1);
-                    *((ptr + v6 - 1)) = 6;
+                    ptr[1 + v6] = 6;
                     vvar_218{r48|8b} = vvar_207{r48|8b} - 8;
                     *((vvar_207{r48|8b} - 8)) = &g_401df0;
                     memset(&v3, 0, 0x100);
