@@ -6,17 +6,17 @@ unsigned int cgc_int2str(unsigned long a0, unsigned int a1, unsigned int a2)
     unsigned int v0;  // [bp-0x2c]
     unsigned int i;  // [bp-0x28]
     unsigned int v2;  // [bp-0x24]
-    unsigned int j;  // [bp-0x20]
+    unsigned int v3;  // [bp-0x20]
     unsigned int v4;  // [bp-0xc]
 
-    j = a2;
+    v3 = a2;
     v2 = 0;
     if (a1 < 2)
     {
         v4 = 4294967295;
         return v4;
     }
-    if (j < 0)
+    if (v3 < 0)
     {
         if (a1 < 3)
         {
@@ -29,9 +29,9 @@ unsigned int cgc_int2str(unsigned long a0, unsigned int a1, unsigned int a2)
     }
     else
     {
-        j *= 4294967295;
+        v3 *= 4294967295;
     }
-    i = j;
+    i = v3;
     do
     {
         v2 += 1;
@@ -47,12 +47,12 @@ unsigned int cgc_int2str(unsigned long a0, unsigned int a1, unsigned int a2)
     *((a0 + (v7 & 4294967295))) = 0;
     do
     {
-        v0 = ((((j >> 31 CONCAT j) % 10) CONCAT ((j >> 31 CONCAT j) / 10)) >> 32) * 4294967295;
+        v0 = ((((v3 >> 31 CONCAT v3) % 10) CONCAT ((v3 >> 31 CONCAT v3) / 10)) >> 32) * 4294967295;
         v8 = v2;
         v2 = v8 - 1;
         *((a0 + (v8 & 4294967295))) = v0 + 48;
-        j = ((j >> 31 CONCAT j) % 10) CONCAT ((j >> 31 CONCAT j) / 10);
-    } while (j < 0);
+        v3 = ((v3 >> 31 CONCAT v3) % 10) CONCAT ((v3 >> 31 CONCAT v3) / 10);
+    } while (v3 < 0);
     v4 = 0;
     return v4;
 }
