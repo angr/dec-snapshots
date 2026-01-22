@@ -1,4 +1,4 @@
-void _fini()
+void _fini(void)
 {
     return;
 }

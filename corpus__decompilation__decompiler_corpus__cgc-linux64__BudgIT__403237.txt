@@ -1,4 +1,4 @@
-void sub_403237()
+void sub_403237(void)
 {
     cgc___stack_cookie_init();
     return;

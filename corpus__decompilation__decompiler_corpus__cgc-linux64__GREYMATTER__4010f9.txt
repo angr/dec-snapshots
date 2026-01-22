@@ -1,4 +1,4 @@
-void sub_4010f9()
+void sub_4010f9(void)
 {
     register_tm_clones();
     return;

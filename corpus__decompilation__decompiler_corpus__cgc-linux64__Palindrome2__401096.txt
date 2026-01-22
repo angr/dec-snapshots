@@ -1,4 +1,4 @@
-void sub_401096()
+void sub_401096(void)
 {
     deregister_tm_clones();
     return;

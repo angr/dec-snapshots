@@ -1,4 +1,4 @@
-void sub_401199()
+void sub_401199(void)
 {
     frame_dummy();
     return;

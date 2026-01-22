@@ -1,7 +1,7 @@
 extern unsigned long long g_404810;
 extern unsigned long long g_404818;
 
-void sub_401020()
+void sub_401020(void)
 {
     unsigned long v0;  // [bp-0x8]
 

@@ -1,4 +1,4 @@
-void sub_401119()
+void sub_401119(void)
 {
     register_tm_clones();
     return;

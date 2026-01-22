@@ -1,7 +1,7 @@
 extern unsigned long long g_405a58;
 extern unsigned long long g_405a60;
 
-void sub_402020()
+void sub_402020(void)
 {
     unsigned long v0;  // [bp-0x8]
 

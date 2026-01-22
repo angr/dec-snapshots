@@ -1,4 +1,4 @@
-int cgc_sendSearchString()
+int cgc_sendSearchString(void)
 {
     unsigned int v17;  // edi
     char v0;  // [bp-0x98]

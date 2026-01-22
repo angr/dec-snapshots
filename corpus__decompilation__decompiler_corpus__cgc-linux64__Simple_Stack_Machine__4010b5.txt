@@ -1,4 +1,4 @@
-void sub_4010b5()
+void sub_4010b5(void)
 {
     [D] Unsupported jumpkind Ijk_SigTRAP at address 4198581()
 }

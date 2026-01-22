@@ -1,4 +1,4 @@
-void sub_402dd4()
+void sub_402dd4(void)
 {
     cgc_checkheap();
     return;

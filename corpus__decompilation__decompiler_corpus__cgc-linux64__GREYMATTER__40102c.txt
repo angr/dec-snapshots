@@ -1,4 +1,4 @@
-long long sub_40102c()
+long long sub_40102c(void)
 {
     void* v1;  // rdi
     unsigned int v2;  // esi

@@ -1,4 +1,4 @@
-void sub_40214d()
+void sub_40214d(void)
 {
     cgc_createSearchString();
     return;

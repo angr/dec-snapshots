@@ -1,4 +1,4 @@
-void sub_4020d6()
+void sub_4020d6(void)
 {
     deregister_tm_clones();
     return;

@@ -21,7 +21,7 @@ typedef struct struct_4 {
     struct struct_3 *field_0;
 } struct_4;
 
-long long cgc_remove()
+long long cgc_remove(void)
 {
     struct_2 *ptr;  // rdi
 

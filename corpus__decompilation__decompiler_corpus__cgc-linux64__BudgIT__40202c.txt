@@ -1,4 +1,4 @@
-void sub_40202c()
+void sub_40202c(void)
 {
     cgc_fdwait();
     return;

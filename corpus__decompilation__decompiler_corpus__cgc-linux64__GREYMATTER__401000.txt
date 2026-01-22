@@ -4,7 +4,7 @@ typedef struct struct_0 {
 
 extern struct_0 *g_403568;
 
-unsigned long long * _init()
+unsigned long long * _init(void)
 {
     unsigned long long *v1;  // rax
 

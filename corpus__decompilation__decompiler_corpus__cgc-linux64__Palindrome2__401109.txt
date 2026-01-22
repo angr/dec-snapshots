@@ -1,4 +1,4 @@
-void sub_401109()
+void sub_401109(void)
 {
     __do_global_dtors_aux();
     return;

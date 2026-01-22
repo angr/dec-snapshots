@@ -1,4 +1,4 @@
-int cgc_selectSong()
+int cgc_selectSong(void)
 {
     return;
 }

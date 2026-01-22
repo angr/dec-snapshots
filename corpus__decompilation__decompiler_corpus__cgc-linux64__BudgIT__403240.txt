@@ -1,6 +1,6 @@
 extern unsigned long long cgc___cookie;
 
-unsigned long long cgc___stack_cookie_init()
+unsigned long long cgc___stack_cookie_init(void)
 {
     unsigned long long v1;  // rax
 

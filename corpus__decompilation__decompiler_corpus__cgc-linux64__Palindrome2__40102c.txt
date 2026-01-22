@@ -1,4 +1,4 @@
-void sub_40102c()
+void sub_40102c(void)
 {
     cgc__terminate();
     return;

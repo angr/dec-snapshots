@@ -1,4 +1,4 @@
-void sub_4034b3()
+void sub_4034b3(void)
 {
     cgc_heapinit();
     return;
