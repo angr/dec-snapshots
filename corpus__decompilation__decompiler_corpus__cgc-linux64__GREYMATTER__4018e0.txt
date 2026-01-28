@@ -3,7 +3,6 @@ extern char g_401937;
 char * cgc_random_alpha_lower(char *a0, unsigned long a1)
 {
     char *v9;  // rcx
-    unsigned int v10;  // eax
     char v0;  // [bp-0x58]
     char v1;  // [bp-0x49]
     char *v2;  // [bp-0x48]
@@ -30,8 +29,7 @@ char * cgc_random_alpha_lower(char *a0, unsigned long a1)
     } while ((v1 & 1));
     for (i = 0; i < a1; i += 1)
     {
-        v10 = v2[i];
-        a0[i] = ((((v10 >> 31 CONCAT v10) % 26) CONCAT ((v10 >> 31 CONCAT v10) / 26)) >> 32) + 97;
+        a0[i] = (v2[i] % 26) + 97;
     }
     return v5;
 }

@@ -13,6 +13,6 @@ unsigned int cgc_getSize(struct_0 **a0)
         return v1;
     }
     for (ptr = a0; *(ptr); ptr = *(ptr));
-    v1 = (((0 CONCAT ptr - a0) % 40) CONCAT ((0 CONCAT ptr - a0) / 40)) + 1;
+    v1 = ((ptr - a0) / 40) + 1;
     return v1;
 }

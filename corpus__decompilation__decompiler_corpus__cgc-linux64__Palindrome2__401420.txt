@@ -24,13 +24,13 @@ unsigned int cgc_check(void)
         v5 += 1;
     }
     cur = v5;
-    if ((((v5 >> 31 CONCAT v5) % 2) CONCAT ((v5 >> 31 CONCAT v5) / 2)) >> 32 == 1)
+    if ((v5 % 2) == 1)
         cur -= 1;
     i = 0;
     while (true)
     {
         v0 = i;
-        if (v0 > (((cur >> 31 CONCAT cur) % 2) CONCAT ((cur >> 31 CONCAT cur) / 2)))
+        if (v0 > (cur / 2))
             break;
         if (*(&v2 + i) != *(-1 + &v2 + v5 - i))
             v3 = 0;

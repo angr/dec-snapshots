@@ -10,6 +10,6 @@ int cgc_getRandomNumber(unsigned int a0)
         cgc__terminate(1);
     if (v2 != 4)
         cgc__terminate(2);
-    v1 = (((0 CONCAT v1) % a0) CONCAT ((0 CONCAT v1) / a0)) >> 32;
+    v1 = v1 % a0;
     return v1;
 }
