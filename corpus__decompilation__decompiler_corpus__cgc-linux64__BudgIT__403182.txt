@@ -1,4 +1,4 @@
-void sub_403182(unsigned long a0)
+void sub_403182(void)
 {
     cgc_calloc();
     return;

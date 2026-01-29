@@ -1,6 +1,6 @@
 char * cgc_strcat(char *a0, char *a1)
 {
-    char result;  // 4116
+    char v3;  // 4116
     unsigned int v0;  // [bp-0x28]
     unsigned int cur;  // [bp-0x24]
 
@@ -8,9 +8,9 @@ char * cgc_strcat(char *a0, char *a1)
     v0 = 0;
     while (true)
     {
-        result = a1[v0];
+        v3 = a1[v0];
         a0[cur] = a1[v0];
-        if (!result)
+        if (!v3)
             break;
         cur += 1;
         v0 += 1;

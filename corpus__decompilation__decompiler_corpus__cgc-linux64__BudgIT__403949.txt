@@ -1,4 +1,4 @@
-void sub_403949(unsigned long a0)
+void sub_403949(void)
 {
     cgc_receiveKey();
     return;

@@ -3,7 +3,7 @@ unsigned int cgc_str2int(char *a0)
     unsigned int v0;  // [bp-0x2c]
     unsigned int cur;  // [bp-0x28]
     unsigned int v2;  // [bp-0x24]
-    unsigned int v3;  // [sp-0x20]
+    unsigned int v3;  // [bp-0x20]
     unsigned int v4;  // [bp-0x1c]
     unsigned int v5;  // [bp-0xc]
 

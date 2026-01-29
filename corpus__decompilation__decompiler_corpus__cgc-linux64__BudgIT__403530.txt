@@ -6,15 +6,15 @@ typedef struct struct_0 {
 struct_0 * cgc_initMap(struct_0 *a0)
 {
     struct_0 *i;  // [bp-0x28], Other Possible Types: char
-    unsigned int result;  // [bp-0x1c]
+    unsigned int v1;  // [bp-0x1c]
     struct_0 *v2;  // [bp-0x10]
 
     if (!a0)
     {
-        result = cgc_allocate(0x1400, 0, &i);
-        if (result)
+        v1 = cgc_allocate(0x1400, 0, &i);
+        if (v1)
             cgc__terminate(3);
-        i = &i[390].padding_0[10];
+        i += 5080;
         v2 = i;
         return v2;
     }

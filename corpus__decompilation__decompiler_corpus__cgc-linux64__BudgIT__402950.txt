@@ -1,8 +1,5 @@
-unsigned int cgc_int2str(unsigned long a0, unsigned int a1, unsigned int a2)
+unsigned int cgc_int2str(char *a0, unsigned int a1, unsigned int a2)
 {
-    unsigned long v6;  // rcx
-    unsigned long v7;  // rcx
-    unsigned long v8;  // rcx
     unsigned int v0;  // [bp-0x2c]
     unsigned int i;  // [bp-0x28]
     unsigned int v2;  // [bp-0x24]
@@ -23,9 +20,8 @@ unsigned int cgc_int2str(unsigned long a0, unsigned int a1, unsigned int a2)
             v4 = 4294967295;
             return v4;
         }
-        v6 = v2;
-        v2 = v6 + 1;
-        *((a0 + (v6 & 4294967295))) = 45;
+        v2 += 1;
+        a0[v2] = 45;
     }
     else
     {
@@ -42,15 +38,13 @@ unsigned int cgc_int2str(unsigned long a0, unsigned int a1, unsigned int a2)
         v4 = 4294967295;
         return v4;
     }
-    v7 = v2;
-    v2 = v7 - 1;
-    *((a0 + (v7 & 4294967295))) = 0;
+    v2 -= 1;
+    a0[v2] = 0;
     do
     {
         v0 = (j % 10) * 4294967295;
-        v8 = v2;
-        v2 = v8 - 1;
-        *((a0 + (v8 & 4294967295))) = v0 + 48;
+        v2 -= 1;
+        a0[v2] = v0 + 48;
         j /= 10;
     } while (j < 0);
     v4 = 0;
