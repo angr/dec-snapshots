@@ -5,7 +5,7 @@ typedef struct struct_0 {
 
 unsigned long long cgc_getBalance(struct_0 *ptr)
 {
-    unsigned long long v6;  // rax
+    char v6;  // al
     unsigned long v7;  // rcx
     char *v0;  // [bp-0x38]
     char v1;  // [bp-0x2c], Other Possible Types: unsigned int
@@ -34,7 +34,7 @@ unsigned long long cgc_getBalance(struct_0 *ptr)
         cgc__terminate(3);
     v6 = cgc_receiveBalance(0);
     ptr->field_10 = v6;
-    v1 = cgc_allocate(ptr->field_10 * 250, 0, &ptr->padding_0[8], v7 & 0xffffffffffffff00 | v6 & 255);
+    v1 = cgc_allocate(ptr->field_10 * 250, 0, &ptr->padding_0[8], v7 & 0xffffffffffffff00 | v6);
     if (!v1)
         return 0;
     cgc__terminate(3);
