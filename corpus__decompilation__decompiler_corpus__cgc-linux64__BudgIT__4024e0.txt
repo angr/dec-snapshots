@@ -1,17 +1,17 @@
 unsigned int cgc_recv(unsigned int a0, unsigned long long a1, unsigned long long a2)
 {
     unsigned long long v0;  // [bp-0x30]
-    unsigned long flag1;  // [bp-0x28]
-    unsigned long long result;  // [bp-0x20]
+    unsigned long result;  // [bp-0x28]
+    unsigned long long v2;  // [bp-0x20]
     unsigned long long v3;  // [bp-0x18]
     unsigned long long v4;  // [bp-0x18]
     unsigned int v5;  // [bp-0xc]
 
     v3 = a1;
-    result = a2;
-    flag1 = 0;
+    v2 = a2;
+    result = 0;
     v0 = 0;
-    if (!result)
+    if (!v2)
     {
         v5 = 0;
         return v5;
@@ -23,19 +23,19 @@ unsigned int cgc_recv(unsigned int a0, unsigned long long a1, unsigned long long
     }
     while (true)
     {
-        if (!result)
+        if (!v2)
         {
             v5 = v0;
             return v5;
         }
         v4 = v3 + 1;
-        if (cgc_receive(a0, v3, 1, &flag1))
+        if (cgc_receive(a0, v3, 1, &result))
         {
             v5 = 4294967295;
             return v5;
         }
         v0 += 1;
-        result -= 1;
+        v2 -= 1;
         v3 = v4;
     }
 }
