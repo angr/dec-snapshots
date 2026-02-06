@@ -13,20 +13,20 @@ typedef struct struct_2 {
     struct struct_2 *field_8;
 } struct_2;
 
+extern struct_2 *cgc_allocated;
 extern char cgc_allocatedc;
+extern struct_1 *cgc_freed;
 extern char cgc_freedc;
 extern char cgc_heapinit_done;
-extern struct_1 *p;
-extern struct_2 *ptr;
 
 struct_0 * cgc_heapinit(void)
 {
-    ptr = &cgc_allocatedc;
-    p = &cgc_freedc;
-    ptr->field_8 = ptr;
-    ptr->field_0 = ptr;
-    p->field_8 = p;
-    p->field_0 = p;
+    cgc_allocated = &cgc_allocatedc;
+    cgc_freed = &cgc_freedc;
+    cgc_allocated->field_8 = cgc_allocated;
+    cgc_allocated->field_0 = cgc_allocated;
+    cgc_freed->field_8 = cgc_freed;
+    cgc_freed->field_0 = cgc_freed;
     cgc_heapinit_done = 1;
-    return p;
+    return cgc_freed;
 }

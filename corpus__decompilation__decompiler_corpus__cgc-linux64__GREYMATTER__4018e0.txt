@@ -1,31 +1,24 @@
-extern char g_401937;
-
 char * cgc_random_alpha_lower(char *a0, unsigned long a1)
 {
-    char *v9;  // rcx
     char v0;  // [bp-0x58]
     char v1;  // [bp-0x49]
     char *v2;  // [bp-0x48]
     unsigned int i;  // [bp-0x3c]
     unsigned long v4;  // [bp-0x38]
     char *v5;  // [bp-0x30]
-    unsigned long flag1;  // [bp-0x28]
-    unsigned int result;  // [bp-0x1c]
+    unsigned long choice;  // [bp-0x28]
+    unsigned int flag;  // [bp-0x1c]
 
-    result = 0;
-    flag1 = 0;
+    flag = 0;
+    choice = 0;
     v5 = &v0;
-    v9 = &(&v0)[-1 * (a1 + 15 & 0xfffffffffffffff0)];
-    v2 = v9;
+    v2 = &(&v0)[-1 * (a1 + 15 & 0xfffffffffffffff0)];
     v4 = a1;
     do
     {
-        vvar_44{r48|8b} = vvar_3{r48|8b} - 8;
-        *((vvar_3{r48|8b} - 8)) = &g_401937;
         v1 = 0;
-        if (cgc_random(v2, a1, &flag1))
-            v1 = a1 != flag1;
-        vvar_3{r48|8b} = vvar_44{r48|8b};
+        if (cgc_random(v2, a1, &choice))
+            v1 = a1 != choice;
     } while ((v1 & 1));
     for (i = 0; i < a1; i += 1)
     {

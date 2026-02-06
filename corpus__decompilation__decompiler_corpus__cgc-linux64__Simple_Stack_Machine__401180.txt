@@ -1,24 +1,24 @@
 unsigned long long cgc_transmit_all(unsigned long long a0, unsigned long long a1)
 {
-    char v0;  // [bp-0x34], Other Possible Types: unsigned int
-    unsigned long long i;  // [bp-0x30]
-    unsigned long v2;  // [bp-0x28]
-    unsigned long long v3;  // [bp-0x10]
+    int v0;  // [bp-0x34]
+    int i;  // [bp-0x30], Other Possible Types: unsigned long
+    unsigned long long v2;  // [bp-0x10]
 
     memset(&v0, 0, 20);
+    i = v0;
     if (!a0)
     {
-        v3 = 0;
-        return v3;
+        v2 = 0;
+        return v2;
     }
     do
     {
-        v0 = cgc_transmit(1, a0, a1 - i, &v2);
-        if (!v0 && v2)
+        *(&v0) = cgc_transmit(1, a0, a1 - i, &v0 - 12);
+        if (!*((&v0 + 0)) && *((&v0 + 12)))
             continue;
         cgc__terminate(1);
-        i += v2;
+        i = *((&v0 + 12)) + *((&v0 + 4));
     } while (i < a1);
-    v3 = a1;
-    return v3;
+    v2 = a1;
+    return v2;
 }

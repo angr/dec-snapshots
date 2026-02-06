@@ -2,27 +2,27 @@ long long cgc_createSearchString(void)
 {
     char *v0;  // [bp-0x20]
     unsigned int v1;  // [bp-0x14]
-    unsigned long result;  // [bp-0x10]
+    unsigned long flag;  // [bp-0x10]
     unsigned long v3;  // [bp+0x8]
 
     v0 = &v3;
-    result = 0;
+    flag = 0;
     v1 = 0;
-    v1 = cgc_allocate(137, 0, &result);
+    v1 = cgc_allocate(137, 0, &flag);
     if (v1)
         cgc__terminate(3);
-    cgc_memset(result, 0, 137);
-    cgc_strcat(result, "term");
-    cgc_strcat(result, "=");
-    cgc_strcat(result, v0);
-    cgc_strcat(result, "&");
-    cgc_strcat(result, "attribute");
-    cgc_strcat(result, "=");
-    cgc_strcat(result, v0 + 50);
-    cgc_strcat(result, "&");
-    cgc_strcat(result, "limit");
-    cgc_strcat(result, "=");
-    cgc_strcat(result, v0 + 100);
-    cgc_strcat(result, "\n");
-    return result;
+    cgc_memset(flag, 0, 137);
+    cgc_strcat(flag, "term");
+    cgc_strcat(flag, "=");
+    cgc_strcat(flag, v0);
+    cgc_strcat(flag, "&");
+    cgc_strcat(flag, "attribute");
+    cgc_strcat(flag, "=");
+    cgc_strcat(flag, v0 + 50);
+    cgc_strcat(flag, "&");
+    cgc_strcat(flag, "limit");
+    cgc_strcat(flag, "=");
+    cgc_strcat(flag, v0 + 100);
+    cgc_strcat(flag, "\n");
+    return flag;
 }

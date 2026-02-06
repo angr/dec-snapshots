@@ -1,12 +1,12 @@
 unsigned int cgc_recv_until_delim(unsigned int a0, void* a1, unsigned long long a2)
 {
     unsigned long long i;  // [bp-0x30]
-    unsigned long v1;  // [bp-0x28], Other Possible Types: unsigned long long
+    unsigned long flag;  // [sp-0x28], Other Possible Types: unsigned long long
     void* ptr;  // [bp-0x18]
     unsigned int v3;  // [bp-0xc]
 
     ptr = a1;
-    v1 = 0;
+    flag = 0;
     if (!a2)
     {
         v3 = 0;
@@ -19,12 +19,12 @@ unsigned int cgc_recv_until_delim(unsigned int a0, void* a1, unsigned long long 
     }
     else
     {
-        for (i = a2; i; i -= v1)
+        for (i = a2; i; i -= flag)
         {
-            v1 = 0;
-            cgc_receive(a0, ptr, 1, &v1);
-            ptr += v1;
-            if (!v1)
+            flag = 0;
+            cgc_receive(a0, ptr, 1, &flag);
+            ptr += flag;
+            if (!flag)
                 break;
             if (ptr[1] == 6)
                 break;

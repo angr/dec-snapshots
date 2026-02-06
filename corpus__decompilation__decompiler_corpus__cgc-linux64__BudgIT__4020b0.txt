@@ -1,9 +1,10 @@
 void _start(unsigned long a0, unsigned long a1, unsigned long long a2)
 {
     unsigned long v3;  // rax
+    unsigned long v0;  // [bp+0x0]
     unsigned long long v1;  // [bp+0x0]
     unsigned long v2;  // [bp+0x8]
 
-    v1 = v3;
-    __libc_start_main(main, v1, &v2, 0, 0, a2, &v1, v1); /* do not return */
+    v0 = v3;
+    __libc_start_main(main, v1, &v2, 0, 0, a2, &v1, v3); /* do not return */
 }

@@ -1,69 +1,68 @@
 unsigned int cgc_parseSearchResult(char *a0, char *a1)
 {
     char v0;  // [bp-0x5d]
-    unsigned int flag1;  // [bp-0x5c]
+    unsigned int flag2;  // [bp-0x5c]
     char *v2;  // [bp-0x58]
-    unsigned int result;  // [bp-0x50]
+    unsigned int choice;  // [bp-0x50]
     unsigned int v4;  // [bp-0x4c]
     char v5;  // [bp-0x48]
-    char *v6;  // [bp-0x30], Other Possible Types: unsigned long long
-    char *v7;  // [bp-0x30]
-    char *v8;  // [bp-0x28], Other Possible Types: unsigned long long
-    unsigned int v9;  // [bp-0xc]
+    char *cur;  // [bp-0x30], Other Possible Types: unsigned long long
+    char *v7;  // [bp-0x28], Other Possible Types: unsigned long long
+    unsigned int flag;  // [bp-0xc]
 
-    v8 = 0;
-    v6 = 0;
+    v7 = 0;
+    cur = 0;
     memset(&v5, 0, 20);
     v4 = 0;
-    result = 0;
+    choice = 0;
     v2 = "=";
-    flag1 = 0;
+    flag2 = 0;
     cgc_memset(a1, 0, 250);
-    v8 = a0;
+    v7 = a0;
     while (true)
     {
-        v7 = v8;
+        cur = v7;
         v4 = 0;
         while (true)
         {
             v0 = 0;
-            if (*(v7))
+            if (*(cur))
             {
                 v0 = 0;
-                if (*(v7) != *(v2))
+                if (*(cur) != *(v2))
                     v0 = v4 < 20;
             }
             if (!(v0 & 1))
                 break;
-            v7 += 1;
+            cur += 1;
             v4 += 1;
         }
-        cgc_memcpy(&v5, v8, v4);
+        cgc_memcpy(&v5, v7, v4);
         if (!cgc_strcmp(&v5, "sid"))
         {
-            v6 = v7 + 1;
-            v8 = cgc_setValue(v7 + 1, a1);
+            cur += 1;
+            v7 = cgc_setValue(cur, a1);
         }
         else
         {
             if (!cgc_strcmp(&v5, "price"))
             {
-                v6 = v7 + 1;
-                v8 = cgc_setValue(v7 + 1, a1 + 200);
+                cur += 1;
+                v7 = cgc_setValue(cur, a1 + 200);
             }
             else
             {
                 if (!cgc_strcmp(&v5, "artist"))
                 {
-                    v6 = v7 + 1;
-                    v8 = cgc_setValue(v7 + 1, a1 + 50);
+                    cur += 1;
+                    v7 = cgc_setValue(cur, a1 + 50);
                 }
                 else
                 {
                     if (cgc_strcmp(&v5, "album"))
                         break;
-                    v6 = v7 + 1;
-                    v8 = cgc_setValue(v7 + 1, a1 + 100);
+                    cur += 1;
+                    v7 = cgc_setValue(cur, a1 + 100);
                 }
             }
         }
@@ -71,11 +70,11 @@ unsigned int cgc_parseSearchResult(char *a0, char *a1)
     }
     if (cgc_strcmp(&v5, "song"))
     {
-        v9 = 0;
-        return v9;
+        flag = 0;
+        return flag;
     }
-    v6 = v7 + 1;
-    cgc_setValue(v7 + 1, a1 + 150);
-    v9 = 0;
-    return v9;
+    cur += 1;
+    cgc_setValue(cur, a1 + 150);
+    flag = 0;
+    return flag;
 }

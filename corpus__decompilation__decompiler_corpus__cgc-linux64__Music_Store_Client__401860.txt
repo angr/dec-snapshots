@@ -1,28 +1,28 @@
-char * cgc_setValue(char *a0, char *a1)
+long long cgc_setValue(char *a0, char *a1)
 {
     char v0;  // [bp-0x31]
     char *v1;  // [bp-0x30]
-    char v2;  // [bp-0x28]
-    unsigned int v3;  // [bp-0x24]
-    char *v4;  // [bp-0x20]
+    int v2;  // [bp-0x28], Other Possible Types: uint128_t
+    unsigned int v3;  // [bp-0x24], Other Possible Types: uint128_t
 
     memset(&v2, 0, 16);
     v1 = "&";
-    v4 = a0;
+    *((&v2 + 8)) = a0;
+    v3 = v2;
     while (true)
     {
         v0 = 0;
-        if (*(v4))
+        if (*(*((&v2 + 8))))
         {
             v0 = 0;
-            if (*(v4) != *(v1))
+            if (*(*((&v2 + 8))) != *(v1))
                 v0 = v3 < 50;
         }
         if (!(v0 & 1))
             break;
-        v4 += 1;
-        v3 += 1;
+        *(&(&v2)[8]) = *((&v2 + 8)) + 1;
+        v3 = *((&v2 + 4)) + 1;
     }
     cgc_memcpy(a1, a0, v3);
-    return v4 + 1;
+    return *((&v2 + 8)) + 1;
 }

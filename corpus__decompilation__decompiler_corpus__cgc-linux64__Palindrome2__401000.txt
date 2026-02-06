@@ -8,7 +8,7 @@ unsigned long long * _init(void)
 {
     unsigned long long *v1;  // rax
 
-    v1 = g_403408;
+    v1 = &g_403408->field_0;
     if (g_403408)
         v1 = g_403408();
     return v1;

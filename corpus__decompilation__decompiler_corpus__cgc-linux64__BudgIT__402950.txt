@@ -2,56 +2,51 @@ unsigned int cgc_int2str(char *a0, unsigned int a1, unsigned int a2)
 {
     unsigned int v0;  // [bp-0x2c]
     unsigned int i;  // [bp-0x28]
-    unsigned int v2;  // [bp-0x24]
-    unsigned int v3;  // [bp-0x24]
-    unsigned int v4;  // [bp-0x24]
+    unsigned int cur;  // [bp-0x24]
     unsigned int j;  // [bp-0x20]
-    unsigned int v6;  // [bp-0xc]
+    unsigned int v4;  // [bp-0xc]
 
     j = a2;
-    v2 = 0;
+    cur = 0;
     if (a1 < 2)
     {
-        v6 = 4294967295;
-        return v6;
+        v4 = 4294967295;
+        return v4;
     }
     if (j < 0)
     {
         if (a1 < 3)
         {
-            v6 = 4294967295;
-            return v6;
+            v4 = 4294967295;
+            return v4;
         }
-        v3 = v2 + 1;
-        a0[v2] = 45;
-        v4 = v3;
+        cur += 1;
+        a0[cur] = 45;
     }
     else
     {
         j *= 4294967295;
-        v4 = v2;
     }
     i = j;
     do
     {
-        v4 += 1;
+        cur += 1;
         i /= 10;
     } while (i < 0);
-    if (v4 >= a1)
+    if (cur >= a1)
     {
-        v6 = 4294967295;
-        return v6;
+        v4 = 4294967295;
+        return v4;
     }
-    v2 = v4 - 1;
-    a0[v4] = 0;
+    cur -= 1;
+    a0[cur] = 0;
     do
     {
         v0 = (j % 10) * 4294967295;
-        v3 = v2 - 1;
-        a0[v2] = v0 + 48;
+        cur -= 1;
+        a0[cur] = v0 + 48;
         j /= 10;
-        v2 = v3;
     } while (j < 0);
-    v6 = 0;
-    return v6;
+    v4 = 0;
+    return v4;
 }
