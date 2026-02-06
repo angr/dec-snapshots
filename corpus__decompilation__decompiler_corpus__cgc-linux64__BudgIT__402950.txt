@@ -2,7 +2,7 @@ unsigned int cgc_int2str(char *a0, unsigned int a1, unsigned int a2)
 {
     unsigned int v0;  // [bp-0x2c]
     unsigned int i;  // [bp-0x28]
-    unsigned int cur;  // [bp-0x24]
+    unsigned int cur;  // [sp-0x24]
     unsigned int j;  // [bp-0x20]
     unsigned int v4;  // [bp-0xc]
 

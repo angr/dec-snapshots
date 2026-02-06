@@ -1,6 +1,6 @@
 unsigned long long cgc_transmit_all(unsigned long long a0, unsigned long long a1)
 {
-    int v0;  // [sp-0x34]
+    int v0;  // [bp-0x34]
     int i;  // [bp-0x30], Other Possible Types: unsigned long
     unsigned long long v2;  // [bp-0x10]
 
