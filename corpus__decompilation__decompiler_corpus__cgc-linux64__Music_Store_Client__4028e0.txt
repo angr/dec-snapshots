@@ -36,7 +36,7 @@ int main(unsigned int a0, unsigned long long a1)
     unsigned long long v28;  // [bp-0x30]
     char i;  // [bp-0x28]
     unsigned int v30;  // [bp-0x20]
-    unsigned int flag;  // [bp-0x1c]
+    unsigned int flag;  // [sp-0x1c]
     unsigned long long v32;  // [bp-0x18]
     unsigned int v33;  // [bp-0x10]
     unsigned int flag2;  // [bp-0xc]
