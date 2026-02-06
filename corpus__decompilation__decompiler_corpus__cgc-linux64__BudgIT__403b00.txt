@@ -4,7 +4,7 @@ unsigned int main(unsigned int a0, unsigned long long a1)
     char v1[48];  // [bp-0x88]
     unsigned int v2;  // [bp-0x58]
     unsigned int v3;  // [bp-0x54]
-    unsigned int flag2;  // [sp-0x50]
+    unsigned int flag2;  // [bp-0x50]
     unsigned int v5;  // [bp-0x4c]
     char v6;  // [bp-0x48]
     char v7;  // [bp-0x28]

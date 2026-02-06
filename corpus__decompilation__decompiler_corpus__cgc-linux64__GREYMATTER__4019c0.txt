@@ -3,8 +3,8 @@ extern char g_402004;
 unsigned int cgc_canonicalize_path(unsigned long long a0, char *a1, unsigned long a2)
 {
     char *cur;  // [bp-0x48], Other Possible Types: unsigned long long
-    int n;  // [sp-0x40], Other Possible Types: unsigned long long
-    unsigned long long v2;  // [sp-0x38]
+    int n;  // [bp-0x40], Other Possible Types: unsigned long long
+    unsigned long long v2;  // [bp-0x38]
     char *ptr;  // [bp-0x30], Other Possible Types: unsigned long long
     unsigned int v4;  // [bp-0x24]
 
