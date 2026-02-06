@@ -20,7 +20,7 @@ int main(unsigned int a0, unsigned long long a1)
     char v12;  // [bp-0xab0]
     unsigned long long v13;  // [bp-0xaa0]
     char *v14;  // [bp-0xa98]
-    char *v15;  // [bp-0xa90], Other Possible Types: unsigned long long
+    char *v15;  // [sp-0xa90], Other Possible Types: unsigned long long
     char v16[2512];  // [bp-0xa88]
     char v17[16];  // [bp-0xb8]
     uint128_t v18;  // [bp-0xa8]
