@@ -8,7 +8,7 @@ typedef struct struct_0 {
 
 extern struct_0 attributes;
 
-char * cgc_getRandomAttribute(unsigned long a0)
+long long cgc_getRandomAttribute(unsigned long a0)
 {
     unsigned long v0;  // [bp-0x28]
     unsigned long v1;  // [bp-0x20]
