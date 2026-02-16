@@ -157,11 +157,13 @@ LABEL_401647:
             *(&(&v4)[36]) = *((&v4 + 36)) + 1;
         }
     }
-    if (cur < 0)
+    if (cur >= 0)
     {
-        cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
-        cgc__terminate(4294967295);
+        cgc_transmit_all(*((&v4 + 16)) + cur * 4, 4);
+        return 0;
     }
+    cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
+    cgc__terminate(4294967295);
     cgc_transmit_all(*((&v4 + 16)) + cur * 4, 4);
     return 0;
 }
