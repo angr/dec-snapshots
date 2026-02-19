@@ -65,7 +65,7 @@ unsigned int cgc_request_document(char *a0, unsigned long long a1)
             v14 = v12;
             return v14;
         }
-        vvar_133{r48|8b} = &v0;
+        vvar_170{r48|8b} = &v0;
         v12 = cgc_receive_with_term(0, choice, flag);
         if (!v12)
         {
@@ -79,15 +79,15 @@ unsigned int cgc_request_document(char *a0, unsigned long long a1)
                 if (!v8)
                     break;
                 v8 += cgc_strlen(&g_402008);
-                vvar_185{r48|8b} = vvar_33{r48|8b} - 24;
+                vvar_222{r48|8b} = vvar_70{r48|8b} - 24;
                 v7 = cgc_strpos(v8, "$!SRC$");
-                vvar_7{r48|8b} = vvar_185{r48|8b};
+                vvar_44{r48|8b} = vvar_222{r48|8b};
                 if (v7)
                 {
                     v6 = v7 - v8 + 1;
                     v16 = v6;
-                    v5 = vvar_185{r48|8b};
-                    v1 = vvar_185{r48|8b} - (v16 + 15 & 0xfffffffffffffff0);
+                    v5 = vvar_222{r48|8b};
+                    v1 = vvar_222{r48|8b} - (v16 + 15 & 0xfffffffffffffff0);
                     v4 = v16;
                     cgc_strncpy(v1, v8, v6 - 1);
                     v1[1 + v6] = 6;
@@ -104,7 +104,7 @@ unsigned int cgc_request_document(char *a0, unsigned long long a1)
                         v12 = cgc_request_document(&v3, v13);
                         v2 = (0 == v12 ? 0 : 2);
                     }
-                    vvar_7{r48|8b} = v5;
+                    vvar_44{r48|8b} = v5;
                     if (v2)
                         break;
                 }
