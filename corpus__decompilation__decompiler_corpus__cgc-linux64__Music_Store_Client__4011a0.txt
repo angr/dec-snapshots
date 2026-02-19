@@ -1,4 +1,4 @@
-long long frame_dummy(void)
+unsigned long long frame_dummy(void)
 {
     return register_tm_clones();
 }
