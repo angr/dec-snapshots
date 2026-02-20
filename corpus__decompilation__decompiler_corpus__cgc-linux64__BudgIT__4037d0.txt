@@ -1,22 +1,20 @@
-typedef struct struct_1 {
-    struct struct_1 *field_0;
-    unsigned int field_8;
-    char field_c;
-} struct_1;
-
 typedef struct struct_0 {
     struct struct_0 *field_0;
     unsigned int field_8;
     char field_c;
 } struct_0;
 
-struct_1 * cgc_removeMap(struct_0 **p, char *a1)
+typedef struct struct_1 {
+    struct struct_1 *field_0;
+    unsigned int field_8;
+    char field_c;
+} struct_1;
+
+struct_0 * cgc_removeMap(struct_1 **p, char *a1)
 {
-    unsigned long v4;  // rax
-    struct_1 *v5;  // rax
     char v0;  // [bp-0x31]
-    struct_1 *addr;  // [bp-0x30]
-    struct_0 *ptr;  // [bp-0x28], Other Possible Types: unsigned long long
+    struct_0 *addr;  // [bp-0x30]
+    struct_1 *ptr;  // [bp-0x28], Other Possible Types: unsigned long long
 
     ptr = 0;
     addr = NULL;
@@ -26,7 +24,6 @@ struct_1 * cgc_removeMap(struct_0 **p, char *a1)
         v0 = 0;
         if (ptr)
             v0 = ptr->field_c;
-        v5 = _INSERT(v4, 0, v0);
         if (!(v0 & 1))
             break;
         if (!cgc_strcmp(a1, &ptr->field_c))
@@ -35,7 +32,7 @@ struct_1 * cgc_removeMap(struct_0 **p, char *a1)
         ptr = ptr->field_0;
     }
     if (!ptr)
-        return v5;
+        return ptr;
     if (!addr)
         *(p) = ptr->field_0;
     else
