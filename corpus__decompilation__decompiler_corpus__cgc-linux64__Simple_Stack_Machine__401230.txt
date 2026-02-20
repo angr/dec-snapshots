@@ -6,7 +6,7 @@ unsigned int main(unsigned int a0, unsigned long long a1)
     unsigned int v2;  // [bp-0x68]
     unsigned int v3;  // [bp-0x64]
     int v4;  // [bp-0x60]
-    unsigned int v5;  // [bp-0x3c]
+    int v5;  // [bp-0x3c], Other Possible Types: unsigned int
     unsigned int cur;  // [bp-0x34]
     unsigned long long j;  // [bp-0x30]
     unsigned long choice;  // [bp-0x28]
@@ -61,6 +61,7 @@ unsigned int main(unsigned int a0, unsigned long long a1)
         i = *((*((&v4 + 24)) + *((&v4 + 36)) * 4));
         if (i == 4294967295)
             break;
+        v5 = v4;
         if ((i & 7) <= 7)
         {
             switch (i & 7)
@@ -68,6 +69,7 @@ unsigned int main(unsigned int a0, unsigned long long a1)
             case 0:
                 cur += 1;
                 *((*((&v4 + 16)) + cur * 4)) = i >> 3;
+                v5 = v4;
                 break;
             case 1:
                 if (cur < 0)
@@ -76,6 +78,7 @@ unsigned int main(unsigned int a0, unsigned long long a1)
                     cgc__terminate(4294967295);
                 }
                 cur -= 1;
+                v5 = v4;
                 break;
             case 2:
                 cur += 1;
@@ -85,6 +88,7 @@ unsigned int main(unsigned int a0, unsigned long long a1)
                     cgc__terminate(4294967295);
                 }
                 *((*((&v4 + 16)) + cur * 4)) = *((&v4 + 36));
+                v5 = v4;
                 break;
             case 3:
                 if (cur < 1)
@@ -92,7 +96,8 @@ unsigned int main(unsigned int a0, unsigned long long a1)
                     cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
                     cgc__terminate(4294967295);
                 }
-                if (*((*((&v4 + 16)) + cur * 4)))
+                v5 = v4;
+                if (*((*((&v5 + 16)) + cur * 4)))
                 {
 LABEL_401553:
                     cur -= 2;
@@ -121,6 +126,7 @@ LABEL_40154a:
 LABEL_4015d3:
                 *((*((&v4 + 16)) + cur * 4)) = *((*((&v4 + 16)) + v2 * 4));
                 *((*((&v4 + 16)) + v2 * 4)) = v3;
+                v5 = v4;
                 break;
             case 5:
                 cur += 1;
@@ -131,6 +137,7 @@ LABEL_4015d3:
                 cgc__terminate(4294967295);
 LABEL_401647:
                 *((*((&v4 + 16)) + cur * 4)) = *((*((&v4 + 16)) + (cur - (i >> 3) - 1) * 4));
+                v5 = v4;
                 break;
             case 6:
                 if (cur < 1)
@@ -140,6 +147,7 @@ LABEL_401647:
                 }
                 *((*((&v4 + 16)) + (cur - 1) * 4)) = *((*((&v4 + 16)) + cur * 4)) + *((*((&v4 + 16)) + (cur - 1) * 4));
                 cur -= 1;
+                v5 = v4;
                 break;
             case 7:
                 if (cur < 1)
@@ -149,12 +157,13 @@ LABEL_401647:
                 }
                 *((*((&v4 + 16)) + (cur - 1) * 4)) = *((*((&v4 + 16)) + (cur - 1) * 4)) - *((*((&v4 + 16)) + cur * 4));
                 cur -= 1;
+                v5 = v4;
                 break;
             }
         }
         else
         {
-            *(&(&v4)[36]) = *((&v4 + 36)) + 1;
+            *(&(&v4)[36]) = v5 + 1;
         }
     }
     if (cur >= 0)
