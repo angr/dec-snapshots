@@ -9,7 +9,7 @@ unsigned int cgc_receiveSearchResults(unsigned int a0, struct_0 *ptr, unsigned i
     int v0;  // [bp-0x434], Other Possible Types: unsigned int
     unsigned int v1;  // [bp-0x430]
     unsigned int v2;  // [bp-0x42c]
-    char v3;  // [bp-0x428]
+    int v3;  // [bp-0x428]
     unsigned int flag;  // [bp-0xc]
 
     memset(&v3, 0, 0x400);

@@ -2,7 +2,7 @@ unsigned int cgc_receiveBalance(unsigned int a0)
 {
     unsigned int v0;  // [bp-0x420]
     unsigned int v1;  // [bp-0x41c]
-    char v2;  // [bp-0x418]
+    int v2;  // [bp-0x418]
     unsigned int v3;  // [bp-0xc]
 
     memset(&v2, 0, 0x400);

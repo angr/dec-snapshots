@@ -8,7 +8,7 @@ int cgc_sendReport(struct_0 *a0)
     unsigned int v0;  // [bp-0x5c]
     struct_0 *ptr;  // [bp-0x58]
     unsigned int v2;  // [bp-0x4c]
-    char v3;  // [bp-0x48]
+    int v3;  // [bp-0x48]
     unsigned int v4;  // [bp-0x14]
     unsigned int v5;  // [bp-0x14]
 
