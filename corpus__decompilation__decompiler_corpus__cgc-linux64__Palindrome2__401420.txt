@@ -2,7 +2,7 @@ unsigned int cgc_check(void)
 {
     unsigned int v0;  // [bp-0x60]
     unsigned int iter;  // [bp-0x5c]
-    unsigned short v2;  // [bp-0x58]
+    char v2;  // [bp-0x58]
     unsigned int v3;  // [bp-0x18]
     unsigned int cur;  // [bp-0x14]
     unsigned int v5;  // [bp-0x10]
@@ -12,14 +12,14 @@ unsigned int cgc_check(void)
     v3 = 1;
     for (cur = 0; cur < 64; cur += 1)
     {
-        *(&v2 + cur) = 0;
+        (&v2)[cur] = 0;
     }
     if (cgc_receive_delim(0, &v2, 128, 10))
     {
         v6 = 4294967295;
         return v6;
     }
-    for (cur = 0; *(&v2 + cur); cur += 1)
+    for (cur = 0; (&v2)[cur]; cur += 1)
     {
         v5 += 1;
     }
@@ -32,11 +32,11 @@ unsigned int cgc_check(void)
         v0 = cur;
         if (v0 > (iter / 2))
             break;
-        if (*(&v2 + cur) != *(-1 + &v2 + v5 - cur))
+        if ((&v2)[cur] != (&v2)[1 + v5 + -1 * cur])
             v3 = 0;
         cur += 1;
     }
-    if (v2 == 94 && cgc_transmit_all(1, "\n\nEASTER EGG!\n\n", 15))
+    if (*(&v2) == 94 && cgc_transmit_all(1, "\n\nEASTER EGG!\n\n", 15))
         cgc__terminate(0);
     v6 = v3;
     return v6;
