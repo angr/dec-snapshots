@@ -12,6 +12,8 @@ typedef struct struct_1 {
 
 struct_0 * cgc_removeMap(struct_1 **p, char *a1)
 {
+    unsigned long v4;  // rax
+    struct_0 *v5;  // rax
     char v0;  // [bp-0x31]
     struct_0 *addr;  // [bp-0x30]
     struct_1 *ptr;  // [bp-0x28], Other Possible Types: unsigned long long
@@ -24,6 +26,7 @@ struct_0 * cgc_removeMap(struct_1 **p, char *a1)
         v0 = 0;
         if (ptr)
             v0 = ptr->field_c;
+        v5 = _INSERT(v4, 0, v0);
         if (!(v0 & 1))
             break;
         if (!cgc_strcmp(a1, &ptr->field_c))
@@ -32,7 +35,7 @@ struct_0 * cgc_removeMap(struct_1 **p, char *a1)
         ptr = ptr->field_0;
     }
     if (!ptr)
-        return ptr;
+        return v5;
     if (!addr)
         *(p) = ptr->field_0;
     else
