@@ -1,8 +1,8 @@
 long long cgc_bzero(unsigned long a0, unsigned int a1)
 {
-    unsigned int i;  // [bp-0x18]
+    int i;  // [bp-0x18]
 
-    for (i = 0; i < a1; i += 1)
+    for (i = 0; i < (int)a1; i += 1)
     {
         *((a0 + i)) = 0;
     }

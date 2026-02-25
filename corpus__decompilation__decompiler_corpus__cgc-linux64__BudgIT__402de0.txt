@@ -18,20 +18,20 @@ extern struct_0 *cgc_freed;
 
 struct_1 * cgc_checkheap(void)
 {
-    struct_2 *iter;  // [bp-0x18]
-    struct_0 *cur;  // [bp-0x10]
+    unsigned int iter;  // [bp-0x18]
+    unsigned int cur;  // [bp-0x10]
 
     for (cur = cgc_freed; *(&cur->padding_0[8]) != cgc_freed; cur = *(&cur->padding_0[8]))
     {
         for (iter = cgc_allocated; *(&iter->padding_0[8]) != cgc_allocated; iter = *(&iter->padding_0[8]))
         {
-            if (cur < iter + iter->field_10 && iter < cur + cur->field_10)
+            if (cur < iter + iter->field_10 && iter < cur + *((cur + 16)))
             {
-                if (cgc_sendline(1, "corrupt", 7) < 0)
+                if ((int)cgc_sendline(1, "corrupt", 7) < 0)
                     cgc__terminate(6);
                 cgc__terminate(283);
             }
         }
     }
-    return *(&cur->padding_0[8]);
+    return *((cur + 8));
 }

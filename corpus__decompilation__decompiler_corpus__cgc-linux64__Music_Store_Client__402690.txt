@@ -1,9 +1,9 @@
 int cgc_sendSearchString(void)
 {
     unsigned int v17;  // edi
-    uint128_t v0;  // [bp-0x98]
-    uint128_t v1;  // [bp-0x88]
-    uint128_t v2;  // [bp-0x78]
+    unsigned __int128 v0;  // [bp-0x98]
+    unsigned __int128 v1;  // [bp-0x88]
+    unsigned __int128 v2;  // [bp-0x78]
     char v3;  // [bp-0x68]
     char v4;  // [bp-0x58]
     char v5;  // [bp-0x48]
@@ -11,9 +11,9 @@ int cgc_sendSearchString(void)
     unsigned long long v7;  // [bp-0x20]
     unsigned long long v8;  // [bp-0x18]
     unsigned int v9;  // [bp-0x10]
-    uint128_t v10;  // [bp+0x8]
-    uint128_t v11;  // [bp+0x18]
-    uint128_t v12;  // [bp+0x28]
+    unsigned __int128 v10;  // [bp+0x8]
+    unsigned __int128 v11;  // [bp+0x18]
+    unsigned __int128 v12;  // [bp+0x28]
     char v13;  // [bp+0x38]
     char v14;  // [bp+0x48]
     char v15;  // [bp+0x58]
