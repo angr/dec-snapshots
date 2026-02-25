@@ -12,7 +12,7 @@ long long cgc_strncpy(char *a0, char *a1, unsigned long a2)
         v0 = 0;
         if (cur - a0 < a2)
             v0 = *(iter);
-        if (!(v0 & 1))
+        if (!(char)(v0 & 1))
             break;
         *(cur) = *(iter);
         cur += 1;
