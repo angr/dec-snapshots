@@ -17,7 +17,7 @@ unsigned int cgc_purchaseSong(unsigned int a0, char *a1, struct_0 *ptr)
     v4 = 0;
     v3 = 0;
     v3 = cgc_str2int(a1 + 200);
-    if (ptr->field_10 < v3)
+    if ((char)ptr->field_10 < (char)v3)
     {
         flag = 1;
         return flag;

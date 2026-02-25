@@ -3,9 +3,9 @@ unsigned int main(unsigned int a0, unsigned long long a1)
     char *v0;  // [bp-0x90]
     char v1[48];  // [bp-0x88]
     unsigned int v2;  // [bp-0x58]
-    unsigned int v3;  // [bp-0x54]
+    int v3;  // [bp-0x54], Other Possible Types: unsigned int
     unsigned int flag3;  // [bp-0x50]
-    unsigned int v5;  // [bp-0x4c]
+    int v5;  // [bp-0x4c]
     char v6;  // [bp-0x48]
     char flag2;  // [bp-0x28]
     void* choice;  // [bp-0x20]

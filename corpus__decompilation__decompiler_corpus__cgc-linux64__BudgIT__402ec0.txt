@@ -36,7 +36,7 @@ unsigned long long cgc_malloc(unsigned long long a0)
         v0 = 0;
         if (cur->field_10 < v2)
             v0 = *(&cur->padding_0[8]) != cgc_freed;
-        if (!(v0 & 1))
+        if (!(char)(v0 & 1))
             break;
         cur = *(&cur->padding_0[8]);
     }
@@ -73,7 +73,7 @@ unsigned long long cgc_malloc(unsigned long long a0)
         cur->field_10 = v2;
         cgc_insert(cgc_allocated, cur);
         cgc_lastpage = &cur->padding_0[v2];
-        if ((v2 & 4095))
+        if ((unsigned short)(v2 & 4095))
             cgc_curleft = 0x1000 - (v2 & 4095);
         else
             cgc_curleft = 0;

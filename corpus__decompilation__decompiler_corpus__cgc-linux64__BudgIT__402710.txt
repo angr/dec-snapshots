@@ -13,7 +13,7 @@ unsigned int cgc_streq(char *a0, char *a1)
         v1 = 0;
         if (*(v3))
             v1 = *(cur);
-        if (!(v1 & 1))
+        if (!(char)(v1 & 1))
             break;
         if (*(v3) != *(cur))
         {

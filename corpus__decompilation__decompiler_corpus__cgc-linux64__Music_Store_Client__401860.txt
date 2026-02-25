@@ -2,7 +2,7 @@ long long cgc_setValue(char *a0, char *a1)
 {
     char v0;  // [bp-0x31]
     char *v1;  // [bp-0x30]
-    int v2;  // [bp-0x28], Other Possible Types: uint128_t
+    int v2;  // [bp-0x28], Other Possible Types: unsigned __int128
 
     memset(&v2, 0, 16);
     v1 = "&";
@@ -14,9 +14,9 @@ long long cgc_setValue(char *a0, char *a1)
         {
             v0 = 0;
             if (*(*((&v2 + 8))) != *(v1))
-                v0 = *((&v2 + 4)) < 50;
+                v0 = (int)*((&v2 + 4)) < 50;
         }
-        if (!(v0 & 1))
+        if (!(char)(v0 & 1))
             break;
         *(&(&v2)[8]) = *((&v2 + 8)) + 1;
         *((&v2 + 4)) = *((&v2 + 4)) + 1;
