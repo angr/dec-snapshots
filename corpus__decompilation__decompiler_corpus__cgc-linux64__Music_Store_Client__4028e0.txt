@@ -3,6 +3,8 @@ Traceback (most recent call last):
     decomp = project.analyses.Decompiler(
   File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/analysis.py", line 266, in __call__
     r = w(*args, **kwargs)
+  File "/usr/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
   File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/analysis.py", line 251, in wrapper
     oself.__init__(*args, **kwargs)
   File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/decompiler.py", line 181, in __init__
@@ -13,6 +15,8 @@ Traceback (most recent call last):
     clinic = self.project.analyses.Clinic(
   File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/analysis.py", line 266, in __call__
     r = w(*args, **kwargs)
+  File "/usr/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
   File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/analysis.py", line 251, in wrapper
     oself.__init__(*args, **kwargs)
   File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/clinic.py", line 277, in __init__
@@ -27,6 +31,8 @@ Traceback (most recent call last):
     return func(*args, **kwargs)
   File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/clinic.py", line 1851, in _transform_to_ssa_level1
     ssailification = self.project.analyses[Ssailification].prep(fail_fast=self._fail_fast)(
+  File "/usr/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
   File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/analysis.py", line 251, in wrapper
     oself.__init__(*args, **kwargs)
   File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/ssailification/ssailification.py", line 149, in __init__
