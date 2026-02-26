@@ -1,6 +1,6 @@
 int cgc_receiveKey(void* a0)
 {
-    unsigned int v0;  // [bp-0x14]
+    int v0;  // [bp-0x14]
 
     cgc_memset(a0, 0, 24);
     v0 = cgc_recvline(0, a0, 23);

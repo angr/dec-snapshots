@@ -1,6 +1,6 @@
 unsigned int cgc_check(void)
 {
-    unsigned int v0;  // [bp-0x60]
+    int v0;  // [bp-0x60]
     unsigned int iter;  // [bp-0x5c]
     char v2;  // [bp-0x58]
     unsigned int v3;  // [bp-0x18]
@@ -30,7 +30,7 @@ unsigned int cgc_check(void)
     while (true)
     {
         v0 = cur;
-        if (v0 > (iter / 2))
+        if (v0 > (int)(iter / 2))
             break;
         if ((&v2)[cur] != (&v2)[1 + v5 + -1 * cur])
             v3 = 0;

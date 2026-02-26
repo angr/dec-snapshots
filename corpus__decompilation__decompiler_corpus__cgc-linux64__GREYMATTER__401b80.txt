@@ -42,12 +42,12 @@ unsigned int cgc_request_document(char *a0, unsigned long long a1)
         v15 = v13;
         return v15;
     }
-    else if (flag + 1 < flag)
+    else if ((short)(flag + 1) < (short)flag)
     {
         v15 = v13;
         return v15;
     }
-    else if (0 > cgc_recv_until_delim(0, &buf_recv_tmp, 65535))
+    else if (0 > (int)cgc_recv_until_delim(0, &buf_recv_tmp, 65535))
     {
         v15 = v13;
         return v15;
