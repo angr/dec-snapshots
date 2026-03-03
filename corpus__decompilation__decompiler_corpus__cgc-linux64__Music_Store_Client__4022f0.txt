@@ -12,7 +12,7 @@ char * cgc_getRandomAttribute(unsigned long a0)
 {
     unsigned long v0;  // [bp-0x28]
     unsigned long v1;  // [bp-0x20]
-    unsigned int v2;  // [bp-0x14]
+    int v2;  // [bp-0x14], Other Possible Types: unsigned int
 
     v2 = 0;
     v2 = cgc_getRandomNumber(3);

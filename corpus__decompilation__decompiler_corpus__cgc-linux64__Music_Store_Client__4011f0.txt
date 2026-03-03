@@ -1,11 +1,11 @@
-unsigned int cgc_ready(unsigned int a0)
+int cgc_ready(unsigned int a0)
 {
     unsigned int v0;  // [bp-0xa0]
-    unsigned int flag;  // [bp-0x9c]
+    int flag;  // [bp-0x9c]
     char v2;  // [bp-0x98]
-    unsigned int v3;  // [bp-0x94]
+    int v3;  // [bp-0x94]
     char v4;  // [bp-0x90]
-    unsigned int v5;  // [bp-0xc]
+    int v5;  // [bp-0xc]
 
     cgc_bzero(&v4, 128);
     *(&(&v4)[8 * (a0 >> 6)]) = (1 << (a0 & 63 & 31)) | *(&(&v4)[8 * (a0 >> 6)]);

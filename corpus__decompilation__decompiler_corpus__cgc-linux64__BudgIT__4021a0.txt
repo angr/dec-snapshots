@@ -1,4 +1,4 @@
-int cgc_promptc(unsigned long long a0, unsigned short a1, unsigned long long a2)
+int cgc_promptc(long long a0, unsigned short a1, long long a2)
 {
     unsigned int v1;  // eax
 

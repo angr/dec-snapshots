@@ -1,6 +1,6 @@
 typedef struct struct_0 {
     char padding_0[16];
-    unsigned int field_10;
+    int field_10;
 } struct_0;
 
 typedef struct struct_1 {
@@ -8,18 +8,18 @@ typedef struct struct_1 {
     unsigned int field_10;
 } struct_1;
 
-extern unsigned long long cgc_allocated;
-extern unsigned int cgc_curleft;
+extern long long cgc_allocated;
+extern int cgc_curleft;
 extern struct_0 *cgc_freed;
 extern char cgc_heapinit_done;
 extern struct_1 *cgc_lastpage;
 
-unsigned long long cgc_malloc(unsigned long long a0)
+long long cgc_malloc(long long a0)
 {
     char v0;  // [bp-0x21]
     struct_0 *cur;  // [bp-0x20], Other Possible Types: struct_1 *
-    unsigned long long v2;  // [bp-0x18]
-    unsigned long long v3;  // [bp-0x10]
+    long long v2;  // [bp-0x18]
+    long long v3;  // [bp-0x10]
 
     v2 = a0;
     if (!cgc_heapinit_done)

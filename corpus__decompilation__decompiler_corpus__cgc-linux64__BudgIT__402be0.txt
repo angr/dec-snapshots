@@ -1,13 +1,19 @@
-char [3] cgc_b2hex(char a0, char *ptr)
+typedef struct struct_0 {
+    char field_0;
+    char field_1;
+    char field_2;
+} struct_0;
+
+struct_0 * cgc_b2hex(char a0, struct_0 *ptr)
 {
     if (a0 >> 4 < 10)
-        *(ptr) = (a0 >> 4) + 48;
+        ptr->field_0 = (a0 >> 4) + 48;
     else
-        *(ptr) = (a0 >> 4) - -55;
+        ptr->field_0 = (a0 >> 4) - -55;
     if ((a0 & 15) < 10)
-        ptr[1] = (a0 & 15) + 48;
+        ptr->field_1 = (a0 & 15) + 48;
     else
-        ptr[1] = (a0 & 15) - -55;
-    ptr[2] = 0;
+        ptr->field_1 = (a0 & 15) - -55;
+    ptr->field_2 = 0;
     return ptr;
 }

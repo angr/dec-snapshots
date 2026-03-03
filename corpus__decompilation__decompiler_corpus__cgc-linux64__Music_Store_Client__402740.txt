@@ -3,10 +3,10 @@ typedef struct struct_0 {
     char field_10;
 } struct_0;
 
-unsigned long long cgc_getBalance(struct_0 *ptr)
+int cgc_getBalance(struct_0 *ptr)
 {
     char v3;  // al
-    unsigned long long v4;  // rcx
+    long long v4;  // rcx
     unsigned long v0;  // [bp-0x38]
     int v1;  // [bp-0x2c], Other Possible Types: unsigned int
 

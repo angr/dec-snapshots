@@ -1,8 +1,8 @@
-unsigned int cgc_strcmp(char *a0, char *a1)
+int cgc_strcmp(char *a0, char *a1)
 {
     char v0;  // [bp-0x25]
-    unsigned int v1;  // [bp-0x24]
-    unsigned int v2;  // [bp-0xc]
+    int v1;  // [bp-0x24]
+    int v2;  // [bp-0xc]
 
     v1 = 0;
     while (true)

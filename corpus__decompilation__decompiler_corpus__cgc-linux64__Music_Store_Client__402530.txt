@@ -5,14 +5,14 @@ typedef struct struct_0 {
     char field_10;
 } struct_0;
 
-unsigned int cgc_purchaseSong(unsigned int a0, char *a1, struct_0 *ptr)
+int cgc_purchaseSong(unsigned int a0, void* a1, struct_0 *ptr)
 {
     unsigned int v0;  // [bp-0x38]
     unsigned int v1;  // [bp-0x34]
-    unsigned long long v2;  // [bp-0x30]
+    long long v2;  // [bp-0x30]
     char v3;  // [bp-0x25]
-    unsigned int v4;  // [bp-0x24]
-    unsigned int flag;  // [bp-0xc]
+    int v4;  // [bp-0x24], Other Possible Types: unsigned int
+    int flag;  // [bp-0xc]
 
     v4 = 0;
     v3 = 0;

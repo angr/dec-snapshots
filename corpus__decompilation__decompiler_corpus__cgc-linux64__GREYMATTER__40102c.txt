@@ -1,7 +1,7 @@
 long long sub_40102c(void)
 {
     void* v1;  // rdi
-    unsigned int v2;  // esi
+    int v2;  // esi
     unsigned long v3;  // rdx
 
     return memset(v1, v2, v3);

@@ -1,11 +1,11 @@
-unsigned int main(unsigned int a0, unsigned long long a1)
+int main(int a0, long long a1)
 {
     char v0[15];  // [bp-0x38]
     char v1;  // [bp-0x29]
-    unsigned int choice;  // [bp-0x1c]
-    unsigned long long v3;  // [bp-0x18]
-    unsigned int v4;  // [bp-0x10]
-    unsigned int flag;  // [bp-0xc]
+    int choice;  // [bp-0x1c]
+    long long v3;  // [bp-0x18]
+    int v4;  // [bp-0x10]
+    int flag;  // [bp-0xc]
 
     flag = 0;
     v4 = a0;
