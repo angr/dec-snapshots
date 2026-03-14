@@ -2,14 +2,14 @@
 unsigned int main(unsigned int a0, unsigned long long a1)
 {
     char v0;  // [bp-0x6d]
-    unsigned int v1;  // [bp-0x6c]
-    unsigned int v2;  // [bp-0x68]
+    int v1;  // [bp-0x6c]
+    int v2;  // [bp-0x68]
     unsigned int v3;  // [bp-0x64]
     int v4;  // [bp-0x60]
-    unsigned int v5;  // [bp-0x3c]
-    unsigned int cur;  // [bp-0x34]
+    unsigned int v5[2];  // [bp-0x3c]
+    int cur;  // [bp-0x34]
     unsigned long long j;  // [bp-0x30]
-    unsigned long choice;  // [bp-0x28]
+    char choice[12];  // [bp-0x28]
     unsigned int i;  // [bp-0x1c]
     unsigned long long v10;  // [bp-0x18]
     unsigned int v11;  // [bp-0x10]
@@ -19,7 +19,7 @@ unsigned int main(unsigned int a0, unsigned long long a1)
     v11 = a0;
     v10 = a1;
     i = 0;
-    choice = 0;
+    *(choice) = *(0);
     j = 0;
     cur = 4294967295;
     memset(&v4, 0, 44);
@@ -34,29 +34,29 @@ unsigned int main(unsigned int a0, unsigned long long a1)
         j = 0;
         do
         {
-            *(&(&v4)[32]) = cgc_receive(0, &i + j, 4 - j, &choice);
+            *((&v4 + 32)) = cgc_receive(0, &i + j, 4 - j, &choice);
             if (!*((&v4 + 32)) && choice)
                 continue;
             if (!*((&v4 + 40)))
                 cgc_transmit_all("### The Instruction Set\n\n000b : PUSH # : Pushes a new number onto the stack\n001b : POP : Pops the top number from the stack\n010b : PUSHPC : Pushes the program counter of the current instruction (i.e. PUSHPC) onto the stack\n011b : JMPZ : Pops the top number off of the stack, if its 0 then pop the next value off of the stack and store t\nhat into the PC. If it is not-zero then just pop the next value off of the stack and do nothing with it.\n100b : SWAP # : Swaps the nth number with the top one (which is 0) - meaning SWAP 0 does nothing\n101b : DUP #: Duplicates nth number and pushes it to the top of the stack\n110b : ADD : Pops the top two numbers off of the stack, adds them, and pushes the sum back onto the stack\n111b : SUB : Pops the top two numbers off of the stack, subtracts them ( (top - 1) - top ), and pushes the differ\nence back onto the stack\n\nAll instructions are 32-bits long with the first 3 bits (msbs) reserved for the instruction and the lower 29 bits\nfor literals. POP, ADD, SUB, PUSHPC, JMPZ ignores the lower 29 bits, UNLESS the following special instructions a\nre used:\n\n0xFFFFFFFF : RET : End of instruction stream - The topmost value is the return value\n\n### A simple program\n\nmultiply(x,y)\n\nPUSH 0\t; 0 - the SUM\nPUSH y \t; SUM, y\nPUSHPC \t; SUM, y, pc\nDUP 1 \t; SUM, y, pc, y\nPUSH 1\t; SUM, y, pc, y, 1\nSUB\t; SUM, y, pc, y-1\nSWAP 2\t; SUM, y-1, pc, y\nSWAP 3\t; y, y-1, pc, SUM\nPUSH x \t; y, y-1, pc, SUM, x\nADD \t; y, y-1, pc, SUM+x\nSWAP 3 \t; SUM+x, y-1, pc, y\nPOP\t; SUM+x, y-1, pc\nPUSHPC\t; SUM+x, y-1, pc, HERE\nPUSH 7\t; SUM+x, y-1, pc, HERE, 7\nADD\t; SUM+x, y-1, pc, HERE+7 \nDUP 2\t; SUM+x, y-1, pc, HERE+7, y-1\nJMPZ\t;\nPUSH 0\t; SUM+x, y-1, pc, 0\nJMPZ\t;\nPOP\t; SUM+x, y-1\nPOP\t; SUM+x\nRET\n\nIf y-1 is not zero, then we will jump back up to where PUSHPC is and execute that whole stream again, except SUM \nwill now be SUM+x and y is now y-1\nIf y-1 is zero, then we will jump to the instruction after the second JMPZ (which is the first POP)\n", 1956);
             cgc__terminate(4294967295);
-            j += choice;
+            j = (choice + j);
         } while (j < 4);
         *((*((&v4 + 24)) + *((&v4 + 40)) * 4)) = i;
-        *(&(&v4)[40]) = *((&v4 + 40)) + 1;
-        if (*((&v4 + 40)) >= 0x800)
+        *((&v4 + 40)) = *((&v4 + 40)) + 1;
+        if ((int)*((&v4 + 40)) >= 0x800)
         {
             cgc_transmit_all("INSNS OVERFLOW EXCEPTION\n", 26);
             cgc__terminate(4294967295);
         }
     } while (i != 4294967295);
-    *(&(&v4)[36]) = 0;
+    *((&v4 + 36)) = 0;
     while (true)
     {
         v0 = 0;
-        if (*((&v4 + 36)) < *((&v4 + 40)))
+        if ((int)*((&v4 + 36)) < (int)*((&v4 + 40)))
             v0 = *((*((&v4 + 24)) + *((&v4 + 36)) * 4)) != 4294967295;
-        if (!(v0 & 1))
+        if (!(char)(v0 & 1))
             break;
         i = *((*((&v4 + 24)) + *((&v4 + 36)) * 4));
         if (i == 4294967295)
@@ -98,13 +98,13 @@ LABEL_401553:
                     cur -= 2;
                     break;
                 }
-                *(&(&v4)[36]) = *((*((&v4 + 16)) + (cur - 1) * 4));
-                if (*((&v4 + 36)) >= 0 && *((&v4 + 36)) < *((&v4 + 40)))
+                *((&v4 + 36)) = *((*((&v4 + 16)) + (cur - 1) * 4));
+                if ((int)*((&v4 + 36)) >= 0 && (int)*((&v4 + 36)) < (int)*((&v4 + 40)))
                     goto LABEL_40154a;
                 cgc_transmit_all("INVALID PROGRAM COUNTER EXCEPTION\n", 35);
                 cgc__terminate(4294967295);
 LABEL_40154a:
-                v5 = *((&v4 + 36)) - 1;
+                *(v5) = *((*((&v4 + 36)) - 1));
                 goto LABEL_401553;
             case 4:
                 if (cur < 0)
@@ -154,7 +154,7 @@ LABEL_401647:
         }
         else
         {
-            *(&(&v4)[36]) = *((&v4 + 36)) + 1;
+            *((&v4 + 36)) = *((&v4 + 36)) + 1;
         }
     }
     if (cur >= 0)

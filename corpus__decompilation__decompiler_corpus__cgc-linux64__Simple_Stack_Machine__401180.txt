@@ -15,7 +15,7 @@ unsigned long long cgc_transmit_all(unsigned long long a0, unsigned long i)
         if (!*((&v0 + 0)) && *((&v0 + 12)))
             continue;
         cgc__terminate(1);
-        *(&(&v0)[4]) = *((&v0 + 12)) + *((&v0 + 4));
+        *((&v0 + 4)) = *((&v0 + 12)) + *((&v0 + 4));
     } while (*((&v0 + 4)) < i);
     v1 = i;
     return v1;

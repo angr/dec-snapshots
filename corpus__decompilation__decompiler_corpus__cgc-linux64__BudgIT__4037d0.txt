@@ -16,35 +16,35 @@ struct_1 * cgc_removeMap(struct_0 **p, char *a1)
     struct_1 *v5;  // rax
     char v0;  // [bp-0x31]
     struct_1 *addr;  // [bp-0x30]
-    struct_0 *ptr;  // [bp-0x28], Other Possible Types: unsigned long long
+    struct_0 *ptr[4];  // [bp-0x28], Other Possible Types: unsigned long long (64 bits)[4]
 
-    ptr = 0;
+    *(ptr) = *(0);
     addr = NULL;
-    ptr = *(p);
+    *(ptr) = *(*(p));
     while (true)
     {
         v0 = 0;
         if (ptr)
         {
-            v4 = ptr->field_c;
+            v4 = *(&ptr[1] + 4);
             v0 = v4;
         }
         v5 = _INSERT(v4 CONCAT 0, 0, v0);
-        if (!(v0 & 1))
+        if (!(char)(v0 & 1))
             break;
-        if (!cgc_strcmp(a1, &ptr->field_c))
+        if (!cgc_strcmp(a1, ptr + 12))
             break;
         addr = ptr;
-        ptr = ptr->field_0;
+        *(ptr) = *(*(ptr));
     }
     if (!ptr)
         return v5;
     if (!addr)
-        *(p) = ptr->field_0;
+        *(p) = *(ptr);
     else
-        addr->field_0 = ptr->field_0;
-    cgc_memset(&ptr->field_c, 0, 24);
-    ptr->field_8 = 0;
-    ptr->field_0 = NULL;
+        addr->field_0 = *(ptr);
+    cgc_memset(ptr + 12, 0, 24);
+    *(&ptr[1]) = 0;
+    *(ptr) = NULL;
     return ptr;
 }

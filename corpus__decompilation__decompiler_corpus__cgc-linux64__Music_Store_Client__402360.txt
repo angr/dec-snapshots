@@ -4,8 +4,8 @@ char * cgc_getRandomTerm(char *a0)
     int i;  // [bp-0x1c]
 
     memset(&i, 0, 12);
-    for (; !*((&i + 8)); *(&(&i)[8]) = cgc_getRandomNumber(50));
-    *(&(&i)[4]) = cgc_strlen("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
+    for (; !*((&i + 8)); *((&i + 8)) = cgc_getRandomNumber(50));
+    *((&i + 4)) = cgc_strlen("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
     for (*(&i) = 0; *((&i + 0)) < *((&i + 8)); *(&i) = *((&i + 0)) + 1)
     {
         v0 = cgc_getRandomNumber(*((&i + 4)));

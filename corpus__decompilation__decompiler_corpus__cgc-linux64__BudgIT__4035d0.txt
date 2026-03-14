@@ -13,14 +13,14 @@ typedef struct struct_1 {
 unsigned int cgc_setMap(struct_1 **p, char *a1, unsigned int a2)
 {
     struct_0 *v0;  // [bp-0x38]
-    struct_1 *ptr;  // [bp-0x30], Other Possible Types: unsigned long long
+    char ptr[36];  // [bp-0x30]
     unsigned int flag;  // [bp-0xc]
 
-    ptr = 0;
+    *(ptr) = *(0);
     v0 = NULL;
-    for (ptr = *(p); ptr; ptr = ptr->field_0)
+    for (*(ptr) = *(*(p)); ptr; *(ptr) = *(*(ptr)))
     {
-        if (!cgc_strcmp(a1, &ptr->field_c))
+        if (!cgc_strcmp(a1, ptr + 12))
             break;
         v0 = ptr;
     }
@@ -31,13 +31,13 @@ unsigned int cgc_setMap(struct_1 **p, char *a1, unsigned int a2)
             flag = 0;
             return flag;
         }
-        ptr = cgc_initMap(v0);
-        ptr->field_0 = *(p);
-        *(p) = ptr;
+        *(ptr) = *(cgc_initMap(v0));
+        *(ptr) = *(p);
+        *(*(p)) = *(ptr);
     }
-    if (!ptr->field_c)
-        cgc_strcpy(&ptr->field_c, a1);
-    ptr->field_8 = a2;
+    if (!ptr[12])
+        cgc_strcpy(ptr + 12, a1);
+    *(&ptr[8]) = a2;
     flag = 1;
     return flag;
 }

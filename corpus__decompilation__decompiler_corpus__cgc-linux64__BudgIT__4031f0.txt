@@ -3,11 +3,11 @@ extern void* cgc_freed;
 void* cgc_free(unsigned long long a0)
 {
     void* v2;  // rax
-    unsigned long long v0;  // [bp-0x18]
+    unsigned long long v0[2];  // [bp-0x18]
 
     if (!a0)
         return v2;
-    v0 = a0 - 24;
+    *(v0) = *((a0 - 24));
     cgc_remove();
     return cgc_insert(cgc_freed, v0);
 }

@@ -19,7 +19,7 @@ long long cgc_strncmp(long long a0)
             if (*(iter) != 6)
                 v0 = *(cur) == *(iter);
         }
-        if (!(v0 & 1))
+        if (!(char)(v0 & 1))
             break;
         v1 -= 1;
         if (!v1)

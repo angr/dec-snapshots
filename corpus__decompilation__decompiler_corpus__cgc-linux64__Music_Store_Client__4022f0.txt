@@ -11,12 +11,12 @@ extern struct_0 attributes;
 char * cgc_getRandomAttribute(unsigned long a0)
 {
     unsigned long v0;  // [bp-0x28]
-    unsigned long v1;  // [bp-0x20]
-    unsigned int v2;  // [bp-0x14]
+    char v1[12];  // [bp-0x20]
+    unsigned int v2[3];  // [bp-0x14]
 
-    v2 = 0;
-    v2 = cgc_getRandomNumber(3);
+    *(v2) = *(0);
+    *(v2) = *(cgc_getRandomNumber(3));
     v0 = a0 + 50;
-    v1 = *(&(&attributes.field_0)[2 * v2]);
+    *(v1) = *(*(&(&attributes.field_0)[2 * v2]));
     return cgc_memcpy(v0, v1, cgc_strlen(*(&(&attributes.field_0)[2 * v2])));
 }

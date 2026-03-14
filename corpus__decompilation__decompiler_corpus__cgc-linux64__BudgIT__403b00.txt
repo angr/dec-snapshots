@@ -3,11 +3,11 @@ unsigned int main(unsigned int a0, unsigned long long a1)
     char *v0;  // [bp-0x90]
     char v1[48];  // [bp-0x88]
     unsigned int v2;  // [bp-0x58]
-    unsigned int v3;  // [bp-0x54]
+    int v3;  // [bp-0x54], Other Possible Types: unsigned int
     unsigned int flag3;  // [bp-0x50]
-    unsigned int v5;  // [bp-0x4c]
-    char v6;  // [bp-0x48]
-    char flag2;  // [bp-0x28]
+    int v5;  // [bp-0x4c]
+    char v6[32];  // [bp-0x48]
+    char flag2[8];  // [bp-0x28]
     void* choice;  // [bp-0x20]
     unsigned long long v9;  // [bp-0x18]
     unsigned int v10;  // [bp-0x10]
@@ -22,7 +22,7 @@ unsigned int main(unsigned int a0, unsigned long long a1)
         while (true)
         {
             cgc_receiveInstruction(&flag2);
-            if (flag2 == 1)
+            if (*(flag2) == 1)
             {
                 cgc_receiveKey(&v6);
                 cgc_receiveValue(&v5);
@@ -32,7 +32,7 @@ unsigned int main(unsigned int a0, unsigned long long a1)
             else
             {
 LABEL_403bdc:
-                if (flag2 == 2)
+                if (*(flag2) == 2)
                 {
                     cgc_receiveKey(&v6);
                     cgc_receiveValue(&v5);
@@ -41,7 +41,7 @@ LABEL_403bdc:
                     cgc_setMap(&choice, &v6, v3);
                     if (v3 < 0)
                     {
-                        v0 = &v6;
+                        v0 = &v6[0];
                         flag3 = cgc_transmit_all(1, v0, cgc_strlen(&v6));
                         if (flag3)
                             cgc__terminate(1);
@@ -50,7 +50,7 @@ LABEL_403bdc:
                             cgc__terminate(1);
                     }
                 }
-                if (flag2 == 3)
+                if (*(flag2) == 3)
                 {
                     memset(&v1, 0, 40);
                     cgc_receiveKey(&v6);
@@ -62,15 +62,15 @@ LABEL_403bdc:
                     if (flag3)
                         cgc__terminate(1);
                 }
-                if (flag2 == 6)
+                if (*(flag2) == 6)
                 {
                     cgc_receiveKey(&v6);
                     if (!cgc_strcmp(&v6, "BACON"))
                         cgc_removeMap(&choice, &v6);
                 }
-                if (flag2 == 7)
+                if (*(flag2) == 7)
                     cgc_sendReport(choice);
-                if (flag2 >= 8)
+                if (*(flag2) >= 8)
                     return 0;
             }
         }

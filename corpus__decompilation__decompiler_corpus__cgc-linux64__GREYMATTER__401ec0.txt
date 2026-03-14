@@ -1,7 +1,7 @@
 unsigned int main(unsigned int a0, unsigned long long a1)
 {
     char v0[15];  // [bp-0x38]
-    char v1;  // [bp-0x29]
+    char v1[13];  // [bp-0x29]
     unsigned int choice;  // [bp-0x1c]
     unsigned long long v3;  // [bp-0x18]
     unsigned int v4;  // [bp-0x10]
@@ -12,6 +12,6 @@ unsigned int main(unsigned int a0, unsigned long long a1)
     v3 = a1;
     choice = 0;
     cgc_random_alpha_lower(&v0, 16);
-    v1 = 6;
+    *(v1) = *(6);
     return cgc_request_document(&v0, 0);
 }

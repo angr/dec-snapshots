@@ -2,10 +2,10 @@ unsigned int cgc_receive_delim(unsigned int a0, unsigned long long a1, unsigned 
 {
     unsigned int v0;  // [bp-0x3c]
     unsigned long flag;  // [bp-0x38]
-    unsigned long long i;  // [bp-0x30]
+    char i[36];  // [bp-0x30]
     unsigned int v3;  // [bp-0xc]
 
-    i = 0;
+    *(i) = *(0);
     if (!a1)
     {
         v3 = 1;
@@ -18,7 +18,7 @@ unsigned int cgc_receive_delim(unsigned int a0, unsigned long long a1, unsigned 
     }
     else
     {
-        for (flag = 0; i < a2; i += flag)
+        for (flag = 0; i < a2; *(i) += flag)
         {
             v0 = cgc_receive(a0, a1 + i, 1, &flag);
             if (!flag)
@@ -31,7 +31,7 @@ unsigned int cgc_receive_delim(unsigned int a0, unsigned long long a1, unsigned 
                 v3 = 3;
                 return v3;
             }
-            if (*((a1 + i)) == a3)
+            if (i[a1] == a3)
                 break;
         }
         v3 = 0;

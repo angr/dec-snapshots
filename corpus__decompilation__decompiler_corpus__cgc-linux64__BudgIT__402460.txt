@@ -1,10 +1,10 @@
 unsigned int cgc_sendline(unsigned int a0, unsigned long long a1, unsigned long a2)
 {
-    unsigned int v0;  // [bp-0x24]
-    unsigned long v1;  // [bp-0x20]
+    int v0;  // [bp-0x24], Other Possible Types: unsigned int
+    char v1[20];  // [bp-0x20]
     unsigned int v2;  // [bp-0xc]
 
-    v1 = a2;
+    *(v1) = *(a2);
     v0 = cgc_sendall(a0, a1, v1);
     if (v0 < 0)
     {

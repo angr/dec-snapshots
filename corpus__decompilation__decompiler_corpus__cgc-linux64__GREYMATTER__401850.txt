@@ -15,7 +15,7 @@ int cgc_strcmp(char *a0, char *a1)
             if (*(iter) != 6)
                 v0 = *(cur) == *(iter);
         }
-        if (!(v0 & 1))
+        if (!(char)(v0 & 1))
             break;
         cur += 1;
         iter += 1;

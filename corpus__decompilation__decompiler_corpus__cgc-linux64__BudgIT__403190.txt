@@ -1,9 +1,9 @@
 unsigned long long cgc_calloc(unsigned long long n)
 {
-    unsigned long long ptr;  // [bp-0x20]
+    unsigned long long ptr[2];  // [bp-0x20]
     unsigned long long v1;  // [bp-0x10]
 
-    ptr = cgc_malloc(n);
+    *(ptr) = *(cgc_malloc(n));
     if (ptr)
     {
         cgc_memset(ptr, 0, n);

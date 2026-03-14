@@ -5,10 +5,10 @@ typedef struct struct_0 {
 
 unsigned int cgc_getValue(struct_0 *a0, char *a1)
 {
-    struct_0 *ptr;  // [bp-0x28]
+    char ptr[28];  // [bp-0x28]
     unsigned int v1;  // [bp-0xc]
 
-    ptr = a0;
+    *(ptr) = *(a0);
     while (true)
     {
         if (!ptr)
@@ -16,11 +16,11 @@ unsigned int cgc_getValue(struct_0 *a0, char *a1)
             v1 = 0;
             return v1;
         }
-        if (ptr + 1 && !cgc_strcmp(a1, ptr + 1))
+        if (ptr + 12 && !cgc_strcmp(a1, ptr + 12))
         {
-            v1 = ptr->field_8;
+            v1 = *(&ptr[8]);
             return v1;
         }
-        ptr = ptr->field_0;
+        *(ptr) = *(*(ptr));
     }
 }

@@ -1,8 +1,8 @@
 char * cgc_strcat(char *a0, char *a1)
 {
-    char *i;  // [bp-0x20]
+    char *i[3];  // [bp-0x20]
 
-    for (i = a0; *(i); i += 1);
+    for (*(i) = *(a0); *(i); *(i) += 1);
     cgc_strcpy(i, a1);
     return a0;
 }

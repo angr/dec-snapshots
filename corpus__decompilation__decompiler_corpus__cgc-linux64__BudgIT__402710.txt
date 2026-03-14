@@ -3,24 +3,24 @@ unsigned int cgc_streq(char *a0, char *a1)
     char v0;  // [bp-0x22]
     char v1;  // [bp-0x21]
     char *cur;  // [bp-0x20]
-    char *v3;  // [bp-0x18]
+    char v3[12];  // [bp-0x18]
     unsigned int v4;  // [bp-0xc]
 
-    v3 = a0;
+    *(v3) = *(a0);
     cur = a1;
     while (true)
     {
         v1 = 0;
         if (*(v3))
             v1 = *(cur);
-        if (!(v1 & 1))
+        if (!(char)(v1 & 1))
             break;
         if (*(v3) != *(cur))
         {
             v4 = 0;
             return v4;
         }
-        v3 += 1;
+        *(v3) += 1;
         cur += 1;
     }
     v0 = 0;

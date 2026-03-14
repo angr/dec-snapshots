@@ -4,25 +4,25 @@ extern char g_402008;
 unsigned int cgc_request_document(char *a0, unsigned long long a1)
 {
     unsigned long long v16;  // rax
-    char v0;  // [bp-0x190]
-    char *v1;  // [bp-0x180]
+    char v0[16];  // [bp-0x190]
+    char v1[20];  // [bp-0x180]
     unsigned int v2;  // [bp-0x16c]
-    char v3;  // [bp-0x168]
+    char v3[256];  // [bp-0x168]
     unsigned long long v4;  // [bp-0x68]
     unsigned long v5;  // [bp-0x60]
     unsigned long long v6;  // [bp-0x58]
     unsigned long long v7;  // [bp-0x50]
     unsigned long v8;  // [bp-0x48], Other Possible Types: unsigned long long
-    unsigned long choice;  // [bp-0x40]
+    char choice[14];  // [bp-0x40]
     unsigned short flag;  // [bp-0x32]
-    unsigned long long flag2;  // [bp-0x30]
+    char flag2[12];  // [bp-0x30]
     unsigned int v12;  // [bp-0x24]
-    unsigned long long v13;  // [bp-0x20]
+    char v13[20];  // [bp-0x20]
     unsigned int v14;  // [bp-0xc]
 
-    v13 = a1;
+    *(v13) = *(a1);
     v12 = 0;
-    flag2 = 0;
+    *(flag2) = *(0);
     if (v13 > 1000)
     {
         v14 = 16;
@@ -41,12 +41,12 @@ unsigned int cgc_request_document(char *a0, unsigned long long a1)
         v14 = v12;
         return v14;
     }
-    else if (flag + 1 < flag)
+    else if ((short)(flag + 1) < (short)flag)
     {
         v14 = v12;
         return v14;
     }
-    else if (0 > cgc_recv_until_delim(0, &buf_recv_tmp, 65535))
+    else if (0 > (int)cgc_recv_until_delim(0, &buf_recv_tmp, 65535))
     {
         v14 = v12;
         return v14;
@@ -58,7 +58,7 @@ unsigned int cgc_request_document(char *a0, unsigned long long a1)
     }
     else
     {
-        choice = 0;
+        *(choice) = *(0);
         v12 = cgc_allocate(flag + 1, 0, &choice);
         if (v12)
         {
@@ -66,7 +66,7 @@ unsigned int cgc_request_document(char *a0, unsigned long long a1)
             return v14;
         }
         vvar_170{r48|8b} = &v0;
-        v12 = cgc_receive_with_term(0, choice, flag);
+        v12 = cgc_receive_with_term(0, *((&choice + 0)), flag);
         if (!v12)
         {
             if (flag2 != flag)
@@ -87,12 +87,12 @@ unsigned int cgc_request_document(char *a0, unsigned long long a1)
                     v6 = v7 - v8 + 1;
                     v16 = v6;
                     v5 = vvar_222{r48|8b};
-                    v1 = vvar_222{r48|8b} - (v16 + 15 & 0xfffffffffffffff0);
+                    *(v1) = *((vvar_222{r48|8b} - (v16 + 15 & 0xfffffffffffffff0)));
                     v4 = v16;
                     cgc_strncpy(v1, v8, v6 - 1);
                     v1[1 + v6] = 6;
                     memset(&v3, 0, 0x100);
-                    v3 = 6;
+                    *(v3) = *(6);
                     v12 = cgc_canonicalize_path(&v3, v1, v6);
                     if (v12)
                     {
@@ -100,7 +100,7 @@ unsigned int cgc_request_document(char *a0, unsigned long long a1)
                     }
                     else
                     {
-                        v13 += 1;
+                        *(v13) += 1;
                         v12 = cgc_request_document(&v3, v13);
                         v2 = (0 == v12 ? 0 : 2);
                     }
