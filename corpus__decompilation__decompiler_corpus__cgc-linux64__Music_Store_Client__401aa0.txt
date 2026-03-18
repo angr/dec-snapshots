@@ -6,8 +6,8 @@ unsigned int cgc_parseBalanceResult(char *a0)
     char *v3;  // [bp-0x98]
     unsigned int flag;  // [bp-0x90]
     unsigned int v5;  // [bp-0x8c]
-    char v6;  // [bp-0x88]
-    char v7;  // [bp-0x48]
+    int v6;  // [bp-0x88]
+    int v7;  // [bp-0x48]
     char *cur;  // [bp-0x28], Other Possible Types: unsigned long long
     char *v9;  // [bp-0x20], Other Possible Types: unsigned long long
     unsigned int v10;  // [bp-0xc]

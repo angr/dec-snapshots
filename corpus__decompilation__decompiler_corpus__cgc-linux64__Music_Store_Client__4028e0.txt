@@ -1,89 +1,79 @@
 int main(unsigned int a0, unsigned long long a1)
 {
-    unsigned long long v36;  // rdi
-    unsigned long long v37;  // rsi
-    unsigned long long v38;  // rdx
-    unsigned long long v39;  // r8
-    unsigned long long v40;  // r9
+    unsigned long long v26;  // rdi
+    unsigned long long v27;  // rsi
+    unsigned long long v28;  // rdx
+    unsigned long long v29;  // r8
+    unsigned long long v30;  // r9
     int v0;  // [bp-0xb18]
-    uint128_t v1;  // [bp-0xb08], Other Possible Types: unsigned long long
+    int v1;  // [bp-0xb08], Other Possible Types: unsigned long
     int v2;  // [bp-0xb00]
-    uint128_t v3;  // [bp-0xaf8]
-    uint128_t v4;  // [bp-0xaf0]
-    char v5;  // [bp-0xae8]
-    uint128_t v6;  // [bp-0xae0]
-    char v7;  // [bp-0xad8]
-    char v8;  // [bp-0xad0]
-    char v9;  // [bp-0xac8]
-    char v10;  // [bp-0xac0]
-    unsigned long long v11;  // [bp-0xab8]
-    char v12;  // [bp-0xab0]
-    unsigned long long v13;  // [bp-0xaa0]
-    char *v14;  // [bp-0xa98]
+    int v3;  // [bp-0xaf8]
+    int v4;  // [bp-0xaf0]
+    int v5;  // [bp-0xae8]
+    int v6;  // [bp-0xae0]
+    int v7;  // [bp-0xad8]
+    int v8;  // [bp-0xad0]
+    int v9;  // [bp-0xac8]
+    int v10;  // [bp-0xac0]
+    unsigned long v11;  // [bp-0xab8]
+    int v12;  // [bp-0xab0]
+    unsigned long v13;  // [bp-0xaa0]
+    unsigned long long v14;  // [bp-0xa98]
     char *v15;  // [bp-0xa90], Other Possible Types: unsigned long long
-    char v16[2512];  // [bp-0xa88]
-    char v17[16];  // [bp-0xb8]
-    uint128_t v18;  // [bp-0xa8]
-    uint128_t v19;  // [bp-0x98]
-    char v20;  // [bp-0x88]
-    char v21;  // [bp-0x78]
-    char v22;  // [bp-0x68]
-    unsigned long long v23;  // [bp-0x58]
-    char choice[8];  // [bp-0x50]
-    char *v25;  // [bp-0x48]
-    unsigned long long v26;  // [bp-0x40]
-    char v27;  // [bp-0x38]
-    unsigned long long v28;  // [bp-0x30]
-    char i;  // [bp-0x28]
-    unsigned int v30;  // [bp-0x20]
+    int v16;  // [bp-0xa88]
+    int v17;  // [bp-0xb8]
+    int v18;  // [bp-0x50]
+    int v19;  // [bp-0x38]
+    unsigned int v20;  // [bp-0x20]
     unsigned int flag;  // [bp-0x1c]
-    unsigned long long v32;  // [bp-0x18]
-    unsigned int v33;  // [bp-0x10]
-    unsigned int flag2;  // [bp-0xc]
+    unsigned long long v22;  // [bp-0x18]
+    unsigned int v23;  // [bp-0x10]
+    unsigned int choice;  // [bp-0xc]
 
-    flag2 = 0;
-    v33 = a0;
-    v32 = a1;
+    choice = 0;
+    v23 = a0;
+    v22 = a1;
     flag = 0;
-    v30 = 0;
-    memset(&v27, 0, 24);
-    memset(&choice, 0, 24);
+    v20 = 0;
+    memset(&v19, 0, 24);
+    memset(&v18, 0, 24);
     memset(&v17, 0, 104);
     memset(&v16, 0, 2500);
     v15 = 0;
-    v25 = &v16[0];
-    cgc_getBalance(&v27);
-    v30 = i;
-    while (i > 0)
+    *(&(&v18)[8]) = &v16;
+    cgc_getBalance(&v19);
+    v20 = *((&v19 + 16));
+    while (*((&v19 + 16)) > 0)
     {
-        choice = 0;
+        *(&v18) = 0;
         cgc_createRandomRequest(&v17);
-        v11 = v23;
-        memcpy(&v9, &v22, 16);
-        memcpy(&v7, &v21, 16);
-        memcpy(&v5, &v20, 16);
-        v3 = v19;
-        v1 = v18;
-        v0 = v17;
+        v11 = *((&v17 + 96));
+        memcpy(&v9, &v17 - 80, 16);
+        memcpy(&v7, &v17 - 64, 16);
+        memcpy(&v5, &v17 - 48, 16);
+        v3 = *((&v17 + 32));
+        v1 = *((&v17 + 16));
+        v0 = *((&v17 + 0));
         cgc_sendSearchString(1);
-        cgc_receiveSearchResults(0, &choice, 10);
+        cgc_receiveSearchResults(0, &v18, 10);
         v14 = &v0;
-        v13 = v23;
-        memcpy(&v12, &v22, 16);
-        memcpy(&v10, &v21, 16);
-        memcpy(&v8, &v20, 16);
-        v6 = v19;
-        v4 = v18;
-        v2 = v17;
-        v1 = v26;
-        memcpy(&v0, &choice, 16);
-        v15 = cgc_selectSong(v36, v37, v38, v1, v39, v40, *((&v17 + 0)));
-        flag = cgc_purchaseSong(1, v15, &v27);
+        v13 = *((&v17 + 96));
+        memcpy(&v12, &v17 - 80, 16);
+        memcpy(&v10, &v17 - 64, 16);
+        memcpy(&v8, &v17 - 48, 16);
+        v6 = *((&v17 + 32));
+        v4 = *((&v17 + 16));
+        v2 = *((&v17 + 0));
+        v1 = *((&v18 + 16));
+        memcpy(&v0, &v18, 16);
+        v15 = cgc_selectSong(v26, v27, v28, v1, v29, v30, *((&v0 + 0)));
+        flag = cgc_purchaseSong(1, v15, &v19);
         if (flag == 1)
             break;
         cgc_receiveBalance(0);
     }
-    flag = cgc_deallocate(v28, v30 * 250);
+    flag = cgc_deallocate(*((&v19 + 8)), v20 * 250);
     if (!flag)
         return flag;
     cgc__terminate(3);

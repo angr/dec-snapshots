@@ -7,7 +7,7 @@ unsigned int cgc_request_document(char *a0, unsigned long long a1)
     char v0;  // [bp-0x190]
     char *v1;  // [bp-0x180]
     unsigned int v2;  // [bp-0x16c]
-    char v3;  // [bp-0x168]
+    int v3;  // [bp-0x168], Other Possible Types: char[256]
     unsigned long long v4;  // [bp-0x68]
     unsigned long v5;  // [bp-0x60]
     unsigned long long v6;  // [bp-0x58]
