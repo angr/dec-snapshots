@@ -1,6 +1,6 @@
-long long cgc_memset(unsigned long a0, char a1, unsigned long long a2)
+long long cgc_memset(unsigned long a0, char a1, long long a2)
 {
-    unsigned long long i;  // [bp-0x20]
+    long long i;  // [bp-0x20]
 
     for (i = a2; i; i -= 1)
     {

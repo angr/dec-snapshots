@@ -1,6 +1,6 @@
-unsigned long long cgc_strlen(unsigned long a0)
+long long cgc_strlen(unsigned long a0)
 {
-    unsigned long long i;  // [bp-0x18]
+    long long i;  // [bp-0x18]
 
     for (i = 0; *((a0 + i)); i += 1);
     return i;

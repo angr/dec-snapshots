@@ -1,7 +1,7 @@
-unsigned long long cgc_transmit_all(unsigned long long a0, unsigned long i)
+long long cgc_transmit_all(long long a0, unsigned long i)
 {
     int v0;  // [bp-0x34]
-    unsigned long long v1;  // [bp-0x10]
+    long long v1;  // [bp-0x10]
 
     memset(&v0, 0, 20);
     if (!a0)

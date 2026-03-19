@@ -1,9 +1,9 @@
-long long cgc_strncpy(unsigned long a0, unsigned long a1, unsigned long long a2)
+long long cgc_strncpy(unsigned long a0, unsigned long a1, long long a2)
 {
-    unsigned long long v4;  // rcx
+    long long v4;  // rcx
     char v0;  // [bp-0x29]
-    unsigned long long v1;  // [bp-0x28]
-    unsigned long long v2;  // [bp-0x20]
+    long long v1;  // [bp-0x28]
+    long long v2;  // [bp-0x20]
 
     v2 = a2;
     v1 = 0;

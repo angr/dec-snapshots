@@ -3,10 +3,10 @@ typedef struct struct_0 {
     unsigned int field_8;
 } struct_0;
 
-unsigned int cgc_getValue(struct_0 *a0, char *a1)
+int cgc_getValue(struct_0 *a0, char *a1)
 {
     struct_0 *ptr;  // [bp-0x28]
-    unsigned int v1;  // [bp-0xc]
+    int v1;  // [bp-0xc], Other Possible Types: unsigned int
 
     ptr = a0;
     while (true)

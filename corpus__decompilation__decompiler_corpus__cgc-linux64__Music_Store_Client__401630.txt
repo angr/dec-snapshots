@@ -1,8 +1,8 @@
 char * cgc_strcat(char *a0, char *a1)
 {
     char v3;  // 4116
-    unsigned int v0;  // [bp-0x28]
-    unsigned int cur;  // [bp-0x24]
+    int v0;  // [bp-0x28]
+    int cur;  // [bp-0x24]
 
     for (cur = 0; a0[cur]; cur += 1);
     v0 = 0;

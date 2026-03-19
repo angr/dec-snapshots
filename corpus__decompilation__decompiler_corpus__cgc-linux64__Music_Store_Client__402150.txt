@@ -1,7 +1,7 @@
 long long cgc_createSearchString(void)
 {
     char *v0;  // [bp-0x20]
-    unsigned int v1;  // [bp-0x14]
+    int v1;  // [bp-0x14], Other Possible Types: unsigned int
     unsigned long flag;  // [bp-0x10]
     unsigned long v3;  // [bp+0x8]
 

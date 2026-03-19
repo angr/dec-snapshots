@@ -1,7 +1,7 @@
 int cgc_strcmp(char *a0, char *a1)
 {
     char v0;  // [bp-0x1d]
-    unsigned int v1;  // [bp-0x1c]
+    int v1;  // [bp-0x1c]
 
     v1 = 0;
     while (true)

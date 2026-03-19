@@ -6,7 +6,7 @@ typedef struct struct_0 {
 
 typedef struct struct_1 {
     struct struct_1 *field_0;
-    unsigned int field_8;
+    int field_8;
     char field_c;
 } struct_1;
 
@@ -16,7 +16,7 @@ struct_0 * cgc_removeMap(struct_1 **p, char *a1)
     struct_0 *v5;  // rax
     char v0;  // [bp-0x31]
     struct_0 *addr;  // [bp-0x30]
-    struct_1 *ptr;  // [bp-0x28], Other Possible Types: unsigned long long
+    struct_1 *ptr;  // [bp-0x28], Other Possible Types: long long
 
     ptr = 0;
     addr = NULL;

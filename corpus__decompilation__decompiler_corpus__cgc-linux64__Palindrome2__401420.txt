@@ -1,13 +1,13 @@
-unsigned int cgc_check(void)
+int cgc_check(void)
 {
-    unsigned int v0;  // [bp-0x60]
+    int v0;  // [bp-0x60]
     int v1;  // [bp-0x5c], Other Possible Types: char
-    unsigned int v2;  // [bp-0x18]
-    unsigned int cur;  // [bp-0x14]
-    unsigned int v4;  // [bp-0x10]
-    unsigned int v5;  // [bp-0xc]
+    int v2;  // [bp-0x18]
+    int cur;  // [bp-0x14]
+    int v4;  // [bp-0x10]
+    int v5;  // [bp-0xc]
 
-    v4 = 4294967295;
+    v4 = -1;
     v2 = 1;
     for (cur = 0; cur < 64; cur += 1)
     {
@@ -15,7 +15,7 @@ unsigned int cgc_check(void)
     }
     if (cgc_receive_delim(0, &v1 + 4, 128, 10))
     {
-        v5 = 4294967295;
+        v5 = -1;
         return v5;
     }
     for (cur = 0; (&v1)[4 + cur]; cur += 1)
