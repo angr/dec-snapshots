@@ -28,14 +28,14 @@ unsigned int cgc_request_document(char *a0, unsigned long long a1)
         v14 = 16;
         return v14;
     }
-    v12 = cgc_transmit_with_term(1, a0, cgc_strlen(a0), 0);
+    v12 = cgc_transmit_with_term(1, a0, cgc_strlen(a0), NULL);
     if (v12)
     {
         v14 = v12;
         return v14;
     }
     flag = 0;
-    v12 = cgc_receive_all(0, &flag, 2);
+    v12 = cgc_receive_all(0, &flag, 2, NULL);
     if (v12)
     {
         v14 = v12;
@@ -66,7 +66,7 @@ unsigned int cgc_request_document(char *a0, unsigned long long a1)
             return v14;
         }
         vvar_170{r48|8b} = &v0;
-        v12 = cgc_receive_with_term(0, choice, flag);
+        v12 = cgc_receive_with_term(0, choice, flag, &flag2);
         if (!v12)
         {
             if (flag2 != flag)
