@@ -7,7 +7,7 @@ int cgc___stack_cookie_fail(void)
     unsigned long long v5;  // r8
     unsigned long long v6;  // r9
 
-    if (cgc_sendline(1, "Friend is someone to share the last cookie with.", 48) < 0)
+    if ((int)cgc_sendline(1, "Friend is someone to share the last cookie with.", 48) < 0)
         cgc__terminate(6);
     cgc__terminate(66);
     return cgc_transmit_all(v1, v2, v3, v4, v5, v6);

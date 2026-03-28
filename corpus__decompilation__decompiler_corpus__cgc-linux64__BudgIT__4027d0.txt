@@ -12,7 +12,7 @@ unsigned int cgc_startswith(char *a0, char *a1)
         v0 = 0;
         if (*(v2))
             v0 = *(cur);
-        if (!(v0 & 1))
+        if (!(char)(v0 & 1))
         {
             v3 = !*(cur);
             return v3;

@@ -6,12 +6,12 @@ int main(unsigned int a0, unsigned long long a1)
     unsigned long long v39;  // r8
     unsigned long long v40;  // r9
     int v0;  // [bp-0xb18]
-    uint128_t v1;  // [bp-0xb08], Other Possible Types: unsigned long long
+    unsigned __int128 v1;  // [bp-0xb08], Other Possible Types: unsigned long long
     int v2;  // [bp-0xb00]
-    uint128_t v3;  // [bp-0xaf8]
-    uint128_t v4;  // [bp-0xaf0]
+    unsigned __int128 v3;  // [bp-0xaf8]
+    unsigned __int128 v4;  // [bp-0xaf0]
     char v5;  // [bp-0xae8]
-    uint128_t v6;  // [bp-0xae0]
+    unsigned __int128 v6;  // [bp-0xae0]
     char v7;  // [bp-0xad8]
     char v8;  // [bp-0xad0]
     char v9;  // [bp-0xac8]
@@ -23,8 +23,8 @@ int main(unsigned int a0, unsigned long long a1)
     char *v15;  // [bp-0xa90], Other Possible Types: unsigned long long
     char v16[2512];  // [bp-0xa88]
     char v17[16];  // [bp-0xb8]
-    uint128_t v18;  // [bp-0xa8]
-    uint128_t v19;  // [bp-0x98]
+    unsigned __int128 v18;  // [bp-0xa8]
+    unsigned __int128 v19;  // [bp-0x98]
     char v20;  // [bp-0x88]
     char v21;  // [bp-0x78]
     char v22;  // [bp-0x68]
