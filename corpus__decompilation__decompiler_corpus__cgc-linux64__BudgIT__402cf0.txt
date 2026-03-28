@@ -1,4 +1,4 @@
-int cgc___umoddi3(unsigned int a0, unsigned int a1)
+long long cgc___umoddi3(unsigned int a0, unsigned int a1)
 {
     return a0 - a1 * a0 / a1;
 }

@@ -5,10 +5,9 @@ extern unsigned long long g_404800;
 unsigned long long __do_global_dtors_aux(void)
 {
     unsigned long long v1;  // rax
-    unsigned long long v2;  // rax
 
     if (__bss_start)
-        return v2;
+        return sub_401198();
     if (g_404800)
         __cxa_finalize(__dso_handle);
     v1 = deregister_tm_clones();

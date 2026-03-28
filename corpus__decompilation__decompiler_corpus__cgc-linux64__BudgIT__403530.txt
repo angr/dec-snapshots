@@ -3,11 +3,11 @@ typedef struct struct_0 {
     char field_c;
 } struct_0;
 
-struct_0 * cgc_initMap(struct_0 *a0)
+void cgc_initMap(struct_0 *a0)
 {
-    struct_0 *cur;  // [bp-0x28], Other Possible Types: char
+    struct_0 *cur;  // [bp-0x28], Other Possible Types: char, unsigned long
     unsigned int v1;  // [bp-0x1c]
-    struct_0 *v2;  // [bp-0x10]
+    struct_0 *v2;  // [bp-0x10], Other Possible Types: unsigned long
 
     if (!a0)
     {
@@ -16,12 +16,12 @@ struct_0 * cgc_initMap(struct_0 *a0)
             cgc__terminate(3);
         cur += 5080;
         v2 = cur;
-        return v2;
+        return;
     }
     else
     {
         for (cur = a0; cur->field_c; cur = &cur[3].padding_0[1]);
         v2 = cur;
-        return v2;
+        return;
     }
 }

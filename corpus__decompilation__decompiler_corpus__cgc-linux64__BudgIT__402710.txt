@@ -1,4 +1,4 @@
-unsigned int cgc_streq(char *a0, char *a1)
+long long cgc_streq(char *a0, char *a1)
 {
     char v0;  // [bp-0x22]
     char v1;  // [bp-0x21]

@@ -1,4 +1,4 @@
-unsigned int cgc_ready(unsigned int a0)
+void cgc_ready(unsigned int a0)
 {
     unsigned int v0;  // [bp-0xa0]
     unsigned int flag;  // [bp-0x9c]
@@ -15,10 +15,10 @@ unsigned int cgc_ready(unsigned int a0)
     if (v3)
     {
         v5 = v3;
-        return v5;
+        return;
     }
     if (!(*(&(&v4)[8 * (v2 >> 6)]) & 1 << (v2 & 63 & 31)))
         cgc__terminate(11);
     v5 = 0;
-    return v5;
+    return;
 }

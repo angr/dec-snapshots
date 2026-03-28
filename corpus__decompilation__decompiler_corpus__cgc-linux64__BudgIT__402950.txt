@@ -1,4 +1,4 @@
-unsigned int cgc_int2str(char *a0, unsigned int a1, unsigned int a2)
+void cgc_int2str(char *a0, unsigned int a1, unsigned int a2)
 {
     unsigned int v0;  // [bp-0x2c]
     unsigned int i;  // [bp-0x28]
@@ -11,14 +11,14 @@ unsigned int cgc_int2str(char *a0, unsigned int a1, unsigned int a2)
     if (a1 < 2)
     {
         v4 = 4294967295;
-        return v4;
+        return;
     }
     if (j < 0)
     {
         if (a1 < 3)
         {
             v4 = 4294967295;
-            return v4;
+            return;
         }
         cur += 1;
         a0[cur] = 45;
@@ -36,7 +36,7 @@ unsigned int cgc_int2str(char *a0, unsigned int a1, unsigned int a2)
     if (cur >= a1)
     {
         v4 = 4294967295;
-        return v4;
+        return;
     }
     cur -= 1;
     a0[cur] = 0;
@@ -48,5 +48,5 @@ unsigned int cgc_int2str(char *a0, unsigned int a1, unsigned int a2)
         j /= 10;
     } while (j < 0);
     v4 = 0;
-    return v4;
+    return;
 }

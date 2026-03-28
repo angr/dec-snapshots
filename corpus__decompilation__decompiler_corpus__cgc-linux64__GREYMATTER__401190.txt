@@ -1,4 +1,4 @@
-unsigned int cgc_receive_all(unsigned int a0, unsigned long a1, unsigned long long a2, unsigned long long *ptr)
+void cgc_receive_all(unsigned int a0, unsigned long a1, unsigned long long a2, unsigned long long *ptr)
 {
     unsigned long flag;  // [bp-0x40], Other Possible Types: unsigned long long
     unsigned long long v1;  // [bp-0x38]
@@ -19,14 +19,14 @@ unsigned int cgc_receive_all(unsigned int a0, unsigned long a1, unsigned long lo
             if (v2)
             {
                 v4 = v2;
-                return v4;
+                return;
             }
             if (!flag)
             {
                 if (ptr)
                     *(ptr) = a2 - v1;
                 v4 = v2;
-                return v4;
+                return;
             }
             v1 -= flag;
         }
@@ -35,7 +35,7 @@ unsigned int cgc_receive_all(unsigned int a0, unsigned long a1, unsigned long lo
             if (ptr)
                 *(ptr) = a2;
             v4 = v2;
-            return v4;
+            return;
         }
     }
 }

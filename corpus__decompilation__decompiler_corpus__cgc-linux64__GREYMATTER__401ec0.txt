@@ -1,4 +1,4 @@
-unsigned int main(unsigned int a0, unsigned long long a1)
+void main(unsigned int a0, unsigned long long a1)
 {
     char v0[15];  // [bp-0x38]
     char v1;  // [bp-0x29]
@@ -13,5 +13,6 @@ unsigned int main(unsigned int a0, unsigned long long a1)
     choice = 0;
     cgc_random_alpha_lower(&v0, 16);
     v1 = 6;
-    return cgc_request_document(&v0, 0);
+    cgc_request_document(&v0, 0);
+    return;
 }

@@ -1,3 +1,5 @@
 void sub_401165(void)
 {
+    sub_401168();
+    return;
 }

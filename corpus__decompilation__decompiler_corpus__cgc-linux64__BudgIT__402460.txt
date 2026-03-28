@@ -1,4 +1,4 @@
-unsigned int cgc_sendline(unsigned int a0, unsigned long long a1, unsigned long a2)
+void cgc_sendline(unsigned int a0, unsigned long long a1, unsigned long a2)
 {
     unsigned int v0;  // [bp-0x24]
     unsigned long v1;  // [bp-0x20]
@@ -9,17 +9,17 @@ unsigned int cgc_sendline(unsigned int a0, unsigned long long a1, unsigned long 
     if (v0 < 0)
     {
         v2 = v0;
-        return v2;
+        return;
     }
     else if (cgc_transmit(a0, "\n", 1, &v1))
     {
         v2 = 4294967295;
-        return v2;
+        return;
     }
     else
     {
         v0 += 1;
         v2 = v0;
-        return v2;
+        return;
     }
 }

@@ -1,4 +1,4 @@
-unsigned int cgc_check(void)
+void cgc_check(void)
 {
     unsigned int v0;  // [bp-0x60]
     int v1;  // [bp-0x5c], Other Possible Types: char
@@ -16,7 +16,7 @@ unsigned int cgc_check(void)
     if (cgc_receive_delim(0, &v1 + 4, 128, 10))
     {
         v5 = 4294967295;
-        return v5;
+        return;
     }
     for (cur = 0; (&v1)[4 + cur]; cur += 1)
     {
@@ -38,5 +38,5 @@ unsigned int cgc_check(void)
     if (*((&v1 + 4)) == 94 && cgc_transmit_all(1, "\n\nEASTER EGG!\n\n", 15))
         cgc__terminate(0);
     v5 = v2;
-    return v5;
+    return;
 }
