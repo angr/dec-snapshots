@@ -20,7 +20,7 @@ unsigned int cgc_canonicalize_path(unsigned long long a0, char *a1, unsigned lon
         v4 = 15;
         return v4;
     }
-    cgc_strncat(a0, *((&ptr + 0)), n);
+    cgc_strncat(a0, *(&ptr), n);
     if (!cur)
         return v4;
     cur += 2;

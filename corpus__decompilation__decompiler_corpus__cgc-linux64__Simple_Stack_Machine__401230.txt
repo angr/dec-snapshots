@@ -28,7 +28,7 @@ unsigned int main(unsigned int a0, unsigned long long a1)
     cgc_allocate(0x1000, 0, &v4);
     cgc_allocate(0x2000, 0, &v4 - 24);
     cgc_deallocate(*((&v4 + 8)), 0x1000);
-    cgc_deallocate(*((&v4 + 0)), 0x1000);
+    cgc_deallocate(*(&v4), 0x1000);
     do
     {
         j = 0;
