@@ -24,12 +24,12 @@ unsigned int cgc_check(void)
     }
     *(&v1) = v4;
     if ((v4 % 2) == 1)
-        *(&v1) = *((&v1 + 0)) - 1;
+        *(&v1) = *(&v1) - 1;
     cur = 0;
     while (true)
     {
         v0 = cur;
-        if (v0 > (*((&v1 + 0)) / 2))
+        if (v0 > (*(&v1) / 2))
             break;
         if (*(-4 + &v1 + cur) != *(-5 + &v1 + v4 - cur))
             v2 = 0;

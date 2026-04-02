@@ -13,18 +13,18 @@ unsigned long long cgc_getBalance(struct_0 *ptr)
     memset(&v1, 0, 28);
     *(&(&v1)[20]) = cgc_getRandomGiftCard(&v1 - 12);
     *(&v1) = cgc_allocate(*((&v1 + 20)) + 7, 0, &v1 - 4);
-    if (*((&v1 + 0)))
+    if (*(&v1))
         cgc__terminate(3);
     cgc_memset(*((&v1 + 4)), 0, *((&v1 + 20)) + 7);
     cgc_strcat(*((&v1 + 4)), "ID=");
     cgc_strcat(*((&v1 + 4)), *((&v1 + 12)));
     cgc_strcat(*((&v1 + 4)), "\n");
     *(&v1) = cgc_deallocate(*((&v1 + 12)), *((&v1 + 20)));
-    if (*((&v1 + 0)))
+    if (*(&v1))
         cgc__terminate(3);
     v0 = *((&v1 + 4));
     *(&v1) = cgc_transmit_all(1, v0, cgc_strlen(*((&v1 + 4))));
-    if (*((&v1 + 0)))
+    if (*(&v1))
         cgc__terminate(10);
     v1 = cgc_deallocate(*((&v1 + 4)), *((&v1 + 20)) + 7);
     if (v1)

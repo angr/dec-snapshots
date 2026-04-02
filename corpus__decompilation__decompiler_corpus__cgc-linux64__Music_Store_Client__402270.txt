@@ -5,7 +5,7 @@ int cgc_getRandomNumber(unsigned int a0)
 
     memset(&v0, 0, 16);
     *(&v0) = cgc_random(&v0 - 4, 4, &v0 - 8);
-    if (*((&v0 + 0)))
+    if (*(&v0))
         cgc__terminate(1);
     if (*((&v0 + 8)) != 4)
         cgc__terminate(2);
