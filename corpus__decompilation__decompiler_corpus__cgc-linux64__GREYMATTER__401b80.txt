@@ -1,121 +1,58 @@
-extern void buf_recv_tmp;
-extern char g_402008;
-
-unsigned int cgc_request_document(char *a0, unsigned long long a1)
-{
-    unsigned long long v16;  // rax
-    char v0;  // [bp-0x190]
-    char *v1;  // [bp-0x180]
-    unsigned int v2;  // [bp-0x16c]
-    char v3[256];  // [bp-0x168]
-    unsigned long long v4;  // [bp-0x68]
-    unsigned long v5;  // [bp-0x60]
-    unsigned long long v6;  // [bp-0x58]
-    unsigned long long v7;  // [bp-0x50]
-    unsigned long v8;  // [bp-0x48], Other Possible Types: unsigned long long
-    unsigned long choice;  // [bp-0x40]
-    unsigned short flag;  // [bp-0x32]
-    unsigned long long flag2;  // [bp-0x30]
-    unsigned int v12;  // [bp-0x24]
-    unsigned long long v13;  // [bp-0x20]
-    unsigned int v14;  // [bp-0xc]
-
-    v13 = a1;
-    v12 = 0;
-    flag2 = 0;
-    if (v13 > 1000)
-    {
-        v14 = 16;
-        return v14;
-    }
-    v12 = cgc_transmit_with_term(1, a0, cgc_strlen(a0), NULL);
-    if (v12)
-    {
-        v14 = v12;
-        return v14;
-    }
-    flag = 0;
-    v12 = cgc_receive_all(0, &flag, 2, NULL);
-    if (v12)
-    {
-        v14 = v12;
-        return v14;
-    }
-    else if (flag + 1 < flag)
-    {
-        v14 = v12;
-        return v14;
-    }
-    else if (0 > cgc_recv_until_delim(0, &buf_recv_tmp, 65535))
-    {
-        v14 = v12;
-        return v14;
-    }
-    else if (cgc_strcmp(a0, &buf_recv_tmp))
-    {
-        v14 = v12;
-        return v14;
-    }
-    else
-    {
-        choice = 0;
-        v12 = cgc_allocate(flag + 1, 0, &choice);
-        if (v12)
-        {
-            v14 = v12;
-            return v14;
-        }
-        vvar_170{r48|8b} = &v0;
-        v12 = cgc_receive_with_term(0, choice, flag, &flag2);
-        if (!v12)
-        {
-            if (flag2 != flag)
-                goto LABEL_401d11;
-            v8 = choice;
-            v7 = 0;
-            while (true)
-            {
-                v8 = cgc_strpos(v8, &g_402008);
-                if (!v8)
-                    break;
-                v8 += cgc_strlen(&g_402008);
-                vvar_222{r48|8b} = vvar_70{r48|8b} - 24;
-                v7 = cgc_strpos(v8, "$!SRC$");
-                vvar_44{r48|8b} = vvar_222{r48|8b};
-                if (v7)
-                {
-                    v6 = v7 - v8 + 1;
-                    v16 = v6;
-                    v5 = vvar_222{r48|8b};
-                    v1 = vvar_222{r48|8b} - (v16 + 15 & 0xfffffffffffffff0);
-                    v4 = v16;
-                    cgc_strncpy(v1, v8, v6 - 1);
-                    v1[1 + v6] = 6;
-                    memset(&v3, 0, 0x100);
-                    v3 = 6;
-                    v12 = cgc_canonicalize_path(&v3, v1, v6);
-                    if (v12)
-                    {
-                        v2 = 2;
-                    }
-                    else
-                    {
-                        v13 += 1;
-                        v12 = cgc_request_document(&v3, v13);
-                        v2 = (0 == v12 ? 0 : 2);
-                    }
-                    vvar_44{r48|8b} = v5;
-                    if (v2)
-                        break;
-                }
-            }
-        }
-        else
-        {
-LABEL_401d11:
-        }
-        cgc_deallocate(choice, flag + 1);
-        v14 = v12;
-        return v14;
-    }
-}
+Traceback (most recent call last):
+  File "/__w/angr/angr/build/src/angr/corpus_tests/test_corpus.py", line 40, in analyze_binary
+    decomp = project.analyses.Decompiler(
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/analysis.py", line 266, in __call__
+    r = w(*args, **kwargs)
+  File "/usr/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/analysis.py", line 251, in wrapper
+    oself.__init__(*args, **kwargs)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/decompiler.py", line 201, in __init__
+    self._decompile()
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/utils/timing.py", line 72, in timed_func
+    return func(*args, **kwargs)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/decompiler.py", line 314, in _decompile
+    clinic = self.project.analyses.Clinic(
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/analysis.py", line 266, in __call__
+    r = w(*args, **kwargs)
+  File "/usr/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/analysis.py", line 251, in wrapper
+    oself.__init__(*args, **kwargs)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/clinic.py", line 304, in __init__
+    self._analyze_for_decompiling()
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/clinic.py", line 362, in _analyze_for_decompiling
+    ail_graph = self._decompilation_simplifications(ail_graph)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/clinic.py", line 682, in _decompilation_simplifications
+    stages[stage]()
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/clinic.py", line 943, in _stage_recover_variables
+    variable_kb = self._recover_and_link_variables(
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/utils/timing.py", line 72, in timed_func
+    return func(*args, **kwargs)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/clinic.py", line 2285, in _recover_and_link_variables
+    tp = self.project.analyses[self._typehoon_cls].prep(kb=tmp_kb, fail_fast=self._fail_fast)(
+  File "/usr/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/analysis.py", line 251, in wrapper
+    oself.__init__(*args, **kwargs)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/typehoon.py", line 77, in __init__
+    self._analyze()
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/typehoon.py", line 192, in _analyze
+    self._solve()
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/typehoon.py", line 221, in _solve
+    solver = SimpleSolver(
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/simple_solver.py", line 536, in __init__
+    self.solve()
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/simple_solver.py", line 680, in solve
+    primitive_constraints = self._generate_primitive_constraints(tvs, base_constraint_graph)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/simple_solver.py", line 829, in _generate_primitive_constraints
+    constraints_0 = self._solve_constraints_between(constraint_graph, endpoints, PRIMITIVE_TYPES)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/simple_solver.py", line 1730, in _solve_constraints_between
+    return dfa_solver.generate_constraints_between(graph, start_nodes, end_nodes)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/dfa.py", line 83, in generate_constraints_between
+    constraint = self._check_constraint(start_node, end_node, path_labels[1:-1])
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/dfa.py", line 104, in _check_constraint
+    rhs = rhs.recall(forget)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/simple_solver.py", line 451, in recall
+    assert isinstance(typevar, (TypeVariable, DerivedTypeVariable))
+AssertionError

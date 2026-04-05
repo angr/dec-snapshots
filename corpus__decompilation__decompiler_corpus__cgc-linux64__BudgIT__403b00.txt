@@ -1,92 +1,58 @@
-unsigned int main(unsigned int a0, unsigned long long a1)
-{
-    char *v0;  // [bp-0x90]
-    char v1;  // [bp-0x88]
-    unsigned int v2;  // [bp-0x58]
-    unsigned int v3;  // [bp-0x54]
-    unsigned int flag3;  // [bp-0x50]
-    unsigned int v5;  // [bp-0x4c]
-    char v6[32];  // [bp-0x48]
-    char flag2;  // [bp-0x28]
-    void* choice;  // [bp-0x20]
-    unsigned long long v9;  // [bp-0x18]
-    unsigned int v10;  // [bp-0x10]
-    unsigned int flag;  // [bp-0xc]
-
-    flag = 0;
-    v10 = a0;
-    v9 = a1;
-    choice = NULL;
-    while (true)
-    {
-        while (true)
-        {
-            cgc_receiveInstruction(&flag2);
-            if (flag2 == 1)
-            {
-                cgc_receiveKey(&v6);
-                cgc_receiveValue(&v5);
-                if (v5 >= 0)
-                    break;
-            }
-            else
-            {
-LABEL_403bdc:
-                if (flag2 == 2)
-                {
-                    cgc_receiveKey(&v6);
-                    cgc_receiveValue(&v5);
-                    v3 = cgc_getValue(choice, &v6);
-                    v3 -= v5;
-                    cgc_setMap(&choice, &v6, v3);
-                    if (v3 < 0)
-                    {
-                        v0 = &v6[0];
-                        flag3 = cgc_transmit_all(1, v0, cgc_strlen(&v6));
-                        if (flag3)
-                            cgc__terminate(1);
-                        flag3 = cgc_transmit_all(1, " is over budget!\n", 17);
-                        if (flag3)
-                            cgc__terminate(1);
-                    }
-                }
-                if (flag2 == 3)
-                {
-                    memset(&v1, 0, 40);
-                    cgc_receiveKey(&v6);
-                    v2 = cgc_getValue(choice, &v6);
-                    flag3 = cgc_int2str(&v1, 40, v2);
-                    if (flag3)
-                        cgc__terminate(6);
-                    flag3 = cgc_transmit_all(1, &v1, 40);
-                    if (flag3)
-                        cgc__terminate(1);
-                }
-                if (flag2 == 6)
-                {
-                    cgc_receiveKey(&v6);
-                    if (!cgc_strcmp(&v6, "BACON"))
-                        cgc_removeMap(&choice, &v6);
-                }
-                if (flag2 == 7)
-                    cgc_sendReport(choice);
-                if (flag2 >= 8)
-                    return 0;
-            }
-        }
-        flag3 = cgc_setMap(&choice, &v6, v5);
-        if (flag3 == 1)
-        {
-            flag3 = cgc_transmit_all(1, "New budget created!\n", 20);
-            if (flag3)
-                cgc__terminate(1);
-        }
-        else
-        {
-            flag3 = cgc_transmit_all(1, "No more entries\n", 16);
-            if (flag3)
-                cgc__terminate(1);
-        }
-        goto LABEL_403bdc;
-    }
-}
+Traceback (most recent call last):
+  File "/__w/angr/angr/build/src/angr/corpus_tests/test_corpus.py", line 40, in analyze_binary
+    decomp = project.analyses.Decompiler(
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/analysis.py", line 266, in __call__
+    r = w(*args, **kwargs)
+  File "/usr/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/analysis.py", line 251, in wrapper
+    oself.__init__(*args, **kwargs)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/decompiler.py", line 201, in __init__
+    self._decompile()
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/utils/timing.py", line 72, in timed_func
+    return func(*args, **kwargs)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/decompiler.py", line 314, in _decompile
+    clinic = self.project.analyses.Clinic(
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/analysis.py", line 266, in __call__
+    r = w(*args, **kwargs)
+  File "/usr/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/analysis.py", line 251, in wrapper
+    oself.__init__(*args, **kwargs)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/clinic.py", line 304, in __init__
+    self._analyze_for_decompiling()
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/clinic.py", line 362, in _analyze_for_decompiling
+    ail_graph = self._decompilation_simplifications(ail_graph)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/clinic.py", line 682, in _decompilation_simplifications
+    stages[stage]()
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/clinic.py", line 943, in _stage_recover_variables
+    variable_kb = self._recover_and_link_variables(
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/utils/timing.py", line 72, in timed_func
+    return func(*args, **kwargs)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/clinic.py", line 2285, in _recover_and_link_variables
+    tp = self.project.analyses[self._typehoon_cls].prep(kb=tmp_kb, fail_fast=self._fail_fast)(
+  File "/usr/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/analysis.py", line 251, in wrapper
+    oself.__init__(*args, **kwargs)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/typehoon.py", line 77, in __init__
+    self._analyze()
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/typehoon.py", line 192, in _analyze
+    self._solve()
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/typehoon.py", line 221, in _solve
+    solver = SimpleSolver(
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/simple_solver.py", line 536, in __init__
+    self.solve()
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/simple_solver.py", line 680, in solve
+    primitive_constraints = self._generate_primitive_constraints(tvs, base_constraint_graph)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/simple_solver.py", line 829, in _generate_primitive_constraints
+    constraints_0 = self._solve_constraints_between(constraint_graph, endpoints, PRIMITIVE_TYPES)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/simple_solver.py", line 1730, in _solve_constraints_between
+    return dfa_solver.generate_constraints_between(graph, start_nodes, end_nodes)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/dfa.py", line 83, in generate_constraints_between
+    constraint = self._check_constraint(start_node, end_node, path_labels[1:-1])
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/dfa.py", line 104, in _check_constraint
+    rhs = rhs.recall(forget)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/simple_solver.py", line 451, in recall
+    assert isinstance(typevar, (TypeVariable, DerivedTypeVariable))
+AssertionError

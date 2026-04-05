@@ -1,4 +1,4 @@
-unsigned int cgc_startswith(char *a0, char *a1)
+long long cgc_startswith(char *a0, char *a1)
 {
     char v0;  // [bp-0x21]
     char *cur;  // [bp-0x20]

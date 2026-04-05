@@ -1,57 +1,58 @@
-unsigned int cgc_parseBalanceResult(char *a0)
-{
-    char v0;  // [bp-0xa1]
-    unsigned int v1;  // [bp-0xa0]
-    unsigned int choice;  // [bp-0x9c]
-    char *v3;  // [bp-0x98]
-    unsigned int flag;  // [bp-0x90]
-    unsigned int v5;  // [bp-0x8c]
-    char v6[64];  // [bp-0x88]
-    char v7[32];  // [bp-0x48]
-    char *cur;  // [bp-0x28], Other Possible Types: unsigned long long
-    char *v9;  // [bp-0x20], Other Possible Types: unsigned long long
-    unsigned int v10;  // [bp-0xc]
-
-    v9 = 0;
-    cur = 0;
-    memset(&v7, 0, 20);
-    memset(&v6, 0, 50);
-    v5 = 0;
-    flag = 0;
-    v3 = "=";
-    choice = 0;
-    v1 = 0;
-    v9 = a0;
-    cur = v9;
-    v5 = 0;
-    while (true)
-    {
-        v0 = 0;
-        if (*(cur))
-        {
-            v0 = 0;
-            if (*(cur) != *(v3))
-                v0 = v5 < 20;
-        }
-        if (!(v0 & 1))
-            break;
-        cur += 1;
-        v5 += 1;
-    }
-    cgc_memcpy(&v7, v9, v5);
-    if (cgc_strcmp(&v7, "BALANCE"))
-    {
-        v10 = 0;
-        return v10;
-    }
-    cur += 1;
-    cgc_setValue(cur, &v6);
-    v1 = cgc_str2int(&v6);
-    if (v1 >= 0 && v1 <= 255)
-    {
-        v10 = v1;
-        return v10;
-    }
-    v10 = 0;
-    return v10;
-}
+Traceback (most recent call last):
+  File "/__w/angr/angr/build/src/angr/corpus_tests/test_corpus.py", line 40, in analyze_binary
+    decomp = project.analyses.Decompiler(
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/analysis.py", line 266, in __call__
+    r = w(*args, **kwargs)
+  File "/usr/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/analysis.py", line 251, in wrapper
+    oself.__init__(*args, **kwargs)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/decompiler.py", line 201, in __init__
+    self._decompile()
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/utils/timing.py", line 72, in timed_func
+    return func(*args, **kwargs)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/decompiler.py", line 314, in _decompile
+    clinic = self.project.analyses.Clinic(
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/analysis.py", line 266, in __call__
+    r = w(*args, **kwargs)
+  File "/usr/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/analysis.py", line 251, in wrapper
+    oself.__init__(*args, **kwargs)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/clinic.py", line 304, in __init__
+    self._analyze_for_decompiling()
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/clinic.py", line 362, in _analyze_for_decompiling
+    ail_graph = self._decompilation_simplifications(ail_graph)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/clinic.py", line 682, in _decompilation_simplifications
+    stages[stage]()
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/clinic.py", line 943, in _stage_recover_variables
+    variable_kb = self._recover_and_link_variables(
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/utils/timing.py", line 72, in timed_func
+    return func(*args, **kwargs)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/decompiler/clinic.py", line 2285, in _recover_and_link_variables
+    tp = self.project.analyses[self._typehoon_cls].prep(kb=tmp_kb, fail_fast=self._fail_fast)(
+  File "/usr/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/analysis.py", line 251, in wrapper
+    oself.__init__(*args, **kwargs)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/typehoon.py", line 77, in __init__
+    self._analyze()
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/typehoon.py", line 192, in _analyze
+    self._solve()
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/typehoon.py", line 221, in _solve
+    solver = SimpleSolver(
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/simple_solver.py", line 536, in __init__
+    self.solve()
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/simple_solver.py", line 680, in solve
+    primitive_constraints = self._generate_primitive_constraints(tvs, base_constraint_graph)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/simple_solver.py", line 829, in _generate_primitive_constraints
+    constraints_0 = self._solve_constraints_between(constraint_graph, endpoints, PRIMITIVE_TYPES)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/simple_solver.py", line 1730, in _solve_constraints_between
+    return dfa_solver.generate_constraints_between(graph, start_nodes, end_nodes)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/dfa.py", line 83, in generate_constraints_between
+    constraint = self._check_constraint(start_node, end_node, path_labels[1:-1])
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/dfa.py", line 104, in _check_constraint
+    rhs = rhs.recall(forget)
+  File "/__w/angr/angr/build/virtualenv/lib/python3.10/site-packages/angr/analyses/typehoon/simple_solver.py", line 451, in recall
+    assert isinstance(typevar, (TypeVariable, DerivedTypeVariable))
+AssertionError

@@ -1,17 +1,24 @@
 typedef struct struct_0 {
-    char padding_0[12];
+    struct struct_0 *field_0;
+    unsigned int field_8;
     char field_c;
 } struct_0;
 
-unsigned int cgc_setMap(struct_0 **p, char *a1, unsigned int a2)
+typedef struct struct_1 {
+    struct struct_1 *field_0;
+    unsigned int field_8;
+    char field_c;
+} struct_1;
+
+long long cgc_setMap(struct_1 **p, char *a1, unsigned int a2)
 {
     struct_0 *v0;  // [bp-0x38]
-    struct_0 *ptr;  // [bp-0x30], Other Possible Types: unsigned long long
+    struct_1 *ptr;  // [bp-0x30], Other Possible Types: unsigned long long
     unsigned int flag;  // [bp-0xc]
 
     ptr = 0;
     v0 = NULL;
-    for (ptr = *(p); ptr; ptr = *(&ptr->padding_0[0]))
+    for (ptr = *(p); ptr; ptr = ptr->field_0)
     {
         if (!cgc_strcmp(a1, &ptr->field_c))
             break;
@@ -25,12 +32,12 @@ unsigned int cgc_setMap(struct_0 **p, char *a1, unsigned int a2)
             return flag;
         }
         ptr = cgc_initMap(v0);
-        *(&ptr->padding_0[0]) = *(p);
+        ptr->field_0 = *(p);
         *(p) = ptr;
     }
     if (!ptr->field_c)
         cgc_strcpy(&ptr->field_c, a1);
-    *(&ptr->padding_0[8]) = a2;
+    ptr->field_8 = a2;
     flag = 1;
     return flag;
 }
