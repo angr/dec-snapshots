@@ -5,34 +5,35 @@ typedef struct struct_0 {
 
 unsigned long long cgc_getBalance(struct_0 *ptr)
 {
-    char v3;  // al
-    unsigned long long v4;  // rcx
+    char v4;  // al
+    unsigned long long v5;  // rcx
     unsigned long v0;  // [bp-0x38]
-    struct struct_0 *v1[4];  // [bp-0x2c]
+    struct struct_0 *v1[2];  // [bp-0x2c]
+    unsigned long long v2;  // [bp-0x18]
 
     memset(&v1, 0, 28);
-    *((&v1[2] + 4)) = cgc_getRandomGiftCard(&v1[1] + 4);
-    *(v1) = cgc_allocate(*((&v1 + 20)) + 7, 0, (&v1[0] + 4));
-    if (*(&v1))
+    v2 = cgc_getRandomGiftCard(&v1[1] + 4);
+    v1 = cgc_allocate(v2 + 7, 0, (&v1[0] + 4));
+    if (v1)
         cgc__terminate(3);
-    cgc_memset(*((&v1 + 4)), 0, *((&v1 + 20)) + 7);
+    cgc_memset(*((&v1 + 4)), 0, v2 + 7);
     cgc_strcat(*((&v1 + 4)), "ID=");
     cgc_strcat(*((&v1 + 4)), *((&v1 + 12)));
     cgc_strcat(*((&v1 + 4)), "\n");
-    *(v1) = cgc_deallocate(*((&v1 + 12)), *((&v1 + 20)));
-    if (*(&v1))
-        cgc__terminate(3);
-    v0 = *((&v1 + 4));
-    *(v1) = cgc_transmit_all(1, v0, cgc_strlen(*((&v1 + 4))));
-    if (*(&v1))
-        cgc__terminate(10);
-    v1 = cgc_deallocate(*((&v1 + 4)), *((&v1 + 20)) + 7);
+    v1 = cgc_deallocate(*((&v1 + 12)), v2);
     if (v1)
         cgc__terminate(3);
-    v3 = cgc_receiveBalance(0);
-    v4 = _INSERT(0, 0, v3);
-    ptr->field_10 = v3;
-    v1 = cgc_allocate(ptr->field_10 * 250, 0, &ptr->padding_0[8], v4);
+    v0 = *((&v1 + 4));
+    v1 = cgc_transmit_all(1, v0, cgc_strlen(*((&v1 + 4))));
+    if (v1)
+        cgc__terminate(10);
+    v1 = cgc_deallocate(*((&v1 + 4)), v2 + 7);
+    if (v1)
+        cgc__terminate(3);
+    v4 = cgc_receiveBalance(0);
+    v5 = _INSERT(0, 0, v4);
+    ptr->field_10 = v4;
+    v1 = cgc_allocate(ptr->field_10 * 250, 0, &ptr->padding_0[8], v5);
     if (!v1)
         return 0;
     cgc__terminate(3);
