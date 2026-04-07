@@ -1,15 +1,13 @@
-long long cgc_strncmp(long long a0)
+int cgc_strncmp(char *a0, char *a1, unsigned long long a2)
 {
-    char *v5;  // rsi
-    unsigned long long v6;  // rdx
     char v0;  // [bp-0x21]
     unsigned long long v1;  // [bp-0x20]
     char *iter;  // [bp-0x18]
     char *cur;  // [bp-0x10]
 
     cur = a0;
-    iter = v5;
-    v1 = v6;
+    iter = a1;
+    v1 = a2;
     while (true)
     {
         v0 = 0;
