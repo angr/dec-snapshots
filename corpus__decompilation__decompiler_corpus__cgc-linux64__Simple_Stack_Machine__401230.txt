@@ -130,7 +130,7 @@ LABEL_4015d3:
                 cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
                 cgc__terminate(4294967295);
 LABEL_401647:
-                *((*((&v4 + 16)) + cur * 4)) = *((*((&v4 + 16)) + (cur - (i >> 3) - 1) * 4));
+                *((*((&v4 + 16)) + cur * 4)) = *((*((&v4 + 16)) + ((cur - (i >> 3)) - 1) * 4));
                 break;
             case 6:
                 if (cur < 1)
