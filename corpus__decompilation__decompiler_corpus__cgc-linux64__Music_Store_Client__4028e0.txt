@@ -2,7 +2,6 @@ typedef struct struct_0 {
     unsigned int field_0;
     char padding_4[4];
     unsigned long long field_8;
-    char field_10;
 } struct_0;
 
 int main(unsigned int a0, unsigned long long a1)
@@ -39,7 +38,7 @@ int main(unsigned int a0, unsigned long long a1)
     struct_0 choice;  // [bp-0x50], Other Possible Types: char
     char *v25;  // [bp-0x48]
     unsigned long long v26;  // [bp-0x40]
-    struct_0 v27;  // [bp-0x38]
+    char v27;  // [bp-0x38]
     unsigned long long v28;  // [bp-0x30]
     char i;  // [bp-0x28]
     unsigned int v30;  // [bp-0x20]
