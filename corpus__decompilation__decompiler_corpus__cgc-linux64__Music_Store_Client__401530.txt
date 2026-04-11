@@ -22,7 +22,7 @@ unsigned int cgc_recvline(unsigned int a0, void* a1, unsigned long long a2)
     }
     else
     {
-        while (true)
+        do
         {
             if (!v2)
                 break;
@@ -34,9 +34,7 @@ unsigned int cgc_recvline(unsigned int a0, void* a1, unsigned long long a2)
             }
             v0 += 1;
             v2 -= 1;
-            if (cur[1] == 7)
-                break;
-        }
+        } while (cur[1] != 7);
         if (cur[1] == 7)
         {
             *(&cur[1]) = 0;
