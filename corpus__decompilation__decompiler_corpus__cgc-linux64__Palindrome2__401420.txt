@@ -1,4 +1,4 @@
-unsigned int cgc_check(void)
+long long cgc_check(void)
 {
     unsigned int v0;  // [bp-0x60]
     int v1;  // [bp-0x5c], Other Possible Types: char

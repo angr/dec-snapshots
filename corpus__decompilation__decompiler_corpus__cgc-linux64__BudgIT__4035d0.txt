@@ -3,7 +3,7 @@ typedef struct struct_0 {
     char field_c;
 } struct_0;
 
-unsigned int cgc_setMap(struct_0 **p, char *a1, unsigned int a2)
+long long cgc_setMap(struct_0 **p, char *a1, unsigned int a2)
 {
     struct_0 *v0;  // [bp-0x38]
     struct_0 *ptr;  // [bp-0x30], Other Possible Types: unsigned long long

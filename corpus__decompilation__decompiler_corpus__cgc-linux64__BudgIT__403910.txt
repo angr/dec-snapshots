@@ -1,4 +1,4 @@
-int cgc_receiveValue(unsigned long long a0)
+long long cgc_receiveValue(unsigned long long a0)
 {
     unsigned int v0;  // [bp-0x14]
 

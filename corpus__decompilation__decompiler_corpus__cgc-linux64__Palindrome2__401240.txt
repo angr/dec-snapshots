@@ -1,4 +1,4 @@
-unsigned int cgc_receive_delim(unsigned int a0, unsigned long long a1, unsigned long long a2, char a3)
+long long cgc_receive_delim(unsigned int a0, unsigned long long a1, unsigned long long a2, char a3)
 {
     unsigned int v0;  // [bp-0x3c]
     unsigned long flag;  // [bp-0x38]
