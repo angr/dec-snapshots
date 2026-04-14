@@ -1,5 +1,7 @@
 typedef struct struct_0 {
-    char padding_0[16];
+    unsigned int field_0;
+    char padding_4[4];
+    unsigned long long field_8;
     char field_10;
 } struct_0;
 
