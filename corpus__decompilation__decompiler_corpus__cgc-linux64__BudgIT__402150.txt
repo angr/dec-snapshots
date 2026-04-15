@@ -1,5 +1,5 @@
 extern char __bss_start;
-extern unsigned long long __dso_handle;
+extern long long __dso_handle;
 extern unsigned long long g_405a48;
 
 unsigned long long __do_global_dtors_aux(void)

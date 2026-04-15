@@ -1,9 +1,9 @@
 unsigned int cgc_check(void)
 {
-    unsigned int v0;  // [bp-0x60]
+    int v0;  // [bp-0x60]
     int v1;  // [bp-0x5c], Other Possible Types: char
     unsigned int v2;  // [bp-0x18]
-    unsigned int cur;  // [bp-0x14]
+    int cur;  // [bp-0x14], Other Possible Types: unsigned int
     unsigned int v4;  // [bp-0x10]
     unsigned int v5;  // [bp-0xc]
 
