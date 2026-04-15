@@ -1,8 +1,8 @@
-extern unsigned long long cgc___cookie;
+extern long long cgc___cookie;
 
-unsigned long long cgc___stack_cookie_init(void)
+int cgc___stack_cookie_init(void)
 {
-    unsigned long long v1;  // rax
+    unsigned int v1;  // eax
 
     v1 = cgc_random(&cgc___cookie, 4, 0);
     if (!v1)

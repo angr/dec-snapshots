@@ -1,4 +1,4 @@
-unsigned int cgc_strncat(unsigned long long a0, unsigned int a1, unsigned long long n)
+unsigned int cgc_strncat(long long a0, unsigned int a1, unsigned long long n)
 {
     unsigned long long v0;  // [bp-0x28]
 

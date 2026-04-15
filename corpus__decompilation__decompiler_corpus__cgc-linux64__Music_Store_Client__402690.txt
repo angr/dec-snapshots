@@ -8,8 +8,8 @@ int cgc_sendSearchString(void)
     char v4;  // [bp-0x58]
     char v5;  // [bp-0x48]
     unsigned long long v6;  // [bp-0x38]
-    unsigned long long v7;  // [bp-0x20]
-    unsigned long long v8;  // [bp-0x18]
+    long long v7;  // [bp-0x20]
+    long long v8;  // [bp-0x18], Other Possible Types: unsigned long long
     unsigned int v9;  // [bp-0x10]
     unsigned long v10;  // [bp+0x8]
     char v11;  // [bp+0x18]

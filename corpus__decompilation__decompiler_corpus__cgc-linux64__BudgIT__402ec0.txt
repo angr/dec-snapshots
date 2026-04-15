@@ -8,7 +8,7 @@ typedef struct struct_1 {
     unsigned int field_10;
 } struct_1;
 
-extern unsigned long long cgc_allocated;
+extern long long cgc_allocated;
 extern unsigned int cgc_curleft;
 extern struct_0 *cgc_freed;
 extern char cgc_heapinit_done;
