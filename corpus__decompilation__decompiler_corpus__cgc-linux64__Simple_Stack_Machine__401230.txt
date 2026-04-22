@@ -6,18 +6,17 @@ unsigned int main(unsigned int a0, unsigned long long a1)
     int v2;  // [bp-0x68]
     unsigned int v3;  // [bp-0x64]
     int v4;  // [bp-0x60]
-    unsigned int v5;  // [bp-0x3c]
     int cur;  // [bp-0x34]
     unsigned long long j;  // [bp-0x30]
     unsigned long choice;  // [bp-0x28]
     unsigned int i;  // [bp-0x1c]
-    unsigned long long v10;  // [bp-0x18]
-    unsigned int v11;  // [bp-0x10]
+    unsigned long long v9;  // [bp-0x18]
+    unsigned int v10;  // [bp-0x10]
     unsigned int flag;  // [bp-0xc]
 
     flag = 0;
-    v11 = a0;
-    v10 = a1;
+    v10 = a0;
+    v9 = a1;
     i = 0;
     choice = 0;
     j = 0;
@@ -104,7 +103,7 @@ LABEL_401553:
                 cgc_transmit_all("INVALID PROGRAM COUNTER EXCEPTION\n", 35);
                 cgc__terminate(4294967295);
 LABEL_40154a:
-                v5 = *((&v4 + 36)) - 1;
+                *(&(&v4)[36]) = *((&v4 + 36)) - 1;
                 goto LABEL_401553;
             case 4:
                 if (cur < 0)
