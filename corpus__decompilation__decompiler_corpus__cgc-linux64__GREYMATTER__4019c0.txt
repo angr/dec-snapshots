@@ -3,13 +3,15 @@ extern unsigned int g_402004;
 unsigned int cgc_canonicalize_path(long long a0, char *a1, unsigned long a2)
 {
     char *cur;  // [bp-0x48], Other Possible Types: unsigned long long
-    int n;  // [bp-0x40], Other Possible Types: unsigned long long
+    unsigned long long n;  // [bp-0x40]
     unsigned long long v2;  // [bp-0x38]
     char *ptr;  // [bp-0x30], Other Possible Types: unsigned long long
     unsigned int v4;  // [bp-0x24]
 
     v4 = 0;
-    memset(&n, 0, 24);
+    ptr = 0;
+    v2 = 0;
+    n = 0;
     cur = a1;
     ptr = a1;
     cur = cgc_strpos(a1, &g_402004);
