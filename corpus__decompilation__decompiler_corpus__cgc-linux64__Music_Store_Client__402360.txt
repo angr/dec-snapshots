@@ -1,16 +1,19 @@
 char * cgc_getRandomTerm(char *a0)
 {
     unsigned int v0;  // [bp-0x20]
-    int i;  // [bp-0x1c]
+    unsigned int j;  // [bp-0x1c]
+    unsigned int v2;  // [bp-0x18]
+    unsigned int i;  // [bp-0x14]
 
-    memset(&i, 0, 12);
-    for (; !*((&i + 8)); *(&(&i)[8]) = cgc_getRandomNumber(50));
-    *(&(&i)[4]) = cgc_strlen("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
-    for (*(&i) = 0; *(&i) < *((&i + 8)); *(&i) = *(&i) + 1)
+    i = 0;
+    v2 = 0;
+    for (j = 0; !i; i = cgc_getRandomNumber(50));
+    v2 = cgc_strlen("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
+    for (j = 0; j < i; j += 1)
     {
-        v0 = cgc_getRandomNumber(*((&i + 4)));
-        a0[*(&i)] = *((4206608 + v0));
+        v0 = cgc_getRandomNumber(v2);
+        a0[j] = *((4206608 + v0));
     }
-    a0[*((&i + 8))] = 0;
+    a0[i] = 0;
     return a0;
 }
