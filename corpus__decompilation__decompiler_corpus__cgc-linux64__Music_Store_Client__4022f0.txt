@@ -1,12 +1,4 @@
-typedef struct struct_0 {
-    unsigned int field_0;
-    char padding_4[4];
-    unsigned long long field_8;
-    unsigned long long field_10;
-    unsigned long long field_18;
-} struct_0;
-
-extern struct_0 attributes;
+extern char attributes;
 
 char * cgc_getRandomAttribute(unsigned long a0)
 {
@@ -17,6 +9,6 @@ char * cgc_getRandomAttribute(unsigned long a0)
     v2 = 0;
     v2 = cgc_getRandomNumber(3);
     v0 = a0 + 50;
-    v1 = *(&(&attributes.field_0)[2 * v2]);
-    return cgc_memcpy(v0, v1, cgc_strlen(*(&(&attributes.field_0)[2 * v2])));
+    v1 = *(&(&attributes)[8 * v2]);
+    return cgc_memcpy(v0, v1, cgc_strlen(*(&(&attributes)[8 * v2])));
 }

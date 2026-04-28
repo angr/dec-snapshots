@@ -1,5 +1,4 @@
 
 unsigned long long deregister_tm_clones(void)
 {
-    return 4273632;
 }

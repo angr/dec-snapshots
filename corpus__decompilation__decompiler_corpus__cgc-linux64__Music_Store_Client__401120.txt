@@ -1,5 +1,4 @@
 
 unsigned long long register_tm_clones(void)
 {
-    return 0;
 }
