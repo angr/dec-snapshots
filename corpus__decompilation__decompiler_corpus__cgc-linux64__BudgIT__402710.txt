@@ -1,9 +1,9 @@
-unsigned int cgc_streq(char *a0, char *a1)
+unsigned int cgc_streq(unsigned long long a0, unsigned long long a1)
 {
     char v0;  // [bp-0x22]
     char v1;  // [bp-0x21]
-    char *cur;  // [bp-0x20]
-    char *v3;  // [bp-0x18]
+    unsigned long long cur;  // [bp-0x20]
+    unsigned long long v3;  // [bp-0x18]
     unsigned int v4;  // [bp-0xc]
 
     v3 = a0;

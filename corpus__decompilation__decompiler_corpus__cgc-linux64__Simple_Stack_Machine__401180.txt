@@ -1,13 +1,11 @@
 unsigned long long cgc_transmit_all(long long a0, unsigned long long a1)
 {
-    unsigned int v0;  // [bp-0x34]
+    char v0;  // [bp-0x34], Other Possible Types: unsigned int
     unsigned long long i;  // [bp-0x30]
-    unsigned long flag;  // [bp-0x28]
+    char v2;  // [bp-0x28]
     unsigned long long v3;  // [bp-0x10]
 
-    flag = 0;
-    i = 0;
-    v0 = 0;
+    memcpy(&v0, "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00", 20);
     if (!a0)
     {
         v3 = 0;
@@ -15,11 +13,11 @@ unsigned long long cgc_transmit_all(long long a0, unsigned long long a1)
     }
     do
     {
-        v0 = cgc_transmit(1, a0, a1 - i, &flag);
-        if (!v0 && flag)
+        v0 = cgc_transmit(1, a0, a1 - i, &v2);
+        if (!v0 && v2)
             continue;
         cgc__terminate(1);
-        i += flag;
+        i += v2;
     } while (i < a1);
     v3 = a1;
     return v3;

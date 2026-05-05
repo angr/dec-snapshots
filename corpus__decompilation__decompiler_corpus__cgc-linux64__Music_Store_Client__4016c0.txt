@@ -1,17 +1,13 @@
 unsigned int cgc_str2int(char *a0)
 {
-    unsigned int v0;  // [bp-0x2c]
+    char v0;  // [bp-0x2c], Other Possible Types: unsigned int
     int cur;  // [bp-0x28]
     int v2;  // [bp-0x24]
     unsigned int v3;  // [bp-0x20]
     unsigned int v4;  // [bp-0x1c]
     unsigned int v5;  // [bp-0xc]
 
-    v4 = 0;
-    v3 = 0;
-    v2 = 10;
-    cur = 0;
-    v0 = 1;
+    memcpy(&v0, "\x01\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00", 20);
     if (!a0)
     {
         v5 = v4;

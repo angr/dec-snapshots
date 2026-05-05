@@ -10,30 +10,29 @@ unsigned int cgc_getBalance(struct_0 *ptr)
     long long v7;  // rcx
     unsigned long v0;  // [bp-0x38]
     unsigned int v1;  // [bp-0x2c]
-    unsigned long choice;  // [bp-0x28]
-    struct_0 *flag;  // [bp-0x20]
+    char v2;  // [bp-0x28], Other Possible Types: unsigned long
+    struct_0 *v3;  // [bp-0x20]
     unsigned long v4;  // [bp-0x18], Other Possible Types: unsigned long long
 
     v4 = 0;
-    flag = NULL;
-    choice = 0;
+    memcpy(&v2, "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00", 16);
     v1 = 0;
-    v4 = cgc_getRandomGiftCard(&flag);
-    v1 = cgc_allocate(v4 + 7, 0, &choice);
+    v4 = cgc_getRandomGiftCard(&v3);
+    v1 = cgc_allocate(v4 + 7, 0, &v2);
     if (v1)
         cgc__terminate(3);
-    cgc_memset(choice, 0, v4 + 7);
-    cgc_strcat(choice, "ID=");
-    cgc_strcat(choice, flag);
-    cgc_strcat(choice, "\n");
-    v1 = cgc_deallocate(flag, v4);
+    cgc_memset(v2, 0, v4 + 7);
+    cgc_strcat(v2, "ID=");
+    cgc_strcat(v2, v3);
+    cgc_strcat(v2, "\n");
+    v1 = cgc_deallocate(v3, v4);
     if (v1)
         cgc__terminate(3);
-    v0 = choice;
-    v1 = cgc_transmit_all(1, v0, cgc_strlen(choice));
+    v0 = v2;
+    v1 = cgc_transmit_all(1, v0, cgc_strlen(v2));
     if (v1)
         cgc__terminate(10);
-    v1 = cgc_deallocate(choice, v4 + 7);
+    v1 = cgc_deallocate(v2, v4 + 7);
     if (v1)
         cgc__terminate(3);
     v6 = cgc_receiveBalance(0);
