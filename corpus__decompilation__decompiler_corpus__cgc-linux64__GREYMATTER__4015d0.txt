@@ -1,22 +1,22 @@
 unsigned long long cgc_strpos(char *a0, unsigned long a1)
 {
     unsigned int i;  // [bp-0x3c]
-    unsigned long len;  // [bp-0x38]
+    unsigned long len1;  // [bp-0x38]
     unsigned long len;  // [bp-0x30]
     unsigned long long v3;  // [bp-0x28]
     unsigned long long v4;  // [bp-0x10]
 
     v3 = 0;
     len = cgc_strlen(a0);
-    len = cgc_strlen(a1);
-    if (len < len)
+    len1 = cgc_strlen(a1);
+    if (len < len1)
     {
         v4 = 0;
         return v4;
     }
-    for (i = 0; i <= len - len; i += 1)
+    for (i = 0; i <= len - len1; i += 1)
     {
-        if (!cgc_strncmp(&a0[i], a1, len))
+        if (!cgc_strncmp(&a0[i], a1, len1))
         {
             v3 = &a0[i];
             break;
