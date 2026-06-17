@@ -3,7 +3,7 @@ char * cgc_random_alpha_lower(char *a0, unsigned long a1)
     char v0;  // [bp-0x58]
     char v1;  // [bp-0x49]
     char *v2;  // [bp-0x48]
-    unsigned int i;  // [bp-0x3c]
+    unsigned int v3;  // [bp-0x3c]
     unsigned long v4;  // [bp-0x38]
     char *v5;  // [bp-0x30]
     unsigned long choice;  // [bp-0x28]
@@ -20,9 +20,9 @@ char * cgc_random_alpha_lower(char *a0, unsigned long a1)
         if (cgc_random(v2, a1, &choice))
             v1 = a1 != choice;
     } while ((v1 & 1));
-    for (i = 0; i < a1; i += 1)
+    for (v3 = 0; v3 < a1; v3 += 1)
     {
-        a0[i] = (v2[i] % 26) + 97;
+        a0[v3] = (v2[v3] % 26) + 97;
     }
     return v5;
 }

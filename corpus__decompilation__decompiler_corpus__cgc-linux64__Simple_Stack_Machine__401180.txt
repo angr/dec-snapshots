@@ -1,12 +1,12 @@
 unsigned long long cgc_transmit_all(long long a0, unsigned long long a1)
 {
     unsigned int v0;  // [bp-0x34]
-    unsigned long long i;  // [bp-0x30]
+    unsigned long long v1;  // [bp-0x30]
     unsigned long flag;  // [bp-0x28]
     unsigned long long v3;  // [bp-0x10]
 
     flag = 0;
-    i = 0;
+    v1 = 0;
     v0 = 0;
     if (!a0)
     {
@@ -15,12 +15,12 @@ unsigned long long cgc_transmit_all(long long a0, unsigned long long a1)
     }
     do
     {
-        v0 = cgc_transmit(1, a0, a1 - i, &flag);
+        v0 = cgc_transmit(1, a0, a1 - v1, &flag);
         if (!v0 && flag)
             continue;
         cgc__terminate(1);
-        i += flag;
-    } while (i < a1);
+        v1 += flag;
+    } while (v1 < a1);
     v3 = a1;
     return v3;
 }

@@ -1,18 +1,18 @@
 unsigned int cgc_transmit_all(unsigned int a0, long long a1, long long a2, long long *ptr)
 {
     unsigned long flag;  // [bp-0x40], Other Possible Types: unsigned long long
-    long long i;  // [bp-0x38]
+    long long v1;  // [bp-0x38]
     unsigned int v2;  // [bp-0x2c]
     unsigned int v3;  // [bp-0x10]
     unsigned int v4;  // [bp-0xc]
 
     v3 = a0;
     v2 = 0;
-    i = a2;
-    for (flag = 0; i; i -= flag)
+    v1 = a2;
+    for (flag = 0; v1; v1 -= flag)
     {
         flag = 0;
-        v2 = cgc_transmit(0, a1, i, &flag);
+        v2 = cgc_transmit(0, a1, v1, &flag);
         if (v2)
         {
             v4 = v2;
