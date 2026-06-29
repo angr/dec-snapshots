@@ -25,7 +25,7 @@ unsigned int cgc_str2int(char *a0)
     }
     for (; cur < v2; cur += 1)
     {
-        if (a0[cur] != 48 && a0[cur] != 49 && a0[cur] != 50 && a0[cur] != 51 && a0[cur] != 52 && a0[cur] != 53 && a0[cur] != 54 && a0[cur] != 55 && a0[cur] != 56 && a0[cur] != 57)
+        if (a0[cur] != 48 && a0[cur] != 49 && a0[cur] != 50 && a0[cur] != 0x33 && a0[cur] != 52 && a0[cur] != 53 && a0[cur] != 54 && a0[cur] != 55 && a0[cur] != 56 && a0[cur] != 57)
             break;
         v4 *= 10;
         v3 = a0[cur] - 48;

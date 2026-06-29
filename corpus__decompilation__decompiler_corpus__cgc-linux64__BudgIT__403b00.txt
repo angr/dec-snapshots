@@ -45,7 +45,7 @@ LABEL_403bdc:
                         flag3 = cgc_transmit_all(1, v0, cgc_strlen(&v6));
                         if (flag3)
                             cgc__terminate(1);
-                        flag3 = cgc_transmit_all(1, " is over budget!\n", 17);
+                        flag3 = cgc_transmit_all(1, " is over budget!\n", 0x11);
                         if (flag3)
                             cgc__terminate(1);
                     }

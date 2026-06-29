@@ -47,7 +47,7 @@ unsigned int cgc_parseBalanceResult(char *a0)
     cur += 1;
     cgc_setValue(cur, &v6);
     v1 = cgc_str2int(&v6);
-    if (v1 >= 0 && v1 <= 255)
+    if (v1 >= 0 && v1 <= 0xff)
     {
         v10 = v1;
         return v10;
