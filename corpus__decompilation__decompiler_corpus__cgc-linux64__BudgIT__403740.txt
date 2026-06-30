@@ -16,7 +16,7 @@ unsigned int cgc_getValue(struct_0 *a0, char *a1)
             v1 = 0;
             return v1;
         }
-        if (ptr + 1 && !cgc_strcmp(a1, ptr + 1))
+        if (ptr != 0xfffffffffffffff4 && !cgc_strcmp(a1, ptr + 1))
         {
             v1 = ptr->field_8;
             return v1;
