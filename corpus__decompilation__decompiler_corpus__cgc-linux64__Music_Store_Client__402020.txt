@@ -24,7 +24,7 @@ unsigned int cgc_receiveSearchResults(unsigned int a0, struct_0 *ptr, unsigned i
             flag = 0;
             return flag;
         }
-        v1 = cgc_recvline(a0, &v3, 1023);
+        v1 = cgc_recvline(a0, &v3, 0x3ff);
         if (v1 < 0)
             cgc__terminate(2);
         if (!v1)

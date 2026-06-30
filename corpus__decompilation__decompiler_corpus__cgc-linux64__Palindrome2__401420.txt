@@ -31,7 +31,7 @@ unsigned int cgc_check(void)
         v0 = cur;
         if (v0 > (*(&v1) / 2))
             break;
-        if (*(-4 + &v1 + cur) != *(-5 + &v1 + v4 - cur))
+        if (*(-0x4 + &v1 + cur) != *(-5 + &v1 + v4 - cur))
             v2 = 0;
         cur += 1;
     }
