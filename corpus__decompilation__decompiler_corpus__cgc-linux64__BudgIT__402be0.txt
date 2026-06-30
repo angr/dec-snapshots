@@ -1,13 +1,13 @@
-char [3] cgc_b2hex(char a0, char *ptr)
+char [3] cgc_b2hex(char a0, char *idx)
 {
     if (a0 >> 4 < 10)
-        *(ptr) = (a0 >> 4) + 48;
+        *(idx) = (a0 >> 4) + 48;
     else
-        *(ptr) = (a0 >> 4) - -55;
+        *(idx) = (a0 >> 4) - -55;
     if ((a0 & 15) < 10)
-        ptr[1] = (a0 & 15) + 48;
+        idx[1] = (a0 & 15) + 48;
     else
-        ptr[1] = (a0 & 15) - -55;
-    ptr[2] = 0;
-    return ptr;
+        idx[1] = (a0 & 15) - -55;
+    idx[2] = 0;
+    return idx;
 }

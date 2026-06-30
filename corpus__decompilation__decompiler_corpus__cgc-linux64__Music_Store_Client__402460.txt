@@ -8,13 +8,13 @@ unsigned int cgc_getRandomGiftCard(struct_0 **a0)
 {
     unsigned int v0;  // [bp-0x24]
     unsigned int v1;  // [bp-0x20]
-    unsigned int flag;  // [bp-0x1c]
+    unsigned int v2;  // [bp-0x1c]
     int i;  // [bp-0x18], Other Possible Types: unsigned int
     unsigned int v4;  // [bp-0x14]
 
     v4 = 0;
     i = 0;
-    flag = 0;
+    v2 = 0;
     v1 = 0;
     v1 = cgc_allocate(33, 0, a0);
     if (v1)

@@ -1,50 +1,50 @@
-typedef struct struct_1 {
-    struct struct_1 *field_0;
-    unsigned int field_8;
-    char field_c;
-} struct_1;
-
 typedef struct struct_0 {
     struct struct_0 *field_0;
     unsigned int field_8;
     char field_c;
 } struct_0;
 
-struct_1 * cgc_removeMap(struct_0 **p, char *a1)
+typedef struct struct_1 {
+    struct struct_1 *field_0;
+    unsigned int field_8;
+    char field_c;
+} struct_1;
+
+struct_0 * cgc_removeMap(struct_1 **a0, char *a1)
 {
     unsigned long v4;  // rax
-    struct_1 *v5;  // rax
+    struct_0 *v5;  // rax
     char v0;  // [bp-0x31]
-    struct_1 *addr;  // [bp-0x30]
-    struct_0 *ptr;  // [bp-0x28], Other Possible Types: unsigned long long
+    struct_0 *v1;  // [bp-0x30]
+    struct_1 *v2;  // [bp-0x28], Other Possible Types: unsigned long long
 
-    ptr = 0;
-    addr = NULL;
-    ptr = *(p);
+    v2 = 0;
+    v1 = NULL;
+    v2 = *(a0);
     while (true)
     {
         v0 = 0;
-        if (ptr)
+        if (v2)
         {
-            v4 = ptr->field_c;
+            v4 = v2->field_c;
             v0 = v4;
         }
         v5 = _INSERT(v4 CONCAT 0, 0, v0);
         if (!(v0 & 1))
             break;
-        if (!cgc_strcmp(a1, &ptr->field_c))
+        if (!cgc_strcmp(a1, &v2->field_c))
             break;
-        addr = ptr;
-        ptr = ptr->field_0;
+        v1 = v2;
+        v2 = v2->field_0;
     }
-    if (!ptr)
+    if (!v2)
         return v5;
-    if (!addr)
-        *(p) = ptr->field_0;
+    if (!v1)
+        *(a0) = v2->field_0;
     else
-        addr->field_0 = ptr->field_0;
-    cgc_memset(&ptr->field_c, 0, 24);
-    ptr->field_8 = 0;
-    ptr->field_0 = NULL;
-    return ptr;
+        v1->field_0 = v2->field_0;
+    cgc_memset(&v2->field_c, 0, 24);
+    v2->field_8 = 0;
+    v2->field_0 = NULL;
+    return v2;
 }
