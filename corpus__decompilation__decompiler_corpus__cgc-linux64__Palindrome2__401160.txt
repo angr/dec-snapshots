@@ -17,7 +17,7 @@ unsigned int cgc_transmit_all(unsigned int a0, unsigned long long a1, unsigned l
         v3 = 2;
         return v3;
     }
-    while (true)
+    while (1)
     {
         if (v2 >= a2)
         {

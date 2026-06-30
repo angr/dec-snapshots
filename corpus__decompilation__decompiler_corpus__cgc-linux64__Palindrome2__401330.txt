@@ -10,7 +10,7 @@ unsigned int main(unsigned int a0, unsigned long long a1)
     v1 = a1;
     if (cgc_transmit_all(1, "\nWelcome to Palindrome Finder\n\n", 31))
         cgc__terminate(0);
-    while (true)
+    while (1)
     {
         if (cgc_transmit_all(1, "\tPlease enter a possible palindrome: ", 37))
             cgc__terminate(0);

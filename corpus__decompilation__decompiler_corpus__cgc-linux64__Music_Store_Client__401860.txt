@@ -11,7 +11,7 @@ char * cgc_setValue(char *a0, char *a1)
     flag = 0;
     v1 = "&";
     v4 = a0;
-    while (true)
+    while (1)
     {
         v0 = 0;
         if (*(v4))

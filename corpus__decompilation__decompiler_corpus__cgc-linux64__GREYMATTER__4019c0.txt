@@ -27,7 +27,7 @@ unsigned int cgc_canonicalize_path(long long a0, char *a1, unsigned long a2)
         return v4;
     cur += 2;
     ptr = cur;
-    while (true)
+    while (1)
     {
         cur = cgc_strpos(cur, &g_402004);
         if (!cur)

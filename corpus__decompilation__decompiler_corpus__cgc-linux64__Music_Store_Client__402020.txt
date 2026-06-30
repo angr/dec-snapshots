@@ -17,7 +17,7 @@ unsigned int cgc_receiveSearchResults(unsigned int a0, struct_0 *ptr, unsigned i
     v1 = 0;
     v0 = 0;
     v0 = cgc_receiveNumResults(a0);
-    while (true)
+    while (1)
     {
         if (!v0)
         {

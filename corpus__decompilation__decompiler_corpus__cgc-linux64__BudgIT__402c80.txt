@@ -4,7 +4,7 @@ char * cgc_strchr(char *a0, char a1)
     char *v1;  // [bp-0x10]
 
     v0 = a0;
-    while (true)
+    while (1)
     {
         if (!*(v0))
         {

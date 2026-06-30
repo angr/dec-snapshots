@@ -31,7 +31,7 @@ unsigned long long cgc_malloc(unsigned long long a0)
     }
     cur = cgc_freed;
     v2 += 24;
-    while (true)
+    while (1)
     {
         v0 = 0;
         if (cur->field_10 < v2)

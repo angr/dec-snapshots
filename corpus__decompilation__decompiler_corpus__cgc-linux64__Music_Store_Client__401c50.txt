@@ -19,11 +19,11 @@ unsigned int cgc_parseSearchResult(char *a0, char *a1)
     flag2 = 0;
     cgc_memset(a1, 0, 250);
     v7 = a0;
-    while (true)
+    while (1)
     {
         cur = v7;
         v4 = 0;
-        while (true)
+        while (1)
         {
             v0 = 0;
             if (*(cur))

@@ -17,9 +17,9 @@ unsigned int main(unsigned int a0, unsigned long long a1)
     v10 = a0;
     v9 = a1;
     choice = NULL;
-    while (true)
+    while (1)
     {
-        while (true)
+        while (1)
         {
             cgc_receiveInstruction(&flag2);
             if (flag2 == 1)

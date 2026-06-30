@@ -20,7 +20,7 @@ unsigned int cgc_recv(unsigned int a0, long long a1, unsigned long long a2)
         v4 = 4294967295;
         return v4;
     }
-    while (true)
+    while (1)
     {
         if (!v2)
         {

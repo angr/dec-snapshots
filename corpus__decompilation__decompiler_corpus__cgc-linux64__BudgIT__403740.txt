@@ -9,7 +9,7 @@ unsigned int cgc_getValue(struct_0 *a0, char *a1)
     unsigned int v1;  // [bp-0xc]
 
     ptr = a0;
-    while (true)
+    while (1)
     {
         if (!ptr)
         {
