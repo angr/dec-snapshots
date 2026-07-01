@@ -5,35 +5,35 @@ typedef struct struct_0 {
     char field_10;
 } struct_0;
 
-unsigned int cgc_purchaseSong(unsigned int a0, char *a1, struct_0 *ptr)
+unsigned int cgc_purchaseSong(unsigned int a0, char *a1, struct_0 *idx)
 {
     unsigned int v0;  // [bp-0x38]
     unsigned int v1;  // [bp-0x34]
     unsigned long long v2;  // [bp-0x30]
     char v3;  // [bp-0x25]
     unsigned int v4;  // [bp-0x24]
-    unsigned int flag;  // [bp-0xc]
+    unsigned int v5;  // [bp-0xc]
 
     v4 = 0;
     v3 = 0;
     v3 = cgc_str2int(a1 + 200);
-    if (ptr->field_10 < v3)
+    if (idx->field_10 < v3)
     {
-        flag = 1;
-        return flag;
+        v5 = 1;
+        return v5;
     }
-    ptr->field_10 = ptr->field_10 - v3;
-    ptr->field_0 = ptr->field_0 + 1;
-    cgc_memcpy(ptr->field_8 + (ptr->field_0 - 1) * 250, a1, 150);
+    idx->field_10 = idx->field_10 - v3;
+    idx->field_0 = idx->field_0 + 1;
+    cgc_memcpy(idx->field_8 + (idx->field_0 - 1) * 250, a1, 150);
     v1 = a0;
-    v2 = ptr->field_8 + (ptr->field_0 - 1) * 250;
-    v4 = cgc_transmit_all(v1, v2, cgc_strlen(ptr->field_8 + (ptr->field_0 - 1) * 250));
+    v2 = idx->field_8 + (idx->field_0 - 1) * 250;
+    v4 = cgc_transmit_all(v1, v2, cgc_strlen(idx->field_8 + (idx->field_0 - 1) * 250));
     if (v4)
         cgc__terminate(10);
     v0 = a0;
     v4 = cgc_transmit_all(v0, "\n", cgc_strlen("\n"));
     if (v4)
         cgc__terminate(10);
-    flag = 0;
-    return flag;
+    v5 = 0;
+    return v5;
 }

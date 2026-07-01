@@ -1,28 +1,28 @@
 unsigned int cgc_startswith(char *a0, char *a1)
 {
     char v0;  // [bp-0x21]
-    char *cur;  // [bp-0x20]
+    char *iter;  // [bp-0x20]
     char *v2;  // [bp-0x18]
     unsigned int v3;  // [bp-0xc]
 
     v2 = a0;
-    cur = a1;
+    iter = a1;
     while (true)
     {
         v0 = 0;
         if (*(v2))
-            v0 = *(cur);
+            v0 = *(iter);
         if (!(v0 & 1))
         {
-            v3 = !*(cur);
+            v3 = !*(iter);
             return v3;
         }
-        if (*(v2) != *(cur))
+        if (*(v2) != *(iter))
         {
             v3 = 0;
             return v3;
         }
         v2 += 1;
-        cur += 1;
+        iter += 1;
     }
 }

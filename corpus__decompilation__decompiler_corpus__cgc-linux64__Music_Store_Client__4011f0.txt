@@ -1,7 +1,7 @@
 unsigned int cgc_ready(unsigned int a0)
 {
     unsigned int v0;  // [bp-0xa0]
-    unsigned int flag;  // [bp-0x9c]
+    unsigned int v1;  // [bp-0x9c]
     char v2;  // [bp-0x98]
     unsigned int v3;  // [bp-0x94]
     char v4;  // [bp-0x90]
@@ -10,7 +10,7 @@ unsigned int cgc_ready(unsigned int a0)
     cgc_bzero(&v4, 128);
     *(&(&v4)[8 * (a0 >> 6)]) = (1 << (a0 & 63 & 31)) | *(&(&v4)[8 * (a0 >> 6)]);
     v0 = 10;
-    flag = 0;
+    v1 = 0;
     v3 = cgc_fdwait(a0 + 1, 0, &v4, &v0, &v2);
     if (v3)
     {
