@@ -1,12 +1,12 @@
-typedef struct struct_1 {
-    char padding_0[16];
-    unsigned int field_10;
-} struct_1;
-
 typedef struct struct_0 {
     char padding_0[16];
     unsigned int field_10;
 } struct_0;
+
+typedef struct struct_1 {
+    char padding_0[16];
+    unsigned int field_10;
+} struct_1;
 
 typedef struct struct_2 {
     char padding_0[16];
@@ -14,18 +14,18 @@ typedef struct struct_2 {
 } struct_2;
 
 extern struct_2 *cgc_allocated;
-extern struct_0 *cgc_freed;
+extern struct_1 *cgc_freed;
 
-struct_1 * cgc_checkheap(void)
+struct_0 * cgc_checkheap(void)
 {
-    struct_2 *node;  // [bp-0x18]
-    struct_0 *iter;  // [bp-0x10]
+    struct_2 *iter;  // [bp-0x18]
+    struct_1 *cur;  // [bp-0x10]
 
-    for (iter = cgc_freed; *(&iter->padding_0[8]) != cgc_freed; iter = *(&iter->padding_0[8]))
+    for (cur = cgc_freed; *(&cur->padding_0[8]) != cgc_freed; cur = *(&cur->padding_0[8]))
     {
-        for (node = cgc_allocated; *(&node->padding_0[8]) != cgc_allocated; node = *(&node->padding_0[8]))
+        for (iter = cgc_allocated; *(&iter->padding_0[8]) != cgc_allocated; iter = *(&iter->padding_0[8]))
         {
-            if (iter < node + node->field_10 && node < iter + iter->field_10)
+            if (cur < iter + iter->field_10 && iter < cur + cur->field_10)
             {
                 if (cgc_sendline(1, "corrupt", 7) < 0)
                     cgc__terminate(6);
@@ -33,5 +33,5 @@ struct_1 * cgc_checkheap(void)
             }
         }
     }
-    return *(&iter->padding_0[8]);
+    return *(&cur->padding_0[8]);
 }

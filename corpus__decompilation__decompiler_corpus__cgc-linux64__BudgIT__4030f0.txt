@@ -21,11 +21,11 @@ typedef struct struct_4 {
     struct struct_3 *field_0;
 } struct_4;
 
-struct_2 * cgc_remove(struct_2 *idx)
+struct_2 * cgc_remove(struct_2 *ptr)
 {
-    idx->field_0->field_8 = idx->field_8;
-    idx->field_8->field_0 = idx->field_0;
-    idx->field_8 = NULL;
-    idx->field_0 = NULL;
-    return idx;
+    ptr->field_0->field_8 = ptr->field_8;
+    ptr->field_8->field_0 = ptr->field_0;
+    ptr->field_8 = NULL;
+    ptr->field_0 = NULL;
+    return ptr;
 }
