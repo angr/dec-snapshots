@@ -1,21 +1,15 @@
-typedef struct struct_1 {
-    struct struct_1 *field_0;
-    unsigned int field_8;
-    char field_c;
-} struct_1;
-
 typedef struct struct_0 {
     struct struct_0 *field_0;
     unsigned int field_8;
     char field_c;
 } struct_0;
 
-struct_1 * cgc_removeMap(struct_0 **a0, char *a1)
+struct_0 * cgc_removeMap(struct_0 **a0, char *a1)
 {
     unsigned long v4;  // rax
-    struct_1 *v5;  // rax
+    struct_0 *v5;  // rax
     char v0;  // [bp-0x31]
-    struct_1 *v1;  // [bp-0x30]
+    struct_0 *v1;  // [bp-0x30]
     struct_0 *v2;  // [bp-0x28], Other Possible Types: unsigned long long
 
     v2 = 0;

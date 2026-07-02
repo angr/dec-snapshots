@@ -3,21 +3,16 @@ typedef struct struct_0 {
     unsigned int field_10;
 } struct_0;
 
-typedef struct struct_1 {
-    char padding_0[16];
-    unsigned int field_10;
-} struct_1;
-
 extern long long cgc_allocated;
 extern unsigned int cgc_curleft;
 extern struct_0 *cgc_freed;
 extern char cgc_heapinit_done;
-extern struct_1 *cgc_lastpage;
+extern struct_0 *cgc_lastpage;
 
 unsigned long long cgc_malloc(unsigned long long a0)
 {
     char v0;  // [bp-0x21]
-    struct_0 *iter;  // [bp-0x20], Other Possible Types: struct_1 *
+    struct_0 *iter;  // [bp-0x20]
     unsigned long long v2;  // [bp-0x18]
     unsigned long long v3;  // [bp-0x10]
 

@@ -3,19 +3,9 @@ typedef struct struct_0 {
     struct struct_0 *field_8;
 } struct_0;
 
-typedef struct struct_2 {
-    struct struct_2 *field_0;
-    struct struct_2 *field_8;
-} struct_2;
-
-typedef struct struct_1 {
-    struct struct_1 *field_0;
-    struct struct_1 *field_8;
-} struct_1;
-
-extern struct_2 *cgc_allocated;
+extern struct_0 *cgc_allocated;
 extern char cgc_allocatedc;
-extern struct_1 *cgc_freed;
+extern struct_0 *cgc_freed;
 extern char cgc_freedc;
 extern char cgc_heapinit_done;
 

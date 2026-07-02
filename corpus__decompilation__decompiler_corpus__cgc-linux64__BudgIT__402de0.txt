@@ -1,24 +1,14 @@
-typedef struct struct_1 {
-    char padding_0[16];
-    unsigned int field_10;
-} struct_1;
-
 typedef struct struct_0 {
     char padding_0[16];
     unsigned int field_10;
 } struct_0;
 
-typedef struct struct_2 {
-    char padding_0[16];
-    unsigned int field_10;
-} struct_2;
-
-extern struct_2 *cgc_allocated;
+extern struct_0 *cgc_allocated;
 extern struct_0 *cgc_freed;
 
-struct_1 * cgc_checkheap(void)
+struct_0 * cgc_checkheap(void)
 {
-    struct_2 *node;  // [bp-0x18]
+    struct_0 *node;  // [bp-0x18]
     struct_0 *iter;  // [bp-0x10]
 
     for (iter = cgc_freed; *(&iter->padding_0[8]) != cgc_freed; iter = *(&iter->padding_0[8]))
