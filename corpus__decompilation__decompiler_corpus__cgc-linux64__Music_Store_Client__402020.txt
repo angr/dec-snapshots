@@ -12,7 +12,7 @@ unsigned int cgc_receiveSearchResults(unsigned int a0, struct_0 *a1, unsigned in
     char v3[1052];  // [bp-0x428]
     unsigned int v4;  // [bp-0xc]
 
-    memset(&v3, 0, 0x400);
+    memset(v3, 0, 0x400);
     v2 = 0;
     v1 = 0;
     v0 = 0;
@@ -24,7 +24,7 @@ unsigned int cgc_receiveSearchResults(unsigned int a0, struct_0 *a1, unsigned in
             v4 = 0;
             return v4;
         }
-        v1 = cgc_recvline(a0, &v3, 0x3ff);
+        v1 = cgc_recvline(a0, v3, 0x3ff);
         if (v1 < 0)
             cgc__terminate(2);
         if (!v1)
@@ -34,7 +34,7 @@ unsigned int cgc_receiveSearchResults(unsigned int a0, struct_0 *a1, unsigned in
         }
         if (a1->field_0 < a2)
         {
-            v2 = cgc_parseSearchResult(&v3, a1->field_8 + a1->field_0 * 250);
+            v2 = cgc_parseSearchResult(v3, a1->field_8 + a1->field_0 * 250);
             if (v2)
                 cgc__terminate(10);
             a1->field_0 = a1->field_0 + 1;

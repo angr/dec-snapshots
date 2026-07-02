@@ -14,8 +14,8 @@ unsigned int cgc_parseBalanceResult(char *a0)
 
     v9 = 0;
     iter = 0;
-    memset(&v7, 0, 20);
-    memset(&v6, 0, 50);
+    memset(v7, 0, 20);
+    memset(v6, 0, 50);
     v5 = 0;
     v4 = 0;
     v3 = "=";
@@ -38,15 +38,15 @@ unsigned int cgc_parseBalanceResult(char *a0)
         iter += 1;
         v5 += 1;
     }
-    cgc_memcpy(&v7, v9, v5);
-    if (cgc_strcmp(&v7, "BALANCE"))
+    cgc_memcpy(v7, v9, v5);
+    if (cgc_strcmp(v7, "BALANCE"))
     {
         v10 = 0;
         return v10;
     }
     iter += 1;
-    cgc_setValue(iter, &v6);
-    v1 = cgc_str2int(&v6);
+    cgc_setValue(iter, v6);
+    v1 = cgc_str2int(v6);
     if (v1 >= 0 && v1 <= 0xff)
     {
         v10 = v1;
