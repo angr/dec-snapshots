@@ -11,7 +11,7 @@ unsigned int main(unsigned int a0, unsigned long long a1)
     v4 = a0;
     v3 = a1;
     v2 = 0;
-    cgc_random_alpha_lower(&v0, 16);
+    cgc_random_alpha_lower(v0, 16);
     v1 = 6;
-    return cgc_request_document(&v0, 0);
+    return cgc_request_document(v0, 0);
 }

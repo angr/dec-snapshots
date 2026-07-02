@@ -54,7 +54,7 @@ int main(unsigned int a0, unsigned long long a1)
     v30 = 0;
     memset(&v27, 0, 24);
     memset(&v24, 0, 24);
-    memset(&v17, 0, 104);
+    memset(v17, 0, 104);
     memset(&v16, 0, 2500);
     v15 = 0;
     v25 = &v16;
@@ -63,7 +63,7 @@ int main(unsigned int a0, unsigned long long a1)
     while (i > 0)
     {
         v24 = 0;
-        cgc_createRandomRequest(&v17);
+        cgc_createRandomRequest(v17);
         v11 = v23;
         memcpy(&v9, &v22, 16);
         memcpy(&v7, &v21, 16);
@@ -82,8 +82,8 @@ int main(unsigned int a0, unsigned long long a1)
         v4 = v18;
         v2 = v17;
         v1 = v26;
-        memcpy(&v0, &v24, 16);
-        v15 = cgc_selectSong(v36, v37, v38, v1, v39, v40, *(&v17));
+        memcpy(v0, &v24, 16);
+        v15 = cgc_selectSong(v36, v37, v38, v1, v39, v40, *(v17));
         v31 = cgc_purchaseSong(1, v15, &v27);
         if (v31 == 1)
             break;

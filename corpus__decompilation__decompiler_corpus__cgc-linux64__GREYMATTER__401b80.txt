@@ -93,7 +93,7 @@ unsigned int cgc_request_document(unsigned long a0, long long a1)
                     v1[1 + v6] = 6;
                     memset(&v3, 0, 0x100);
                     v3 = 6;
-                    v12 = cgc_canonicalize_path(&v3, v1, v6);
+                    v12 = cgc_canonicalize_path(v3, v1, v6);
                     if (v12)
                     {
                         v2 = 2;
@@ -101,7 +101,7 @@ unsigned int cgc_request_document(unsigned long a0, long long a1)
                     else
                     {
                         v13 += 1;
-                        v12 = cgc_request_document(&v3, v13);
+                        v12 = cgc_request_document(v3, v13);
                         v2 = (0 == v12 ? 0 : 2);
                     }
                     /* unsupported instruction */ = v5;
