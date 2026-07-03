@@ -2,28 +2,28 @@ int cgc_strncmp(char *a0, char *a1, unsigned long long a2)
 {
     char v0;  // [bp-0x21]
     unsigned long long v1;  // [bp-0x20]
-    char *node;  // [bp-0x18]
-    char *iter;  // [bp-0x10]
+    char *iter;  // [bp-0x18]
+    char *cur;  // [bp-0x10]
 
-    iter = a0;
-    node = a1;
+    cur = a0;
+    iter = a1;
     v1 = a2;
     while (true)
     {
         v0 = 0;
-        if (*(iter) != 6)
+        if (*(cur) != 6)
         {
             v0 = 0;
-            if (*(node) != 6)
-                v0 = *(iter) == *(node);
+            if (*(iter) != 6)
+                v0 = *(cur) == *(iter);
         }
         if (!(v0 & 1))
             break;
         v1 -= 1;
         if (!v1)
             break;
+        cur += 1;
         iter += 1;
-        node += 1;
     }
-    return *(iter) - *(node);
+    return *(cur) - *(iter);
 }

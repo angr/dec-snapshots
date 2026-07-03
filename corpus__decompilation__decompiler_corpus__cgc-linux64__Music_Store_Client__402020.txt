@@ -4,15 +4,15 @@ typedef struct struct_0 {
     unsigned long long field_8;
 } struct_0;
 
-unsigned int cgc_receiveSearchResults(unsigned int a0, struct_0 *a1, unsigned int a2)
+unsigned int cgc_receiveSearchResults(unsigned int a0, struct_0 *ptr, unsigned int a2)
 {
     unsigned int v0;  // [bp-0x434]
     unsigned int v1;  // [bp-0x430]
     unsigned int v2;  // [bp-0x42c]
     char v3[1052];  // [bp-0x428]
-    unsigned int v4;  // [bp-0xc]
+    unsigned int flag;  // [bp-0xc]
 
-    memset(v3, 0, 0x400);
+    memset(&v3, 0, 0x400);
     v2 = 0;
     v1 = 0;
     v0 = 0;
@@ -21,23 +21,23 @@ unsigned int cgc_receiveSearchResults(unsigned int a0, struct_0 *a1, unsigned in
     {
         if (!v0)
         {
-            v4 = 0;
-            return v4;
+            flag = 0;
+            return flag;
         }
-        v1 = cgc_recvline(a0, v3, 0x3ff);
+        v1 = cgc_recvline(a0, &v3, 0x3ff);
         if (v1 < 0)
             cgc__terminate(2);
         if (!v1)
         {
-            v4 = 0;
-            return v4;
+            flag = 0;
+            return flag;
         }
-        if (a1->field_0 < a2)
+        if (ptr->field_0 < a2)
         {
-            v2 = cgc_parseSearchResult(v3, a1->field_8 + a1->field_0 * 250);
+            v2 = cgc_parseSearchResult(&v3, ptr->field_8 + ptr->field_0 * 250);
             if (v2)
                 cgc__terminate(10);
-            a1->field_0 = a1->field_0 + 1;
+            ptr->field_0 = ptr->field_0 + 1;
         }
         v0 -= 1;
     }

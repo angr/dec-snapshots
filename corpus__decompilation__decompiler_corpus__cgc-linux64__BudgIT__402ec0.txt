@@ -3,16 +3,21 @@ typedef struct struct_0 {
     unsigned int field_10;
 } struct_0;
 
+typedef struct struct_1 {
+    char padding_0[16];
+    unsigned int field_10;
+} struct_1;
+
 extern long long cgc_allocated;
 extern unsigned int cgc_curleft;
 extern struct_0 *cgc_freed;
 extern char cgc_heapinit_done;
-extern struct_0 *cgc_lastpage;
+extern struct_1 *cgc_lastpage;
 
 unsigned long long cgc_malloc(unsigned long long a0)
 {
     char v0;  // [bp-0x21]
-    struct_0 *iter;  // [bp-0x20]
+    struct_0 *cur;  // [bp-0x20], Other Possible Types: struct_1 *
     unsigned long long v2;  // [bp-0x18]
     unsigned long long v3;  // [bp-0x10]
 
@@ -24,55 +29,55 @@ unsigned long long cgc_malloc(unsigned long long a0)
         v3 = 0;
         return v3;
     }
-    iter = cgc_freed;
+    cur = cgc_freed;
     v2 += 24;
     while (true)
     {
         v0 = 0;
-        if (iter->field_10 < v2)
-            v0 = *(&iter->padding_0[8]) != cgc_freed;
+        if (cur->field_10 < v2)
+            v0 = *(&cur->padding_0[8]) != cgc_freed;
         if (!(v0 & 1))
             break;
-        iter = *(&iter->padding_0[8]);
+        cur = *(&cur->padding_0[8]);
     }
-    if (iter->field_10 >= v2)
+    if (cur->field_10 >= v2)
     {
-        cgc_remove(iter);
-        cgc_insert(cgc_allocated, iter);
-        v3 = &iter[1].padding_0[4];
+        cgc_remove(cur);
+        cgc_insert(cgc_allocated, cur);
+        v3 = &cur[1].padding_0[4];
         return v3;
     }
     else if (v2 <= cgc_curleft)
     {
-        iter = cgc_lastpage;
-        iter->field_10 = v2;
+        cur = cgc_lastpage;
+        cur->field_10 = v2;
         cgc_lastpage = &cgc_lastpage->padding_0[v2];
         cgc_curleft = cgc_curleft - v2;
-        cgc_insert(cgc_allocated, iter);
-        v3 = &iter[1].padding_0[4];
+        cgc_insert(cgc_allocated, cur);
+        v3 = &cur[1].padding_0[4];
         return v3;
     }
     else
     {
         if (cgc_curleft > 24)
         {
-            iter = cgc_lastpage;
-            iter->field_10 = cgc_curleft;
-            cgc_insert(cgc_freed, iter);
+            cur = cgc_lastpage;
+            cur->field_10 = cgc_curleft;
+            cgc_insert(cgc_freed, cur);
         }
-        if (cgc_allocate(v2, 0, &iter))
+        if (cgc_allocate(v2, 0, &cur))
         {
             v3 = 0;
             return v3;
         }
-        iter->field_10 = v2;
-        cgc_insert(cgc_allocated, iter);
-        cgc_lastpage = &iter->padding_0[v2];
+        cur->field_10 = v2;
+        cgc_insert(cgc_allocated, cur);
+        cgc_lastpage = &cur->padding_0[v2];
         if ((v2 & 0xfff))
             cgc_curleft = 0x1000 - (v2 & 0xfff);
         else
             cgc_curleft = 0;
-        v3 = &iter[1].padding_0[4];
+        v3 = &cur[1].padding_0[4];
         return v3;
     }
 }

@@ -1,24 +1,24 @@
 long long cgc_strncpy(char *a0, char *a1, unsigned long a2)
 {
     char v0;  // [bp-0x29]
-    char *iter;  // [bp-0x28]
+    char *cur;  // [bp-0x28]
     char *v2;  // [bp-0x28]
-    char *node;  // [bp-0x18]
+    char *iter;  // [bp-0x18]
 
-    node = a1;
-    iter = a0;
+    iter = a1;
+    cur = a0;
     while (true)
     {
         v0 = 0;
-        if (iter - a0 < a2)
-            v0 = *(node);
+        if (cur - a0 < a2)
+            v0 = *(iter);
         if (!(v0 & 1))
             break;
-        *(iter) = *(node);
+        *(cur) = *(iter);
+        cur += 1;
         iter += 1;
-        node += 1;
     }
-    v2 = iter + 1;
-    *(iter) = 0;
+    v2 = cur + 1;
+    *(cur) = 0;
     return v2 - a0 - 1;
 }

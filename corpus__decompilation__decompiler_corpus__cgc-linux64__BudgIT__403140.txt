@@ -3,11 +3,11 @@ typedef struct struct_0 {
     struct struct_0 *field_8;
 } struct_0;
 
-struct_0 * cgc_insert(struct_0 *a0, struct_0 *a1)
+struct_0 * cgc_insert(struct_0 *p, struct_0 *ptr)
 {
-    a1->field_8 = a0;
-    a1->field_0 = a0->field_0;
-    a1->field_0->field_8 = a1;
-    a0->field_0 = a1;
-    return a0;
+    ptr->field_8 = p;
+    ptr->field_0 = p->field_0;
+    ptr->field_0->field_8 = ptr;
+    p->field_0 = ptr;
+    return p;
 }
