@@ -24,7 +24,7 @@ struct_0 * cgc_removeMap(struct_0 **a0, char *a1)
             v0 = v4;
         }
         v5 = _INSERT(v4 CONCAT 0, 0, v0);
-        if (!(v0 & 1))
+        if (!(v0))
             break;
         if (!cgc_strcmp(a1, &v2->field_c))
             break;
