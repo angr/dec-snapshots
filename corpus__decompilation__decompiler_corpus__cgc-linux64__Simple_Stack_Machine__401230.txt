@@ -62,7 +62,7 @@ unsigned int main(unsigned int a0, unsigned long long a1)
         }
     } while (i != 4294967295);
     node = 0;
-    while (true)
+    while (1)
     {
         v0 = 0;
         if (node < v10)
@@ -141,7 +141,7 @@ LABEL_4015d3:
                 cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
                 cgc__terminate(4294967295);
 LABEL_401647:
-                *((v6 + iter * 4)) = *((v6 + ((iter - (i >> 3)) - 1) * 4));
+                *((v6 + iter * 4)) = *((v6 + (iter - (i >> 3) - 1) * 4));
                 break;
             case 6:
                 if (iter < 1)

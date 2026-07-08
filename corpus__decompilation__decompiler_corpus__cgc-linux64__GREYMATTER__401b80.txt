@@ -73,7 +73,7 @@ unsigned int cgc_request_document(unsigned long a0, long long a1)
                 goto LABEL_401d11;
             v8 = v9;
             v7 = 0;
-            while (true)
+            while (1)
             {
                 v8 = cgc_strpos(v8, &g_402008);
                 if (!v8)

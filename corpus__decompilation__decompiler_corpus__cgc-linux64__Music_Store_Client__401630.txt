@@ -6,7 +6,7 @@ char * cgc_strcat(char *a0, char *a1)
 
     for (iter = 0; a0[iter]; iter += 1);
     v0 = 0;
-    while (true)
+    while (1)
     {
         v3 = a1[v0];
         a0[iter] = a1[v0];
