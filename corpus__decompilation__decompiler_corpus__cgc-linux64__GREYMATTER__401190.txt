@@ -10,7 +10,7 @@ unsigned int cgc_receive_all(unsigned int a0, unsigned long a1, long long a2, lo
     v2 = 0;
     v1 = a2;
     v0 = 0;
-    while (true)
+    while (1)
     {
         if (v1)
         {

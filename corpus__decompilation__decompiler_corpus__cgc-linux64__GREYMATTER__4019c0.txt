@@ -27,7 +27,7 @@ unsigned int cgc_canonicalize_path(long long a0, char *a1, unsigned long a2)
         return v4;
     iter += 2;
     v3 = iter;
-    while (true)
+    while (1)
     {
         iter = cgc_strpos(iter, &g_402004);
         if (!iter)

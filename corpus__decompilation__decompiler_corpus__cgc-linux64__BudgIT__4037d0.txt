@@ -15,7 +15,7 @@ struct_0 * cgc_removeMap(struct_0 **a0, char *a1)
     v2 = 0;
     v1 = NULL;
     v2 = *(a0);
-    while (true)
+    while (1)
     {
         v0 = 0;
         if (v2)

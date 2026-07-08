@@ -7,7 +7,7 @@ long long cgc_strncpy(unsigned long a0, unsigned long a1, unsigned long long a2)
 
     v2 = a2;
     v1 = 0;
-    while (true)
+    while (1)
     {
         v0 = 0;
         if (*((a1 + v1)) != 6)

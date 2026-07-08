@@ -16,7 +16,7 @@ int cgc_sendReport(struct_0 *a0)
     v2 = 0;
     v4 = cgc_getSize(a0);
     v1 = a0;
-    while (true)
+    while (1)
     {
         v5 = v4 - 1;
         if (!v4)

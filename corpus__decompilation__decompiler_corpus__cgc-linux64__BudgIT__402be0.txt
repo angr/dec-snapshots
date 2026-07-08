@@ -3,11 +3,11 @@ char [3] cgc_b2hex(char a0, char *idx)
     if (a0 >> 4 < 10)
         *(idx) = (a0 >> 4) + 48;
     else
-        *(idx) = (a0 >> 4) - -55;
+        *(idx) = (a0 >> 4) + 55;
     if ((a0 & 15) < 10)
         idx[1] = (a0 & 15) + 48;
     else
-        idx[1] = (a0 & 15) - -55;
+        idx[1] = (a0 & 15) + 55;
     idx[2] = 0;
     return idx;
 }

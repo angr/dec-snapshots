@@ -5,7 +5,7 @@ unsigned int cgc_strcmp(char *a0, char *a1)
     unsigned int v2;  // [bp-0xc]
 
     v1 = 0;
-    while (true)
+    while (1)
     {
         v0 = 0;
         if (a0[v1])
