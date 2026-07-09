@@ -13,7 +13,7 @@ unsigned int cgc_memcmp(unsigned long a0, unsigned long a1, unsigned long long a
         }
         if (*((a0 + v0)) != *((a1 + v0)))
         {
-            v1 = 4294967295;
+            v1 = 0xffffffff;
             return v1;
         }
         v0 += 1;

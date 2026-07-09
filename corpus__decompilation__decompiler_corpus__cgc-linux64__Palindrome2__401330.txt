@@ -15,7 +15,7 @@ unsigned int main(unsigned int a0, unsigned long long a1)
         if (cgc_transmit_all(1, "\tPlease enter a possible palindrome: ", 37))
             cgc__terminate(0);
         v0 = cgc_check();
-        if (v0 == 4294967295)
+        if (v0 == 0xffffffff)
             break;
         if (!v0)
         {

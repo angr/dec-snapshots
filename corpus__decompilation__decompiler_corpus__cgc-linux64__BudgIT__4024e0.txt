@@ -17,7 +17,7 @@ unsigned int cgc_recv(unsigned int a0, long long a1, unsigned long long a2)
     }
     if (!v3)
     {
-        v4 = 4294967295;
+        v4 = 0xffffffff;
         return v4;
     }
     while (1)
@@ -30,7 +30,7 @@ unsigned int cgc_recv(unsigned int a0, long long a1, unsigned long long a2)
         v3 += 1;
         if (cgc_receive(a0, v3, 1, &v1))
         {
-            v4 = 4294967295;
+            v4 = 0xffffffff;
             return v4;
         }
         v0 += 1;
