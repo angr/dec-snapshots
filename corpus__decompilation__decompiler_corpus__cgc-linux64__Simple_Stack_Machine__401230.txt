@@ -141,7 +141,7 @@ LABEL_4015d3:
                 cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
                 cgc__terminate(0xffffffff);
 LABEL_401647:
-                *((v6 + iter * 4)) = *((v6 + (iter - (i >> 3) - 1) * 4));
+                *((v6 + iter * 4)) = *((v6 + ((iter - (i >> 3)) - 1) * 4));
                 break;
             case 6:
                 if (iter < 1)
