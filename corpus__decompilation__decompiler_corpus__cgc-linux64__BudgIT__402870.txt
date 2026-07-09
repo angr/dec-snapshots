@@ -11,7 +11,7 @@ unsigned int cgc_uint2str(char *a0, int a1, unsigned int a2)
     v2 = 0;
     if (a1 < 2)
     {
-        v5 = 4294967295;
+        v5 = 0xffffffff;
         return v5;
     }
     i = j;
@@ -22,7 +22,7 @@ unsigned int cgc_uint2str(char *a0, int a1, unsigned int a2)
     } while (i > 0);
     if (v2 >= a1)
     {
-        v5 = 4294967295;
+        v5 = 0xffffffff;
         return v5;
     }
     v3 = v2 - 1;

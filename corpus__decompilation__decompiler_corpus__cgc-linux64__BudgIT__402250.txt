@@ -12,7 +12,7 @@ unsigned int cgc_sendall(unsigned int a0, long long a1, long long a2)
     v0 = 0;
     if (!v3)
     {
-        v4 = 4294967295;
+        v4 = 0xffffffff;
         return v4;
     }
     if (!v2)
@@ -29,7 +29,7 @@ unsigned int cgc_sendall(unsigned int a0, long long a1, long long a2)
         }
         if (cgc_transmit(a0, v3, v2, &v1))
         {
-            v4 = 4294967295;
+            v4 = 0xffffffff;
             return v4;
         }
         v3 += v1;

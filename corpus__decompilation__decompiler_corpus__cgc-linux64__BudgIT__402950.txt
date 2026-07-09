@@ -10,14 +10,14 @@ unsigned int cgc_int2str(char *a0, int a1, unsigned int a2)
     iter = 0;
     if (a1 < 2)
     {
-        v4 = 4294967295;
+        v4 = 0xffffffff;
         return v4;
     }
     if (j < 0)
     {
         if (a1 < 3)
         {
-            v4 = 4294967295;
+            v4 = 0xffffffff;
             return v4;
         }
         iter += 1;
@@ -25,7 +25,7 @@ unsigned int cgc_int2str(char *a0, int a1, unsigned int a2)
     }
     else
     {
-        j *= 4294967295;
+        j *= 0xffffffff;
     }
     i = j;
     do
@@ -35,14 +35,14 @@ unsigned int cgc_int2str(char *a0, int a1, unsigned int a2)
     } while (i < 0);
     if (iter >= a1)
     {
-        v4 = 4294967295;
+        v4 = 0xffffffff;
         return v4;
     }
     iter -= 1;
     a0[iter] = 0;
     do
     {
-        v0 = (j % 10) * 4294967295;
+        v0 = (j % 10) * 0xffffffff;
         iter -= 1;
         a0[iter] = v0 + 48;
         j /= 10;

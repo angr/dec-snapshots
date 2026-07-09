@@ -14,7 +14,7 @@ unsigned int cgc_recv_until_delim(unsigned int a0, void* a1, unsigned long long 
     }
     else if (!v2)
     {
-        v3 = 4294967294;
+        v3 = 0xfffffffe;
         return v3;
     }
     else
@@ -35,7 +35,7 @@ unsigned int cgc_recv_until_delim(unsigned int a0, void* a1, unsigned long long 
             v3 = a2 - i;
             return v3;
         }
-        v3 = 4294967295;
+        v3 = 0xffffffff;
         return v3;
     }
 }
