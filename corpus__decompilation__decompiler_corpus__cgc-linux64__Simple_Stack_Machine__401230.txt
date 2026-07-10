@@ -67,12 +67,12 @@ unsigned int main(unsigned int a0, unsigned long long a1)
         v0 = 0;
         if (node < v10)
             v0 = *((v7 + node * 4)) != 0xffffffff;
-        if (!(v0 & 1))
+        if (!(v0))
             break;
         i = *((v7 + node * 4));
         if (i == 0xffffffff)
             break;
-        if ((i & 7) <= 7)
+        if (i <= 7)
         {
             switch (i & 7)
             {
