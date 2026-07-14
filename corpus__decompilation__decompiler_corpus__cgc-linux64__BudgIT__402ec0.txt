@@ -31,7 +31,7 @@ unsigned long long cgc_malloc(unsigned long long a0)
         v0 = 0;
         if (iter->field_10 < v2)
             v0 = *(&iter->padding_0[8]) != cgc_freed;
-        if (!(v0 & 1))
+        if (!(v0))
             break;
         iter = *(&iter->padding_0[8]);
     }
@@ -68,7 +68,7 @@ unsigned long long cgc_malloc(unsigned long long a0)
         iter->field_10 = v2;
         cgc_insert(cgc_allocated, iter);
         cgc_lastpage = &iter->padding_0[v2];
-        if ((v2 & 0xfff))
+        if (v2)
             cgc_curleft = 0x1000 - (v2 & 0xfff);
         else
             cgc_curleft = 0;

@@ -4,7 +4,7 @@ char [3] cgc_b2hex(char a0, char *idx)
         *(idx) = (a0 >> 4) + 48;
     else
         *(idx) = (a0 >> 4) + 55;
-    if ((a0 & 15) < 10)
+    if (a0 < 10)
         idx[1] = (a0 & 15) + 48;
     else
         idx[1] = (a0 & 15) + 55;
