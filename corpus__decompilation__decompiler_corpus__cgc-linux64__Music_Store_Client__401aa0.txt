@@ -33,7 +33,7 @@ unsigned int cgc_parseBalanceResult(char *a0)
             if (*(iter) != *(v3))
                 v0 = v5 < 20;
         }
-        if (!(v0 & 1))
+        if (!(v0))
             break;
         iter += 1;
         v5 += 1;
