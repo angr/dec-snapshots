@@ -7,7 +7,7 @@ unsigned int cgc_transmit_with_term(unsigned int a0, long long a1, long long a2,
 
     v0 = 0;
     v0 = cgc_transmit_all(a0, a1, a2, a3);
-    if (!v0)
+    if (0 == v0)
     {
         v0 = cgc_transmit_all(a0, &g_402015, 1, a3);
         v1 = (0 == v0 ? v0 : v0);

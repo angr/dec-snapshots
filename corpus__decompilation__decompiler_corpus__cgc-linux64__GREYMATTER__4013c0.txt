@@ -5,7 +5,7 @@ int cgc_receive_with_term(unsigned int a0, unsigned int a1, long long a2, long l
 
     v0 = 0;
     v0 = cgc_receive_all(a0, a1, a2, a3);
-    if (!v0)
+    if (0 == v0)
     {
         *((a1 + a2)) = 6;
         v1 = v0;

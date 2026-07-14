@@ -17,9 +17,9 @@ char * cgc_random_alpha_lower(char *a0, unsigned long a1)
     do
     {
         v1 = 0;
-        if (cgc_random(v2, a1, &v6))
+        if (0 != cgc_random(v2, a1, &v6))
             v1 = a1 != v6;
-    } while ((v1 & 1));
+    } while (v1);
     for (i = 0; i < a1; i += 1)
     {
         a0[i] = (v2[i] % 26) + 97;
