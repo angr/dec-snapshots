@@ -3,11 +3,11 @@ typedef struct struct_0 {
     struct struct_0 *field_8;
 } struct_0;
 
-extern struct_0 *cgc_allocated;
+extern char cgc_heapinit_done;
+extern char cgc_freedc;
 extern char cgc_allocatedc;
 extern struct_0 *cgc_freed;
-extern char cgc_freedc;
-extern char cgc_heapinit_done;
+extern struct_0 *cgc_allocated;
 
 struct_0 * cgc_heapinit(void)
 {

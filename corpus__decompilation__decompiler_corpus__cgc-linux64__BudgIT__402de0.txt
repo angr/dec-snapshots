@@ -3,8 +3,8 @@ typedef struct struct_0 {
     unsigned int field_10;
 } struct_0;
 
-extern struct_0 *cgc_allocated;
 extern struct_0 *cgc_freed;
+extern struct_0 *cgc_allocated;
 
 struct_0 * cgc_checkheap(void)
 {

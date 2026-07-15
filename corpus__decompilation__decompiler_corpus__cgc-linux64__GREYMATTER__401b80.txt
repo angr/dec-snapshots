@@ -1,5 +1,5 @@
-extern void buf_recv_tmp;
 extern char g_402008;
+extern void buf_recv_tmp;
 
 unsigned int cgc_request_document(unsigned long a0, long long a1)
 {
