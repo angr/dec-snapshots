@@ -3,7 +3,7 @@ typedef struct struct_0 {
     unsigned int field_10;
 } struct_0;
 
-extern long long cgc_allocated;
+extern unsigned long long cgc_allocated;
 extern unsigned int cgc_curleft;
 extern struct_0 *cgc_freed;
 extern char cgc_heapinit_done;

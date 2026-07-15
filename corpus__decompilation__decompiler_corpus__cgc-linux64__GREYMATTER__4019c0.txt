@@ -1,6 +1,6 @@
-extern unsigned int g_402004;
+extern char g_402004;
 
-unsigned int cgc_canonicalize_path(long long a0, char *a1, unsigned long a2)
+unsigned int cgc_canonicalize_path(unsigned int a0, char *a1, unsigned long a2)
 {
     char *iter;  // [bp-0x48], Other Possible Types: unsigned long long
     unsigned long long n;  // [bp-0x40]

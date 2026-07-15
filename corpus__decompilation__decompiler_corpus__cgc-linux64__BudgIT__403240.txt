@@ -1,4 +1,4 @@
-extern long long cgc___cookie;
+extern char cgc___cookie;
 
 int cgc___stack_cookie_init(void)
 {
