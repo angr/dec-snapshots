@@ -5,9 +5,9 @@ typedef struct struct_0 {
 
 extern struct_0 *cgc_freed;
 
-void* [2] cgc_free(unsigned long long a0)
+void* * cgc_free(unsigned long long a0)
 {
-    void* v2[2];  // rax
+    void* *v2;  // rax
     unsigned long long v0;  // [bp-0x18]
 
     if (!a0)
