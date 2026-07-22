@@ -13,13 +13,13 @@ unsigned int cgc_transmit_all(unsigned int a0, long long a1, long long a2, long 
     {
         v0 = 0;
         v2 = cgc_transmit(0, a1, i, &v0);
-        if (v2)
+        if (0 != v2)
         {
             v4 = v2;
             return v4;
         }
     }
-    if (a3)
+    if (NULL != a3)
         *(a3) = a2;
     v4 = v2;
     return v4;

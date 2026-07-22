@@ -29,14 +29,14 @@ unsigned int cgc_request_document(unsigned long a0, long long a1)
         return v14;
     }
     v12 = cgc_transmit_with_term(1, a0, cgc_strlen(a0), NULL);
-    if (v12)
+    if (0 != v12)
     {
         v14 = v12;
         return v14;
     }
     v10 = 0;
     v12 = cgc_receive_all(0, &v10, 2, NULL);
-    if (v12)
+    if (0 != v12)
     {
         v14 = v12;
         return v14;
@@ -51,7 +51,7 @@ unsigned int cgc_request_document(unsigned long a0, long long a1)
         v14 = v12;
         return v14;
     }
-    else if (cgc_strcmp(a0, &buf_recv_tmp))
+    else if (0 != cgc_strcmp(a0, &buf_recv_tmp))
     {
         v14 = v12;
         return v14;
@@ -60,14 +60,14 @@ unsigned int cgc_request_document(unsigned long a0, long long a1)
     {
         v9 = 0;
         v12 = cgc_allocate(v10 + 1, 0, &v9);
-        if (v12)
+        if (0 != v12)
         {
             v14 = v12;
             return v14;
         }
         /* unsupported instruction */ = &v0;
         v12 = cgc_receive_with_term(0, v9, v10, &v11);
-        if (!v12)
+        if (0 == v12)
         {
             if (v11 != v10)
                 goto LABEL_401d11;
@@ -76,13 +76,13 @@ unsigned int cgc_request_document(unsigned long a0, long long a1)
             while (1)
             {
                 v8 = cgc_strpos(v8, &g_402008);
-                if (!v8)
+                if (0 == v8)
                     break;
                 v8 += cgc_strlen(&g_402008);
                 /* unsupported instruction */ = /* unsupported instruction */ - 24;
                 v7 = cgc_strpos(v8, "$!SRC$");
                 /* unsupported instruction */ = /* unsupported instruction */;
-                if (v7)
+                if (0 != v7)
                 {
                     v6 = v7 - v8 + 1;
                     v16 = v6;
@@ -94,7 +94,7 @@ unsigned int cgc_request_document(unsigned long a0, long long a1)
                     memset(&v3, 0, 0x100);
                     v3 = 6;
                     v12 = cgc_canonicalize_path(v3, v1, v6);
-                    if (v12)
+                    if (0 != v12)
                     {
                         v2 = 2;
                     }
