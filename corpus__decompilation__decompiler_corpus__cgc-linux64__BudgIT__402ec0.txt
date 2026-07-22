@@ -46,7 +46,7 @@ unsigned long long cgc_malloc(unsigned long long a0)
     {
         iter = cgc_lastpage;
         iter->field_10 = v2;
-        cgc_lastpage = &cgc_lastpage->padding_0[v2];
+        cgc_lastpage = v2 + cgc_lastpage;
         cgc_curleft = cgc_curleft - v2;
         cgc_insert(cgc_allocated, iter);
         v3 = &iter[1].padding_0[4];
