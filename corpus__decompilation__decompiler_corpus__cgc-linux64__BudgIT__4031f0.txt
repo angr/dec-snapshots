@@ -1,6 +1,5 @@
 typedef struct struct_0 {
-    void* field_0;
-    void* field_8;
+    unsigned long long field_0;
 } struct_0;
 
 extern struct_0 *cgc_freed;
