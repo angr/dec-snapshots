@@ -20,7 +20,7 @@ struct_0 * cgc_initMap(struct_0 *a0)
     }
     else
     {
-        for (iter = a0; iter->field_c; iter = &iter[3].padding_0[1]);
+        for (iter = a0; iter->field_c; iter = iter - 40);
         v2 = iter;
         return v2;
     }
