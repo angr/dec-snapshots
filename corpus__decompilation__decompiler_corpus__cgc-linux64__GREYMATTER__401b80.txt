@@ -89,7 +89,7 @@ unsigned int cgc_request_document(unsigned long a0, long long a1)
                     v1 = /* unsupported instruction */ - (v16 + 15 & 0xfffffffffffffff0);
                     v4 = v16;
                     cgc_strncpy(v1, v8, v6 - 1);
-                    *(&v1[v6] - 1) = 6;
+                    v1[1 + v6] = 6;
                     memset(&v3, 0, 0x100);
                     v3 = 6;
                     v12 = cgc_canonicalize_path(v3, v1, v6);

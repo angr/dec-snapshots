@@ -34,10 +34,10 @@ unsigned int cgc_recvline(unsigned int a0, void* a1, unsigned long long a2)
             }
             v0 += 1;
             v2 -= 1;
-        } while (*(iter - 1) != 7);
-        if (*(iter - 1) == 7)
+        } while (iter[1] != 7);
+        if (iter[1] == 7)
         {
-            *(iter - 1) = 0;
+            *(&iter[1]) = 0;
             v4 = v0;
             return v4;
         }

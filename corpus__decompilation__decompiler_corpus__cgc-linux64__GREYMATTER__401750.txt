@@ -26,12 +26,12 @@ unsigned int cgc_recv_until_delim(unsigned int a0, void* a1, unsigned long long 
             v2 += v1;
             if (!v1)
                 break;
-            if (*(v2 - 1) == 6)
+            if (v2[1] == 6)
                 break;
         }
-        if (*(v2 - 1) == 6)
+        if (v2[1] == 6)
         {
-            *(v2 - 1) = 6;
+            *(&v2[1]) = 6;
             v3 = a2 - i;
             return v3;
         }

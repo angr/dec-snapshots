@@ -12,7 +12,7 @@ char * cgc_getRandomTerm(char *a0)
     for (j = 0; j < i; j += 1)
     {
         v0 = cgc_getRandomNumber(v2);
-        a0[j] = *((v0 + 4206608));
+        a0[j] = *((4206608 + v0));
     }
     a0[i] = 0;
     return a0;
