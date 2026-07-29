@@ -81,7 +81,6 @@ unsigned int cgc_request_document(unsigned long a0, long long a1)
                 v8 += cgc_strlen(&g_402008);
                 /* unsupported instruction */ = /* unsupported instruction */ - 24;
                 v7 = cgc_strpos(v8, "$!SRC$");
-                /* unsupported instruction */ = /* unsupported instruction */;
                 if (v7)
                 {
                     v6 = v7 - v8 + 1;
