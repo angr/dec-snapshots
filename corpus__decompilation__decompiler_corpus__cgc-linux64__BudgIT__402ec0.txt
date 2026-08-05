@@ -31,7 +31,7 @@ unsigned long long cgc_malloc(unsigned long long a0)
         v0 = 0;
         if (iter->field_10 < v2)
             v0 = *(&iter->padding_0[8]) != cgc_freed;
-        if (!(v0 & 1))
+        if (!v0 & 1)
             break;
         iter = *(&iter->padding_0[8]);
     }
