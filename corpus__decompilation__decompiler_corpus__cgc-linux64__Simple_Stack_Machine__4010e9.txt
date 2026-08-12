@@ -1,5 +1,0 @@
-void sub_4010e9(void)
-{
-    register_tm_clones();
-    return;
-}

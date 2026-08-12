@@ -1,5 +1,0 @@
-void sub_403297(void)
-{
-    cgc___stack_cookie_fail();
-    return;
-}

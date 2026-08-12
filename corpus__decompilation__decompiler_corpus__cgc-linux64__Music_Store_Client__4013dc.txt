@@ -1,5 +1,0 @@
-void sub_4013dc(unsigned long a0, unsigned long a1, unsigned long a2)
-{
-    cgc_memcpy();
-    return;
-}
