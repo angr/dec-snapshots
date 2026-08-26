@@ -6,5 +6,5 @@ void sub_401020(void)
     unsigned long v0;  // [bp-0x8]
 
     v0 = g_404810;
-    goto g_404818;
+    goto *((void *)(g_404818));
 }
