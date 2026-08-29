@@ -17,8 +17,9 @@ unsigned long long cgc_transmit_all(long long a0, unsigned long long a1)
     {
         v0 = cgc_transmit(1, a0, a1 - i, &v2);
         if (!v0 && v2)
-            continue;
+            goto LABEL_401200;
         cgc__terminate(1);
+LABEL_401200:
         i += v2;
     } while (i < a1);
     v3 = a1;
