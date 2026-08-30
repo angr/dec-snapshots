@@ -1,5 +1,0 @@
-void sub_40122c(unsigned long a0, unsigned long a1)
-{
-    main();
-    return;
-}

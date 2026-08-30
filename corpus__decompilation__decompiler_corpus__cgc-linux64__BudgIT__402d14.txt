@@ -1,5 +1,0 @@
-void sub_402d14(unsigned long a0)
-{
-    cgc_sleep();
-    return;
-}

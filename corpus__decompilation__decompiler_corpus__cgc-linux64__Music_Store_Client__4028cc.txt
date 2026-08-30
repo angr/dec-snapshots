@@ -1,5 +1,0 @@
-int sub_4028cc(void)
-{
-    cgc_selectSong();
-    return;
-}
