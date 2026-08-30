@@ -1,4 +1,4 @@
-unsigned int cgc_str2int(char *a0)
+int cgc_str2int(char *a0)
 {
     unsigned int v0;  // [bp-0x2c]
     int iter;  // [bp-0x28]

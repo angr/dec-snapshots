@@ -4,7 +4,7 @@ typedef struct struct_0 {
     char field_20;
 } struct_0;
 
-unsigned int cgc_getRandomGiftCard(struct_0 **a0)
+int cgc_getRandomGiftCard(struct_0 **a0)
 {
     unsigned int v0;  // [bp-0x24]
     unsigned int v1;  // [bp-0x20]

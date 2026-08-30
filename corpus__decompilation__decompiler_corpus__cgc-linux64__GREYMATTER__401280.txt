@@ -1,4 +1,4 @@
-unsigned int cgc_transmit_all(unsigned int a0, long long a1, long long a2, long long *a3)
+int cgc_transmit_all(unsigned int a0, long long a1, long long a2, long long *a3)
 {
     unsigned long v0;  // [bp-0x40], Other Possible Types: unsigned long long
     long long i;  // [bp-0x38]

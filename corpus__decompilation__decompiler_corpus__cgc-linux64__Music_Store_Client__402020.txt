@@ -4,7 +4,7 @@ typedef struct struct_0 {
     unsigned long long field_8;
 } struct_0;
 
-unsigned int cgc_receiveSearchResults(unsigned int a0, struct_0 *a1, unsigned int a2)
+int cgc_receiveSearchResults(unsigned int a0, struct_0 *a1, unsigned int a2)
 {
     unsigned int v0;  // [bp-0x434]
     unsigned int v1;  // [bp-0x430]
