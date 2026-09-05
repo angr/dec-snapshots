@@ -24,8 +24,8 @@ unsigned int cgc_getRandomGiftCard(struct_0 **a0)
     for (i = 0; i < 32; i += 1)
     {
         v0 = cgc_getRandomNumber(v4);
-        (&*(a0)->field_0)[i] = *((v0 + 4206608));
+        (&(*(a0))->field_0)[i] = *((v0 + 4206608));
     }
-    *(a0)->field_20 = 0;
+    (*(a0))->field_20 = 0;
     return 33;
 }
