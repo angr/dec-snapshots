@@ -1,4 +1,4 @@
-unsigned long long cgc_strlen(unsigned long a0)
+long long cgc_strlen(unsigned long a0)
 {
     unsigned long long i;  // [bp-0x18]
 

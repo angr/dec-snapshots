@@ -1,4 +1,4 @@
-unsigned int cgc_str2uint(char *a0)
+int cgc_str2uint(char *a0)
 {
     int i;  // [bp-0x24]
     int v1;  // [bp-0x20]

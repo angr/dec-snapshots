@@ -1,5 +1,5 @@
 
-unsigned int main(unsigned int a0, unsigned long long a1)
+int main(unsigned int a0, unsigned long long a1)
 {
     char v0;  // [bp-0x6d]
     unsigned int v1;  // [bp-0x6c]

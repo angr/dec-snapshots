@@ -1,4 +1,4 @@
-unsigned int cgc_ready(unsigned int a0)
+int cgc_ready(unsigned int a0)
 {
     unsigned int v0;  // [bp-0xa0]
     unsigned int v1;  // [bp-0x9c]

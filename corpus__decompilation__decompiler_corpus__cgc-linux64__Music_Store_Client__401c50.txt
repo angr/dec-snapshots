@@ -1,4 +1,4 @@
-unsigned int cgc_parseSearchResult(char *a0, char *a1)
+int cgc_parseSearchResult(char *a0, char *a1)
 {
     char v0;  // [bp-0x5d]
     unsigned int v1;  // [bp-0x5c]

@@ -9,7 +9,7 @@ extern long long cgc_allocated;
 extern struct_0 *cgc_lastpage;
 extern unsigned int cgc_curleft;
 
-unsigned long long cgc_malloc(unsigned long long a0)
+long long cgc_malloc(unsigned long long a0)
 {
     char v0;  // [bp-0x21]
     struct_0 *iter;  // [bp-0x20]

@@ -1,4 +1,4 @@
-unsigned int cgc_sendall(unsigned int a0, long long a1, long long a2)
+int cgc_sendall(unsigned int a0, long long a1, long long a2)
 {
     unsigned long long v0;  // [bp-0x30]
     unsigned long v1;  // [bp-0x28]

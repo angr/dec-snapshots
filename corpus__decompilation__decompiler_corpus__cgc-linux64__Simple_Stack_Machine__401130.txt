@@ -2,10 +2,10 @@ extern unsigned long long g_4033c8;
 extern long long __dso_handle;
 extern char __bss_start;
 
-unsigned long long __do_global_dtors_aux(void)
+long long __do_global_dtors_aux(void)
 {
-    unsigned long long v1;  // rax
-    unsigned long long v2;  // rax
+    long long v1;  // rax
+    long long v2;  // rax
 
     if (__bss_start)
         return v2;
