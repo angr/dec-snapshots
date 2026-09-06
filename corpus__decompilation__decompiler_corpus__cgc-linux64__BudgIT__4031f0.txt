@@ -3,6 +3,11 @@ typedef struct struct_0 {
     struct struct_1 *field_8;
 } struct_0;
 
+typedef struct ustruct_0 {
+    void* field_0;
+    void* field_8;
+} ustruct_0;
+
 typedef struct struct_1 {
     struct struct_0 *field_0;
 } struct_1;
@@ -12,7 +17,7 @@ extern struct_0 *cgc_freed;
 struct_0 * cgc_free(unsigned long long a0)
 {
     struct_0 *v2;  // rax
-    unsigned long long v0;  // [bp-0x18]
+    ustruct_0 *v0;  // [bp-0x18]
 
     if (!a0)
         return v2;

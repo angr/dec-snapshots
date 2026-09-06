@@ -4,6 +4,12 @@ typedef struct struct_0 {
     char field_20;
 } struct_0;
 
+typedef struct ustruct_0 {
+    char field_0;
+    char padding_1[31];
+    char field_20;
+} ustruct_0;
+
 unsigned int cgc_getBalance(struct_0 *a0)
 {
     char v6;  // al
@@ -11,7 +17,7 @@ unsigned int cgc_getBalance(struct_0 *a0)
     unsigned long v0;  // [bp-0x38]
     unsigned int v1;  // [bp-0x2c]
     unsigned long v2;  // [bp-0x28]
-    struct_0 *v3;  // [bp-0x20]
+    ustruct_0 *v3;  // [bp-0x20]
     unsigned long v4;  // [bp-0x18], Other Possible Types: unsigned long long
 
     v4 = 0;
