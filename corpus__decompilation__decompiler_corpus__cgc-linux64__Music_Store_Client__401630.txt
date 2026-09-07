@@ -1,6 +1,6 @@
 char * cgc_strcat(char *a0, char *a1)
 {
-    char v3;  // 4116
+    char v3;  // al
     int v0;  // [bp-0x28]
     int iter;  // [bp-0x24]
 
@@ -9,7 +9,7 @@ char * cgc_strcat(char *a0, char *a1)
     while (1)
     {
         v3 = a1[v0];
-        a0[iter] = a1[v0];
+        a0[iter] = v3;
         if (!v3)
             break;
         iter += 1;

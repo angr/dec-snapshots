@@ -6,8 +6,9 @@ typedef struct struct_0 {
 
 struct_0 * cgc_removeMap(struct_0 **a0, char *a1)
 {
-    unsigned long v4;  // rax
-    struct_0 *v5;  // rax
+    unsigned long long v4;  // rax
+    unsigned long v5;  // rax
+    struct_0 *v6;  // rax
     char v0;  // [bp-0x31]
     struct_0 *v1;  // [bp-0x30]
     struct_0 *v2;  // [bp-0x28], Other Possible Types: unsigned long long
@@ -17,10 +18,15 @@ struct_0 * cgc_removeMap(struct_0 **a0, char *a1)
     v2 = *(a0);
     while (1)
     {
+        v4 = 0;
         v0 = 0;
         if (v2)
-            v0 = v2->field_c;
-        v5 = _INSERT(v4, 0, v0);
+        {
+            v5 = v2->field_c;
+            v4 = _INSERT(v5, 0, v5);
+            v0 = v5;
+        }
+        v6 = _INSERT(v4, 0, v0);
         if (!(v0 & 1))
             break;
         if (!cgc_strcmp(a1, &v2->field_c))
@@ -29,7 +35,7 @@ struct_0 * cgc_removeMap(struct_0 **a0, char *a1)
         v2 = v2->field_0;
     }
     if (!v2)
-        return v5;
+        return v6;
     if (!v1)
         *(a0) = v2->field_0;
     else
