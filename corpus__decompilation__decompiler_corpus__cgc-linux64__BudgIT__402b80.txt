@@ -1,8 +1,10 @@
 long long cgc_memcpy(unsigned long a0, unsigned long a1, unsigned long long a2)
 {
+    unsigned long long v2;  // rdx
     unsigned long long i;  // [bp-0x28]
 
-    for (i = 0; i < a2; i += 1)
+    i = 0;
+    for (v2 = a2; i < a2; i += 1)
     {
         *((a0 + i)) = *((a1 + i));
     }
