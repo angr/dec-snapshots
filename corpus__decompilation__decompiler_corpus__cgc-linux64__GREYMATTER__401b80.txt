@@ -65,7 +65,7 @@ unsigned int cgc_request_document(unsigned long a0, long long a1)
             v14 = v12;
             return v14;
         }
-        /* unsupported instruction */ = &v0;
+        rsp = &v0;
         v12 = cgc_receive_with_term(0, v9, v10, &v11);
         if (!v12)
         {
@@ -79,14 +79,14 @@ unsigned int cgc_request_document(unsigned long a0, long long a1)
                 if (!v8)
                     break;
                 v8 += cgc_strlen(&g_402008);
-                /* unsupported instruction */ = /* unsupported instruction */ - 24;
+                rsp = rsp - 24;
                 v7 = cgc_strpos(v8, "$!SRC$");
                 if (v7)
                 {
                     v6 = v7 - v8 + 1;
                     v16 = v6;
-                    v5 = /* unsupported instruction */;
-                    v1 = /* unsupported instruction */ - (v16 + 15 & 0xfffffffffffffff0);
+                    v5 = rsp;
+                    v1 = rsp - (v16 + 15 & 0xfffffffffffffff0);
                     v4 = v16;
                     cgc_strncpy(v1, v8, v6 - 1);
                     *(&v1[v6] - 1) = 6;
@@ -103,7 +103,7 @@ unsigned int cgc_request_document(unsigned long a0, long long a1)
                         v12 = cgc_request_document(v3, v13);
                         v2 = (0 == v12 ? 0 : 2);
                     }
-                    /* unsupported instruction */ = v5;
+                    rsp = v5;
                     if (v2)
                         break;
                 }
