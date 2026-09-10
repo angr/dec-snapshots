@@ -1,3 +1,9 @@
+typedef struct struct_hcc4689f7 {
+    struct struct_hcc4689f7 *field_0;
+    unsigned int field_8;
+    char field_c;
+} struct_hcc4689f7;
+
 unsigned int main(unsigned int a0, unsigned long long a1)
 {
     char *v0;  // [bp-0x90]
@@ -8,7 +14,7 @@ unsigned int main(unsigned int a0, unsigned long long a1)
     unsigned int v5;  // [bp-0x4c]
     char v6;  // [bp-0x48]
     char v7;  // [bp-0x28]
-    void* v8;  // [bp-0x20]
+    struct_hcc4689f7 *v8;  // [bp-0x20]
     unsigned long long v9;  // [bp-0x18]
     unsigned int v10;  // [bp-0x10]
     unsigned int v11;  // [bp-0xc]
