@@ -12,11 +12,11 @@ typedef struct struct_1 {
     struct struct_0 *field_0;
 } struct_1;
 
-struct_2 * cgc_remove(struct_2 *idx)
+void cgc_remove(struct_2 *idx)
 {
     idx->field_0->field_8 = idx->field_8;
     idx->field_8->field_0 = idx->field_0;
     idx->field_8 = NULL;
     idx->field_0 = NULL;
-    return idx;
+    return;
 }

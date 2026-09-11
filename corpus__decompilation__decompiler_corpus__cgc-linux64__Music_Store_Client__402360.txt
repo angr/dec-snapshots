@@ -1,4 +1,4 @@
-char * cgc_getRandomTerm(char *a0)
+void cgc_getRandomTerm(char *a0)
 {
     unsigned int v0;  // [bp-0x20]
     unsigned int j;  // [bp-0x1c]
@@ -15,5 +15,5 @@ char * cgc_getRandomTerm(char *a0)
         a0[j] = *((v0 + 4206608));
     }
     a0[i] = 0;
-    return a0;
+    return;
 }
