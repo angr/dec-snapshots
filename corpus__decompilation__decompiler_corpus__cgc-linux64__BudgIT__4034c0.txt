@@ -1,6 +1,5 @@
 typedef struct struct_0 {
-    struct struct_0 *field_0;
-    struct struct_0 *field_8;
+    unsigned long long field_0;
 } struct_0;
 
 extern char cgc_heapinit_done;
@@ -9,7 +8,7 @@ extern char cgc_allocatedc;
 extern struct_0 *cgc_freed;
 extern struct_0 *cgc_allocated;
 
-struct_0 * cgc_heapinit(void)
+void cgc_heapinit(void)
 {
     cgc_allocated = &cgc_allocatedc;
     cgc_freed = &cgc_freedc;
@@ -18,5 +17,5 @@ struct_0 * cgc_heapinit(void)
     cgc_freed[1].field_0 = cgc_freed;
     cgc_freed->field_0 = cgc_freed;
     cgc_heapinit_done = 1;
-    return cgc_freed;
+    return;
 }
