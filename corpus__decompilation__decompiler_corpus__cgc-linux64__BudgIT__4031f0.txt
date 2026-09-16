@@ -1,8 +1,9 @@
-typedef struct struct_0 {
-    unsigned long long field_0;
-} struct_0;
+typedef struct st_403140_0 {
+    struct st_403140_0 *field_0;
+    struct st_403140_0 *field_8;
+} st_403140_0;
 
-extern struct_0 *cgc_freed;
+extern st_403140_0 *cgc_freed;
 
 void cgc_free(unsigned long long a0)
 {

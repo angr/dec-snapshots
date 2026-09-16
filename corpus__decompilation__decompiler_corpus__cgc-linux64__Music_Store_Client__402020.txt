@@ -1,10 +1,10 @@
-typedef struct struct_0 {
+typedef struct st_402020_0 {
     unsigned int field_0;
     char padding_4[4];
     unsigned long long field_8;
-} struct_0;
+} st_402020_0;
 
-unsigned int cgc_receiveSearchResults(unsigned int a0, struct_0 *a1, unsigned int a2)
+unsigned int cgc_receiveSearchResults(unsigned int a0, st_402020_0 *a1, unsigned int a2)
 {
     unsigned int v0;  // [bp-0x434]
     unsigned int v1;  // [bp-0x430]

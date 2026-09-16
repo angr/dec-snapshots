@@ -1,9 +1,9 @@
-typedef struct struct_0 {
-    struct struct_0 *field_0;
-    struct struct_0 *field_8;
-} struct_0;
+typedef struct st_403140_0 {
+    struct st_403140_0 *field_0;
+    struct st_403140_0 *field_8;
+} st_403140_0;
 
-void cgc_insert(struct_0 *a0, struct_0 *a1)
+void cgc_insert(st_403140_0 *a0, st_403140_0 *a1)
 {
     a1->field_8 = a0;
     a1->field_0 = a0->field_0;

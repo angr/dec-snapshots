@@ -1,12 +1,12 @@
-typedef struct struct_0 {
-    struct struct_0 *field_0;
+typedef struct st_4039a0_0 {
+    struct st_4039a0_0 *field_0;
     unsigned int field_8;
-} struct_0;
+} st_4039a0_0;
 
-void cgc_sendReport(struct_0 *a0)
+void cgc_sendReport(st_4039a0_0 *a0)
 {
     unsigned int v0;  // [bp-0x5c]
-    struct_0 *v1;  // [bp-0x58]
+    st_4039a0_0 *v1;  // [bp-0x58]
     unsigned int v2;  // [bp-0x4c]
     char v3[52];  // [bp-0x48]
     unsigned int v4;  // [bp-0x14]

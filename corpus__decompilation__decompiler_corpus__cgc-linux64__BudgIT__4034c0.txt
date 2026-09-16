@@ -1,20 +1,21 @@
-typedef struct struct_0 {
-    unsigned long long field_0;
-} struct_0;
+typedef struct st_4034c0_0 {
+    struct st_4034c0_0 *field_0;
+    struct st_4034c0_0 *field_8;
+} st_4034c0_0;
 
 extern char cgc_heapinit_done;
 extern char cgc_freedc;
 extern char cgc_allocatedc;
-extern struct_0 *cgc_freed;
-extern struct_0 *cgc_allocated;
+extern st_4034c0_0 *cgc_freed;
+extern st_4034c0_0 *cgc_allocated;
 
 void cgc_heapinit(void)
 {
     cgc_allocated = &cgc_allocatedc;
     cgc_freed = &cgc_freedc;
-    cgc_allocated[1].field_0 = cgc_allocated;
+    cgc_allocated->field_8 = cgc_allocated;
     cgc_allocated->field_0 = cgc_allocated;
-    cgc_freed[1].field_0 = cgc_freed;
+    cgc_freed->field_8 = cgc_freed;
     cgc_freed->field_0 = cgc_freed;
     cgc_heapinit_done = 1;
     return;

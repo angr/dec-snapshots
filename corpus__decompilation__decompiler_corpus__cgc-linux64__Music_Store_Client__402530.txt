@@ -1,11 +1,11 @@
-typedef struct struct_0 {
+typedef struct st_402530_0 {
     unsigned int field_0;
     char padding_4[4];
     unsigned long long field_8;
     char field_10;
-} struct_0;
+} st_402530_0;
 
-unsigned int cgc_purchaseSong(unsigned int a0, char *a1, struct_0 *idx)
+unsigned int cgc_purchaseSong(unsigned int a0, char *a1, st_402530_0 *idx)
 {
     unsigned int v0;  // [bp-0x38]
     unsigned int v1;  // [bp-0x34]

@@ -1,14 +1,14 @@
-typedef struct struct_0 {
-    struct struct_0 *field_0;
+typedef struct st_4037d0_0 {
+    struct st_4037d0_0 *field_0;
     unsigned int field_8;
     char field_c;
-} struct_0;
+} st_4037d0_0;
 
-void cgc_removeMap(struct_0 **a0, char *a1)
+void cgc_removeMap(st_4037d0_0 **a0, char *a1)
 {
     char v0;  // [bp-0x31]
-    struct_0 *v1;  // [bp-0x30]
-    struct_0 *v2;  // [bp-0x28], Other Possible Types: unsigned long long
+    st_4037d0_0 *v1;  // [bp-0x30]
+    st_4037d0_0 *v2;  // [bp-0x28], Other Possible Types: unsigned long long
 
     v2 = 0;
     v1 = NULL;
