@@ -3,7 +3,12 @@ typedef struct struct_0 {
     unsigned int field_8;
 } struct_0;
 
-int cgc_sendReport(struct_0 *a0)
+typedef struct ustruct_1 {
+    void* field_0;
+    unsigned int field_8;
+} ustruct_1;
+
+int cgc_sendReport(ustruct_1 *a0)
 {
     unsigned int v0;  // [bp-0x5c]
     struct_0 *v1;  // [bp-0x58]
