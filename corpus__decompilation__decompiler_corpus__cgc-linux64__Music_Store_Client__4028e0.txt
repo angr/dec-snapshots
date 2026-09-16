@@ -4,7 +4,7 @@ typedef struct struct_0 {
     char field_20;
 } struct_0;
 
-int main(unsigned int a0, unsigned long long a1)
+int main(int argc, char **argv)
 {
     long long v36;  // rdi
     long long v37;  // rsi
@@ -43,13 +43,13 @@ int main(unsigned int a0, unsigned long long a1)
     char i;  // [bp-0x28]
     unsigned int v30;  // [bp-0x20]
     unsigned int v31;  // [bp-0x1c]
-    unsigned long long v32;  // [bp-0x18]
-    unsigned int v33;  // [bp-0x10]
+    char **v32;  // [bp-0x18]
+    int v33;  // [bp-0x10]
     unsigned int v34;  // [bp-0xc]
 
     v34 = 0;
-    v33 = a0;
-    v32 = a1;
+    v33 = argc;
+    v32 = argv;
     v31 = 0;
     v30 = 0;
     memset(&v27, 0, 24);

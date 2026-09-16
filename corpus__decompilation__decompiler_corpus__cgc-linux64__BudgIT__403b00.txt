@@ -1,4 +1,4 @@
-unsigned int main(unsigned int a0, unsigned long long a1)
+int main(int argc, char **argv)
 {
     char *v0;  // [bp-0x90]
     char v1[48];  // [bp-0x88]
@@ -9,13 +9,13 @@ unsigned int main(unsigned int a0, unsigned long long a1)
     char v6;  // [bp-0x48]
     char v7;  // [bp-0x28]
     void* v8;  // [bp-0x20]
-    unsigned long long v9;  // [bp-0x18]
-    unsigned int v10;  // [bp-0x10]
+    char **v9;  // [bp-0x18]
+    int v10;  // [bp-0x10]
     unsigned int v11;  // [bp-0xc]
 
     v11 = 0;
-    v10 = a0;
-    v9 = a1;
+    v10 = argc;
+    v9 = argv;
     v8 = NULL;
     while (1)
     {
