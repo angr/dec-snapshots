@@ -168,13 +168,11 @@ LABEL_401647:
             node += 1;
         }
     }
-    if (iter >= 0)
+    if (iter < 0)
     {
-        cgc_transmit_all(v6 + iter * 4, 4);
-        return 0;
+        cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
+        cgc__terminate(0xffffffff);
     }
-    cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
-    cgc__terminate(0xffffffff);
     cgc_transmit_all(v6 + iter * 4, 4);
     return 0;
 }
