@@ -1,18 +1,18 @@
-typedef struct struct_0 {
+typedef struct st_4030f0_0 {
     char padding_0[8];
-    struct struct_1 *field_8;
-} struct_0;
+    struct st_4030f0_1 *field_8;
+} st_4030f0_0;
 
-typedef struct struct_2 {
-    struct struct_0 *field_0;
-    struct struct_1 *field_8;
-} struct_2;
+typedef struct st_4030f0_2 {
+    struct st_4030f0_0 *field_0;
+    struct st_4030f0_1 *field_8;
+} st_4030f0_2;
 
-typedef struct struct_1 {
-    struct struct_0 *field_0;
-} struct_1;
+typedef struct st_4030f0_1 {
+    struct st_4030f0_0 *field_0;
+} st_4030f0_1;
 
-void cgc_remove(struct_2 *idx)
+void cgc_remove(st_4030f0_2 *idx)
 {
     idx->field_0->field_8 = idx->field_8;
     idx->field_8->field_0 = idx->field_0;

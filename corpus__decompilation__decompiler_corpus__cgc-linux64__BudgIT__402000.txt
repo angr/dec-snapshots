@@ -1,8 +1,8 @@
-typedef struct struct_0 {
+typedef struct st_402000_0 {
     unsigned long long field_0;
-} struct_0;
+} st_402000_0;
 
-extern struct_0 *g_405a38;
+extern st_402000_0 *g_405a38;
 
 unsigned long long * _init(void)
 {

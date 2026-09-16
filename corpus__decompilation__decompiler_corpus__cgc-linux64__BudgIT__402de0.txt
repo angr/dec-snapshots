@@ -1,15 +1,15 @@
-typedef struct struct_0 {
+typedef struct st_402de0_0 {
     char padding_0[16];
     unsigned int field_10;
-} struct_0;
+} st_402de0_0;
 
-extern struct_0 *cgc_freed;
-extern struct_0 *cgc_allocated;
+extern st_402de0_0 *cgc_freed;
+extern st_402de0_0 *cgc_allocated;
 
-struct_0 * cgc_checkheap(void)
+st_402de0_0 * cgc_checkheap(void)
 {
-    struct_0 *node;  // [bp-0x18]
-    struct_0 *iter;  // [bp-0x10]
+    st_402de0_0 *node;  // [bp-0x18]
+    st_402de0_0 *iter;  // [bp-0x10]
 
     for (iter = cgc_freed; *(&iter->padding_0[8]) != cgc_freed; iter = *(&iter->padding_0[8]))
     {

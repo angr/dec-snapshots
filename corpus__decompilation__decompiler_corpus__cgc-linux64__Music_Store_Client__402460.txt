@@ -1,10 +1,10 @@
-typedef struct struct_0 {
+typedef struct st_402460_0 {
     char field_0;
     char padding_1[31];
     char field_20;
-} struct_0;
+} st_402460_0;
 
-unsigned int cgc_getRandomGiftCard(struct_0 **a0)
+unsigned int cgc_getRandomGiftCard(st_402460_0 **a0)
 {
     unsigned int v0;  // [bp-0x24]
     unsigned int v1;  // [bp-0x20]

@@ -1,18 +1,18 @@
-typedef struct struct_0 {
+typedef struct st_402ec0_0 {
     char padding_0[16];
     unsigned int field_10;
-} struct_0;
+} st_402ec0_0;
 
 extern char cgc_heapinit_done;
-extern struct_0 *cgc_freed;
+extern st_402ec0_0 *cgc_freed;
 extern long long cgc_allocated;
-extern struct_0 *cgc_lastpage;
+extern st_402ec0_0 *cgc_lastpage;
 extern unsigned int cgc_curleft;
 
 unsigned long long cgc_malloc(unsigned long long a0)
 {
     char v0;  // [bp-0x21]
-    struct_0 *iter;  // [bp-0x20]
+    st_402ec0_0 *iter;  // [bp-0x20]
     unsigned long long v2;  // [bp-0x18]
     unsigned long long v3;  // [bp-0x10]
 
@@ -46,7 +46,7 @@ unsigned long long cgc_malloc(unsigned long long a0)
     {
         iter = cgc_lastpage;
         iter->field_10 = v2;
-        cgc_lastpage = v2 + cgc_lastpage;
+        cgc_lastpage = &cgc_lastpage->padding_0[v2];
         cgc_curleft = cgc_curleft - v2;
         cgc_insert(cgc_allocated, iter);
         v3 = &iter[1].padding_0[4];
