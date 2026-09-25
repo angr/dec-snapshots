@@ -11,6 +11,8 @@ typedef struct st_402460_0 {
 
 unsigned int cgc_getBalance(st_402740_0 *a0)
 {
+    char v6;  // al
+    long long v7;  // rcx
     unsigned long v0;  // [bp-0x38]
     unsigned int v1;  // [bp-0x2c]
     unsigned long v2;  // [bp-0x28]
@@ -39,8 +41,10 @@ unsigned int cgc_getBalance(st_402740_0 *a0)
     v1 = cgc_deallocate(v2, v4 + 7);
     if (v1)
         cgc__terminate(3);
-    a0->field_10 = cgc_receiveBalance(0);
-    v1 = cgc_allocate(a0->field_10 * 250, 0, &a0->padding_0[8]);
+    v6 = cgc_receiveBalance(0);
+    v7 = _INSERT(0, 0, v6);
+    a0->field_10 = v6;
+    v1 = cgc_allocate(a0->field_10 * 250, 0, &a0->padding_0[8], v7);
     if (!v1)
         return 0;
     cgc__terminate(3);
