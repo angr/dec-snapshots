@@ -1,5 +1,0 @@
-void sub_402ce2(unsigned long a0, unsigned long a1)
-{
-    cgc___umoddi3();
-    return;
-}

@@ -1,5 +1,0 @@
-void sub_4016ba(unsigned long a0)
-{
-    cgc_str2int();
-    return;
-}
