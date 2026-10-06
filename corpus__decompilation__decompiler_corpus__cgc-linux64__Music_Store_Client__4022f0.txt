@@ -6,7 +6,7 @@ typedef struct st_4022f0_0 {
     unsigned long long field_18;
 } st_4022f0_0;
 
-extern st_4022f0_0 attributes;
+extern struct_attributes attributes;
 
 void cgc_getRandomAttribute(unsigned long a0)
 {

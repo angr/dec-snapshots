@@ -4,8 +4,8 @@ typedef struct st_4034c0_0 {
 } st_4034c0_0;
 
 extern char cgc_heapinit_done;
-extern char cgc_freedc;
-extern char cgc_allocatedc;
+extern int cgc_freedc;
+extern int cgc_allocatedc;
 extern st_4034c0_0 *cgc_freed;
 extern st_4034c0_0 *cgc_allocated;
 
