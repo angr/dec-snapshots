@@ -5,7 +5,7 @@ unsigned int cgc_request_document(unsigned long a0, long long a1)
 {
     unsigned long long v16;  // rax
     char v0;  // [bp-0x190]
-    void* v1;  // [bp-0x180]
+    char *v1;  // [bp-0x180]
     unsigned int v2;  // [bp-0x16c]
     char v3[256];  // [bp-0x168], Other Possible Types: char
     unsigned long long v4;  // [bp-0x68]
@@ -89,7 +89,7 @@ unsigned int cgc_request_document(unsigned long a0, long long a1)
                     v1 = rsp - (v16 + 15 & 0xfffffffffffffff0);
                     v4 = v16;
                     cgc_strncpy(v1, v8, v6 - 1);
-                    *(v1 + v6 - 1) = 6;
+                    *(&v1[v6] - 1) = 6;
                     memset(&v3, 0, 0x100);
                     v3 = 6;
                     v12 = cgc_canonicalize_path(v3, v1, v6);
