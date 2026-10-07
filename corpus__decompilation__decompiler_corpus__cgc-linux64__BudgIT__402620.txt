@@ -11,7 +11,7 @@ long long cgc_strncpy(char *a0, char *a1, unsigned long a2)
     {
         v0 = 0;
         if (iter - a0 < a2)
-            v0 = *(v3);
+            v0 = *(v3) != 0;
         if (!(v0 & 1))
             break;
         *(iter) = *(v3);

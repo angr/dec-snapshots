@@ -1,11 +1,11 @@
 extern unsigned int g_402004;
 
-unsigned int cgc_canonicalize_path(long long a0, char *a1, unsigned long a2)
+unsigned int cgc_canonicalize_path(long long a0, void* a1, unsigned long a2)
 {
-    char *iter;  // [bp-0x48], Other Possible Types: unsigned long long
+    void* iter;  // [bp-0x48], Other Possible Types: unsigned long long
     unsigned long long n;  // [bp-0x40]
     unsigned long long v2;  // [bp-0x38]
-    char *v3;  // [bp-0x30], Other Possible Types: unsigned long long
+    void* v3;  // [bp-0x30], Other Possible Types: unsigned long long
     unsigned int v4;  // [bp-0x24]
 
     v4 = 0;
@@ -15,14 +15,14 @@ unsigned int cgc_canonicalize_path(long long a0, char *a1, unsigned long a2)
     iter = a1;
     v3 = a1;
     iter = cgc_strpos(a1, &g_402004);
-    v2 = (0 == iter ? &a1[a2] : iter);
+    v2 = (0 == iter ? a1 + a2 : iter);
     n = v2 - v3;
     if (n > 0x100)
     {
         v4 = 15;
         return v4;
     }
-    cgc_strncat(a0, *(&v3), n);
+    cgc_strncat(a0, v3, n);
     if (!iter)
         return v4;
     iter += 2;
@@ -43,7 +43,7 @@ unsigned int cgc_canonicalize_path(long long a0, char *a1, unsigned long a2)
         iter += 2;
         v3 = iter;
     }
-    v2 = &a1[a2];
+    v2 = a1 + a2;
     if (v3 >= v2)
         return v4;
     n = v2 - v3;

@@ -1,4 +1,4 @@
-char * cgc_random_alpha_lower(char *a0, unsigned long a1)
+void cgc_random_alpha_lower(char *a0, unsigned long a1)
 {
     char v0;  // [bp-0x58]
     char v1;  // [bp-0x49]
@@ -24,5 +24,5 @@ char * cgc_random_alpha_lower(char *a0, unsigned long a1)
     {
         a0[i] = (v2[i] % 26) + 97;
     }
-    return v5;
+    return;
 }
