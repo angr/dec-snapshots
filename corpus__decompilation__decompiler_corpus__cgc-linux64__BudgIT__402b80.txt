@@ -1,4 +1,4 @@
-char * cgc_memcpy(char *a0, char *a1, unsigned long long a2)
+long long cgc_memcpy(unsigned long a0, unsigned long a1, unsigned long long a2)
 {
     unsigned long long v2;  // rdx
     unsigned long long i;  // [bp-0x28]
@@ -6,7 +6,7 @@ char * cgc_memcpy(char *a0, char *a1, unsigned long long a2)
     i = 0;
     for (v2 = a2; i < a2; i += 1)
     {
-        a0[i] = a1[i];
+        *((a0 + i)) = *((a1 + i));
     }
     return a0;
 }

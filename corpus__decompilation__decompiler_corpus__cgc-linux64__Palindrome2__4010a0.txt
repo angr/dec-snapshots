@@ -1,5 +1,6 @@
+extern unsigned long long __bss_start;
 
-void deregister_tm_clones(void)
+unsigned long long deregister_tm_clones(void)
 {
-    return;
+    return &__bss_start;
 }

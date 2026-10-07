@@ -1,5 +1,5 @@
 
-void deregister_tm_clones(void)
+unsigned long long deregister_tm_clones(void)
 {
-    return;
+    return 4273632;
 }
