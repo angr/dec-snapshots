@@ -5,12 +5,12 @@ long long cgc_strcpy(char *a0, char *a1)
     char *i;  // [bp-0x18]
 
     i = a1;
-    for (iter = a0; *(i); i += 1)
+    for (iter = a0; *i; i += 1)
     {
-        *(iter) = *(i);
+        *iter = *i;
         iter += 1;
     }
     v1 = iter + 1;
-    *(iter) = 0;
+    *iter = 0;
     return v1 - a0 - 1;
 }

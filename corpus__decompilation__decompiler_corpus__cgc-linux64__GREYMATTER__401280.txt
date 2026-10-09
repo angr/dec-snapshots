@@ -20,7 +20,7 @@ unsigned int cgc_transmit_all(unsigned int a0, long long a1, long long a2, long 
         }
     }
     if (a3)
-        *(a3) = a2;
+        *a3 = a2;
     v4 = v2;
     return v4;
 }

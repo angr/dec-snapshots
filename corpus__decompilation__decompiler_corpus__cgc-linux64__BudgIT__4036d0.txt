@@ -12,7 +12,7 @@ unsigned int cgc_getSize(st_4036d0_0 **a0)
         v1 = 0;
         return v1;
     }
-    for (i = a0; *(i); i = *(i));
+    for (i = a0; *i; i = *i);
     v1 = ((i - a0) / 40) + 1;
     return v1;
 }

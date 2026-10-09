@@ -17,7 +17,7 @@ unsigned int cgc_setMap(st_4035d0_0 **a0, void* a1, unsigned int a2)
 
     i = 0;
     v0 = NULL;
-    for (i = *(a0); i; i = i->field_0)
+    for (i = *a0; i; i = i->field_0)
     {
         if (!cgc_strcmp(a1, &i->field_c))
             break;
@@ -25,14 +25,14 @@ unsigned int cgc_setMap(st_4035d0_0 **a0, void* a1, unsigned int a2)
     }
     if (!i)
     {
-        if (cgc_getSize(*(a0)) == 129)
+        if (cgc_getSize(*a0) == 129)
         {
             v2 = 0;
             return v2;
         }
         i = cgc_initMap(v0);
-        i->field_0 = *(a0);
-        *(a0) = i;
+        i->field_0 = *a0;
+        *a0 = i;
     }
     if (!i->field_c)
         cgc_strcpy(&i->field_c, a1);

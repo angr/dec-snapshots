@@ -24,7 +24,7 @@ unsigned int cgc_receive_all(unsigned int a0, unsigned long a1, long long a2, lo
             if (!v0)
             {
                 if (a3)
-                    *(a3) = a2 - v1;
+                    *a3 = a2 - v1;
                 v4 = v2;
                 return v4;
             }
@@ -33,7 +33,7 @@ unsigned int cgc_receive_all(unsigned int a0, unsigned long a1, long long a2, lo
         else
         {
             if (a3)
-                *(a3) = a2;
+                *a3 = a2;
             v4 = v2;
             return v4;
         }

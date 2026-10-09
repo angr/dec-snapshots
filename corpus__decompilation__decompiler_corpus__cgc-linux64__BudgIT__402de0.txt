@@ -11,9 +11,9 @@ st_402de0_0 * cgc_checkheap(void)
     st_402de0_0 *node;  // [bp-0x18]
     st_402de0_0 *iter;  // [bp-0x10]
 
-    for (iter = cgc_freed; *(&iter->padding_0[8]) != cgc_freed; iter = *(&iter->padding_0[8]))
+    for (iter = cgc_freed; *&iter->padding_0[8] != cgc_freed; iter = *&iter->padding_0[8])
     {
-        for (node = cgc_allocated; *(&node->padding_0[8]) != cgc_allocated; node = *(&node->padding_0[8]))
+        for (node = cgc_allocated; *&node->padding_0[8] != cgc_allocated; node = *&node->padding_0[8])
         {
             if (iter < node + node->field_10 && node < iter + iter->field_10)
             {
@@ -23,5 +23,5 @@ st_402de0_0 * cgc_checkheap(void)
             }
         }
     }
-    return *(&iter->padding_0[8]);
+    return *&iter->padding_0[8];
 }

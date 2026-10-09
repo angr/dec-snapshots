@@ -15,7 +15,7 @@ typedef struct st_4030f0_1 {
 void cgc_remove(st_4030f0_2 *idx)
 {
     idx->field_0->field_8 = idx->field_8;
-    *(idx->field_8) = idx->field_0;
+    *idx->field_8 = idx->field_0;
     idx->field_8 = NULL;
     idx->field_0 = NULL;
     return;

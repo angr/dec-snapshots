@@ -10,14 +10,14 @@ unsigned int cgc_startswith(char *a0, char *a1)
     while (1)
     {
         v0 = 0;
-        if (*(v2))
-            v0 = *(v1) != 0;
+        if (*v2)
+            v0 = *v1 != 0;
         if (!(v0 & 1))
         {
-            v3 = !*(v1);
+            v3 = !*v1;
             return v3;
         }
-        if (*(v2) != *(v1))
+        if (*v2 != *v1)
         {
             v3 = 0;
             return v3;
