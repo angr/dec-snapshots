@@ -4,7 +4,7 @@ void cgc_bzero(unsigned long a0, int a1)
 
     for (i = 0; i < a1; i += 1)
     {
-        *((a0 + i)) = 0;
+        *(a0 + i) = 0;
     }
     return;
 }

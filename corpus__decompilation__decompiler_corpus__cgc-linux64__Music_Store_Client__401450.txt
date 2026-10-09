@@ -6,7 +6,7 @@ char * cgc_memset(char *a0, char a1, unsigned long long a2)
     i = a2;
     for (iter = a0; i > 0; i -= 1)
     {
-        *(iter) = a1;
+        *iter = a1;
         iter += 1;
     }
     return a0;

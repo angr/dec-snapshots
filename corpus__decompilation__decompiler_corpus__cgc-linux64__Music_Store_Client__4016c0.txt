@@ -17,7 +17,7 @@ unsigned int cgc_str2int(char *a0)
         v5 = v4;
         return v5;
     }
-    if (*(a0) == 45)
+    if (*a0 == 45)
     {
         v0 = 0xffffffff;
         iter += 1;

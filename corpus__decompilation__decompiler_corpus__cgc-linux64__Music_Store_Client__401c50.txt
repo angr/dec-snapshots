@@ -26,10 +26,10 @@ unsigned int cgc_parseSearchResult(char *a0, char *a1)
         while (1)
         {
             v0 = 0;
-            if (*(iter))
+            if (*iter)
             {
                 v0 = 0;
-                if (*(iter) != *(v2))
+                if (*iter != *v2)
                     v0 = v4 < 20;
             }
             if (!(v0 & 1))

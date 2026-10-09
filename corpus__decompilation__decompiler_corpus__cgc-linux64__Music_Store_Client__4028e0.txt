@@ -63,22 +63,22 @@ int main(unsigned int a0, unsigned long long a1)
         memcpy(&v4, &v17, 16);
         memcpy(&v1 + 48, &v16, 16);
         memcpy(&v1 + 32, &v15, 16);
-        *((&v1 + 16)) = v14;
-        *(&v1) = v13;
+        *(&v1 + 16) = v14;
+        *&v1 = v13;
         v0 = v12;
-        cgc_sendSearchString(1, v31, len, v18, v33, v34, v0, *(&v1), *((&v1 + 8)), *((&v1 + 24)), *((&v1 + 32)), *((&v1 + 48)), v3);
+        cgc_sendSearchString(1, v31, len, v18, v33, v34, v0, *&v1, *(&v1 + 8), *(&v1 + 24), *(&v1 + 32), *(&v1 + 48), v3);
         cgc_receiveSearchResults(0, &v19, 10);
         v9 = &v0[0];
         v8 = v18;
         memcpy(&v7, &v17, 16);
         memcpy(&v5, &v16, 16);
         memcpy(&v3, &v15, 16);
-        *((&v1 + 40)) = v14;
-        *((&v1 + 24)) = v13;
+        *(&v1 + 40) = v14;
+        *(&v1 + 24) = v13;
         v2 = v12;
         v1 = v21;
         memcpy(v0, &v19, 16);
-        v10 = cgc_selectSong(v35, v31, len, v21, v33, v34, *(v0), *((v0 + 8)));
+        v10 = cgc_selectSong(v35, v31, len, v21, v33, v34, *v0, *(v0 + 8));
         v26 = cgc_purchaseSong(1, v10, &v22);
         if (v26 == 1)
             break;

@@ -19,13 +19,13 @@ unsigned int cgc_getRandomGiftCard(st_402460_0 **a0)
     v1 = cgc_allocate(33, 0, a0);
     if (v1)
         cgc__terminate(3);
-    cgc_memset(*(a0), 0, 32);
+    cgc_memset(*a0, 0, 32);
     v4 = cgc_strlen("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
     for (i = 0; i < 32; i += 1)
     {
         v0 = cgc_getRandomNumber(v4);
-        (&*(a0)->field_0)[i] = *((v0 + 4206608));
+        (&*a0->field_0)[i] = *(v0 + 4206608);
     }
-    *(a0)->field_20 = 0;
+    *a0->field_20 = 0;
     return 33;
 }
