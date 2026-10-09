@@ -19,7 +19,7 @@ unsigned int cgc_sendSearchString(unsigned int a0, unsigned long a1, unsigned lo
     v6 = v12;
     memcpy(&v5, &v11, 16);
     memcpy(&v4, &v10, 16);
-    memcpy(&v3, &/* unsupported instruction */, 16);
+    memcpy(&v3, &a12, 16);
     v2 = a10;
     v1 = a8;
     v0 = a6;
