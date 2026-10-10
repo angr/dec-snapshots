@@ -27,10 +27,10 @@ unsigned int cgc_parseBalanceResult(char *a0)
     while (1)
     {
         v0 = 0;
-        if (*iter)
+        if (*(iter))
         {
             v0 = 0;
-            if (*iter != *v3)
+            if (*(iter) != *(v3))
                 v0 = v5 < 20;
         }
         if (!(v0 & 1))

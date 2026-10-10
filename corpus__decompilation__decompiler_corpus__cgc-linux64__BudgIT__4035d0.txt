@@ -12,31 +12,31 @@ typedef struct st_4035d0_0 {
 unsigned int cgc_setMap(st_4035d0_0 **a0, void* a1, unsigned int a2)
 {
     st_403530_0 *v0;  // [bp-0x38]
-    st_4035d0_0 *i;  // [bp-0x30], Other Possible Types: unsigned long long
+    st_4035d0_0 *v1;  // [bp-0x30], Other Possible Types: unsigned long long
     unsigned int v2;  // [bp-0xc]
 
-    i = 0;
+    v1 = 0;
     v0 = NULL;
-    for (i = *a0; i; i = i->field_0)
+    for (v1 = *(a0); v1; v1 = v1->field_0)
     {
-        if (!cgc_strcmp(a1, &i->field_c))
+        if (!cgc_strcmp(a1, &v1->field_c))
             break;
-        v0 = i;
+        v0 = v1;
     }
-    if (!i)
+    if (!v1)
     {
-        if (cgc_getSize(*a0) == 129)
+        if (cgc_getSize(*(a0)) == 129)
         {
             v2 = 0;
             return v2;
         }
-        i = cgc_initMap(v0);
-        i->field_0 = *a0;
-        *a0 = i;
+        v1 = cgc_initMap(v0);
+        v1->field_0 = *(a0);
+        *(a0) = v1;
     }
-    if (!i->field_c)
-        cgc_strcpy(&i->field_c, a1);
-    i->field_8 = a2;
+    if (!v1->field_c)
+        cgc_strcpy(&v1->field_c, a1);
+    v1->field_8 = a2;
     v2 = 1;
     return v2;
 }

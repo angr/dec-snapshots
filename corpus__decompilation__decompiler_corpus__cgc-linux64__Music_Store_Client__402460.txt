@@ -9,23 +9,23 @@ unsigned int cgc_getRandomGiftCard(st_402460_0 **a0)
     unsigned int v0;  // [bp-0x24]
     unsigned int v1;  // [bp-0x20]
     unsigned int v2;  // [bp-0x1c]
-    int i;  // [bp-0x18], Other Possible Types: unsigned int
+    int v3;  // [bp-0x18], Other Possible Types: unsigned int
     unsigned int v4;  // [bp-0x14]
 
     v4 = 0;
-    i = 0;
+    v3 = 0;
     v2 = 0;
     v1 = 0;
     v1 = cgc_allocate(33, 0, a0);
     if (v1)
         cgc__terminate(3);
-    cgc_memset(*a0, 0, 32);
+    cgc_memset(*(a0), 0, 32);
     v4 = cgc_strlen("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
-    for (i = 0; i < 32; i += 1)
+    for (v3 = 0; v3 < 32; v3 += 1)
     {
         v0 = cgc_getRandomNumber(v4);
-        (&*a0->field_0)[i] = *(v0 + 4206608);
+        (&*(a0)->field_0)[v3] = *((v0 + 4206608));
     }
-    *a0->field_20 = 0;
+    *(a0)->field_20 = 0;
     return 33;
 }

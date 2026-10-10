@@ -13,9 +13,9 @@ unsigned int main(unsigned int a0, unsigned long long a1)
     unsigned int node;  // [bp-0x3c], Other Possible Types: int
     int v10;  // [bp-0x38]
     int iter;  // [bp-0x34]
-    unsigned long long j;  // [bp-0x30]
+    unsigned long long v12;  // [bp-0x30]
     unsigned long v13;  // [bp-0x28]
-    unsigned int i;  // [bp-0x1c]
+    unsigned int v14;  // [bp-0x1c]
     unsigned long long v15;  // [bp-0x18]
     unsigned int v16;  // [bp-0x10]
     unsigned int v17;  // [bp-0xc]
@@ -23,9 +23,9 @@ unsigned int main(unsigned int a0, unsigned long long a1)
     v17 = 0;
     v16 = a0;
     v15 = a1;
-    i = 0;
+    v14 = 0;
     v13 = 0;
-    j = 0;
+    v12 = 0;
     iter = -0x1;
     v10 = 0;
     node = 0;
@@ -42,25 +42,25 @@ unsigned int main(unsigned int a0, unsigned long long a1)
     cgc_deallocate(v4, 0x1000);
     do
     {
-        j = 0;
+        v12 = 0;
         do
         {
-            v8 = cgc_receive(0, &i + j, 4 - j, &v13);
+            v8 = cgc_receive(0, &v14 + v12, 4 - v12, &v13);
             if (!v8 && v13)
                 continue;
             if (!v10)
                 cgc_transmit_all("### The Instruction Set\n\n000b : PUSH # : Pushes a new number onto the stack\n001b : POP : Pops the top number from the stack\n010b : PUSHPC : Pushes the program counter of the current instruction (i.e. PUSHPC) onto the stack\n011b : JMPZ : Pops the top number off of the stack, if its 0 then pop the next value off of the stack and store t\nhat into the PC. If it is not-zero then just pop the next value off of the stack and do nothing with it.\n100b : SWAP # : Swaps the nth number with the top one (which is 0) - meaning SWAP 0 does nothing\n101b : DUP #: Duplicates nth number and pushes it to the top of the stack\n110b : ADD : Pops the top two numbers off of the stack, adds them, and pushes the sum back onto the stack\n111b : SUB : Pops the top two numbers off of the stack, subtracts them ( (top - 1) - top ), and pushes the differ\nence back onto the stack\n\nAll instructions are 32-bits long with the first 3 bits (msbs) reserved for the instruction and the lower 29 bits\nfor literals. POP, ADD, SUB, PUSHPC, JMPZ ignores the lower 29 bits, UNLESS the following special instructions a\nre used:\n\n0xFFFFFFFF : RET : End of instruction stream - The topmost value is the return value\n\n### A simple program\n\nmultiply(x,y)\n\nPUSH 0\t; 0 - the SUM\nPUSH y \t; SUM, y\nPUSHPC \t; SUM, y, pc\nDUP 1 \t; SUM, y, pc, y\nPUSH 1\t; SUM, y, pc, y, 1\nSUB\t; SUM, y, pc, y-1\nSWAP 2\t; SUM, y-1, pc, y\nSWAP 3\t; y, y-1, pc, SUM\nPUSH x \t; y, y-1, pc, SUM, x\nADD \t; y, y-1, pc, SUM+x\nSWAP 3 \t; SUM+x, y-1, pc, y\nPOP\t; SUM+x, y-1, pc\nPUSHPC\t; SUM+x, y-1, pc, HERE\nPUSH 7\t; SUM+x, y-1, pc, HERE, 7\nADD\t; SUM+x, y-1, pc, HERE+7 \nDUP 2\t; SUM+x, y-1, pc, HERE+7, y-1\nJMPZ\t;\nPUSH 0\t; SUM+x, y-1, pc, 0\nJMPZ\t;\nPOP\t; SUM+x, y-1\nPOP\t; SUM+x\nRET\n\nIf y-1 is not zero, then we will jump back up to where PUSHPC is and execute that whole stream again, except SUM \nwill now be SUM+x and y is now y-1\nIf y-1 is zero, then we will jump to the instruction after the second JMPZ (which is the first POP)\n", 1956);
             cgc__terminate(0xffffffff);
-            j += v13;
-        } while (j < 4);
-        v7[v10] = i;
+            v12 += v13;
+        } while (v12 < 4);
+        v7[v10] = v14;
         v10 += 1;
         if (v10 >= 0x800)
         {
             cgc_transmit_all("INSNS OVERFLOW EXCEPTION\n", 26);
             cgc__terminate(0xffffffff);
         }
-    } while (i != 0xffffffff);
+    } while (v14 != 0xffffffff);
     node = 0;
     while (1)
     {
@@ -69,16 +69,16 @@ unsigned int main(unsigned int a0, unsigned long long a1)
             v0 = v7[node] != 0xffffffff;
         if (!(v0 & 1))
             break;
-        i = v7[node];
-        if (i == 0xffffffff)
+        v14 = v7[node];
+        if (v14 == 0xffffffff)
             break;
-        if ((i & 7) <= 7)
+        if ((v14 & 7) <= 7)
         {
-            switch (i & 7)
+            switch (v14 & 7)
             {
             case 0:
                 iter += 1;
-                *(v6 + 4 * iter) = i >> 3;
+                *((v6 + 4 * iter)) = v14 >> 3;
                 break;
             case 1:
                 if (iter < 0)
@@ -95,7 +95,7 @@ unsigned int main(unsigned int a0, unsigned long long a1)
                     cgc_transmit_all("STACK OVERFLOW EXCEPTION\n", 26);
                     cgc__terminate(0xffffffff);
                 }
-                *(v6 + 4 * iter) = node;
+                *((v6 + 4 * iter)) = node;
                 break;
             case 3:
                 if (iter < 1)
@@ -103,13 +103,13 @@ unsigned int main(unsigned int a0, unsigned long long a1)
                     cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
                     cgc__terminate(0xffffffff);
                 }
-                if (*(v6 + 4 * iter))
+                if (*((v6 + 4 * iter)))
                 {
 LABEL_401553:
                     iter -= 2;
                     break;
                 }
-                node = *(v6 + 4 * iter - 4);
+                node = *((v6 + 4 * iter - 4));
                 if (node >= 0 && node < v10)
                     goto LABEL_40154a;
                 cgc_transmit_all("INVALID PROGRAM COUNTER EXCEPTION\n", 35);
@@ -123,25 +123,25 @@ LABEL_40154a:
                     cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
                     cgc__terminate(0xffffffff);
                 }
-                v3 = *(v6 + 4 * iter);
-                v2 = iter - (i >> 3);
+                v3 = *((v6 + 4 * iter));
+                v2 = iter - (v14 >> 3);
                 if (v2 >= 0 && v2 <= iter)
                     goto LABEL_4015d3;
                 cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
                 cgc__terminate(0xffffffff);
 LABEL_4015d3:
-                *(v6 + 4 * iter) = *(v6 + 4 * v2);
-                *(v6 + 4 * v2) = v3;
+                *((v6 + 4 * iter)) = *((v6 + 4 * v2));
+                *((v6 + 4 * v2)) = v3;
                 break;
             case 5:
                 iter += 1;
-                v1 = iter - (i >> 3) - 1;
+                v1 = iter - (v14 >> 3) - 1;
                 if (v1 >= 0 && v1 <= iter)
                     goto LABEL_401647;
                 cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
                 cgc__terminate(0xffffffff);
 LABEL_401647:
-                *(v6 + 4 * iter) = *(v6 + 4 * iter + -4 * (i >> 3) - 4);
+                *((v6 + 4 * iter)) = *((v6 + 4 * iter + -4 * (v14 >> 3) - 4));
                 break;
             case 6:
                 if (iter < 1)
@@ -149,7 +149,7 @@ LABEL_401647:
                     cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
                     cgc__terminate(0xffffffff);
                 }
-                *(v6 + 4 * iter - 4) = *(v6 + 4 * iter) + *(v6 + 4 * iter - 4);
+                *((v6 + 4 * iter - 4)) = *((v6 + 4 * iter)) + *((v6 + 4 * iter - 4));
                 iter -= 1;
                 break;
             case 7:
@@ -158,7 +158,7 @@ LABEL_401647:
                     cgc_transmit_all("STACK UNDERFLOW EXCEPTION\n", 27);
                     cgc__terminate(0xffffffff);
                 }
-                *(v6 + 4 * iter - 4) = *(v6 + 4 * iter - 4) - *(v6 + 4 * iter);
+                *((v6 + 4 * iter - 4)) = *((v6 + 4 * iter - 4)) - *((v6 + 4 * iter));
                 iter -= 1;
                 break;
             }

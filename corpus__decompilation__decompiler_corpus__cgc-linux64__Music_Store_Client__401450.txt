@@ -1,12 +1,12 @@
 char * cgc_memset(char *a0, char a1, unsigned long long a2)
 {
     char *iter;  // [bp-0x28]
-    unsigned long long i;  // [bp-0x20]
+    unsigned long long v1;  // [bp-0x20]
 
-    i = a2;
-    for (iter = a0; i > 0; i -= 1)
+    v1 = a2;
+    for (iter = a0; v1 > 0; v1 -= 1)
     {
-        *iter = a1;
+        *(iter) = a1;
         iter += 1;
     }
     return a0;

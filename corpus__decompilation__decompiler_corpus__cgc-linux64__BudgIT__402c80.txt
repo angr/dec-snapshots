@@ -6,12 +6,12 @@ char * cgc_strchr(char *a0, char a1)
     v0 = a0;
     while (1)
     {
-        if (!*v0)
+        if (!*(v0))
         {
             v1 = NULL;
             return v1;
         }
-        if (*v0 == a1)
+        if (*(v0) == a1)
         {
             v1 = v0;
             return v1;
