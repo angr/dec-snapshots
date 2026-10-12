@@ -12,11 +12,11 @@ typedef struct st_4030f0_1 {
     struct st_4030f0_0 *field_0;
 } st_4030f0_1;
 
-void cgc_remove(st_4030f0_2 *idx)
+void cgc_remove(st_4030f0_2 *a0)
 {
-    idx->field_0->field_8 = idx->field_8;
-    *idx->field_8 = idx->field_0;
-    idx->field_8 = NULL;
-    idx->field_0 = NULL;
+    a0->field_0->field_8 = a0->field_8;
+    *a0->field_8 = a0->field_0;
+    a0->field_8 = NULL;
+    a0->field_0 = NULL;
     return;
 }
