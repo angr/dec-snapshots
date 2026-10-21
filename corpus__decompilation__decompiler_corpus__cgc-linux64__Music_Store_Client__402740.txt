@@ -42,7 +42,7 @@ unsigned int cgc_getBalance(st_402740_0 *a0)
     if (v1)
         cgc__terminate(3);
     v6 = cgc_receiveBalance(0);
-    *&v7 = v6;
+    v7 = _INSERT(0, 0, v6);
     a0->field_10 = v6;
     v1 = cgc_allocate(a0->field_10 * 250, 0, &a0->padding_0[8], v7);
     if (!v1)
