@@ -59,7 +59,7 @@ unsigned int cgc_request_document(unsigned long a0, long long a1)
     else
     {
         v9 = 0;
-        v12 = cgc_allocate(v10 + 1, 0, &v9);
+        v12 = cgc_allocate((v10 + 1), 0, &v9);
         if (v12)
         {
             v14 = v12;
@@ -113,7 +113,7 @@ unsigned int cgc_request_document(unsigned long a0, long long a1)
         {
 LABEL_401d11:
         }
-        cgc_deallocate(v9, v10 + 1);
+        cgc_deallocate(v9, (v10 + 1));
         v14 = v12;
         return v14;
     }
