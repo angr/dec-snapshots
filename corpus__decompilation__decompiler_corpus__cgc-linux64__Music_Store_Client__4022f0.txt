@@ -10,7 +10,7 @@ extern st_4022f0_0 attributes;
 void cgc_getRandomAttribute(unsigned long a0)
 {
     unsigned long v0;  // [bp-0x28]
-    unsigned long v1;  // [bp-0x20]
+    char *v1;  // [bp-0x20]
     unsigned int v2;  // [bp-0x14]
 
     v2 = 0;

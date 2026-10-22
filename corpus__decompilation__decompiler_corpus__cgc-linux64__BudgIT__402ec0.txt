@@ -1,5 +1,6 @@
 typedef struct st_402ec0_0 {
-    char padding_0[16];
+    char padding_0[8];
+    struct st_402ec0_0 *field_8;
     unsigned int field_10;
 } st_402ec0_0;
 
@@ -30,10 +31,10 @@ unsigned long long cgc_malloc(unsigned long long a0)
     {
         v0 = 0;
         if (iter->field_10 < v2)
-            v0 = *&iter->padding_0[8] != cgc_freed;
+            v0 = iter->field_8 != cgc_freed;
         if (!(v0 & 1))
             break;
-        iter = *&iter->padding_0[8];
+        iter = iter->field_8;
     }
     if (iter->field_10 >= v2)
     {
