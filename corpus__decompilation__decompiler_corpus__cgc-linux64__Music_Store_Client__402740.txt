@@ -17,7 +17,7 @@ unsigned int cgc_getBalance(st_402740_0 *a0)
     unsigned int v1;  // [bp-0x2c]
     unsigned long v2;  // [bp-0x28]
     st_402460_0 *v3;  // [bp-0x20]
-    unsigned long long v4;  // [bp-0x18]
+    unsigned long v4;  // [bp-0x18], Other Possible Types: unsigned long long
 
     v4 = 0;
     v3 = NULL;
@@ -42,7 +42,7 @@ unsigned int cgc_getBalance(st_402740_0 *a0)
     if (v1)
         cgc__terminate(3);
     v6 = cgc_receiveBalance(0);
-    *&v7 = v6;
+    v7 = _INSERT(0, 0, v6);
     a0->field_10 = v6;
     v1 = cgc_allocate(a0->field_10 * 250, 0, &a0->padding_0[8], v7);
     if (!v1)

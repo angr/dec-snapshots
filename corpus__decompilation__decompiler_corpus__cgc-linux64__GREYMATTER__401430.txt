@@ -18,7 +18,7 @@ char * cgc_strncpy(char *a0, char *a1, unsigned long long a2)
         }
         if (!(v0 & 1))
             break;
-        *&a2 = a1[v1];
+        a2 = _INSERT(a2, 0, a1[v1]);
         a0[v1] = a2;
         v1 += 1;
     }
