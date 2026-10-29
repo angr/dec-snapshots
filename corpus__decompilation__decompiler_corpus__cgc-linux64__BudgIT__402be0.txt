@@ -1,4 +1,4 @@
-char * cgc_b2hex(char a0, char *a1)
+unsigned char * cgc_b2hex(unsigned char a0, unsigned char *a1)
 {
     if (((char)(a0) >> 4) < 10)
         *a1 = ((char)(a0) >> 4) + 48;

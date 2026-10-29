@@ -4,7 +4,7 @@ typedef struct st_4030f0_2 {
 } st_4030f0_2;
 
 typedef struct st_4030f0_0 {
-    char padding_0[8];
+    unsigned char padding_0[8];
     struct st_4030f0_1 *field_8;
 } st_4030f0_0;
 

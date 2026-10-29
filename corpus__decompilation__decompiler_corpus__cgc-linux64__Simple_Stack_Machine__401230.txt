@@ -1,7 +1,7 @@
 
 unsigned int main(unsigned int a0, unsigned long long a1)
 {
-    char v0;  // [bp-0x6d]
+    unsigned char v0;  // [bp-0x6d]
     int v1;  // [bp-0x6c]
     int v2;  // [bp-0x68]
     int v3;  // [bp-0x64]

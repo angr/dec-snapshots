@@ -1,10 +1,10 @@
 typedef struct st_402ec0_0 {
-    char padding_0[8];
+    unsigned char padding_0[8];
     struct st_402ec0_0 *field_8;
     unsigned int field_10;
 } st_402ec0_0;
 
-extern char cgc_heapinit_done;
+extern unsigned char cgc_heapinit_done;
 extern st_402ec0_0 *cgc_freed;
 extern long long cgc_allocated;
 extern st_402ec0_0 *cgc_lastpage;
@@ -12,7 +12,7 @@ extern unsigned int cgc_curleft;
 
 unsigned long long cgc_malloc(unsigned long long a0)
 {
-    char v0;  // [bp-0x21]
+    unsigned char v0;  // [bp-0x21]
     st_402ec0_0 *iter;  // [bp-0x20]
     unsigned long long v2;  // [bp-0x18]
     unsigned long long v3;  // [bp-0x10]

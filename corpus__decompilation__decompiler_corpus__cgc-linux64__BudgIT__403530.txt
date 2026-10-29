@@ -1,11 +1,11 @@
 typedef struct st_403530_0 {
-    char padding_0[12];
-    char field_c;
+    unsigned char padding_0[12];
+    unsigned char field_c;
 } st_403530_0;
 
 st_403530_0 * cgc_initMap(st_403530_0 *a0)
 {
-    st_403530_0 *iter;  // [bp-0x28], Other Possible Types: char
+    st_403530_0 *iter;  // [bp-0x28], Other Possible Types: unsigned char
     unsigned int v1;  // [bp-0x1c]
     st_403530_0 *v2;  // [bp-0x10]
 

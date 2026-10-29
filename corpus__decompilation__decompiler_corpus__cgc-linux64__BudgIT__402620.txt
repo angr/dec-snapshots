@@ -1,9 +1,9 @@
-long long cgc_strncpy(char *a0, char *a1, unsigned long a2)
+long long cgc_strncpy(unsigned char *a0, unsigned char *a1, unsigned long a2)
 {
-    char v0;  // [bp-0x29]
-    char *iter;  // [bp-0x28]
-    char *v2;  // [bp-0x28]
-    char *v3;  // [bp-0x18]
+    unsigned char v0;  // [bp-0x29]
+    unsigned char *iter;  // [bp-0x28]
+    unsigned char *v2;  // [bp-0x28]
+    unsigned char *v3;  // [bp-0x18]
 
     v3 = a1;
     iter = a0;

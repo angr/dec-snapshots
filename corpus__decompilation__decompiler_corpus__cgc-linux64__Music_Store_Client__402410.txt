@@ -1,4 +1,4 @@
-void cgc_createRandomRequest(char *a0)
+void cgc_createRandomRequest(unsigned char *a0)
 {
     cgc_memset(a0, 0, 104);
     cgc_getRandomTerm(a0);

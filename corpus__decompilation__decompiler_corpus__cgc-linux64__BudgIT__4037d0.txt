@@ -1,12 +1,12 @@
 typedef struct st_4037d0_0 {
     struct st_4037d0_0 *field_0;
     unsigned int field_8;
-    char field_c;
+    unsigned char field_c;
 } st_4037d0_0;
 
 void cgc_removeMap(st_4037d0_0 **a0, char *a1)
 {
-    char v0;  // [bp-0x31]
+    unsigned char v0;  // [bp-0x31]
     st_4037d0_0 *v1;  // [bp-0x30]
     st_4037d0_0 *v2;  // [bp-0x28], Other Possible Types: unsigned long long
 

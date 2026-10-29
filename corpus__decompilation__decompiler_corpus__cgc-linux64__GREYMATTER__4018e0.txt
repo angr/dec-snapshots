@@ -1,11 +1,11 @@
-void cgc_random_alpha_lower(char *a0, unsigned long a1)
+void cgc_random_alpha_lower(unsigned char *a0, unsigned long a1)
 {
-    char v0;  // [bp-0x58]
-    char v1;  // [bp-0x49]
-    char *v2;  // [bp-0x48]
+    unsigned char v0;  // [bp-0x58]
+    unsigned char v1;  // [bp-0x49]
+    unsigned char *v2;  // [bp-0x48]
     int i;  // [bp-0x3c]
     unsigned long v4;  // [bp-0x38]
-    char *v5;  // [bp-0x30]
+    unsigned char *v5;  // [bp-0x30]
     unsigned long v6;  // [bp-0x28]
     unsigned int v7;  // [bp-0x1c]
 

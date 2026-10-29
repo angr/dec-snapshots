@@ -1,6 +1,6 @@
 int cgc_strcmp(char *a0, char *a1)
 {
-    char v0;  // [bp-0x19]
+    unsigned char v0;  // [bp-0x19]
     char *v1;  // [bp-0x18]
     char *v2;  // [bp-0x10]
 

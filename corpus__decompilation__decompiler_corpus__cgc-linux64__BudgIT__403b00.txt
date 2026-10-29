@@ -1,13 +1,13 @@
 unsigned int main(unsigned int a0, unsigned long long a1)
 {
-    char *v0;  // [bp-0x90]
-    char v1[48];  // [bp-0x88]
+    unsigned char *v0;  // [bp-0x90]
+    unsigned char v1[48];  // [bp-0x88]
     unsigned int v2;  // [bp-0x58]
     unsigned int v3;  // [bp-0x54]
     unsigned int v4;  // [bp-0x50]
     unsigned int v5;  // [bp-0x4c]
-    char v6[32];  // [bp-0x48]
-    char v7;  // [bp-0x28]
+    unsigned char v6[32];  // [bp-0x48]
+    unsigned char v7;  // [bp-0x28]
     void* v8;  // [bp-0x20]
     unsigned long long v9;  // [bp-0x18]
     unsigned int v10;  // [bp-0x10]

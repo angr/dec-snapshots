@@ -1,6 +1,6 @@
 typedef struct st_402020_0 {
     unsigned int field_0;
-    char padding_4[4];
+    unsigned char padding_4[4];
     unsigned long long field_8;
 } st_402020_0;
 
@@ -9,7 +9,7 @@ unsigned int cgc_receiveSearchResults(unsigned int a0, st_402020_0 *a1, unsigned
     unsigned int v0;  // [bp-0x434]
     unsigned int v1;  // [bp-0x430]
     unsigned int v2;  // [bp-0x42c]
-    char v3[1052];  // [bp-0x428]
+    unsigned char v3[1052];  // [bp-0x428]
     unsigned int v4;  // [bp-0xc]
 
     memset(v3, 0, 0x400);

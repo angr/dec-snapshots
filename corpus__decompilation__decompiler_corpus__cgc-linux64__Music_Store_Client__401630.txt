@@ -1,6 +1,6 @@
-char * cgc_strcat(char *a0, char *a1)
+unsigned char * cgc_strcat(unsigned char *a0, unsigned char *a1)
 {
-    char v3;  // al
+    unsigned char v3;  // al
     int v0;  // [bp-0x28]
     int iter;  // [bp-0x24]
 

@@ -1,7 +1,7 @@
 typedef struct st_402460_0 {
-    char field_0;
-    char padding_1[31];
-    char field_20;
+    unsigned char field_0;
+    unsigned char padding_1[31];
+    unsigned char field_20;
 } st_402460_0;
 
 unsigned int cgc_getRandomGiftCard(st_402460_0 **a0)

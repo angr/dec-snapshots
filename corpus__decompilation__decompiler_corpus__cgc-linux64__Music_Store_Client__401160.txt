@@ -1,6 +1,6 @@
 extern unsigned long long g_404800;
 extern long long __dso_handle;
-extern char __bss_start;
+extern unsigned char __bss_start;
 
 void __do_global_dtors_aux(void)
 {

@@ -1,9 +1,9 @@
 long long cgc_createSearchString(void)
 {
-    char *v0;  // [bp-0x20]
+    unsigned char *v0;  // [bp-0x20]
     unsigned int v1;  // [bp-0x14]
     unsigned long v2;  // [bp-0x10]
-    char v3;  // [bp+0x8]
+    unsigned char v3;  // [bp+0x8]
 
     v0 = &v3;
     v2 = 0;
