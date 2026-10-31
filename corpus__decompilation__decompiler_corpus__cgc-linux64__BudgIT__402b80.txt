@@ -1,4 +1,4 @@
-char * cgc_memcpy(char *a0, char *a1, unsigned long long a2)
+unsigned char * cgc_memcpy(unsigned char *a0, unsigned char *a1, unsigned long long a2)
 {
     unsigned long long v2;  // rdx
     unsigned long long i;  // [bp-0x28]

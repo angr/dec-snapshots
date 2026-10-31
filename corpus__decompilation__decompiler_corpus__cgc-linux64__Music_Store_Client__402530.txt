@@ -1,16 +1,16 @@
 typedef struct st_402530_0 {
     unsigned int field_0;
-    char padding_4[4];
+    unsigned char padding_4[4];
     unsigned long long field_8;
-    char field_10;
+    unsigned char field_10;
 } st_402530_0;
 
-unsigned int cgc_purchaseSong(unsigned int a0, char *a1, st_402530_0 *a2)
+unsigned int cgc_purchaseSong(unsigned int a0, unsigned char *a1, st_402530_0 *a2)
 {
     unsigned int v0;  // [bp-0x38]
     unsigned int v1;  // [bp-0x34]
     unsigned long long v2;  // [bp-0x30]
-    char v3;  // [bp-0x25]
+    unsigned char v3;  // [bp-0x25]
     unsigned int v4;  // [bp-0x24]
     unsigned int v5;  // [bp-0xc]
 

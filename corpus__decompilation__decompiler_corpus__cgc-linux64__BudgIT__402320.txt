@@ -1,6 +1,6 @@
-char * cgc_strlen(char *a0)
+unsigned char * cgc_strlen(unsigned char *a0)
 {
-    char *i;  // [bp-0x18]
+    unsigned char *i;  // [bp-0x18]
 
     for (i = a0; *i; i += 1);
     return i - a0;

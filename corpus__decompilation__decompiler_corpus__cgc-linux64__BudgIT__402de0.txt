@@ -1,5 +1,5 @@
 typedef struct st_402de0_0 {
-    char padding_0[8];
+    unsigned char padding_0[8];
     struct st_402de0_0 *field_8;
     unsigned int field_10;
 } st_402de0_0;

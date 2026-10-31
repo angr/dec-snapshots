@@ -1,17 +1,17 @@
-unsigned int cgc_sendSearchString(unsigned int a0, unsigned long a1, unsigned long a2, unsigned long a3, unsigned long a4, unsigned long a5, uint128_t a6, unsigned int a7, uint128_t a8, unsigned int a9, uint128_t a10, unsigned int a11, char a12)
+unsigned int cgc_sendSearchString(unsigned int a0, unsigned long a1, unsigned long a2, unsigned long a3, unsigned long a4, unsigned long a5, uint128_t a6, unsigned int a7, uint128_t a8, unsigned int a9, uint128_t a10, unsigned int a11, unsigned char a12)
 {
     uint128_t v0;  // [bp-0x98]
     uint128_t v1;  // [bp-0x88]
     uint128_t v2;  // [bp-0x78]
-    char v3;  // [bp-0x68]
-    char v4;  // [bp-0x58]
-    char v5;  // [bp-0x48]
+    unsigned char v3;  // [bp-0x68]
+    unsigned char v4;  // [bp-0x58]
+    unsigned char v5;  // [bp-0x48]
     unsigned long long v6;  // [bp-0x38]
     unsigned long v7;  // [bp-0x20]
     unsigned long v8;  // [bp-0x18], Other Possible Types: unsigned long long
     unsigned int v9;  // [bp-0x10]
-    char v10;  // [bp+0x48]
-    char v11;  // [bp+0x58]
+    unsigned char v10;  // [bp+0x48]
+    unsigned char v11;  // [bp+0x58]
     unsigned long long v12;  // [bp+0x68]
 
     v9 = 0;
