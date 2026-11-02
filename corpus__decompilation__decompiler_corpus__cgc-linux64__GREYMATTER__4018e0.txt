@@ -22,7 +22,7 @@ void cgc_random_alpha_lower(char *a0, unsigned long a1)
     } while (v1 & 1);
     for (i = 0; i < a1; i += 1)
     {
-        a0[i] = (v2[i] % 26) + 97;
+        a0[i] = (v0 % 26) + 97;
     }
     return;
 }
