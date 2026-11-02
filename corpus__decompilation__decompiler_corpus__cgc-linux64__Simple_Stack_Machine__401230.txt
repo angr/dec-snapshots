@@ -45,7 +45,7 @@ unsigned int main(unsigned int a0, unsigned long long a1)
         j = 0;
         do
         {
-            v8 = cgc_receive(0, &i + j, 4 - j, &v13);
+            v8 = cgc_receive(0, (&i + j), 4 - j, &v13);
             if (!v8 && v13)
                 continue;
             if (!v10)
