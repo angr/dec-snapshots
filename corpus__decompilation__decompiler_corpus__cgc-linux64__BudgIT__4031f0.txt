@@ -1,3 +1,8 @@
+typedef struct ustruct_0 {
+    void* field_0;
+    void* field_8;
+} ustruct_0;
+
 typedef struct st_403140_0 {
     struct st_403140_0 *field_0;
     struct st_403140_0 *field_8;
@@ -7,7 +12,7 @@ extern st_403140_0 *cgc_freed;
 
 void cgc_free(unsigned long long a0)
 {
-    unsigned long long v0;  // [bp-0x18]
+    ustruct_0 *v0;  // [bp-0x18]
 
     if (!a0)
         return;
