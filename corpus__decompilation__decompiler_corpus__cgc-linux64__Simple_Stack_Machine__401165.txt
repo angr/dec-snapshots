@@ -1,3 +1,4 @@
 void sub_401165(void)
 {
+    goto LABEL_0x401168;
 }
