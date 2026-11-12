@@ -36,11 +36,8 @@ int main(unsigned int a0, unsigned long long a1)
     char v17;  // [bp-0x68]
     unsigned long long v18;  // [bp-0x58]
     st_402020_0 v19;  // [bp-0x50], Other Possible Types: char
-    char *v20;  // [bp-0x48]
     unsigned long long v21;  // [bp-0x40]
     st_402740_0 v22;  // [bp-0x38]
-    long long v23;  // [bp-0x30]
-    char i;  // [bp-0x28]
     unsigned int v25;  // [bp-0x20]
     unsigned int v26;  // [bp-0x1c]
     unsigned long long v27;  // [bp-0x18]
@@ -57,10 +54,10 @@ int main(unsigned int a0, unsigned long long a1)
     memset(v12, 0, 104);
     memset(&v11, 0, 2500);
     v10 = 0;
-    v20 = &v11;
+    v19.field_8 = &v11;
     cgc_getBalance(&v22);
-    v25 = i;
-    while (i > 0)
+    v25 = v22.field_10;
+    while (v22.field_10 > 0)
     {
         v19.field_0 = 0;
         cgc_createRandomRequest(v12);
@@ -89,7 +86,7 @@ int main(unsigned int a0, unsigned long long a1)
             break;
         cgc_receiveBalance(0);
     }
-    v26 = cgc_deallocate(v23, v25 * 250);
+    v26 = cgc_deallocate(*&v22.padding_0[8], v25 * 250);
     if (!v26)
         return v26;
     cgc__terminate(3);
