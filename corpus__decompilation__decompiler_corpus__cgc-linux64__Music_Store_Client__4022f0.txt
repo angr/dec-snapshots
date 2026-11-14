@@ -1,5 +1,5 @@
 typedef struct st_4022f0_0 {
-    char *field_0;
+    unsigned char *field_0;
     unsigned long long field_8;
     unsigned long long field_10;
     unsigned long long field_18;
@@ -10,7 +10,7 @@ extern st_4022f0_0 attributes;
 void cgc_getRandomAttribute(unsigned long a0)
 {
     unsigned long v0;  // [bp-0x28]
-    char *v1;  // [bp-0x20]
+    unsigned char *v1;  // [bp-0x20]
     unsigned int v2;  // [bp-0x14]
 
     v2 = 0;

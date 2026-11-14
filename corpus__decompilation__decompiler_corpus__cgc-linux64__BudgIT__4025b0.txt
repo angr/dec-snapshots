@@ -1,8 +1,8 @@
-long long cgc_strcpy(char *a0, char *a1)
+long long cgc_strcpy(unsigned char *a0, unsigned char *a1)
 {
-    char *iter;  // [bp-0x20]
-    char *v1;  // [bp-0x20]
-    char *i;  // [bp-0x18]
+    unsigned char *iter;  // [bp-0x20]
+    unsigned char *v1;  // [bp-0x20]
+    unsigned char *i;  // [bp-0x18]
 
     i = a1;
     for (iter = a0; *i; i += 1)

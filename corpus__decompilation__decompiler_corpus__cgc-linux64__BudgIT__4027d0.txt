@@ -1,6 +1,6 @@
 unsigned int cgc_startswith(char *a0, char *a1)
 {
-    char v0;  // [bp-0x21]
+    unsigned char v0;  // [bp-0x21]
     char *v1;  // [bp-0x20]
     char *v2;  // [bp-0x18]
     unsigned int v3;  // [bp-0xc]

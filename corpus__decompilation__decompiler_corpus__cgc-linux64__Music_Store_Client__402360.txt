@@ -1,4 +1,4 @@
-void cgc_getRandomTerm(char *a0)
+void cgc_getRandomTerm(unsigned char *a0)
 {
     unsigned int v0;  // [bp-0x20]
     unsigned int j;  // [bp-0x1c]

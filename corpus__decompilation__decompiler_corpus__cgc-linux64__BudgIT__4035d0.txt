@@ -1,12 +1,12 @@
 typedef struct st_403530_0 {
-    char padding_0[12];
-    char field_c;
+    unsigned char padding_0[12];
+    unsigned char field_c;
 } st_403530_0;
 
 typedef struct st_4035d0_0 {
     struct st_4035d0_0 *field_0;
     unsigned int field_8;
-    char field_c;
+    unsigned char field_c;
 } st_4035d0_0;
 
 unsigned int cgc_setMap(st_4035d0_0 **a0, void* a1, unsigned int a2)
